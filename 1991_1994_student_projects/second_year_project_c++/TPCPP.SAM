@@ -1,0 +1,4053 @@
+[ver]
+	4
+[sty]
+	_essay.sty
+[files]
+[charset]
+	82
+	ANSI (Windows, IBM CP 1252)
+[revisions]
+	0
+[toc]
+	Subtitle
+	Bullet
+	Bullet 1
+	.
+	.
+	.
+	63
+[master]
+	
+	
+	0
+	0
+	0
+[prn]
+	HP DeskJet 500
+[port]
+	LPT1:
+[lang]
+	1
+[desc]
+	
+	
+	
+	
+	
+	731361915
+	5
+	731305833
+	174
+	25
+	0
+	0
+	0
+	0
+	
+	
+	
+	
+	
+	
+	1
+[fopts]
+	0
+	1
+	0
+	0
+[lnopts]
+	2
+	Body Text
+	1
+[docopts]
+	5
+	2
+[GramStyle]
+	
+[ParaNum]
+	1
+[tag]
+	Body Text
+	2
+	[fnt]
+		Courier New
+		240
+		0
+		32768
+	[algn]
+		1
+		1
+		0
+		720
+		0
+	[spc]
+		36
+		475
+		1
+		0
+		0
+		1
+		100
+	[brk]
+		4
+	[line]
+		8
+		0
+		1
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		2
+		
+		0
+		1
+		1
+		0
+		16
+		0
+		0
+	[nfmt]
+		272
+		1
+		2
+		.
+		,
+		</c>
+	Body Text
+	0
+	0
+[tag]
+	Number List
+	3
+	[fnt]
+		Courier New
+		240
+		0
+		32768
+	[algn]
+		1
+		1
+		360
+		360
+		360
+	[spc]
+		33
+		273
+		1
+		0
+		0
+		1
+		100
+	[brk]
+		4
+	[line]
+		8
+		0
+		1
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		0
+		<*:>
+		360
+		1
+		1
+		0
+		16
+		0
+		0
+	[nfmt]
+		272
+		1
+		2
+		.
+		,
+		</c>
+	Number List
+	0
+	0
+[tag]
+	Bullet
+	4
+	[fnt]
+		Courier New
+		240
+		0
+		32768
+	[algn]
+		1
+		1
+		0
+		288
+		288
+	[spc]
+		33
+		273
+		1
+		0
+		0
+		1
+		100
+	[brk]
+		4
+	[line]
+		8
+		0
+		1
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		0
+		<*0>
+		360
+		1
+		1
+		0
+		0
+		0
+		0
+	[nfmt]
+		272
+		1
+		2
+		.
+		,
+		</c>
+	Bullet
+	0
+	0
+[tag]
+	Bullet 1
+	5
+	[fnt]
+		Courier New
+		240
+		0
+		32768
+	[algn]
+		1
+		1
+		288
+		288
+		288
+	[spc]
+		33
+		273
+		1
+		0
+		0
+		1
+		100
+	[brk]
+		4
+	[line]
+		8
+		0
+		1
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		0
+		<*5>
+		0
+		1
+		1
+		0
+		0
+		0
+		0
+	[nfmt]
+		272
+		1
+		2
+		.
+		,
+		</c>
+	Bullet 1
+	0
+	0
+[tag]
+	Prose Quot.
+	6
+	[fnt]
+		Courier New
+		240
+		0
+		32768
+	[algn]
+		1
+		1
+		1440
+		0
+		0
+	[spc]
+		33
+		259
+		1
+		216
+		216
+		1
+		100
+	[brk]
+		68
+	[line]
+		8
+		0
+		1
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		0
+		
+		0
+		1
+		1
+		0
+		0
+		0
+		0
+	[nfmt]
+		272
+		1
+		2
+		.
+		,
+		</c>
+	Poetry Quot.
+	0
+	0
+[tag]
+	Poetry Quot.
+	7
+	[fnt]
+		Courier New
+		240
+		0
+		32768
+	[algn]
+		1
+		1
+		1440
+		0
+		360
+	[spc]
+		33
+		259
+		1
+		216
+		216
+		1
+		100
+	[brk]
+		68
+	[line]
+		8
+		0
+		1
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		0
+		
+		0
+		1
+		1
+		0
+		0
+		0
+		0
+	[nfmt]
+		272
+		1
+		2
+		.
+		,
+		</c>
+	Poetry Quot.
+	0
+	0
+[tag]
+	Title
+	8
+	[fnt]
+		Courier New
+		240
+		0
+		32769
+	[algn]
+		4
+		1
+		0
+		0
+		0
+	[spc]
+		33
+		446
+		1
+		144
+		72
+		1
+		100
+	[brk]
+		16
+	[line]
+		8
+		0
+		1
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		0
+		
+		0
+		1
+		1
+		0
+		0
+		0
+		0
+	[nfmt]
+		272
+		1
+		2
+		.
+		,
+		</c>
+	Title
+	0
+	0
+[tag]
+	Subtitle
+	9
+	[fnt]
+		Courier New
+		240
+		0
+		32768
+	[algn]
+		1
+		1
+		0
+		648
+		0
+	[spc]
+		36
+		504
+		1
+		0
+		504
+		1
+		100
+	[brk]
+		4
+	[line]
+		8
+		0
+		1
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		1
+		<*;>.
+		0
+		1
+		1
+		0
+		16
+		0
+		0
+	[nfmt]
+		272
+		1
+		2
+		.
+		,
+		</c>
+	Subtitle
+	0
+	0
+[tag]
+	Header
+	11
+	[fnt]
+		Courier New
+		240
+		0
+		32768
+	[algn]
+		1
+		1
+		0
+		0
+		0
+	[spc]
+		33
+		273
+		1
+		0
+		0
+		1
+		100
+	[brk]
+		4
+	[line]
+		8
+		0
+		1
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		0
+		
+		0
+		1
+		1
+		0
+		0
+		0
+		0
+	[nfmt]
+		272
+		1
+		2
+		.
+		,
+		</c>
+	Header
+	0
+	0
+[tag]
+	Footnote
+	12
+	[fnt]
+		Courier New
+		240
+		0
+		32768
+	[algn]
+		1
+		1
+		0
+		720
+		0
+	[spc]
+		33
+		259
+		1
+		0
+		0
+		1
+		100
+	[brk]
+		4
+	[line]
+		8
+		0
+		1
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		0
+		<*:>
+		0
+		1
+		1
+		256
+		16
+		0
+		0
+	[nfmt]
+		272
+		1
+		2
+		.
+		,
+		</c>
+	Footnote
+	0
+	0
+[tag]
+	Footer
+	0
+	[fnt]
+		Courier New
+		240
+		0
+		32768
+	[algn]
+		1
+		1
+		0
+		0
+		0
+	[spc]
+		33
+		273
+		1
+		0
+		0
+		1
+		100
+	[brk]
+		4
+	[line]
+		8
+		0
+		1
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		0
+		
+		0
+		1
+		1
+		0
+		0
+		0
+		0
+	[nfmt]
+		272
+		1
+		2
+		.
+		,
+		</c>
+	Footer
+	0
+	0
+[tag]
+	TOC1
+	0
+	[fnt]
+		Courier New
+		240
+		0
+		32768
+	[algn]
+		1
+		1
+		0
+		0
+		360
+	[spc]
+		1
+		273
+		1
+		0
+		0
+		1
+		100
+	[brk]
+		4
+	[line]
+		0
+		0
+		1
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		0
+		
+		0
+		1
+		1
+		0
+		0
+		0
+		0
+	[nfmt]
+		272
+		1
+		2
+		.
+		,
+		</c>
+	TOC1
+	0
+	0
+[tag]
+	TOCPG1
+	0
+	[fnt]
+		Courier New
+		240
+		0
+		32768
+	[algn]
+		2
+		1
+		0
+		0
+		0
+	[spc]
+		1
+		273
+		1
+		0
+		0
+		1
+		100
+	[brk]
+		4
+	[line]
+		0
+		0
+		1
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		0
+		
+		0
+		1
+		1
+		0
+		0
+		0
+		0
+	[nfmt]
+		272
+		1
+		2
+		.
+		,
+		</c>
+	TOCPG1
+	0
+	0
+[tag]
+	TOC2
+	0
+	[fnt]
+		Courier New
+		240
+		0
+		32768
+	[algn]
+		1
+		1
+		0
+		360
+		720
+	[spc]
+		1
+		273
+		1
+		0
+		0
+		1
+		100
+	[brk]
+		4
+	[line]
+		0
+		0
+		1
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		0
+		
+		0
+		1
+		1
+		0
+		0
+		0
+		0
+	[nfmt]
+		272
+		1
+		2
+		.
+		,
+		</c>
+	TOC2
+	0
+	0
+[tag]
+	TOCPG2
+	0
+	[fnt]
+		Courier New
+		240
+		0
+		32768
+	[algn]
+		2
+		1
+		0
+		0
+		0
+	[spc]
+		1
+		273
+		1
+		0
+		0
+		1
+		100
+	[brk]
+		4
+	[line]
+		0
+		0
+		1
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		0
+		
+		0
+		1
+		1
+		0
+		0
+		0
+		0
+	[nfmt]
+		272
+		1
+		2
+		.
+		,
+		</c>
+	TOCPG2
+	0
+	0
+[tag]
+	TOC3
+	0
+	[fnt]
+		Courier New
+		240
+		0
+		32768
+	[algn]
+		1
+		1
+		0
+		720
+		1080
+	[spc]
+		1
+		475
+		1
+		0
+		0
+		1
+		100
+	[brk]
+		4
+	[line]
+		0
+		0
+		1
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		2
+		
+		0
+		1
+		1
+		0
+		0
+		0
+		0
+	[nfmt]
+		272
+		1
+		2
+		.
+		,
+		</c>
+	TOC3
+	0
+	0
+[tag]
+	TOCPG3
+	0
+	[fnt]
+		Courier New
+		240
+		0
+		32768
+	[algn]
+		2
+		1
+		0
+		0
+		0
+	[spc]
+		1
+		475
+		1
+		0
+		0
+		1
+		100
+	[brk]
+		4
+	[line]
+		0
+		0
+		1
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		2
+		
+		0
+		1
+		1
+		0
+		0
+		0
+		0
+	[nfmt]
+		272
+		1
+		2
+		.
+		,
+		</c>
+	TOCPG3
+	0
+	0
+[tag]
+	TOC4
+	0
+	[fnt]
+		Courier New
+		240
+		0
+		32768
+	[algn]
+		1
+		1
+		0
+		1080
+		1440
+	[spc]
+		1
+		475
+		1
+		0
+		0
+		1
+		100
+	[brk]
+		4
+	[line]
+		0
+		0
+		1
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		2
+		
+		0
+		1
+		1
+		0
+		0
+		0
+		0
+	[nfmt]
+		272
+		1
+		2
+		.
+		,
+		</c>
+	TOC4
+	0
+	0
+[tag]
+	TOCPG4
+	0
+	[fnt]
+		Courier New
+		240
+		0
+		32768
+	[algn]
+		2
+		1
+		0
+		0
+		0
+	[spc]
+		1
+		475
+		1
+		0
+		0
+		1
+		100
+	[brk]
+		4
+	[line]
+		0
+		0
+		1
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		2
+		
+		0
+		1
+		1
+		0
+		0
+		0
+		0
+	[nfmt]
+		272
+		1
+		2
+		.
+		,
+		</c>
+	TOCPG4
+	0
+	0
+[tag]
+	TOC5
+	0
+	[fnt]
+		Courier New
+		240
+		0
+		32768
+	[algn]
+		1
+		1
+		0
+		1440
+		1800
+	[spc]
+		1
+		475
+		1
+		0
+		0
+		1
+		100
+	[brk]
+		4
+	[line]
+		0
+		0
+		1
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		2
+		
+		0
+		1
+		1
+		0
+		0
+		0
+		0
+	[nfmt]
+		272
+		1
+		2
+		.
+		,
+		</c>
+	TOC5
+	0
+	0
+[tag]
+	TOCPG5
+	0
+	[fnt]
+		Courier New
+		240
+		0
+		32768
+	[algn]
+		2
+		1
+		0
+		0
+		0
+	[spc]
+		1
+		475
+		1
+		0
+		0
+		1
+		100
+	[brk]
+		4
+	[line]
+		0
+		0
+		1
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		2
+		
+		0
+		1
+		1
+		0
+		0
+		0
+		0
+	[nfmt]
+		272
+		1
+		2
+		.
+		,
+		</c>
+	TOCPG5
+	0
+	0
+[tag]
+	TOC6
+	0
+	[fnt]
+		Courier New
+		240
+		0
+		32768
+	[algn]
+		1
+		1
+		0
+		1800
+		2160
+	[spc]
+		1
+		475
+		1
+		0
+		0
+		1
+		100
+	[brk]
+		4
+	[line]
+		0
+		0
+		1
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		2
+		
+		0
+		1
+		1
+		0
+		0
+		0
+		0
+	[nfmt]
+		272
+		1
+		2
+		.
+		,
+		</c>
+	TOC6
+	0
+	0
+[tag]
+	TOCPG6
+	0
+	[fnt]
+		Courier New
+		240
+		0
+		32768
+	[algn]
+		2
+		1
+		0
+		0
+		0
+	[spc]
+		1
+		475
+		1
+		0
+		0
+		1
+		100
+	[brk]
+		4
+	[line]
+		0
+		0
+		1
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		2
+		
+		0
+		1
+		1
+		0
+		0
+		0
+		0
+	[nfmt]
+		272
+		1
+		2
+		.
+		,
+		</c>
+	TOCPG6
+	0
+	0
+[tag]
+	TOC7
+	0
+	[fnt]
+		Courier New
+		240
+		0
+		32768
+	[algn]
+		1
+		1
+		0
+		2160
+		2520
+	[spc]
+		1
+		475
+		1
+		0
+		0
+		1
+		100
+	[brk]
+		4
+	[line]
+		0
+		0
+		1
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		2
+		
+		0
+		1
+		1
+		0
+		0
+		0
+		0
+	[nfmt]
+		272
+		1
+		2
+		.
+		,
+		</c>
+	TOC7
+	0
+	0
+[tag]
+	TOCPG7
+	0
+	[fnt]
+		Courier New
+		240
+		0
+		32768
+	[algn]
+		2
+		1
+		0
+		0
+		0
+	[spc]
+		1
+		475
+		1
+		0
+		0
+		1
+		100
+	[brk]
+		4
+	[line]
+		0
+		0
+		1
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		2
+		
+		0
+		1
+		1
+		0
+		0
+		0
+		0
+	[nfmt]
+		272
+		1
+		2
+		.
+		,
+		</c>
+	TOCPG7
+	0
+	0
+[tag]
+	TOC8
+	0
+	[fnt]
+		Courier New
+		240
+		0
+		32768
+	[algn]
+		1
+		1
+		0
+		2520
+		2880
+	[spc]
+		1
+		475
+		1
+		0
+		0
+		1
+		100
+	[brk]
+		4
+	[line]
+		0
+		0
+		1
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		2
+		
+		0
+		1
+		1
+		0
+		0
+		0
+		0
+	[nfmt]
+		272
+		1
+		2
+		.
+		,
+		</c>
+	TOC8
+	0
+	0
+[tag]
+	TOCPG8
+	0
+	[fnt]
+		Courier New
+		240
+		0
+		32768
+	[algn]
+		2
+		1
+		0
+		0
+		0
+	[spc]
+		1
+		475
+		1
+		0
+		0
+		1
+		100
+	[brk]
+		4
+	[line]
+		0
+		0
+		1
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		2
+		
+		0
+		1
+		1
+		0
+		0
+		0
+		0
+	[nfmt]
+		272
+		1
+		2
+		.
+		,
+		</c>
+	TOCPG8
+	0
+	0
+[tag]
+	TOC9
+	0
+	[fnt]
+		Courier New
+		240
+		0
+		32768
+	[algn]
+		1
+		1
+		0
+		2880
+		3240
+	[spc]
+		1
+		475
+		1
+		0
+		0
+		1
+		100
+	[brk]
+		4
+	[line]
+		0
+		0
+		1
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		2
+		
+		0
+		1
+		1
+		0
+		0
+		0
+		0
+	[nfmt]
+		272
+		1
+		2
+		.
+		,
+		</c>
+	TOC9
+	0
+	0
+[tag]
+	TOCPG9
+	0
+	[fnt]
+		Courier New
+		240
+		0
+		32768
+	[algn]
+		2
+		1
+		0
+		0
+		0
+	[spc]
+		1
+		475
+		1
+		0
+		0
+		1
+		100
+	[brk]
+		4
+	[line]
+		0
+		0
+		1
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		2
+		
+		0
+		1
+		1
+		0
+		0
+		0
+		0
+	[nfmt]
+		272
+		1
+		2
+		.
+		,
+		</c>
+	TOCPG9
+	0
+	0
+[tag]
+	Table Text
+	0
+	[fnt]
+		Courier New
+		240
+		0
+		32768
+	[algn]
+		1
+		1
+		0
+		0
+		0
+	[spc]
+		36
+		475
+		1
+		0
+		0
+		1
+		100
+	[brk]
+		4
+	[line]
+		8
+		0
+		1
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		0
+		
+		0
+		1
+		1
+		0
+		0
+		0
+		0
+	[nfmt]
+		272
+		1
+		2
+		.
+		,
+		</c>
+	Table Text
+	0
+	0
+[frm]
+	1
+	68681924
+	1440
+	1440
+	10468
+	13043
+	1
+	1
+	1
+	1 0 0 0 0 0 0
+	0
+	16777215
+	3
+	0
+	45568
+	0 0
+	[frmlay]
+		2456
+		9028
+		1
+		0
+		0
+		1
+		1440
+		0
+		0
+		2
+		0
+		0
+		255
+		767
+		1
+		1584
+		10321
+		0
+	[tbl]
+		 34 2 508 86 4404 86 1 43 43
+		[h]
+			 0 254 86 2 0 2 0
+			 1 254 86 2 0 2 0
+			 2 254 86 2 0 2 0
+			 3 254 86 2 0 2 0
+			 4 254 86 2 0 2 0
+			 5 254 86 2 0 2 0
+			 6 254 86 2 0 2 0
+			 7 254 86 2 0 2 0
+			 8 254 86 2 0 2 0
+			 9 254 86 2 0 2 0
+			 10 254 86 2 0 2 0
+			 11 254 86 2 0 2 0
+			 12 254 86 2 0 2 0
+			 13 254 86 2 0 2 0
+			 14 254 86 2 0 2 0
+			 15 254 86 2 0 2 0
+			 16 254 86 2 0 2 0
+			 17 254 86 2 0 2 0
+			 18 254 86 2 0 2 0
+			 19 254 86 2 0 2 0
+			 20 254 86 2 0 2 0
+			 21 254 86 2 0 2 0
+			 22 254 86 2 0 2 0
+			 23 254 86 2 0 2 0
+			 24 254 86 2 0 2 0
+			 25 254 86 2 0 2 0
+			 26 254 86 2 0 2 0
+			 27 254 86 2 0 2 0
+			 28 254 86 2 0 2 0
+			 29 254 86 2 0 2 0
+			 30 254 86 2 0 2 0
+			 31 254 86 2 0 2 0
+			 32 254 86 2 0 2 0
+			 33 254 86 2 0 2 0
+		[e]
+		[w]
+			 0 7939 86 2 0
+			 1 914 86 2 0
+		[e]
+		[data]
+			 2 0 16384 0 0 0 0 1 0 0 0 0
+@TOC2@La classe Evenement
+
+>
+			 2 1 16400 0 0 0 0 1 0 0 0 0
+@TOCPG2@<+A>2.00
+
+>
+			 3 0 16384 0 0 0 0 1 0 0 0 0
+@TOC3@la classe ArriveeClient
+
+>
+			 3 1 16400 0 0 0 0 1 0 0 0 0
+@TOCPG3@<+A>2.00
+
+>
+			 4 0 16384 0 0 0 0 1 0 0 0 0
+@TOC3@La classe LiberationServeur
+
+>
+			 4 1 16400 0 0 0 0 1 0 0 0 0
+@TOCPG3@<+A>3.00
+
+>
+			 5 0 16384 0 0 0 0 1 0 0 0 0
+@TOC2@La classe Temps
+
+>
+			 5 1 16400 0 0 0 0 1 0 0 0 0
+@TOCPG2@<+A>3.00
+
+>
+			 6 0 16384 0 0 0 0 1 0 0 0 0
+@TOC2@La classe Client
+
+>
+			 6 1 16400 0 0 0 0 1 0 0 0 0
+@TOCPG2@<+A>3.00
+
+>
+			 7 0 16384 0 0 0 0 1 0 0 0 0
+@TOC2@La classe FileAttente
+
+>
+			 7 1 16400 0 0 0 0 1 0 0 0 0
+@TOCPG2@<+A>3.00
+
+>
+			 8 0 16384 0 0 0 0 1 0 0 0 0
+@TOC2@La classe Serveur 
+
+>
+			 8 1 16400 0 0 0 0 1 0 0 0 0
+@TOCPG2@<+A>3.00
+
+>
+			 9 0 16384 0 0 0 0 1 0 0 0 0
+@TOC2@La classe Restaurant
+
+>
+			 9 1 16400 0 0 0 0 1 0 0 0 0
+@TOCPG2@<+A>4.00
+
+>
+			 10 0 16384 0 0 0 0 1 0 0 0 0
+@TOC1@III. Listing 
+
+>
+			 10 1 16400 0 0 0 0 1 0 0 0 0
+@TOCPG1@<+A>4.00
+
+>
+			 11 0 16384 0 0 0 0 1 0 0 0 0
+@TOC2@La classe Evenement
+
+>
+			 11 1 16400 0 0 0 0 1 0 0 0 0
+@TOCPG2@<+A>4.00
+
+>
+			 12 0 16384 0 0 0 0 1 0 0 0 0
+@TOC3@Evenement.h
+
+>
+			 12 1 16400 0 0 0 0 1 0 0 0 0
+@TOCPG3@<+A>4.00
+
+>
+			 13 0 16384 0 0 0 0 1 0 0 0 0
+@TOC2@La classe ArriveeClient
+
+>
+			 13 1 16400 0 0 0 0 1 0 0 0 0
+@TOCPG2@<+A>5.00
+
+>
+			 14 0 16384 0 0 0 0 1 0 0 0 0
+@TOC3@ArriveeClient.h
+
+>
+			 14 1 16400 0 0 0 0 1 0 0 0 0
+@TOCPG3@<+A>5.00
+
+>
+			 15 0 16384 0 0 0 0 1 0 0 0 0
+@TOC3@ArriveeClient.C
+
+>
+			 15 1 16400 0 0 0 0 1 0 0 0 0
+@TOCPG3@<+A>6.00
+
+>
+			 16 0 16384 0 0 0 0 1 0 0 0 0
+@TOC2@La classe LiberationServeur
+
+>
+			 16 1 16400 0 0 0 0 1 0 0 0 0
+@TOCPG2@<+A>7.00
+
+>
+			 17 0 16384 0 0 0 0 1 0 0 0 0
+@TOC3@LiberationServeur.h
+
+>
+			 17 1 16400 0 0 0 0 1 0 0 0 0
+@TOCPG3@<+A>7.00
+
+>
+			 18 0 16384 0 0 0 0 1 0 0 0 0
+@TOC2@La classe Temps
+
+>
+			 18 1 16400 0 0 0 0 1 0 0 0 0
+@TOCPG2@<+A>9.00
+
+>
+			 19 0 16384 0 0 0 0 1 0 0 0 0
+@TOC3@Temps.h
+
+>
+			 19 1 16400 0 0 0 0 1 0 0 0 0
+@TOCPG3@<+A>9.00
+
+>
+			 20 0 16384 0 0 0 0 1 0 0 0 0
+@TOC3@Temps.C
+
+>
+			 20 1 16400 0 0 0 0 1 0 0 0 0
+@TOCPG3@<+A>10.00
+
+>
+			 21 0 16384 0 0 0 0 1 0 0 0 0
+@TOC2@La classe Client
+
+>
+			 21 1 16400 0 0 0 0 1 0 0 0 0
+@TOCPG2@<+A>11.00
+
+>
+			 22 0 16384 0 0 0 0 1 0 0 0 0
+@TOC3@Client.h
+
+>
+			 22 1 16400 0 0 0 0 1 0 0 0 0
+@TOCPG3@<+A>11.00
+
+>
+			 23 0 16384 0 0 0 0 1 0 0 0 0
+@TOC2@La classe FileAttente
+
+>
+			 23 1 16400 0 0 0 0 1 0 0 0 0
+@TOCPG2@<+A>12.00
+
+>
+			 24 0 16384 0 0 0 0 1 0 0 0 0
+@TOC3@FileAttente.h
+
+>
+			 24 1 16400 0 0 0 0 1 0 0 0 0
+@TOCPG3@<+A>12.00
+
+>
+			 25 0 16384 0 0 0 0 1 0 0 0 0
+@TOC3@FileAttente.C
+
+>
+			 25 1 16400 0 0 0 0 1 0 0 0 0
+@TOCPG3@<+A>13.00
+
+>
+			 26 0 16384 0 0 0 0 1 0 0 0 0
+@TOC2@La classe Serveur
+
+>
+			 26 1 16400 0 0 0 0 1 0 0 0 0
+@TOCPG2@<+A>15.00
+
+>
+			 27 0 16384 0 0 0 0 1 0 0 0 0
+@TOC3@Serveur.h
+
+>
+			 27 1 16400 0 0 0 0 1 0 0 0 0
+@TOCPG3@<+A>15.00
+
+>
+			 28 0 16384 0 0 0 0 1 0 0 0 0
+@TOC3@Serveur.C
+
+>
+			 28 1 16400 0 0 0 0 1 0 0 0 0
+@TOCPG3@<+A>16.00
+
+>
+			 29 0 16384 0 0 0 0 1 0 0 0 0
+@TOC2@La classe Restaurant
+
+>
+			 29 1 16400 0 0 0 0 1 0 0 0 0
+@TOCPG2@<+A>17.00
+
+>
+			 30 0 16384 0 0 0 0 1 0 0 0 0
+@TOC3@Restaurant.h
+
+>
+			 30 1 16400 0 0 0 0 1 0 0 0 0
+@TOCPG3@<+A>17.00
+
+>
+			 31 0 16384 0 0 0 0 1 0 0 0 0
+@TOC3@Restaurant.C
+
+>
+			 31 1 16400 0 0 0 0 1 0 0 0 0
+@TOCPG3@<+A>19.00
+
+>
+			 32 0 16384 0 0 0 0 1 0 0 0 0
+@TOC2@Le programme principal
+
+>
+			 32 1 16400 0 0 0 0 1 0 0 0 0
+@TOCPG2@<+A>23.00
+
+>
+			 33 0 16384 0 0 0 0 1 0 0 0 0
+@TOC1@IV. Exemple d'utilisation
+
+>
+			 33 1 16400 0 0 0 0 1 0 0 0 0
+@TOCPG1@<+A>24.00
+
+>
+			 0 0 16384 0 0 0 0 1 0 0 0 0
+@TOC1@I. Introduction
+
+>
+			 0 1 16400 0 0 0 0 1 0 0 0 0
+@TOCPG1@<+A>1.00
+
+>
+			 1 0 16384 0 0 0 0 1 0 0 0 0
+@TOC1@II. Les classes
+
+>
+			 1 1 16400 0 0 0 0 1 0 0 0 0
+@TOCPG1@<+A>2.00
+
+>
+		[e]
+	[tble]
+[lay]
+	Standard
+	516
+	[rght]
+		16833
+		11908
+		1
+		1440
+		1440
+		1
+		1440
+		1440
+		0
+		1
+		0
+		1
+		0
+		2
+		1
+		1440
+		10465
+		12
+		1
+		720
+		1
+		1440
+		1
+		2160
+		1
+		2880
+		1
+		3600
+		1
+		4320
+		1
+		5040
+		1
+		5760
+		1
+		6480
+		1
+		7200
+		1
+		7920
+		1
+		8640
+	[hrght]
+	[lyfrm]
+		1
+		11200
+		0
+		0
+		11908
+		1440
+		0
+		1
+		3
+		1 0 0 0 0 0 0
+		0
+		0
+		1
+	[frmlay]
+		1440
+		11908
+		1
+		1440
+		72
+		1
+		792
+		1440
+		0
+		1
+		0
+		1
+		1
+		0
+		1
+		1440
+		10465
+		2
+		2
+		4680
+		3
+		9360
+	[txt]
+@Header@T.P. C++		I.S.E.P. 1992-93
+
+>
+	[frght]
+	[lyfrm]
+		1
+		13248
+		0
+		15393
+		11908
+		16833
+		0
+		1
+		3
+		1 0 0 0 0 0 0
+		0
+		0
+		2
+	[frmlay]
+		16833
+		11908
+		1
+		1440
+		792
+		1
+		15465
+		1440
+		0
+		1
+		0
+		1
+		1
+		0
+		1
+		1440
+		10465
+		2
+		2
+		4680
+		3
+		9360
+	[txt]
+@Footer@Nathalie DARNEAU & Julien SIMON, bin<\t>me A2R2C	<:P11,0,>
+
+>
+[elay]
+[lay]
+	1
+	516
+	[rght]
+		16833
+		11908
+		1
+		1440
+		1440
+		1
+		1440
+		1440
+		0
+		1
+		0
+		1
+		0
+		2
+		1
+		1440
+		10468
+		12
+		1
+		720
+		1
+		1440
+		1
+		2160
+		1
+		2880
+		1
+		3600
+		1
+		4320
+		1
+		5040
+		1
+		5760
+		1
+		6480
+		1
+		7200
+		1
+		7920
+		1
+		8640
+	[hrght]
+	[lyfrm]
+		1
+		11200
+		0
+		0
+		11908
+		1440
+		0
+		1
+		3
+		1 0 0 0 0 0 0
+		0
+		0
+		4
+	[frmlay]
+		1440
+		11908
+		1
+		1440
+		72
+		1
+		792
+		1440
+		0
+		1
+		0
+		1
+		1
+		0
+		1
+		1440
+		10465
+		2
+		2
+		4680
+		3
+		9360
+	[txt]
+@Header@T.P. C++		I.S.E.P. 1992-93
+
+>
+	[frght]
+	[lyfrm]
+		1
+		13248
+		0
+		15393
+		11908
+		16833
+		0
+		1
+		3
+		1 0 0 0 0 0 0
+		0
+		0
+		5
+	[frmlay]
+		16833
+		11908
+		1
+		1440
+		792
+		1
+		15465
+		1440
+		0
+		1
+		0
+		1
+		1
+		0
+		1
+		1440
+		10465
+		2
+		2
+		4680
+		3
+		9360
+	[txt]
+@Footer@Nathalie DARNEAU & Julien SIMON, bin<\t>me A2R2C	
+
+>
+[elay]
+[l1]
+	1
+[pg]
+	25
+	1 5 5 17920 0 0 0 65533 65535 Standard	65535 0 0	0 0 0 0 0 0 0 65535 0 0 65535 0 0 0 0 0
+	12 0 51 512 0 0 0 65533 65535 Standard	65535 0 0	0 0 0 0 0 0 0 65535 0 0 65535 0 0 0 0 0
+	27 235 15 512 0 0 0 65533 65535 Standard	65535 0 0	0 0 0 0 0 0 0 65535 0 0 65535 0 0 0 0 0
+	42 182 26 0 0 0 0 65533 65535 Standard	65535 0 0	0 0 0 0 0 0 0 65535 0 0 65535 0 0 0 0 0
+	77 0 8 0 0 0 0 65533 2 Standard	65535 0 0	0 0 0 0 0 0 0 65535 0 0 65535 0 0 0 0 0
+	116 0 8 0 0 0 0 65533 2 Standard	65535 0 0	0 0 0 0 0 0 0 65535 0 0 65535 0 0 0 0 0
+	153 0 15 512 0 0 0 65533 2 Standard	65535 0 0	0 0 0 0 0 0 0 65535 0 0 65535 0 0 0 0 0
+	192 0 8 0 0 0 0 65533 2 Standard	65535 0 0	0 0 0 0 0 0 0 65535 0 0 65535 0 0 0 0 0
+	228 0 19 512 0 0 0 65533 2 Standard	65535 0 0	0 0 0 0 0 0 0 65535 0 0 65535 0 0 0 0 0
+	268 0 17 0 0 0 0 65533 65535 Standard	65535 0 0	0 0 0 0 0 0 0 65535 0 0 65535 0 0 0 0 0
+	293 0 85 512 0 0 0 65533 65535 Standard	65535 0 0	0 0 0 0 0 0 0 65535 0 0 65535 0 0 0 0 0
+	323 0 22 512 0 0 0 65533 65535 Standard	65535 0 0	0 0 0 0 0 0 0 65535 0 0 65535 0 0 0 0 0
+	362 0 45 0 0 0 0 65533 2 Standard	65535 0 0	0 0 0 0 0 0 0 65535 0 0 65535 0 0 0 0 0
+	402 0 30 0 0 0 0 65533 2 Standard	65535 0 0	0 0 0 0 0 0 0 65535 0 0 65535 0 0 0 0 0
+	440 0 17 512 0 0 0 65533 65535 Standard	65535 0 0	0 0 0 0 0 0 0 65535 0 0 65535 0 0 0 0 0
+	479 0 42 0 0 0 0 65533 2 Standard	65535 0 0	0 0 0 0 0 0 0 65535 0 0 65535 0 0 0 0 0
+	519 0 44 0 0 1 0 65533 2 Standard	65535 0 0	0 0 0 0 0 0 0 65535 0 0 65535 0 0 0 0 0
+	558 0 30 0 0 0 0 65533 2 Standard	65535 0 0	0 0 0 0 0 0 0 65535 0 0 65535 0 0 0 0 0
+	598 0 8 0 0 0 0 65533 2 Standard	65535 0 0	0 0 0 0 0 0 0 65535 0 0 65535 0 0 0 0 0
+	638 0 28 0 0 0 0 65533 2 Standard	65535 0 0	0 0 0 0 0 0 0 65535 0 0 65535 0 0 0 0 0
+	678 0 29 0 0 0 0 65533 2 Standard	65535 0 0	0 0 0 0 0 0 0 65535 0 0 65535 0 0 0 0 0
+	718 0 45 0 0 0 0 65533 2 Standard	65535 0 0	0 0 0 0 0 0 0 65535 0 0 65535 0 0 0 0 0
+	748 0 13 512 0 0 0 65533 2 Standard	65535 0 0	0 0 0 0 0 0 0 65535 0 0 65535 0 0 0 0 0
+	787 0 0 0 0 0 0 65533 65535 Standard	65535 0 0	0 0 0 0 0 0 0 65535 0 0 65535 0 0 0 0 0
+	825 0 115 1025 0 0 0 65533 65535 Standard	65535 0 0	0 0 0 0 0 0 0 65535 0 0 65535 0 0 0 0 0
+[edoc]
+<:t0><:p</B>Standard>
+
+@Subtitle@<:#508,9025>Introduction
+
+<:#1016,9025>Le but de ce T.P. est de simuler le fonctionnement d'un restaurant de type 'fastfood'. 
+
+<:#2032,9025>Un nombre donn<\i> de serveurs travaille dans le restaurant. Chacun d'entre eux est caract<\i>ris<\i> par un temps moyen de service : son temps effectif de service est calcul<\i> selon une loi de Poisson 
+<\`> chaque fois qu'il sert un client. 
+
+<:#3048,9025>Les clients entrent dans le restaurant <\`> intervalles variables, r<\i>partis selon une loi de Poisson autour d'un temps moyen d<\i>termin<\i>. Deux cas se pr<\i>sentent lors de l'arriv<\i>e d'un client. Si tous les serveurs sont occup<\i>s, celui-ci est p
+lac<\i> dans la file d'attente. D<\h>s qu'un serveur est libre, il prend en charge le premier client de la file d'attente. 
+
+<:#1016,9025>La simulation prend fin lorsque tous les clients de la file d'attente ont 
+<\i>t<\i> servis.
+
+<:#508,9025>
+
+<:#508,9025>Les donn<\i>es de d<\i>part sont :
+
+<:#508,9025>- la dur<\i>e de la simulation.
+
+<:#1016,9025>- le temps moyen s'<\i>coulant entre l'arriv<\i>e de deux 			clients.
+
+<:#508,9025>- le nombre de serveurs travaillant dans le restaurant.
+
+- le temps moyen de service de chaque serveur.<:p<* >>
+
+<:#508,9025>
+
+<:#508,9025>Les r<\i>sultats demand<\i>s sont :
+
+<:#508,9025>- la dur<\i>e r<\i>elle de la simulation.
+
+<:#508,9025>- le nombre total de clients servis.
+
+<:#508,9025>- le nombre de clients qui ont attendu.
+
+<:#508,9025>- les longueurs moyenne et maximale de la file d'attente.
+
+<:#508,9025>- le temps moyen d'attente dans la file.
+
+<:#1016,9025>- pour chaque serveur : le nombre de clients servis, le 		temps de service, le pourcentage d'utilisation.
+
+<:#508,9025>
+
+@Subtitle@<:#508,9025>Les classes
+
+@Bullet@<:#254,9025>La classe Evenement
+
+<:#2032,9025>Cette classe abstraite d<\i>crit un <\i>venement qui se produit dans le restaurant : l'heure 
+<\`> laquelle il se produit et la fa<\g>on dont il faut le traiter. Elle poss<\h>de deux classes d<\i>riv<\i>es :
+
+<:#508,9025>
+
+@Bullet 1@<:#254,9025>la classe ArriveeClient
+
+Cette classe g<\h>re l'arriv<\i>e d'un nouveau client dans le resturant. Lorsque cet 
+<\i>venement se produit, l'heure d'arriv<\i>e du prochain client est calcul<\i>e. Si un serveur est libre, il sert le client. Sinon, ce dernier est mis dans la file d'attente.<:p<* >>
+
+<:#508,9025>
+
+@Bullet 1@<:#254,9025>La classe LiberationServeur
+
+<:#1524,9025>Cette classe g<\h>re le m<\i>canisme de lib<\i>ration d'un serveur. D<\h>s qu'un serveur est lib<\i>r<\i>, il sert le premier client de la file d'attente.
+
+<:#508,9025>
+
+@Bullet@<:#254,9025>La classe Temps
+
+<:#2032,9025>La classe Temps permet de g<\i>rer l'<\i>coulement du temps dans le restaurant. Il y a une seule instance de la classe Temps par restaurant. Un Temps est compos<\i> de l'heure courante et d'une liste tri<\i>e d'<\i>v<\h>nements.
+
+<:#508,9025>
+
+@Bullet@<:#254,9025>La classe Client
+
+<:#1016,9025>La classe Client d<\i>crit un client du restaurant. Elle contient l'heure d'arriv<\i>e du client.
+
+<:#508,9025>
+
+@Bullet@<:#254,9025>La classe FileAttente
+
+<:#3048,9025>La classe FileAttente d<\i>crit la file dans laquelle attendent les clients lorsque tous les serveurs sont occup<\i>s. Elle contient les donn<\i>es n<\i>cessaires au calcul des statistiques la concernant : nombre de clients ayant attendu, longueurs moyenne 
+et maximale, temps moyen d'attente dans la file.
+
+<:#508,9025>
+
+@Bullet@<:#254,9025>La classe Serveur 
+
+<:#2032,9025>La classe Serveur d<\i>crit un serveur du restaurant. Elle contient les donn<\i>es n<\i>cessaires au calcul des statistiques le concernant : temps total de service, nombre de clients servis, pourcentage d'utilisation.
+
+<:#508,9025>
+
+@Bullet@<:#254,9025>La classe Restaurant
+
+<:#1016,9025>La classe Restaurant d<\i>crit le restaurant qui est l'objet de la simulation.
+
+<:#508,9025>
+
+@Subtitle@<:#508,9025>Listing 
+
+@Bullet@<:#254,9025>La classe Evenement
+
+<:#508,9025>
+
+@Bullet 1@<:#254,9025>Evenement.h
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>#ifndef __EVENEMENT_H
+
+<:#346,9025><:f160,,>#define __EVENEMENT_H
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>// La classe abstraite Evenement decrit les evenements qui se produisent
+
+<:#346,9025><:f160,,>// dans le restaurant.
+
+<:#346,9025><:f160,,>// Les evenements se produisent par ordre chronologique.
+
+<:#346,9025><:f160,,>// Evenement derive de Magnitude pour que SortedCollection soit accessible.
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>#include "Magnitud.h"
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>class Restaurant;
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>class Evenement : public Magnitude {
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>protected:
+
+<:#346,9025><:f160,,>   double _heure;
+
+<:#346,9025><:f160,,>        // Heure a laquelle se produit l'evenement.
+
+<:#346,9025><:f160,,>   Restaurant * _fastfood;
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>public:
+
+<:#346,9025><:f160,,>   virtuals(Evenement);
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>   Evenement(Restaurant *, double);
+
+<:#346,9025><:f160,,>   // On indique l'heure a laquelle se produit l'evenement et
+
+<:#346,9025><:f160,,>   // le restaurant ou il se produit.
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>   virtual void traiter() = 0;
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>   double heure() const;
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>   int lessThan (const Magnitude * m) const;
+
+<:#346,9025><:f160,,>   // Permet d'ordonner les evenements par ordre chronologique.
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>};
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>inline Evenement :: Evenement(Restaurant * resto, double h) {
+
+<:#346,9025><:f160,,>	_heure = h;
+
+<:#346,9025><:f160,,>	_fastfood = resto;
+
+<:#346,9025><:f160,,>}
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>inline double Evenement :: heure() const { return _heure;}
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>inline int Evenement :: lessThan (const Magnitude * m) const {
+
+<:#346,9025><:f160,,>    return _heure << ((Evenement *)m) -<;> _heure;
+
+<:#346,9025><:f160,,>}
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>#endif
+
+<:#346,9025><:f160,,>
+
+@Bullet@<:#254,9025><:f240,,>La classe ArriveeClient
+
+<:#508,9025><:f240,,>
+
+@Bullet 1@<:#254,9025><:f240,,>ArriveeClient.h
+
+<:#508,9025><:f240,,>
+
+<:#346,9025><:f160,,>#ifndef __ARRIVEECLIENT_H
+
+<:#346,9025><:f160,,>#define __ARRIVEECLIENT_H
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>// La classe ArriveeClient gere l'arrivee d'un nouveau client dans le
+
+<:#346,9025><:f160,,>// restaurant.
+
+<:#346,9025><:f160,,>// Elle d<\i>rive de la classe Evenement.
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>#include "Evenemen.h"
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>class Restaurant;
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>class ArriveeClient : public Evenement {
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,> public:
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>    ArriveeClient(Restaurant *, double t);
+
+<:#346,9025><:f160,,>            // On indique l'heure d'arrivee du client et le restaurant dans
+
+<:#346,9025><:f160,,>            // lequel il arrive.
+
+<:#346,9025><:f160,,>      
+
+<:#346,9025><:f160,,>    virtuals(ArriveeClient);
+
+<:#346,9025><:f160,,>    ostream& printOn (ostream& os) const;
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>    // L'arrivee d'un client entraine le calcul de l'heure d'arrivee
+
+<:#346,9025><:f160,,>    // du client suivant si l'heure de fermeture n'est pas atteinte.
+
+<:#346,9025><:f160,,>    // De plus, si un ou plusieurs serveurs sont libres, celui-ci se dirigera
+
+<:#346,9025><:f160,,>    // vers l'un d'eux hasard.
+
+<:#346,9025><:f160,,>    // Si tous les serveurs sont occupes, il va dans la file d'attente.
+
+<:#346,9025><:f160,,>    void traiter ();
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>};
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>inline ostream& ArriveeClient :: printOn (ostream& os) const {
+
+<:#346,9025><:f160,,>   return os <<<< "Arrivee client";
+
+<:#346,9025><:f160,,>   // affichage de l'evenement ArriveeClient
+
+<:#346,9025><:f160,,>}
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>#endif
+
+<:#346,9025><:f160,,>
+
+@Bullet 1@<:#254,9025><:f240,,>ArriveeClient.C
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>#include "Restaura.h"
+
+<:#346,9025><:f160,,>#include "ArriveeC.h"
+
+<:#346,9025><:f160,,>#include "Temps.h"
+
+<:#346,9025><:f160,,>#include "Client.h"
+
+<:#346,9025><:f160,,>#include "Random.h"
+
+<:#346,9025><:f160,,>#include "Serveur.h"
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>ArriveeClient :: ArriveeClient(Restaurant * resto, double t)
+
+<:#346,9025><:f160,,>   : Evenement(resto,t)
+
+<:f160,,>{}<:p<* >>
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>void ArriveeClient :: traiter() {
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>   Serveur * serveur;
+
+<:#346,9025><:f160,,>   Temps * T = _fastfood -<;> horloge();
+
+<:#346,9025><:f160,,>   Client * client = new Client(T -<;> heure());
+
+<:#346,9025><:f160,,>        // Creation du client qui doit arriver a l'heure indiquee.
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>   double heureArriveeClientSuivant =
+
+<:#346,9025><:f160,,>   T-<;>heure() + Random :: get(_fastfood -<;> tempsMoyArrivee());
+
+<:#346,9025><:f160,,>        // Calcul de l'heure d'arrivee du prochain client.
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>   serveur = _fastfood -<;> serveurLibre();
+
+<:#346,9025><:f160,,>	// renvoie un serveur libre (s'il y en a un).
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>   if (heureArriveeClientSuivant << _fastfood -<;> dureePrevue())
+
+<:#346,9025><:f160,,>      T -<;> ajouter(new ArriveeClient(_fastfood, heureArriveeClientSuivant));
+
+<:#346,9025><:f160,,>      // Creation et ajout dans la liste des evenements de
+
+<:#346,9025><:f160,,>      // l'arrivee du prochain client, si l'heure de son arrivee
+
+<:#346,9025><:f160,,>      // ne depasse pas l'heure de fermeture prevue.
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>   if (serveur)
+
+<:#346,9025><:f160,,>      serveur -<;> servir(client);
+
+<:#346,9025><:f160,,>      // on sert le client s'il y a un serveur libre.
+
+<:#346,9025><:f160,,>   else
+
+<:#346,9025><:f160,,>      _fastfood -<;> fileAttente() -<;> ajouter(client);
+
+<:#346,9025><:f160,,>      // sinon, il fait la queue.
+
+<:#346,9025><:f160,,>}
+
+<:#346,9025><:f160,,>
+
+@Bullet@<:#254,9025><:f240,,>La classe LiberationServeur
+
+<:#508,9025><:f240,,>
+
+@Bullet 1@<:#254,9025><:f240,,>LiberationServeur.h
+
+<:#508,9025><:f240,,>
+
+<:#346,9025><:f160,,>#ifndef __LIBERATION_SERVEUR_H
+
+<:#346,9025><:f160,,>#define __LIBERATION_SERVEUR_H
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>// La classe LiberationServeur gere le mecanisme de liberation d'un serveur
+
+<:#346,9025><:f160,,>// Cette classe derive de Evenement.
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>#include "Evenemen.h"
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>class Restaurant;
+
+<:#346,9025><:f160,,>class Serveur;
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>class LiberationServeur : public Evenement {
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>   private:
+
+<:#346,9025><:f160,,>      Serveur * _serveur;
+
+<:#346,9025><:f160,,>        // serveur a liberer.
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>   public:
+
+<:#346,9025><:f160,,>      LiberationServeur(Restaurant *, double, Serveur *);
+
+<:#346,9025><:f160,,>	// On precise le serveur a liberer, l'heure a laquelle il est libere
+
+<:#346,9025><:f160,,>        // et le restaurant.
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>      virtuals(LiberationServeur);
+
+<:#346,9025><:f160,,>      ostream& printOn (ostream& os) const;
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>      void traiter();
+
+<:#346,9025><:f160,,>	// Le Serveur est libere et sert le premier client de la file
+
+<:#346,9025><:f160,,>	// d'attente si celle-ci n'est pas vide.
+
+<:#346,9025><:f160,,>};
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>inline LiberationServeur :: LiberationServeur (Restaurant * resto,
+
+<:#346,9025><:f160,,>					       double t, Serveur * serv)
+
+<:#346,9025><:f160,,>   : Evenement (resto,t)
+
+<:#346,9025><:f160,,>{  _serveur = serv;
+
+<:#346,9025><:f160,,>}
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>inline ostream& LiberationServeur :: printOn (ostream& os) const {
+
+<:#346,9025><:f160,,>   return os <<<< "Liberation Serveur";
+
+<:#346,9025><:f160,,>}
+
+<:#346,9025><:f160,,>
+
+<:f160,,>#endif<:p<* >>
+
+<:#346,9025><:f160,,>
+
+@Bullet@<:#254,9025><:f240,,>La classe Temps
+
+<:#508,9025><:f240,,>
+
+@Bullet 1@<:#254,9025><:f240,,>Temps.h
+
+<:#346,9025><:f160,,>#ifndef __TEMPS_H
+
+<:#346,9025><:f160,,>#define __TEMPS_H
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>// La classe Temps permet de gerer le temps.
+
+<:#346,9025><:f160,,>// Un temps est un double, exprime en minutes.
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>#include "Object.h"
+
+<:#346,9025><:f160,,>#include "SortedCo.h"
+
+<:#346,9025><:f160,,>#include "Evenemen.h"
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>class Temps : public Object{
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,> protected:
+
+<:#346,9025><:f160,,>    double _heureCourante;
+
+<:#346,9025><:f160,,>    SortedCollection _gestEvt;
+
+<:#346,9025><:f160,,>        // liste d'evenements.
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>  public:
+
+<:#346,9025><:f160,,>    virtuals(Temps);
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>    Temps ();
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>    void ajouter (Evenement *);
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>    Evenement * suivant ();
+
+<:#346,9025><:f160,,>        // On recupere le prochain evenement de la liste.
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>    double heure() const;
+
+<:#346,9025><:f160,,>       // renvoie l'heure courante.
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>    int simulationTerminee() const;
+
+<:#346,9025><:f160,,>    // booleen indiquant la fin de la simulation
+
+<:#346,9025><:f160,,>};
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>inline double Temps :: heure() const {return _heureCourante;}
+
+<:#346,9025><:f160,,>#endif<:f>
+
+<:#508,9025><:f240,,>
+
+@Bullet 1@<:#254,9025><:f240,,>Temps.C
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>#include "Temps.h"
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>Temps :: Temps () { _heureCourante = 0;}
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>void Temps :: ajouter(Evenement * evenement) { _gestEvt.add(evenement);}
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>Evenement * Temps :: suivant() {
+
+<:#346,9025><:f160,,>   Evenement * evenement;
+
+<:#346,9025><:f160,,>   if (_gestEvt.isEmpty()) {
+
+<:#346,9025><:f160,,>      evenement = (Evenement *) 0;
+
+<:#346,9025><:f160,,>      // on renvoie 0 s'il n'y a plus d'evenements.
+
+<:#346,9025><:f160,,>   }
+
+<:#346,9025><:f160,,>   else {
+
+<:#346,9025><:f160,,>	   evenement = (Evenement *) _gestEvt.removeFirst();
+
+<:#346,9025><:f160,,>      _heureCourante = evenement -<;> heure();
+
+<:#346,9025><:f160,,>      // L'heure courante est l'heure du dernier evenement retire.
+
+<:#346,9025><:f160,,>   }
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>   return evenement;
+
+<:#346,9025><:f160,,>}
+
+<:#346,9025><:f160,,>
+
+<:f160,,>int Temps:: simulationTerminee () const { return _gestEvt.isEmpty();}<:f><:p<* >>
+
+<:#508,9025>
+
+@Bullet@<:#254,9025>La classe Client
+
+<:#508,9025>
+
+@Bullet 1@<:#254,9025>Client.h
+
+<:#508,9025>
+
+<:#346,9025><:f160,,>#ifndef __CLIENT_H
+
+<:#346,9025><:f160,,>#define __CLIENT_H
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>// La classe Client definit un client du restaurant.
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>#include "Object.h"
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>class Client : public Object {
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>   protected:
+
+<:#346,9025><:f160,,>      double _heureArrivee;
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>   public:
+
+<:#346,9025><:f160,,>      virtuals(Client);
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>      Client(double);
+
+<:#346,9025><:f160,,>        // On indique l'heure d'arrivee du client.
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>      double heureArrivee() const;
+
+<:#346,9025><:f160,,>};
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>inline double Client :: heureArrivee() const { return _heureArrivee;}
+
+<:#346,9025><:f160,,>inline Client :: Client(double h) { _heureArrivee = h;}
+
+<:#346,9025><:f160,,>
+
+<:f160,,>#endif<:f><:p<* >>
+
+<:#508,9025>
+
+@Bullet@<:#254,9025>La classe FileAttente
+
+<:#508,9025>
+
+@Bullet 1@<:#254,9025>FileAttente.h
+
+<:#508,9025>
+
+<:#346,9025><:f160,,>#ifndef __FILE_ATTENTE_H
+
+<:#346,9025><:f160,,>#define __FILE_ATTENTE_H
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>// La classe FileAttente decrit la file des clients attendant d'etre servis.
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>#include "OrderedC.h"
+
+<:#346,9025><:f160,,>class Restaurant;
+
+<:#346,9025><:f160,,>class Client;
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>class FileAttente : public Object {
+
+<:#346,9025><:f160,,>  
+
+<:#346,9025><:f160,,>   private:
+
+<:#346,9025><:f160,,>      Restaurant *      _fastfood;
+
+<:#346,9025><:f160,,>      OrderedCollection _file;
+
+<:#346,9025><:f160,,>	// file d'attente des clients.
+
+<:#346,9025><:f160,,>      int _nbTotalClients;
+
+<:#346,9025><:f160,,>        // nombre de clients entres dans le restaurant.
+
+<:#346,9025><:f160,,>      double _heureDernierEvenement;
+
+<:#346,9025><:f160,,>	// heure du dernier evenement
+
+<:#346,9025><:f160,,>      int _longueurMax;
+
+<:#346,9025><:f160,,>	// longueur maximale de la file d'attente.
+
+<:#346,9025><:f160,,>      double _aire;
+
+<:#346,9025><:f160,,>	// Aire de la courbe representant le nombre de clients en attente
+
+<:#346,9025><:f160,,>	// en fonction du temps.
+
+<:#346,9025><:f160,,>      double _tempsTotalAttente;
+
+<:#346,9025><:f160,,>	// Somme des temps d'attente de tous les clients qui sont
+
+<:#346,9025><:f160,,>	// passes dans la file.
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>   public:
+
+<:#346,9025><:f160,,>      FileAttente(Restaurant * resto);
+
+<:#346,9025><:f160,,>      virtuals(FileAttente);
+
+<:#346,9025><:f160,,>      ~FileAttente();
+
+<:#346,9025><:f160,,>      int      nbTotalClientsFile() const;
+
+<:#346,9025><:f160,,>      int      longueur()      const;
+
+<:#346,9025><:f160,,>      int      longueurMax ()  const;
+
+<:#346,9025><:f160,,>      double   longueurMoy ()  const;
+
+<:#346,9025><:f160,,>      double   aireAttente()   const;
+
+<:#346,9025><:f160,,>      int      estVide()       const;
+
+<:#346,9025><:f160,,>      void     ajouter(Client *);
+
+<:#346,9025><:f160,,>      Client * retirer();
+
+<:#346,9025><:f160,,>};
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>inline int FileAttente :: nbTotalClientsFile () const {return _nbTotalClients;}
+
+<:#346,9025><:f160,,>inline int FileAttente :: longueur () const {return _file.size();}
+
+<:#346,9025><:f160,,>inline int FileAttente :: longueurMax () const {return _longueurMax;}
+
+<:#346,9025><:f160,,>inline double FileAttente :: aireAttente () const {return _aire;}
+
+<:#346,9025><:f160,,>inline int FileAttente :: estVide () const {return (_file.isEmpty());}
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>#endif<:f>
+
+<:#508,9025>
+
+@Bullet 1@<:#254,9025>FileAttente.C
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>#include "Restaura.h"
+
+<:#346,9025><:f160,,>#include "FileAtte.h"
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>FileAttente :: FileAttente(Restaurant * resto) {
+
+<:#346,9025><:f160,,>   _longueurMax = 0;
+
+<:#346,9025><:f160,,>   _aire = 0;
+
+<:#346,9025><:f160,,>   _nbTotalClients = 0;
+
+<:#346,9025><:f160,,>   _heureDernierEvenement = 0;
+
+<:#346,9025><:f160,,>   _tempsTotalAttente = 0;
+
+<:#346,9025><:f160,,>   _fastfood = resto;
+
+<:#346,9025><:f160,,>}
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>FileAttente :: ~FileAttente() {
+
+<:#346,9025><:f160,,>   for (int i = 0; i << _file.size(); i++)
+
+<:#346,9025><:f160,,>      delete _file.at(i);
+
+<:#346,9025><:f160,,>}
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>double FileAttente :: longueurMoy () const {
+
+<:#346,9025><:f160,,>// Calcul de la longueur moyenne de la file d'attente a l'aide de
+
+<:#346,9025><:f160,,>// l'aire que l'on divise par la duree totale de simulation.
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>   double longueurMoy;
+
+<:#346,9025><:f160,,>   longueurMoy = _aire/_fastfood -<;> dureeReelle();
+
+<:#346,9025><:f160,,>   return longueurMoy;
+
+<:#346,9025><:f160,,>}
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>void FileAttente :: ajouter (Client * c) {
+
+<:#346,9025><:f160,,>   _nbTotalClients++;
+
+<:#346,9025><:f160,,>   double heureCourante = _fastfood -<;> horloge() -<;> heure();
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>   _aire += _file.size() * ( heureCourante - _heureDernierEvenement);
+
+<:#346,9025><:f160,,>	   // mise a jour de l'aire.
+
+<:#346,9025><:f160,,>   _file.addLast(c);
+
+<:#346,9025><:f160,,>   _heureDernierEvenement = heureCourante;
+
+<:#346,9025><:f160,,>        // mise a jour de l'heure du dernier evenement.
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>   if (_longueurMax << _file.size())
+
+<:#346,9025><:f160,,>              _longueurMax = _file.size();
+
+<:#346,9025><:f160,,>        // mise a jour de la longueur maximale de la file si necessaire.
+
+<:#346,9025><:f160,,>}
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>Client * FileAttente :: retirer () {
+
+<:#346,9025><:f160,,>   Client * c;
+
+<:#346,9025><:f160,,>   double heureCourante = _fastfood-<;>horloge()-<;>heure();
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>   if (! _file.isEmpty()) {
+
+<:#346,9025><:f160,,>      _aire += _file.size() * (heureCourante - _heureDernierEvenement);
+
+<:#346,9025><:f160,,>      c = (Client *) _file.removeFirst();
+
+<:#346,9025><:f160,,>        // Retrait du premier client de la file.
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>      _tempsTotalAttente += ( heureCourante - c-<;>heureArrivee() );
+
+<:#346,9025><:f160,,>        // On augmente le temps total d'attente.
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>      _heureDernierEvenement = heureCourante;
+
+<:#346,9025><:f160,,>        //<:f><:f160,,>Mise a jour de l'heure du dernier evenement.
+
+<:#346,9025><:f160,,>   }
+
+<:#346,9025><:f160,,>   else c = 0;
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>   return c;
+
+<:f160,,>}<:f><:p<* >>
+
+<:#508,9025>
+
+@Bullet@<:#254,9025>La classe Serveur
+
+<:#508,9025>
+
+@Bullet 1@<:#254,9025>Serveur.h
+
+<:#508,9025>
+
+<:#346,9025><:f160,,>#ifndef __SERVEUR_H
+
+<:#346,9025><:f160,,>#define __SERVEUR_H
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>// La classe Serveur decrit un serveur du restaurant.
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>#include "Object.h"
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>class Restaurant;
+
+<:#346,9025><:f160,,>class Client;
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>class Serveur : public Object {
+
+<:#346,9025><:f160,,>  
+
+<:#346,9025><:f160,,>   protected:
+
+<:#346,9025><:f160,,>      double _tempsMoyenService;
+
+<:#346,9025><:f160,,>      Restaurant * _fastfood;
+
+<:#346,9025><:f160,,>      double _tempsTotalService;
+
+<:#346,9025><:f160,,>      int _nbClients;
+
+<:#346,9025><:f160,,>        // nombre de clients servis par le serveur.
+
+<:#346,9025><:f160,,>      int _libre;
+
+<:#346,9025><:f160,,>      // booleen indiquant si le serveur est libre ou non.
+
+<:#346,9025><:f160,,> 
+
+<:#346,9025><:f160,,>   public:
+
+<:#346,9025><:f160,,>      virtuals(Serveur);
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>      Serveur(Restaurant *, double);
+
+<:#346,9025><:f160,,>      // On indique le temps moyen de service du serveur et le restaurant.
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>      double tempsMoyenService() const;
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>      double tempsTotalService() const;
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>      double pourcentageUtilisation() const;
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>      int nbClientsServis() const;
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>      int estLibre() const;
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>      void servir(Client *);
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>      void liberer();
+
+<:#346,9025><:f160,,>};
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>inline double Serveur :: tempsMoyenService() const {return _tempsMoyenService;}
+
+<:#346,9025><:f160,,>inline double Serveur :: tempsTotalService() const {return _tempsTotalService;}
+
+<:#346,9025><:f160,,>inline int Serveur :: nbClientsServis() const {return _nbClients;}
+
+<:#346,9025><:f160,,>inline int Serveur :: estLibre() const {return _libre;}
+
+<:#346,9025><:f160,,>inline void Serveur :: liberer() {_libre = 1;}
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>#endif
+
+<:#346,9025><:f160,,>
+
+@Bullet 1@<:#254,9025><:f240,,>Serveur.C
+
+<:#508,9025>
+
+<:#346,9025><:f160,,>#include "Serveur.h"
+
+<:#346,9025><:f160,,>#include "Restaura.h"
+
+<:#346,9025><:f160,,>#include "Random.h"
+
+<:#346,9025><:f160,,>#include "Liberati.h"
+
+<:#346,9025><:f160,,>#include "Temps.h"
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>Serveur :: Serveur(Restaurant * resto, double tms) {
+
+<:#346,9025><:f160,,>	_tempsMoyenService = tms;
+
+<:#346,9025><:f160,,>	_fastfood        = resto;
+
+<:#346,9025><:f160,,>	_tempsTotalService = 0;
+
+<:#346,9025><:f160,,>	_nbClients         = 0;
+
+<:#346,9025><:f160,,>	_libre             = 1;
+
+<:#346,9025><:f160,,>	
+
+<:#346,9025><:f160,,>}
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>double Serveur :: pourcentageUtilisation() const {
+
+<:#346,9025><:f160,,>	return (100 * _tempsTotalService / (_fastfood -<;> dureeReelle()));
+
+<:#346,9025><:f160,,>}
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>void Serveur :: servir(Client * c) {
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>	Temps * T = _fastfood -<;> horloge();
+
+<:#346,9025><:f160,,>        double t = Random :: get(_tempsMoyenService);
+
+<:#346,9025><:f160,,>                // tirage aleatoire du temps de service.
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>        _nbClients ++;
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>        _libre = 0;
+
+<:#346,9025><:f160,,>                // Le serveur est occupe.
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>        _tempsTotalService += t;
+
+<:#346,9025><:f160,,>                // Incrementation du temps total de service.
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>	T -<;> ajouter(new LiberationServeur(_fastfood, t + T-<;>heure(), this ));
+
+<:#346,9025><:f160,,>                // On stocke l'heure de liberation du serveur.
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>        delete c;
+
+<:#346,9025><:f160,,>                // Une fois qu'il a ete servi, on supprime le client.
+
+<:#346,9025><:f160,,>}<:f>
+
+<:#508,9025><:f240,,>
+
+@Bullet@<:#254,9025><:f240,,>La classe Restaurant
+
+<:#508,9025><:f240,,>
+
+@Bullet 1@<:#254,9025><:f240,,>Restaurant.h
+
+<:#508,9025><:f240,,>
+
+<:#346,9025><:f160,,>#ifndef __RESTAURANT_H
+
+<:#346,9025><:f160,,>#define __RESTAURANT_H
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>// La classe Restaurant decrit la structure d'un restaurant et en permet
+
+<:#346,9025><:f160,,>// la simulation.
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>#include <<String.h<;>
+
+<:#346,9025><:f160,,>#include "Object.h"
+
+<:#346,9025><:f160,,>#include "Temps.h"
+
+<:#346,9025><:f160,,>#include "FileAtte.h"
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>class Serveur;
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>class Restaurant : public Object {
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>   private:
+
+<:#346,9025><:f160,,>      int _nbServeurs;
+
+<:#346,9025><:f160,,>        // Nombre de serveurs dans le restaurant.
+
+<:#346,9025><:f160,,>      Serveur ** _tableauServeurs;
+
+<:#346,9025><:f160,,>        // tableau de pointeurs sur les serveurs.
+
+<:#346,9025><:f160,,>      double _dureePrevue;
+
+<:#346,9025><:f160,,>        // duree prevue de la simulation.
+
+<:#346,9025><:f160,,>      double _tempsMoyArrivee;
+
+<:#346,9025><:f160,,>	// temps moyen qui s'ecoule entre l'arrivee de deux clients.
+
+<:#346,9025><:f160,,>      Temps _horloge;
+
+<:#346,9025><:f160,,>	// horloge permettant de gerer l'ecoulement du temps.
+
+<:#346,9025><:f160,,>      FileAttente  _fileAttente;
+
+<:#346,9025><:f160,,>        // file d'attente du restaurant.
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>      
+
+<:#346,9025><:f160,,>   public:
+
+<:#346,9025><:f160,,>      Restaurant ( int nbServeurs, double dureePrevue,
+
+<:#346,9025><:f160,,>			double tpsMoyArrClt);
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>      virtuals(Restaurant);
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>      ~Restaurant();
+
+<:#346,9025><:f160,,>      // Le destructeur detruit tous les serveurs apres simulation.
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>      void initServeurs();
+
+<:#346,9025><:f160,,>      // initialise le temps moyen de service des serveurs.
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>      int nbServeurs() const;
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>      double dureePrevue() const;
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>      double dureeReelle() const;
+
+<:#346,9025><:f160,,>	// renvoie la duree reelle de la simulation.
+
+<:#346,9025><:f160,,>	// elle peut depasser la duree prevue, car tous les clients qui font la
+
+<:#346,9025><:f160,,>	// queue doivent etre servis.
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>      double tempsMoyArrivee() const;
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>      Temps * horloge();
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>      FileAttente * fileAttente();
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>      Serveur * serveurLibre() const;
+
+<:#346,9025><:f160,,>	// renvoie un serveur libre choisi au hasard.
+
+<:#346,9025><:f160,,>	// si aucun n'est libre, renvoie zero.
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>      void go ();
+
+<:#346,9025><:f160,,>	// debute la simulation.
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>};
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>inline int Restaurant :: nbServeurs() const {
+
+<:#346,9025><:f160,,>   return _nbServeurs;
+
+<:#346,9025><:f160,,>}
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>inline double Restaurant :: dureePrevue() const {return _dureePrevue;}
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>inline double Restaurant :: dureeReelle()  const {
+
+<:#346,9025><:f160,,>   if (_horloge.simulationTerminee())
+
+<:#346,9025><:f160,,>      return _horloge.heure();
+
+<:#346,9025><:f160,,>   else
+
+<:#346,9025><:f160,,>      return _dureePrevue;
+
+<:#346,9025><:f160,,>}
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>inline double Restaurant :: tempsMoyArrivee() const {return _tempsMoyArrivee;}
+
+<:#346,9025><:f160,,>inline Temps * Restaurant :: horloge() {return &_horloge;}
+
+<:#346,9025><:f160,,>inline FileAttente * Restaurant :: fileAttente() {return &_fileAttente;}
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>#endif
+
+<:#346,9025><:f160,,>
+
+@Bullet 1@<:#254,9025><:f240,,>Restaurant.C
+
+<:#508,9025>
+
+<:#346,9025><:f160,,>#include <<iostream.h<;>
+
+<:#346,9025><:f160,,>#include <<stdlib.h<;>
+
+<:#346,9025><:f160,,>#include <<String.h<;>
+
+<:#346,9025><:f160,,>#include <<math.h<;>
+
+<:#346,9025><:f160,,>#include "Restaura.h"
+
+<:#346,9025><:f160,,>#include "FileAtte.h"
+
+<:#346,9025><:f160,,>#include "Temps.h"
+
+<:#346,9025><:f160,,>#include "Random.h"
+
+<:#346,9025><:f160,,>#include "Serveur.h"
+
+<:#346,9025><:f160,,>#include "ArriveeC.h"
+
+<:#346,9025><:f160,,>#ifndef RAND_MAX
+
+<:#346,9025><:f160,,>#define RAND_MAX 32767
+
+<:#346,9025><:f160,,>#endif
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>void Restaurant :: initServeurs() {
+
+<:#346,9025><:f160,,>   double tempsMoyenService;
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>   for (int i = 0; i << _nbServeurs; i++) {
+
+<:#346,9025><:f160,,>	 do {
+
+<:#346,9025><:f160,,>	    cout <<<< "Temps Moyen de Service du serveur n</p> " <<<< (i+1) <<<< " : ";
+
+<:#346,9025><:f160,,>	    cin <;><;> tempsMoyenService;
+
+<:#346,9025><:f160,,>	 } while (tempsMoyenService <<= 0);
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>	_tableauServeurs<[>i] = new Serveur(this, tempsMoyenService);
+
+<:#346,9025><:f160,,>	      // creation du ieme serveureur.
+
+<:#346,9025><:f160,,>   }
+
+<:#346,9025><:f160,,>}
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>Restaurant :: Restaurant (int nbServeurs, double dureePrevue,
+
+<:#346,9025><:f160,,>				double tempsMoyenArriveeClient)
+
+<:#346,9025><:f160,,>: _fileAttente(this)
+
+<:#346,9025><:f160,,>{
+
+<:#346,9025><:f160,,>   _nbServeurs      = nbServeurs;
+
+<:#346,9025><:f160,,>   _dureePrevue     = dureePrevue;
+
+<:#346,9025><:f160,,>   _tempsMoyArrivee = tempsMoyenArriveeClient;
+
+<:#346,9025><:f160,,>   _tableauServeurs = new Serveur* <[>_nbServeurs];
+
+<:#346,9025><:f160,,>   initServeurs();
+
+<:#346,9025><:f160,,>}
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>Restaurant :: ~Restaurant() {
+
+<:#346,9025><:f160,,>   delete <[>] _tableauServeurs;
+
+<:#346,9025><:f160,,>}
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>Serveur * Restaurant :: serveurLibre() const {
+
+<:#346,9025><:f160,,>   int j=0;
+
+<:#346,9025><:f160,,>   int nbServeursLibres = 0;
+
+<:#346,9025><:f160,,>   Serveur ** tmpserveur;
+
+<:#346,9025><:f160,,>	   // tableau de pointeurs les serveurs libres.
+
+<:#346,9025><:f160,,>   Serveur * serveur;
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>   tmpserveur = new Serveur* <[>_nbServeurs];
+
+<:#346,9025><:f160,,>   for (int i = 0; i << _nbServeurs; i++) {
+
+<:#346,9025><:f160,,>      if (_tableauServeurs<[>i] -<;> estLibre()) {
+
+<:#346,9025><:f160,,>	 tmpserveur<[>nbServeursLibres++] = _tableauServeurs<[>i];
+
+<:#346,9025><:f160,,>		 // Si des serveurs sont libres, on les met dans le tableau.
+
+<:#346,9025><:f160,,>      }
+
+<:#346,9025><:f160,,>   }
+
+<:#346,9025><:f160,,>   if (nbServeursLibres) {
+
+<:#346,9025><:f160,,>      j = (int) (nbServeursLibres * (double(rand())/RAND_MAX));
+
+<:#346,9025><:f160,,>	// choix d'un serveur libre.
+
+<:#346,9025><:f160,,>      serveur = tmpserveur<[>j];
+
+<:#346,9025><:f160,,>   }
+
+<:#346,9025><:f160,,>   else serveur = 0;
+
+<:#346,9025><:f160,,>   return serveur;
+
+<:#346,9025><:f160,,>}
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>void Restaurant :: go () {
+
+<:#346,9025><:f160,,>   Evenement * evenement;
+
+<:#346,9025><:f160,,>   Serveur * serveur;
+
+<:#346,9025><:f160,,>   int nombreTotalClients = 0;
+
+<:#346,9025><:f160,,>   double heureArriveePremierClient = Random :: get (_tempsMoyArrivee);
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>   _horloge.ajouter( new ArriveeClient(this, heureArriveePremierClient) );
+
+<:#346,9025><:f160,,>	// Generation de l'arrivee du premier client.
+
+<:#346,9025><:f160,,>   while ( ! _horloge.simulationTerminee() ) {
+
+<:#346,9025><:f160,,>      // Boucle de traitement des evenements.
+
+<:#346,9025><:f160,,>      evenement = _horloge.suivant();
+
+<:#346,9025><:f160,,>      evenement -<;> traiter();
+
+<:#346,9025><:f160,,>      if (evenement != 0) {
+
+<:#346,9025><:f160,,>	 delete evenement;
+
+<:#346,9025><:f160,,>	      // Desallocation de l'evenement lorsque celui-ci a ete traite.
+
+<:#346,9025><:f160,,>      }
+
+<:#346,9025><:f160,,>   }
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>// Affichage des resultats de la simulation
+
+<:#346,9025><:f160,,>   cout <<<< "\nResultats de la simulation sur le restaurant\n\n";
+
+<:#346,9025><:f160,,>   cout <<<< "Duree prevue    : " <<<< _dureePrevue <<<< "\n";
+
+<:#346,9025><:f160,,>   cout <<<< "Duree effective : " <<<< _horloge.heure() <<<< "\n";
+
+<:#346,9025><:f160,,>   cout <<<< "Resultats par serveur\n";
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>   for (int i = 0; i << _nbServeurs; i++) {
+
+<:#346,9025><:f160,,>      serveur = _tableauServeurs<[>i];
+
+<:#346,9025><:f160,,>      cout <<<< "Serveur n</p> " <<<< (i+1) <<<< ":\n";
+
+<:#346,9025><:f160,,>      cout <<<< "   Temps moyen de service    : "
+
+<:#346,9025><:f160,,>	   <<<< ceill(serveur-<;>tempsMoyenService()) <<<< " minute(s)\n";
+
+<:#346,9025><:f160,,>      cout <<<< "   Temps total de service    : "
+
+<:#346,9025><:f160,,>	   <<<< ceill(serveur-<;>tempsTotalService()) <<<< " minutes\n";
+
+<:#346,9025><:f160,,>      cout <<<< "   Nombre de clients servis  : "
+
+<:#346,9025><:f160,,>	   <<<< serveur-<;>nbClientsServis() <<<< "\n";
+
+<:#346,9025><:f160,,>      cout <<<< "   Pourcentage d'utilisation : "
+
+<:#346,9025><:f160,,>	   <<<< serveur-<;>pourcentageUtilisation() <<<< " %\n\n" ;
+
+<:#346,9025><:f160,,>      nombreTotalClients += serveur-<;>nbClientsServis();
+
+<:#346,9025><:f160,,>      // calcul du nombre total de clients servis.
+
+<:#346,9025><:f160,,>   }
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>   cout <<<< "Nombre total de clients servis          : "
+
+<:#346,9025><:f160,,>	<<<< nombreTotalClients <<<< "\n";
+
+<:#346,9025><:f160,,>   cout <<<< "Nombre total de clients qui ont attendu : "
+
+<:#346,9025><:f160,,>	<<<< _fileAttente.nbTotalClientsFile() <<<< "\n";
+
+<:#346,9025><:f160,,>   cout <<<< "Longueur moyenne de la file d'attente   : "
+
+<:#346,9025><:f160,,>	<<<< ceill(_fileAttente.longueurMoy()) <<<< " client(s)\n";
+
+<:#346,9025><:f160,,>   cout <<<< "Longueur maximale de la file d'attente  : "
+
+<:#346,9025><:f160,,>	<<<< ceill(_fileAttente.longueurMax()) <<<< " client(s)\n" ;
+
+<:#346,9025><:f160,,>   cout <<<< "Temps moyen d'attente dans la file      : "
+
+<:#346,9025><:f160,,>	<<<< _fileAttente.aireAttente()/nombreTotalClients <<<< " minute(s)\n\n" ;
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>}
+
+<:#508,9025><:f240,,>
+
+<:f160,,><:p<* >>
+
+<:#346,9025><:f160,,>
+
+@Bullet@<:#254,9025><:f240,,>Le programme principal
+
+<:#508,9025>
+
+<:#346,9025><:f160,,>#include "Restaura.h"
+
+<:#346,9025><:f160,,>#include <<iostream.h<;>
+
+<:#346,9025><:f160,,>#include <<String.h<;>
+
+<:#346,9025><:f160,,>#include <<stdlib.h<;>
+
+<:#346,9025><:f160,,>#include <<new.h<;>
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>void PlusDeMemoire() {
+
+<:#346,9025><:f160,,>   cout <<<< "Pas assez de m<\i>moire.\n";
+
+<:#346,9025><:f160,,>   exit(-1);
+
+<:#346,9025><:f160,,>}
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>void main () {
+
+<:#346,9025><:f160,,>   double dureePrevue;
+
+<:#346,9025><:f160,,>   int nbServeurs;
+
+<:#346,9025><:f160,,>   double tempsMoyenArriveeClients;
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>   set_new_handler(PlusDeMemoire);
+
+<:#346,9025><:f160,,>   do {
+
+<:#346,9025><:f160,,>      cout <<<< "Duree de la simulation : ";
+
+<:#346,9025><:f160,,>      cin <;><;> dureePrevue;
+
+<:#346,9025><:f160,,>      dureePrevue = dureePrevue * 60;
+
+<:#346,9025><:f160,,>   } while (dureePrevue <<= 0);
+
+<:#346,9025><:f160,,>   do {
+
+<:#346,9025><:f160,,>      cout <<<< "Nombre de serveurs: ";
+
+<:#346,9025><:f160,,>      cin <;><;> nbServeurs;
+
+<:#346,9025><:f160,,>   } while (nbServeurs << 1);
+
+<:#346,9025><:f160,,>   do {
+
+<:#346,9025><:f160,,>      cout <<<< "Intervalle de temps entre l'arrivee de deux clients : ";
+
+<:#346,9025><:f160,,>      cin <;><;> tempsMoyenArriveeClients;
+
+<:#346,9025><:f160,,>   } while ((tempsMoyenArriveeClients <<= 0)
+
+<:#346,9025><:f160,,>		|| (tempsMoyenArriveeClients <;> dureePrevue));
+
+<:#346,9025><:f160,,>   Restaurant resto((int) nbServeurs, dureePrevue,tempsMoyenArriveeClients);
+
+<:#346,9025><:f160,,>   resto.go();
+
+<:#346,9025><:f160,,>	 // Lancement de la simulation.
+
+<:#346,9025><:f160,,>}<:f>
+
+<:#508,9025>
+
+@Subtitle@<:#508,9025>Exemple d'utilisation
+
+<:#346,9025><:f160,,>Duree de la simulation : 8 heures
+
+<:#346,9025><:f160,,>Nombre de serveurs : 4
+
+<:#346,9025><:f160,,>Intervalle de temps entre l'arrivee de deux clients : 1.5 minute
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>Resultats de la simulation sur le restaurant
+
+<:#346,9025><:f160,,>Duree prevue    : 480 minutes 
+
+<:#346,9025><:f160,,>Duree effective : 479.00116 minutes
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>Serveur n</p> 1:
+
+<:#346,9025><:f160,,>   Temps moyen de service    : 2 minute(s)
+
+<:#346,9025><:f160,,>   Temps total de service    : 169 minutes
+
+<:#346,9025><:f160,,>   Nombre de clients servis  : 96
+
+<:#346,9025><:f160,,>   Pourcentage d'utilisation : 35.163818 %
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>Serveur n</p> 2:
+
+<:#346,9025><:f160,,>   Temps moyen de service    : 3 minute(s)
+
+<:#346,9025><:f160,,>   Temps total de service    : 206 minutes
+
+<:#346,9025><:f160,,>   Nombre de clients servis  : 79
+
+<:#346,9025><:f160,,>   Pourcentage d'utilisation : 42.995077 %
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>Serveur n</p> 3:
+
+<:#346,9025><:f160,,>   Temps moyen de service    : 3 minute(s)
+
+<:#346,9025><:f160,,>   Temps total de service    : 223 minutes
+
+<:#346,9025><:f160,,>   Nombre de clients servis  : 79
+
+<:#346,9025><:f160,,>   Pourcentage d'utilisation : 46.351002 %
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>Serveur n</p> 4:
+
+<:#346,9025><:f160,,>   Temps moyen de service    : 4 minute(s)
+
+<:#346,9025><:f160,,>   Temps total de service    : 241 minutes
+
+<:#346,9025><:f160,,>   Nombre de clients servis  : 51
+
+<:#346,9025><:f160,,>   Pourcentage d'utilisation : 50.200659 %
+
+<:#346,9025><:f160,,>
+
+<:#346,9025><:f160,,>Nombre total de clients servis          : 305
+
+<:#346,9025><:f160,,>Nombre total de clients qui ont attendu : 54
+
+<:#346,9025><:f160,,>Longueur moyenne de la file d'attente   : 1 client(s)
+
+<:#346,9025><:f160,,>Longueur maximale de la file d'attente  : 4 client(s)
+
+<:#346,9025><:f160,,>Temps moyen d'attente dans la file      : 0.228518 minute(s)<:f><:f240,,><:f><:f240,,><:f><:f240,,><:f><:f160,,><:f>
+
+>
+
+[Embedded]
+00062904

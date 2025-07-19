@@ -1,0 +1,43 @@
+Duree de la simulation : 8 heures
+Nombre de serveurs : 4
+Intervalle de temps entre l'arrivee de deux clients : 1.5 minute
+
+
+Resultats de la simulation sur le restaurant
+
+Duree prevue    : 480 minutes 
+Duree effective : 479.00116 minutes
+
+
+Resultats par serveur
+
+Serveur nø 1:
+   Temps moyen de service    : 2 minute(s)
+   Temps total de service    : 169 minutes
+   Nombre de clients servis  : 96
+   Pourcentage d'utilisation : 35.163818 %
+
+Serveur nø 2:
+   Temps moyen de service    : 3 minute(s)
+   Temps total de service    : 206 minutes
+   Nombre de clients servis  : 79
+   Pourcentage d'utilisation : 42.995077 %
+
+Serveur nø 3:
+   Temps moyen de service    : 3 minute(s)
+   Temps total de service    : 223 minutes
+   Nombre de clients servis  : 79
+   Pourcentage d'utilisation : 46.351002 %
+
+Serveur nø 4:
+   Temps moyen de service    : 4 minute(s)
+   Temps total de service    : 241 minutes
+   Nombre de clients servis  : 51
+   Pourcentage d'utilisation : 50.200659 %
+
+Nombre total de clients servis          : 305
+Nombre total de clients qui ont attendu : 54
+Longueur moyenne de la file d'attente   : 1 client(s)
+Longueur maximale de la file d'attente  : 4 client(s)
+Temps moyen d'attente dans la file      : 0.228518 minute(s)
+
