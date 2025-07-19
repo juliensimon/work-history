@@ -23,8 +23,8 @@ This directory contains work artifacts from **Julien Simon's** time at Viadeo, f
 ### [Presentations](./presentations/)
 **Technical Leadership and Communication**
 
-- **[Board Presentation](./presentations/board_19_12_2014.pdf)** - Board presentation from December 2014
-- **[CTO Strategy](./presentations/CTO%20Crunch%2020150224.pdf)** - CTO-level technical strategy presentation (February 2015)
+- **[Board Presentation (PDF)](./presentations/board_19_12_2014.pdf)** - Board presentation from December 2014
+- **[CTO Strategy (PDF)](./presentations/CTO%20Crunch%2020150224.pdf)** - CTO-level technical strategy presentation (February 2015)
 - **Focus**: Executive communication and technical strategy
 
 ## 🛠️ Technologies & Skills

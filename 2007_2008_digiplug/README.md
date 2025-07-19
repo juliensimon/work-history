@@ -15,11 +15,11 @@ This directory contains work artifacts from **Julien Simon's** time at DigiPlug,
 ### [Infrastructure](./Infrastructure/)
 **System Architecture and Technical Presentations**
 
-- **[Technical Presentation](./Infrastructure/20080719.Digiplug_Technical_Presentation_v0.pdf)** - Technical architecture presentation (July 2008)
-- **[Server Documentation](./Infrastructure/Serveurs%20DGP.pdf)** - Server infrastructure documentation
-- **[RFP Hosting](./Infrastructure/RFP%20Hosting.pdf)** - Request for Proposal hosting documentation
-- **Architecture Diagrams**: DIGIPLUG_Architecture_DC_Full_20081222_v1.2.png
-- **Network Architecture**: DIGIPLUG_Architecture_DC_Network_20090216_v1.0.png
+- **[Technical Presentation (PDF)](./Infrastructure/20080719.Digiplug_Technical_Presentation_v0.pdf)** - Technical architecture presentation (July 2008)
+- **[Server Documentation (PDF)](./Infrastructure/Serveurs%20DGP.pdf)** - Server infrastructure documentation
+- **[RFP Hosting (PDF)](./Infrastructure/RFP%20Hosting.pdf)** - Request for Proposal hosting documentation
+- **Architecture Diagrams (PNG)**: DIGIPLUG_Architecture_DC_Full_20081222_v1.2.png
+- **Network Architecture (PNG)**: DIGIPLUG_Architecture_DC_Network_20090216_v1.0.png
 - **Documentation**: Various PDF and PNG files detailing system architecture
 
 ### [ISO27001 Procedures](./ISO27001_procedures/)

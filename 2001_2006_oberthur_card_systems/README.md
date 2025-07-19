@@ -21,23 +21,23 @@ This directory contains work artifacts from **Julien Simon's** time at Oberthur 
 - **Focus**: Smart card authentication and security
 
 ### Technical Presentations
-- **[SmartTrust WIB 1.3](./SmartTrust%20WIB%201.3.pdf)** - Wireless Identity Module presentation
-- **[Security Applications with Java Card](./Security%20applications%20with%20Java%20Card.pdf)** - Java Card security implementations
-- **[Team Overview](./Team.pdf)** - Team structure and capabilities presentation
+- **[SmartTrust WIB 1.3 (PDF)](./SmartTrust%20WIB%201.3.pdf)** - Wireless Identity Module presentation
+- **[Security Applications with Java Card (PDF)](./Security%20applications%20with%20Java%20Card.pdf)** - Java Card security implementations
+- **[Team Overview (PDF)](./Team.pdf)** - Team structure and capabilities presentation
 
 ### [Java Card FAQ](./java_card_faq/)
 **Technical Documentation and Resources**
 
-- **FAQ Documentation** - Comprehensive Java Card technical information
+- **FAQ Documentation (PDF)** - Comprehensive Java Card technical information
 - **Best Practices** - Development guidelines and standards
 - **Troubleshooting** - Common issues and solutions
 
 ### [OOP and JavaCard Trainings](./oop-and-javacard-trainings-2001-2004/)
 **Training Materials and Courses**
 
-- **JavaCard1.ppt** - Introduction to Java Card technology
-- **JavaCard2.PPT** - Advanced Java Card concepts
-- **JavaCard3.PPT** - Java Card security and cryptography
+- **JavaCard1.ppt (PPT)** - Introduction to Java Card technology
+- **JavaCard2.PPT (PPT)** - Advanced Java Card concepts
+- **JavaCard3.PPT (PPT)** - Java Card security and cryptography
 - **Additional Training Materials** - Course materials and exercises
 
 ### [JavaCard Course - Ecole Centrale](./javacard_course_ecole_centrale-d-electronique-2004/)
@@ -49,7 +49,7 @@ This directory contains work artifacts from **Julien Simon's** time at Oberthur 
 - **Focus**: Educational Java Card development
 
 ### Research Publications
-- **[CARDIS06 Paper](./CARDIS06-Bigot-Faivre-Gaston-Simon.pdf)** - Academic research paper on smart card security
+- **[CARDIS06 Paper (PDF)](./CARDIS06-Bigot-Faivre-Gaston-Simon.pdf)** - Academic research paper on smart card security
 
 ## 🛠️ Technologies & Skills
 

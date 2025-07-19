@@ -13,18 +13,18 @@ This directory contains work artifacts from **Julien Simon's** time at Criteo, f
 ## 📁 Project Structure
 
 ### Technical Presentations
-- **[Infrastructure Overview](./slides%20JS%20201312%20Infrastructure%20overview.pdf)** - Comprehensive infrastructure architecture presentation (December 2013)
-- **[Infrastructure Team](./infrastructure_team.pdf)** - Infrastructure team overview and organization
-- **[EMC Systems](./slides%20JS%20201111%20EMC.pdf)** - EMC systems and storage infrastructure (November 2011)
-- **[Board Presentation](./slides%20JS%20201109%20board.pdf)** - Board-level technical presentation (September 2011)
+- **[Infrastructure Overview (PDF)](./slides%20JS%20201312%20Infrastructure%20overview.pdf)** - Comprehensive infrastructure architecture presentation (December 2013)
+- **[Infrastructure Team (PDF)](./infrastructure_team.pdf)** - Infrastructure team overview and organization
+- **[EMC Systems (PDF)](./slides%20JS%20201111%20EMC.pdf)** - EMC systems and storage infrastructure (November 2011)
+- **[Board Presentation (PDF)](./slides%20JS%20201109%20board.pdf)** - Board-level technical presentation (September 2011)
 
 ### Conference Presentations
-- **[MongoNYC Conference](./MongoNYC.pdf)** - MongoDB expertise and implementation at MongoDB NYC conference
-- **[10gen Collaboration](./10gen%20Criteo.pdf)** - Collaboration with 10gen (now MongoDB Inc.)
-- **[USI Conference](./Criteo%20USI.pdf)** - Presentation at USI conference
+- **[MongoNYC Conference (PDF)](./MongoNYC.pdf)** - MongoDB expertise and implementation at MongoDB NYC conference
+- **[10gen Collaboration (PDF)](./10gen%20Criteo.pdf)** - Collaboration with 10gen (now MongoDB Inc.)
+- **[USI Conference (PDF)](./Criteo%20USI.pdf)** - Presentation at USI conference
 
 ### Process Documentation
-- **[Process Documentation](./criteo%20processes%20v1.1.docx)** - Operational procedures and best practices
+- **[Process Documentation (DOCX)](./criteo%20processes%20v1.1.docx)** - Operational procedures and best practices
 
 ## 🛠️ Technologies & Skills
 
