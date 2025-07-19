@@ -1,0 +1,1630 @@
+[ver]
+	4
+[sty]
+	
+[files]
+[prn]
+	HP DeskJet 500 Scalable
+[lang]
+	3
+[desc]
+	
+	
+	
+	
+	
+	697708390
+	11
+	697531762
+[fopts]
+	0
+	2
+	0
+	0
+[lnopts]
+	2
+	Texte
+[docopts]
+	5
+	2
+[tag]
+	Texte
+	2
+	[fnt]
+		CG Times
+		240
+		0
+		49152
+	[algn]
+		225
+		2
+		0
+		0
+		0
+	[spc]
+		17
+		277
+		2
+		141
+		0
+		2
+		100
+	[brk]
+		4
+	[line]
+		8
+		0
+		2
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		0
+		
+		0
+		2
+		0
+		0
+		0
+		0
+		0
+	[nfmt]
+		24
+		1
+		2
+		,
+		 
+		F
+[tag]
+	Texte simple
+	3
+	[fnt]
+		Tms Rmn
+		240
+		0
+		49152
+	[algn]
+		225
+		2
+		0
+		0
+		0
+	[spc]
+		17
+		277
+		2
+		0
+		0
+		2
+		100
+	[brk]
+		4
+	[line]
+		8
+		0
+		2
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		0
+		
+		0
+		2
+		0
+		0
+		0
+		0
+		0
+	[nfmt]
+		24
+		1
+		2
+		,
+		 
+		F
+[tag]
+	Puce 1
+	4
+	[fnt]
+		Tms Rmn
+		240
+		0
+		49152
+	[algn]
+		1
+		2
+		850
+		283
+		283
+	[spc]
+		17
+		277
+		2
+		141
+		0
+		2
+		100
+	[brk]
+		4
+	[line]
+		8
+		0
+		2
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		0
+		<*1>
+		360
+		2
+		1
+		0
+		0
+		0
+		0
+	[nfmt]
+		24
+		1
+		2
+		,
+		 
+		F
+[tag]
+	Puce 2
+	5
+	[fnt]
+		Tms Rmn
+		240
+		0
+		49152
+	[algn]
+		1
+		2
+		1134
+		283
+		283
+	[spc]
+		17
+		277
+		2
+		141
+		0
+		2
+		100
+	[brk]
+		4
+	[line]
+		8
+		0
+		2
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		0
+		<*0>
+		360
+		2
+		1
+		0
+		0
+		0
+		0
+	[nfmt]
+		24
+		1
+		2
+		,
+		 
+		F
+[tag]
+	Retrait 1
+	6
+	[fnt]
+		Tms Rmn
+		240
+		0
+		49152
+	[algn]
+		193
+		2
+		1134
+		0
+		0
+	[spc]
+		17
+		277
+		2
+		141
+		0
+		2
+		100
+	[brk]
+		4
+	[line]
+		8
+		0
+		2
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		0
+		
+		0
+		2
+		0
+		0
+		0
+		0
+		0
+	[nfmt]
+		24
+		1
+		2
+		,
+		 
+		F
+[tag]
+	Retrait 2
+	7
+	[fnt]
+		Tms Rmn
+		240
+		0
+		49152
+	[algn]
+		193
+		2
+		1417
+		0
+		0
+	[spc]
+		17
+		277
+		2
+		141
+		0
+		2
+		100
+	[brk]
+		4
+	[line]
+		8
+		0
+		2
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		0
+		
+		0
+		2
+		0
+		0
+		0
+		0
+		0
+	[nfmt]
+		24
+		1
+		2
+		,
+		 
+		F
+[tag]
+	N</p> liste
+	8
+	[fnt]
+		Tms Rmn
+		240
+		0
+		49152
+	[algn]
+		1
+		2
+		850
+		283
+		283
+	[spc]
+		17
+		277
+		2
+		141
+		0
+		2
+		100
+	[brk]
+		4
+	[line]
+		8
+		0
+		2
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		1
+		<*:>.
+		360
+		2
+		1
+		0
+		4
+		0
+		0
+	[nfmt]
+		24
+		1
+		2
+		,
+		 
+		F
+[tag]
+	Gras & centr<\i>
+	9
+	[fnt]
+		Tms Rmn
+		240
+		0
+		49153
+	[algn]
+		228
+		2
+		0
+		0
+		0
+	[spc]
+		17
+		277
+		2
+		170
+		0
+		2
+		100
+	[brk]
+		4
+	[line]
+		8
+		0
+		2
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		0
+		
+		0
+		2
+		0
+		0
+		0
+		0
+		0
+	[nfmt]
+		24
+		1
+		2
+		,
+		 
+		F
+[tag]
+	Texte tableau
+	11
+	[fnt]
+		Tms Rmn
+		240
+		0
+		49152
+	[algn]
+		226
+		2
+		0
+		0
+		0
+	[spc]
+		17
+		277
+		2
+		141
+		0
+		2
+		100
+	[brk]
+		0
+	[line]
+		8
+		0
+		2
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		0
+		
+		0
+		2
+		0
+		0
+		0
+		0
+		0
+	[nfmt]
+		24
+		1
+		2
+		,
+		 
+		F
+[tag]
+	Filet dessus
+	12
+	[fnt]
+		Tms Rmn
+		240
+		0
+		49152
+	[algn]
+		225
+		2
+		0
+		0
+		0
+	[spc]
+		17
+		277
+		2
+		283
+		113
+		2
+		100
+	[brk]
+		4
+	[line]
+		5
+		0
+		2
+		0
+		1
+		2
+		1
+		133
+		10
+		1
+	[spec]
+		0
+		0
+		
+		0
+		2
+		0
+		0
+		0
+		0
+		0
+	[nfmt]
+		24
+		1
+		2
+		,
+		 
+		F
+[tag]
+	Alin<\i>a
+	0
+	[fnt]
+		Tms Rmn
+		240
+		0
+		49152
+	[algn]
+		161
+		2
+		0
+		1134
+		0
+	[spc]
+		17
+		277
+		2
+		141
+		0
+		2
+		100
+	[brk]
+		4
+	[line]
+		8
+		0
+		2
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		0
+		
+		0
+		2
+		0
+		0
+		0
+		0
+		0
+	[nfmt]
+		24
+		1
+		2
+		,
+		 
+		F
+[lay]
+	Standard
+	516
+	[rght]
+		16839
+		11907
+		2
+		1417
+		1417
+		2
+		1417
+		1417
+		2
+		1
+		0
+		1
+		0
+		2
+		1
+		1417
+		10490
+		5
+		1
+		867
+		1
+		1433
+		1
+		2880
+		1
+		4320
+		1
+		5760
+	[hrght]
+	[lyfrm]
+		1
+		11200
+		0
+		0
+		11905
+		1417
+		1
+		1
+		3
+		1
+		0
+		0
+		0
+	[frmlay]
+		1417
+		11905
+		1
+		1417
+		0
+		2
+		0
+		1417
+		0
+		1
+		0
+		1
+		1
+		0
+		1
+		1417
+		10488
+		0
+	[txt]
+<+B><:R1,3,2,4252,3,8504,1,8640><-!>
+
+<+B><:R1,3,2,4252,3,8504,1,8640><:S+-2><:S-><:S+-2><:f280,,0,0,0>
+
+<+B><:R1,3,2,4252,3,8504,1,8640><:S+-2><+!><:f280,,0,0,0>T.E.P INFORMATIQUE<-!>
+
+<+B><:R1,3,2,4252,3,8504,1,8640><:S+-2><+!><:f280,,0,0,0>T.E.P INFORMATIQUE<-!>
+
+<+B><:R1,3,2,4252,3,8504,1,8640><:S+-2><+!><:f280,,0,0,0>T.E.P INFORMATIQUE<-!>
+
+<+B><:R1,3,2,4252,3,8504,1,8640><:S+-2><+!><:f280,,0,0,0>T.E.P INFORMATIQUE<-!>
+
+<:S+-2>
+
+>
+	[frght]
+	[lyfrm]
+		1
+		13248
+		0
+		15422
+		11905
+		16839
+		1
+		1
+		3
+		1
+		0
+		0
+		0
+	[frmlay]
+		16839
+		11905
+		1
+		1417
+		0
+		2
+		15422
+		1417
+		0
+		1
+		0
+		1
+		1
+		0
+		1
+		1417
+		10488
+		0
+	[txt]
+>
+[elay]
+[l1]
+	0
+[pg]
+	13
+	32 0 26 0 16452 0 0 65535 6 Standard	0 0 0	0 0 0 0 0 0 0 65535 0 0 0 0 0 0
+	55 0 22 0 16384 0 0 65535 2 Standard	0 0 0	0 0 0 0 0 0 0 65535 0 0 0 0 0 0
+	74 0 22 0 16384 0 0 65535 2 Standard	0 0 0	0 0 0 0 0 0 0 65535 0 0 0 0 0 0
+	99 0 28 0 16448 0 0 65535 2 Standard	0 0 0	0 0 0 0 0 0 0 65535 0 0 0 0 0 0
+	126 0 22 0 16384 0 0 65535 2 Standard	0 0 0	0 0 0 0 0 0 0 65535 0 0 0 0 0 0
+	148 168 48 256 16384 0 0 65535 65535 Standard	0 0 0	0 0 0 0 0 0 0 65535 0 0 0 0 0 0
+	169 0 22 256 16384 0 0 65535 2 Standard	0 0 0	0 0 0 0 0 0 0 65535 0 0 0 0 0 0
+	186 0 22 256 16384 0 0 65535 2 Standard	0 0 0	0 0 0 0 0 0 0 65535 0 0 0 0 0 0
+	213 0 22 0 16384 0 0 65535 2 Standard	0 0 0	0 0 0 0 0 0 0 65535 0 0 0 0 0 0
+	234 0 24 0 16388 0 0 65535 4 Standard	0 0 0	0 0 0 0 0 0 0 65535 0 0 0 0 0 0
+	253 113 64 0 16384 0 0 65535 65535 Standard	0 0 0	0 0 0 0 0 0 0 65535 0 0 0 0 0 0
+	273 0 89 256 16384 0 0 65535 2 Standard	254 0 0	0 0 0 0 0 0 0 65535 0 0 0 0 0 0
+	297 0 22 1281 16384 0 0 65535 2 Standard	254 0 0	0 0 0 0 0 0 0 65535 0 0 0 0 0 0
+[edoc]
+<+B><-"><-#><-!><-!><+!><:f280,2CG Times,0,0,0>
+
+<+B><+!><:f280,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0><+#><-!>1 - Pr<\i>sentation g<\i>n<\i>rale 
+:
+
+<+@><:f240,2CG Times,0,0,0>1.1 - De quoi ce programme est-il capable ? 
+
+<+@><:f240,2CG Times,0,0,0>1.2 - Comment inculquer <\`> l'ordinateur les 
+rudiments de la strat<\i>gie du Monopoly ?
+
+<+@><:f240,2CG Times,0,0,0>1.3 - Structure du programme.
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0><+#>2 - Pr<\i>sentation d<\i>taill<\i>e<-#><:f><+#><:f240,2CG Times,0,0,0> 
+:
+
+<+@><:f240,2CG Times,0,0,0>2.1 - Le paquetage Types.
+
+<+@><:f240,2CG Times,0,0,0>2.2 - Le paquetage G<\i>n<\i>ral.
+
+<+@><:f240,2CG Times,0,0,0>2.3 - Le paquetage Argent.<:f>
+
+<+@><:f240,2CG Times,0,0,0>2.4 - Le paquetage Construction.
+
+<+@><:f240,2CG Times,0,0,0>2.5 - Le paquetage Strat<\i>gie.
+
+<+@><:f240,2CG Times,0,0,0>2.6 - Le paquetage Simulation.
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0><+#>3 - Le Troc<-#><:f><+#><:f240,2CG Times,0,0,0> 
+:
+
+<+@><-#><:f240,2CG Times,0,0,0>3.1 - Pr<\i>sentation.
+
+<+@><:f240,2CG Times,0,0,0>3.2 - Le paquetage Gestion_Troc.
+
+<+@><:f240,2CG Times,0,0,0>3.3 - Le paquetage Gestion_Liste_Troc.
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0><+#>4 - Conclusion.<-#>  
+
+<+@><+!><+#><:f240,2CG Times,0,0,0>
+
+<+@><+#><:f240,2CG Times,0,0,0>5 - Appendices.
+
+<+@><+!><+#><:f240,2CG Times,0,0,0>
+
+<+@><+!><+#><:f240,2CG Times,0,0,0>
+
+<+@><+!><+#><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0><-#><+#><-!><+)>
+
+<+@><+#><+)><:f240,2CG Times,0,0,0>
+
+<+@><+#><+)><:f240,2CG Times,0,0,0>
+
+<+@><+#><+)><:f240,2CG Times,0,0,0>
+
+<+@><+#><+)><:f240,2CG Times,0,0,0>
+
+<+@><+#><+)><:f240,2CG Times,0,0,0>
+
+<+@><+#><+)><:f240,2CG Times,0,0,0>1 - Pr<\i>sentation g<\i>n<\i>rale 
+:
+
+<+@><:f240,2CG Times,0,0,0><-!>
+
+<+@><:f240,2CG Times,0,0,0><+#>1.1 - De quoi ce programme est-il capable 
+?<:f>
+
+<+@>
+
+<+@>	<:f240,2CG Times,0,0,0>Ce programme est conforme <\`> la normalisation 
+<\i>tablie par le comit<\i>.<:f>          <:f240,2CG Times,0,0,0> 
+         Il respecte l'utilisation des diff<\i>rents types, fonctions 
+et proc<\i>dures d<\i>finies par le comit<\i> sus-nomm<\i>.  
+
+<+@><:f240,2CG Times,0,0,0>Il est capable de simuler jusqu'<\`> 6 joueurs 
+de Monopoly. Chaque joueur peut de plus <\j>tre simul<\i> de trois 
+fa<\g>ons diff<\i>rentes. 
+
+<+@><:f240,2CG Times,0,0,0> Le programme effectue pour chacun de ces joueurs 
+les op<\i>rations suivantes :
+
+<+@><:f240,2CG Times,0,0,0>- achat et hypoth<\h>que de terrains.
+
+<+@><:f240,2CG Times,0,0,0>- troc de terrains avec les autres joueurs.
+
+<+@><:f240,2CG Times,0,0,0>- achat et vente de maisons.
+
+<+@><:f240,2CG Times,0,0,0>- sortie de prison.
+
+<+@><:f240,2CG Times,0,0,0>Si accomplir ces actions est relativement simple, 
+il est beaucoup plus ardu de les accomplir de mani<\h>re sinon "intelligente", 
+du moins dans le cadre d'une strat<\i>gie pr<\i>-d<\i>finie.<:f>  
+           <:f240,2CG Times,0,0,0>En effet, le manich<\i>isme intrins<\h>que 
+de l'ordinateur ne le pr<\i>dispose pas <\`> envisager d'autres cas 
+que 0 ou 1.  Malheureusement, le Monopoly est un jeu bas<\i> <\`> 
+la fois sur l'<+!>anticipation<-!> et sur la <+!>flexibilit<\i><-!>.  
+
+<+@><:f240,2CG Times,0,0,0>Nous avons tenter de baser notre programme 
+sur ces deux principes<:f><:f240,2CG Times,0,0,0> et nous laissons 
+au lecteur le soin de juger si <:f><:f240,2CG Times,0,0,0>nous <:f><:f240,2CG Times,0,0,0>y 
+sommes parvenus.
+
+<+@><:f240,2CG Times,0,0,0> 
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0><+#>1.2 - Comment inculquer <\`> l'ordinateur 
+les rudiments de la strat<\i>gie du Monopoly ?
+
+<+@><:f240,2CG Times,0,0,0>	
+
+<+@><:f240,2CG Times,0,0,0>	Nous avons tout d'abord <\i>tabli apr<\h>s 
+des nuits enti<\h>res pass<\i>es <\`> jouer au Monopoly les faits 
+suivants :
+
+<+@><:f240,2CG Times,0,0,0>- Un joueur humain choisit d<\h>s le d<\i>but 
+de la partie les s<\i>ries qui l'int<\i>ressent.<:f><:f240,2CG Times,0,0,0> 
+ Cependant, il adapte ses choix au fur et <\`> mesure que la partie 
+se d<\i>roule.
+
+<+@><:f240,2CG Times,0,0,0>- Il tente d'acqu<\i>rir ces s<\i>ries le plus 
+rapidement possible afin de pouvoir y construire tout aussi rapidement.
+
+<+@><:f240,2CG Times,0,0,0>- Dans le cas o<\y> il n'a pas r<\i>ussi <\`> 
+acheter l'int<\i>gralit<\i> des terrains composant une s<\i>rie,<:f> 
+        <:f240,2CG Times,0,0,0>il essaie de troquer les terrains qui 
+lui manquent contre des terrains auxquels il attache peu d'int<\i>r<\j>t.
+
+<+@><:f240,2CG Times,0,0,0>- S'il se trouve en difficult<\i>, il se d<\i>barrasse 
+d'abord des maisons situ<\i>es sur les terrains qui l'int<\i>ressent<:f><:f240,2CG Times,0,0,0> 
+le moins, puis hypoth<\h>que ces terrains.
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>De ces observations, nous avons d<\i>duit qu'il 
+fallait <\i>crire un programme capable de d<\i>finir une strat<\i>gie 
+et de l'adapter aux circonstances de la partie.
+
+<+@><:f240,2CG Times,0,0,0>Le programme choisit lorsque la partie commence 
+le<+!> profil<-!> du joueur qu'il va simuler.        <:f><:f240,2CG Times,0,0,0>Nous 
+avons d<\i>fini trois profils diff<\i>rents :<:f>			<:f240,2CG Times,0,0,0>- 
+le <+!>p<\h>re de famille<-!>.<:f>				<:f240,2CG Times,0,0,0>-   l'<+!>investisseur<-!>.				- 
+le <+!>golden boy<-!>.<:f>
+
+<+@>Le p<\h>re de famille joue tr<\h>s prudemment. Il se contente de s<\i>ries 
+bon march<\i>, rapportant peu, mais o<\y> le prix des maisons est 
+bas.  Il ne d<\i>daigne ni les gares, ni les compagnies, qui rapportent 
+peu mais souvent : ce qui compte pour lui, c'est de nourrir sa petite 
+famille.
+
+<+@>L'investisseur est moins timor<\i>.  En bon hommes d'affaires qu'il 
+est, sa strat<\i>gie est bas<\i> sur l'<\i>quilibre des risques et 
+des gains.  Il recherche certes le profit, mais pas <\`> n'importe 
+quel prix. 
+
+<+@>Le golden boy est le plus t<\i>m<\i>raire des trois.  Il n'a d'autre 
+but que d'acheter les s<\i>ries de grand standing, puis d'y construire 
+afin de ruiner ses adversaires d'un seul coup : on a beaucoup de mal 
+<\`> se remettre d'un s<\i>jour dans un h<\t>tel de la rue de la Paix 
+...      
+
+<+@>
+
+<+@>Chaque joueur attribue, selon son profil, une <+!>valeur strat<\i>gique 
+<-!><\`> chaque propri<\i>t<\i> du plateau de jeu. C'est en fonction 
+d'elle que chaque propri<\i>t<\i> sera trait<\i>e par un joueur.  
+Comme on le verra plus tard, elle peut varier au cours de la partie.
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>Avant d'acheter une propri<\i>t<\i> ou de construire 
+une maison, un joueur <\i>valuera le risque du prochain lancer de 
+d<\i>s : il serait en effet mal avis<\i> de d<\i>penser tout son argent 
+alors que le risque de faire faillite au tour suivant est tr<\h>s 
+<\i>lev<\i>.  L'<\i>valuation des risques est bas<\i>e sur un calcul 
+de <+!>probabilit<\i>s<-!>.  Le joueur d<\i>cide ensuite si le jeu 
+en vaut la chandelle, c'est <\`> dire si l'avantage que lui procure 
+l'achat de tel ou tel terrain ou de telle ou telle maison l'emporte 
+sur le risque de se trouver d<\i>muni au tour suivant.
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>Voil<\`>, r<\i>sum<\i>e en quelques lignes, 
+l'approche que nous avons adopt<\i>e pour obtenir un <+!>joueur  simul<\i><-!> 
+ de qualit<\i> acceptable (du moins, nous l'esp<\i>rons<:f><:f240,2CG Times,0,0,0>).
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0><+#>1.3 - Structure du programme :
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>	Nous avons d<\i>compos<\i> le programme en 
+plusieurs paquetages dont le contenu sera d<\i>taill<\i> dans la deuxi<\h>me 
+partie de cette analyse.
+
+<+@><:f240,2CG Times,0,0,0>Le premier d'entre eux est le paquetage <+!>Types<-!>.<:f><:f240,2CG Times,0,0,0> 
+ Il contient des types et des constantes qui sont requis par tous 
+les autres paquetages.<:f>
+
+<+@><:f240,2CG Times,0,0,0>Le second est le paquetage <+!>G<\i>n<\i>ral<-!>. 
+Il renferme toutes les fonctions et les proc<\i>dures permettant d'obtenir 
+des informations sur les propri<\i>t<\i>s et les s<\i>ries de propri<\i>t<\i>s 
+que poss<\h>dent les joueurs.  
+
+<+@><:f240,2CG Times,0,0,0>Le troisi<\h>me est le paquetage <+!>Argent<-!>. 
+S'y trouvent les proc<\i>dures et les fonctions fournissant des renseignements 
+sur la fortune des joueurs et les d<\i>penses auxquelles peut avoir 
+<\`> face un joueur simul<\i>.
+
+<+@><:f240,2CG Times,0,0,0>Le quatri<\h>me est le paquetage <+!>Construction<-!>.  
+Nous y avons mis les types, les proc<\i>dures<:f><:f240,2CG Times,0,0,0> 
+et les fonctions sp<\i>cifiques <\`> la construction de maisons sur 
+les terrains d'un joueur simul<\i>.
+
+<+@><:f240,2CG Times,0,0,0>Le cinqui<\h>me est le paquetage <+!>Strat<\i>gie<-!>. 
+Il constitue le coeur du programme.  Il regroupe en effet les fonctions 
+et proc<\i>dures de d<\i>cisions.
+
+<+@><:f240,2CG Times,0,0,0>Le sixi<\h>me est le paquetage <+!>Gestion_Troc<-!>.  
+Il est responsable du troc des propri<\i>t<\i>s entre les joueurs.
+
+<+@><:f240,2CG Times,0,0,0>Le septi<\h>me est le paquetage <+!>Gestion_Liste_Troc<-!>.  
+Il g<\h>re la liste des trocs d<\i>j<\`> propos<\i>s par un joueur 
+simul<\i>, mais refus<\i>s par les autres joueurs. 
+
+<+@><:f240,2CG Times,0,0,0>Le dernier d'entre eux est le paquetage <+!>Simulation<-!>.<-!>
+
+<+@><:f240,2CG Times,0,0,0>		
+
+<+@><:f240,2CG Times,0,0,0>	
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0><-#><-$><+)>
+
+<+@><+)><:f240,2CG Times,0,0,0>2 - Pr<\i>sentation d<\i>taill<\i>e :
+
+<+@><:f240,2CG Times,0,0,0><+#>2.1 - Le paquetage <+!>Types<-!> :
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0><-!>type<+!>T_Probabilite<-!> :  les variables 
+de ce type sont les valeurs strat<\i>giques des terrains et les probabilit<\i>s 
+des lancers de d<\i>s.
+
+<+@><:f240,2CG Times,0,0,0>type <+!>T_Profil <-!>: type <\i>num<\i>r<\i> 
+contenant les trois profils possibles d'un joueur.
+
+<+@><:f240,2CG Times,0,0,0>type <+!>T_Valeur_Terrains <-!>: type tableau 
+de valeurs strat<\i>giques attribu<\i>es aux propri<\i>t<\i>s<:f><:f240,2CG Times,0,0,0> 
+par un joueur.
+
+<+@><:f240,2CG Times,0,0,0>type <+!>T_Caract<\i>ristiques_Profil <-!> 
+: article contenant <+!>risque_max<-!>, qui est le facteur risque 
+maximum tol<\i>r<\i> par un joueur, et <+!>valeur_terrains<-!>, tableau 
+du type T_Valeur_Terrains.
+
+<+@><:f240,2CG Times,0,0,0>type <+!>T_Joueur_Simule<-!> : c'est le type 
+qui contient toutes les informations sur un joueur simul<\i>.  C'est 
+un article regroupant le joueur, de type <+!>T_Joueur<-!>, son profil, 
+de type <+!>T_Profil<-!>, et ses caract<\i>ristiques, de type <+!>T_Caracteristiques<-!>. 
+
+<+@><:f240,2CG Times,0,0,0>type <+!>A_T_Joueur_Simule<-!> : c'est un type 
+acc<\h>s, pointant sur un joueur simul<\i>.<:f><-!><-!><-!><-!><-!><-!><-!><-!><-!><-!><:f240,2CG Times,0,0,0><-!><-!><-!><-!> 
+ Il nous permet de passer facilement et <\i>conomiquement un joueur 
+simul<\i> <\`> une proc<\i>dure ou <\`> une fonction.
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>Deux constantes compl<\h>tent le paquetage 
+:
+
+<+@><:f240,2CG Times,0,0,0>- le tableau <:f><:f240,2CG Times,0,0,0>, qui 
+contient les probabilit<\i>s des lancers de d<\i>s de 2 <\`> 12.
+
+<+@><:f240,2CG Times,0,0,0>- la matrice <+!>Valeur_Strat<\i>gique_Terrains<-!>, 
+qui contient la valeur de chaque propri<\i>t<\i> pour chaque profil 
+de joueur.<:f>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0><+#>2.2 - Le paquetage<+!> General<-!> :
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>2.2.1 - <:f><:f240,2CG Times,0,0,0>Fonction 
+<+!>Val_Serie<-!> :  
+
+<+@><:f240,2CG Times,0,0,0>Elle renvoie la valeur strat<\i>gique qu'attache 
+le joueur <\`> la<:f>  <:f240,2CG Times,0,0,0>propri<\i>t<\i>.<:f>	<:f240,2CG Times,0,0,0>Cette 
+valeur se situe dans joueur_simule.caracteristiques.valeur_terrain 
+(propriete).	
+
+<+@>Val_Serie est <\i>galement surcharg<\i>e par une couleur de s<\i>rie.  
+On d<\i>termine les bornes de la s<\i>rie et on appelle la proc<\i>dure 
+pr<\i>c<\i>dente avec une des deux bornes.		<:f240,2CG Times,0,0,0>		
+
+<+@><:f240,2CG Times,0,0,0>2.2.2 -<:f> <:f240,2CG Times,0,0,0>Fonction 
+<+!>Propri<\i>taire <-!>: 
+
+<+@><:f240,2CG Times,0,0,0>Elle renvoie le nom du joueur qui poss<\h>de 
+la propri<\i>t<\i><:f><:f240,2CG Times,0,0,0>.		Elle appelle <+!>Info_Joueur 
+<-!>pour chaque joueur et teste si la propri<\i>t<\i> se trouve dans 
+la liste des propri<\i>t<\i>s du joueur.	
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>2.2.3 - Proc<\i>dure<:f><:f240,2CG Times,0,0,0> 
+<+!>Determiner_Serie<-!> :
+
+<+@><:f240,2CG Times,0,0,0>Elle renvoie la couleur de la s<\i>rie <\`> 
+laquelle appartient la propri<\i>t<\i> et les deux cases d<\i>limitant 
+cette s<\i>rie.  Cette proc<\i>dure est tr<\h>s utile et rem<\i>die 
+au fait qu'on ne peut pas conna<\n>tre<:f><:f240,2CG Times,0,0,0> 
+explicitement le type d'une propri<\i>t<\i> : il n'est par exemple 
+pas possible de savoir directement que Pigalle est du type T_Orange.		
+
+<+@><:f240,2CG Times,0,0,0>	<:f><:f240,2CG Times,0,0,0>		 
+
+<+@><:f240,2CG Times,0,0,0>2.2.4 - Proc<\i>dure<:f><:f240,2CG Times,0,0,0> 
+<+!>Bornes_Serie <-!>:
+
+<+@>Cette proc<\i>dure donne les bornes en T_Cases d'une s<\i>rie indiqu<\i>e 
+par sa couleur.
+
+<+@>
+
+<+@><:f240,2CG Times,0,0,0>2.2.5 - Proc<\i>dure<:f><:f240,2CG Times,0,0,0> 
+ <+!>Nombre_Terrains_Dans_Serie<-!> :
+
+<+@><:f240,2CG Times,0,0,0>Cette proc<\i>dure d<\i>termine combien un 
+joueur poss<\h>de de propri<\i>t<\i>s d'une m<\j>me s<\i>rie.	On voit 
+ici l'int<\i>r<\j>t des deux cases <+!>case_depart<-!> et <+!>case_fin<-!> 
+qui d<\i>limitent la s<\i>rie.	Elles permettent de d<\i>finir un sous-type 
+de T_Cases, <+!>T_Local<-!>, qui regroupe les cases de la s<\i>rie 
+qui nous int<\i>ressent.  Il ne reste plus ensuite qu'<\`> tester 
+la pr<\i>sence de propri<\i>t<\i>s de la s<\i>rie dans la liste des 
+propri<\i>t<\i>s du joueur et <\`> les d<\i>nombrer.  
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>2.2.6 - Fonction <+!>Carte_Serie <-!>:  
+
+<+@>Cette fonction d<\i>termine les cartes d'une s<\i>rie donn<\i>e poss<\i>d<\i>es 
+par un joueur.	On parcourt l'ensemble de propri<\i>t<\i>s contenues 
+entre les bornes de la s<\i>rie et on regarde si elles sont dans la 
+liste des terrains du joueur.			
+
+<+@><:f240,2CG Times,0,0,0>2.2.7 - Fonction <+!>Carte_Serie_Manquante<-!> 
+:
+
+Cette fonction donne les cartes manquant <\`> joueur dans une s<\i>rie 
+donn<\i>e.  	On parcourt l'ensemble de propri<\i>t<\i>s contenues 
+entre les bornes de la s<\i>rie et on regarde si elles sont dans la 
+liste des terrains du joueur.
+
+<+@><:f240,2CG Times,0,0,0>2.2.8 - Fonction <+!>Serie_Complete<-!> :
+
+<+@><:f240,2CG Times,0,0,0>Cette fonction d<\i>termine si un joueur poss<\h>de 
+l'int<\i>gralit<\i> des cartes d'une m<\j>me s<\i>rie.	Elle fonctionne 
+de fa<\g>on identique <\`> Nombre_Terrains_Dans_Serie.
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>2.2.9 - Fonction <+!>Carte_Complete<-!> : 
+
+<+@><:f240,2CG Times,0,0,0>Cette fonction <\i>tablit si la propri<\i>t<\i> 
+P compl<\h>te une des s<\i>ries du joueur.	Elle d<\i>termine d'abord 
+<\`> quelle s<\i>rie appartient la P, <:f><:f240,2CG Times,0,0,0>puis 
+le nombre N de propri<\i>t<\i>s que contient la s<\i>rie, et <:f><:f240,2CG Times,0,0,0>enfin 
+combien de terrains de cette s<\i>rie poss<\h>de le joueur<:f><:f240,2CG Times,0,0,0>. 
+<:f><:f240,2CG Times,0,0,0>S'il en poss<\h>de N-1, c'est <\`> dire 
+<:f><:f240,2CG Times,0,0,0>s'il ne lui manque qu'une seule propri<\i>t<\i> 
+de la s<\i>rie, <:f><:f240,2CG Times,0,0,0>il convient de v<\i>rifier 
+qu'il s'agit bien de P.  La fonction va donc compter le nombre de 
+propri<\i>t<\i>s de la s<\i>rie (diff<\i>rentes de P) que d<\i>tient 
+le joueur.  Si elle en trouve <\`> nouveau N-1, c'est que P compl<\h>te 
+bien une s<\i>rie du joueur. 
+
+<+@><:f240,2CG Times,0,0,0> 	<:f>
+
+<+@><:f240,2CG Times,0,0,0>2.2.10 - Fonction <+!> Complete_Serie_Joueur 
+<-!>:
+
+<+@><:f240,2CG Times,0,0,0>Cette fonction renvoie le nom du joueur dont 
+la propriete compl<\h>te une s<\i>rie.	Elle renvoie transparent si 
+aucun joueur ne convient.		Cette fonction intervient lors du troc.			Elle 
+se contente d'appeler<:f><:f240,2CG Times,0,0,0> Carte_Complete pour 
+chaque joueur de la partie jusqu'<\`> ce que le r<\i>sultat soit vrai.
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>2.2.11 - Fonction <+!>Carte_J1_Complete_Serie_J2<-!> 
+:
+
+<+@><:f240,2CG Times,0,0,0>Cette fonction d<\i>termine quelles sont les 
+propri<\i>t<\i>s du joueur 1 qui compl<\h>tent une s<\i>rie du joueur 
+2, et ce, en vue de proposer des trocs <\`> ce joueur.	Elle renvoie 
+un pointeur sur une liste de propri<\i>t<\i>s satisfaisant <\`> cette 
+condition.		Elle boucle sur les propri<\i>t<\i>s du joueur 1 et <\i>tablit 
+si la propri<\i>t<\i> courante compl<\h>te une s<\i>rie du joueur 
+2.  Si c'est le cas, elle ajoute cette propri<\i>t<\i> <\`> la liste.  
+Elle passe ensuite <\`> la propri<\i>t<\i> suivante.
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>2.2.12 - Fonction  <+!>Serie_Completement_Construite<-!> 
+:
+
+<+@><:f240,2CG Times,0,0,0>Cette fonction d<\i>termine si la s<\i>rie 
+est compl<\h>tement construite, c'est <\`> dire s'il y a cinq maisons 
+sur chaque terrain de la s<\i>rie.
+
+<+@><:f240,2CG Times,0,0,0>		
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>						
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0><+#>2.3 - Le paquetage <+!>Argent<-!> :
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>2.3.1 - Proc<\i>dure <+!>Fortune<-!> :
+
+<+@><:f240,2CG Times,0,0,0>Cette proc<\i>dure calcule le compte en banque 
+et le capital immobiler d<\i>tenus par un joueur.   Le capital est 
+constitu<\i> des propri<\i>t<\i>s et des maisons.		La proc<\i>dure 
+<\i>tablit d'abord si la propri<\i>t<\i> est hypoth<\i>qu<\i>e : si 
+c'est le cas, sa valeur immobili<\h>re est divis<\i>e par deux.  Si 
+la propri<\i>t<\i> est un terrain, elle d<\i>termine le nombre de 
+maisons s'y trouvent, le prix de ces maisons et en d<\i>duit la valeur 
+totale du terrain et des maisons.  Elle ajoute cette valeur au capital 
+du joueur et passe <\`> la propri<\i>t<\i> suivante. 
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>2.3.2 - Procedure <+!>Fortune_Relative <-!>:<:f>
+
+<+@><:f240,2CG Times,0,0,0>Cette proc<\i>dure permet de situer la fortune 
+d'un joueur par rapport aux autres.	Elle classe le joueur en fonction 
+de son compte en banque et de son capital immobilier, puis calcule 
+pour chacun de ces deux param<\h>tres l'<\i>cart (en %) qui le s<\i>pare 
+de la moyenne des joueurs.						Elle commence par calculer la fortune 
+du joueur J que l'on veut classer.  Elle calcule ensuite la fortune 
+d'un autre joueur J'.  Elle ajoute son compte en banque  <\`> la somme 
+totale d<\i>tenus par tous les joueurs et son capital au capital total.	Elle 
+<\i>tablit ensuite si le compte en banque et le capital de J' sont 
+sup<\i>rieurs <\`> ceux de J, puis elle passe <\`> un autre joueur. 
+			Une fois qu'elle a termin<\i>, elle calcule le compte en banque 
+moyen, le capital moyen, puis l'<\i>cart du compte en banque et du 
+capital de J par rapport <\`> ces moyennes.
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>2.3.3 - Fonction <+!>Cout_Case<-!> :
+
+<+@><:f240,2CG Times,0,0,0>Cette fonction calcule combien il co<\{>te 
+de s<\i>journer sur une case pr<\i>cise.	Si la case est un terrain, 
+il faut payer le loyer.  La fonction <\i>tablit si le terrain est 
+hypoth<\i>qu<\i>, et si tel n'est pas le cas, combien de maisons s'y 
+trouvent.	Si la case est une gare ou une compagnie, elle en recherche 
+le propri<\i>taire.  Elle calcule ensuite le nombre de propri<\i>t<\i>s 
+de la m<\j>me s<\i>rie que poss<\h>de ce joueur et en d<\i>duit le 
+co<\{>t du s<\i>jour.					Si la case est une case sp<\i>ciale, elle 
+d<\i>termine le co<\{>t correspondant.<:f>	Dans tous les autres cas, 
+le co<\{>t est nul.
+
+<+@>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>2.3.4 - Proc<\i>dure <+!>Risque<-!> :
+
+<+@><:f240,2CG Times,0,0,0>Cette proc<\i>dure <\i>value la d<\i>pense 
+la plus probable au prochain tour, la d<\i>pense la plus <\i>lev<\i>e 
+au prochain tour et la probabilit<\i> d'avoir <\`> faire cette d<\i>pense.	Ces 
+trois param<\h>tres sont essentiels pour le joueur qui envisage de 
+d<\i>penser de l'argent.	Ils lui permettent de savoir s'il ne sera 
+pas d<\i>pourvu au cas o<\y> la bise viendrait.	<:f>
+
+<+@><:f240,2CG Times,0,0,0>La proc<\i>dure calcule le co<\{>t du s<\i>jour 
+sur les onze cases o<\y> le joueur peut arriver.  Elle en d<\i>duit 
+la d<\i>pense la plus <\i>lev<\i>e qui puisse se produire au tour 
+suivant, ainsi que la probabilit<\i> du lancer de d<\i>s correspondant.<:f> 
+ <:f240,2CG Times,0,0,0>La d<\i>pense la plus probable correspond, 
+elle, <\`> un lancer de 7.			
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><+!><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>						
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0><-!> 
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0><+#>2.4 - Le paquetage <+!>Construction <-!>:
+
+<+@><:f240,2CG Times,0,0,0>Il contient deux nouveaux types : <+!>T_Serie 
+<-!> et <+!>T_Liste_Series<-!>.	T_Serie est un type article contenant 
+les deux cases d<\i>limitant la s<\i>rie et un pointeur du type T_Liste_Series 
+sur la s<\i>rie suivante.  Ces deux types permettent de cr<\i>er une 
+liste de s<\i>ries accessibles facilement et rapidement.
+
+<+@><:f240,2CG Times,0,0,0>On y trouve  aussi  une  constante,<+!> Tete_Liste_Series<-!>, 
+qui vaut null.
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>2.4.1 - Fonction  <+!>Series_Constructibles<-!> 
+:
+
+<+@><:f240,2CG Times,0,0,0>Cette fonction cr<\i>e une liste de s<\i>ries 
+sur lesquelles un joueur peut construire et renvoie un pointeur sur 
+cette liste.				Pour qu'un joueur puisse construire sur une s<\i>rie, 
+les conditions suivantes doivent <\j>tre remplies : 					- le joueur 
+doit poss<\i>der tous les terrains de la s<\i>rie.		- aucun terrain 
+de la s<\i>rie ne doit <\j>tre hypoth<\i>qu<\i>.		- il ne doit pas 
+y avoir plus de cinq maisons par terrain.	
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>2.4.2 - Proc<\i>dure  <+!>Choisir_Serie_A_Construire 
+<-!>:
+
+<+@><:f240,2CG Times,0,0,0>Cette proc<\i>dure d<\i>termine la s<\i>rie 
+constructible de valeur strat<\i>gique la plus <\i>lev<\i>e et renvoie 
+un pointeur sur cette s<\i>rie.			La proc<\i>dure recherche une s<\i>rie 
+o<\y> il reste de la place et dont la case de d<\i>part a la valeur 
+strat<\i>gique la plus <\i>lev<\i>e possible.  Elle  renvoie un pointeur 
+sur cette s<\i>rie.
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>2.4.3 - Fonction <+!> Choisir_Terrain_A_Construire<-!> 
+:
+
+<+@><:f240,2CG Times,0,0,0><-!>Le but de cette fonction est de permettre 
+au joueur de construire sur une s<\i>rie de fa<\g>on <\i>quilibr<\i>e, 
+en r<\i>partissant <\i>quitablement les maisons entre les diff<\i>rents 
+terrains.<:f>	<:f240,2CG Times,0,0,0>Cette fonction recherche le terrain 
+de la s<\i>rie o<\y> se trouvent le moins de maisons et renvoie ce 
+terrain.  	
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><+!><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>													                   	<:f>
+
+<+@><:f240,2CG Times,0,0,0><+#>
+
+<+@><+#><:f240,2CG Times,0,0,0>
+
+<+@><+#><:f240,2CG Times,0,0,0>
+
+<+@><+#><:f240,2CG Times,0,0,0>
+
+<+@><+#><:f240,2CG Times,0,0,0>2.5 - Le paquetage <+!>Strat<\i>gie <-!>:
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>2.5.1 - Fonction <+!>Decision_Achat_Propriete<-!> 
+: 
+
+<+@><:f240,2CG Times,0,0,0>Cette fonction prend la d<\i>cision d'acheter 
+ou pas la propri<\i>t<\i> sur laquelle le joueur se trouve.<:f>						<:f240,2CG Times,0,0,0>Si 
+le joueur a assez d'argent pour l'acheter, il r<\i>fl<\i>chit<:f><:f240,2CG Times,0,0,0>.  
+<:f><:f240,2CG Times,0,0,0>Il d<\i>termine la valeur strat<\i>gique 
+de la propri<\i>t<\i> et calcule le risque du tour suivant.		Si l'achat 
+de la propri<\i>t<\i> risque de causer la faillite du joueur au tour 
+suivant, mais que la probabilit<\i> est plus faible que le risque 
+maximum tol<\i>r<\i> par le joueur ou que la propri<\i>t<\i> vaut 
+vraiment la peine de prendre le risque, alors le joueur l'ach<\h>te. 
+	Si ce risque pas n'existe pas, le joueur n'ach<\h>te le terrain que 
+si celui-ci l'int<\i>resse.
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>2.5.2 - Proc<\i>dure <+!>Decision_Achat_Maisons<-!> 
+:
+
+<+@><:f240,2CG Times,0,0,0>Cette proc<\i>dure s'occupe de l'achat des 
+maisons.		Elle d<\i>termine d'abord sur quelle s<\i>rie, puis sur 
+quel terrain de cette s<\i>rie il faut construire.  Puis, si le joueur 
+a suffisamment d'argent pour construire sur ce terrain, alors elle 
+ach<\h>te une maison.  Elle recommence cette s<\i>quence jusqu'<\`> 
+<\i>puisement des fonds du joueur.
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>2.5.3 - Proc<\i>dure <+!>Mise_A_Jour_Valeur<-!> 
+:
+
+<+@><:f240,2CG Times,0,0,0>Cette proc<\i>dure met <\`> jour la valeur 
+strat<\i>gique d'une s<\i>rie dont le joueur vient d'acheter une propri<\i>t<\i>.					Elle 
+d<\i>termine d'abord la s<\i>rie <\`> laquelle appartient cette propri<\i>t<\i>, 
+puis le nombre de propri<\i>t<\i>s de cette s<\i>rie que poss<\h>de 
+le joueur.  Elle calcule ensuite la plus-value et l'ajoute <\`> toutes 
+les propri<\i>t<\i>s de la s<\i>rie, sachant que la valeur strat<\i>gique 
+maximale que puisse prendre un propri<\i>t<\i> est 1.0.
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>2.5.4 - Proc<\i>dure <+!>Vendre_Maison <-!>:
+
+<+@><:f240,2CG Times,0,0,0>Cette proc<\i>dure recherche un terrain contenant 
+des maisons et poss<\i>dant une valeur strat<\i>gique la plus faible 
+possible.  Lorsqu'elle l'a trouv<\i>, elle vend une maison de ce terrain.
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>2.5.5 - Proc<\i>dure <+!>Hypothequer_Propri<\i>t<\i> 
+<-!>:
+
+<+@><:f240,2CG Times,0,0,0>Cette proc<\i>dure recherche une propri<\i>t<\i> 
+non hypoth<\i>qu<\i>e et poss<\i>dant une valeur strat<\i>gique la 
+plus faible possible.  Lorsqu'elle l'a trouv<\i>e, elle l'hypoth<\h>que.
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>2.5.6 - Proc<\i>dure <+!>Deshypothequer_Propriete<-!>:
+
+<+@><:f240,2CG Times,0,0,0>Cette proc<\i>dure recherche la propri<\i>t<\i> 
+hypoth<\i>qu<\i>e poss<\i>dant la valeur strat<\i>gique la plus <\i>l<\i>v<\i>e. 
+Si le joueur a assez d'argent, elle la d<\i>shypoth<\h>que.<:f>
+
+<+C><:R1,18,1,280,1,560,1,840,1,1120,1,1380,1,1700,1,2000,1,2260,1,2520,1,2880,1,3600,1,4320,1,5040,1,5760,1,6480,1,7200,1,7920,1,8640><-#><-#><:S+-1><:S-><-#><:S+-2><:S-><:S+-2><:S-><:S+-2><:S-><:S+-2><:S-><:S+-2><:S-><:S+-2><:S-><:S+-2><:S-><:S+-2><:S-><:S+-2>
+<:S-><:S+-2><:S-><:S+-2><:S-><:f240,2CG Times,0,0,0><+#>2.6 - Le paquetage 
+<+!>Simulation<-!> :<-#>
+
+<+C><+#><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>2.6.1 - Proc<\i>dure <+!>Creer_Joueur <-!>:
+
+<+@><:f240,2CG Times,0,0,0>Cette proc<\i>dure cr<\i>e un nouveau joueur 
+simul<\i>.  Elle d<\i>cide "al<\i>atoirement" du type du joueur en 
+utilisant l'horloge interne de l'ordinateur.  Puis, elle initialise 
+les variables propres au joueur en fonction du profil choisi.
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>2.6.2 - Fonction <+!>Sauvegarder<-!><+!> <-!>:
+
+<+@><:f240,2CG Times,0,0,0>Cette proc<\i>dure sauve l'int<\i>gralit<\i> 
+d'un joueur simul<\i> dans un fichier <\`> acc<\h>s direct.  Le nom 
+du fichier est le nombre de secondes de l'horloge, suivi de l'extension 
+S_J.
+
+<+@><:f240,2CG Times,0,0,0> 
+
+<+@><:f240,2CG Times,0,0,0><-!><-!>2.6.3 - Fonction <+!>Restaurer<-!>:
+
+<+@><:f240,2CG Times,0,0,0>Cette proc<\i>dure restaure un joueur simul<\i> 
+<\`> partir d'un fichier sauvegard<\i> lors d'une partie pr<\i>c<\i>dente.
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>2.6.4 - Proc<\i>dure <+!>Jouer<-!> :
+
+<+@><:f240,2CG Times,0,0,0>Cette proc<\i>dure est appel<\i>e par la partie 
+Gestion_Dialogue lorsqu'un joueur simul<\i> doit jouer.  																	Si 
+le compte en banque de joueur est positif, la proc<\i>dure effectue 
+les op<\i>rations suivantes :  - elle tente de d<\i>shypoth<\i>quer 
+une <\i>ventuelle propri<\i>t<\i> hypoth<\i>qu<\i>e.				 - si la propri<\i>t<\i> 
+sur laquelle se trouve le joueur n'appartient <\`> personne, elle 
+d<\i>cide ou pas de l'acheter.  <:f>															 - si elle l'a 
+achet<\i>, elle met <\`> jour la valeur strat<\i>gique des terrains 
+de la s<\i>rie <\`> laquelle appartient la propri<\i>t<\i>.												 
+- elle d<\i>termine les s<\i>ries sur lesquelles le joueur peut construire.			 
+      - s'il en existe, elle choisit sur quelle s<\i>rie, puis sur 
+quel terrain le joueur doit construire et enfin ach<\h>te une maison 
+sur ce terrain.								
+
+<+@>Si le compte en banque du joueur est dans le rouge, elle commence 
+par vendre des maisons.  Si cela ne suffit pas, elle hypoth<\h>que 
+des terrains.		
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>2.6.4 - Fonction <+!>Choix_Chance<-!> :
+
+<+@><:f240,2CG Times,0,0,0>Si le joueur a assez d'argent, il paye. Il 
+veut en effet <\i>viter <\`> tout prix de tirer la carte qui l'oblige 
+<\`> r<\i>parer ses maisons, ce qui entraine en effet une grosse d<\i>pense.  
+			Sinon, il tire une carte chance.
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>2.6.5 - Fonction <+!>Choix_Prison <-!>:
+
+<+@><:f240,2CG Times,0,0,0>Si le joueur a assez d'argent, il paye.  Sinon, 
+il reste en prison.
+
+<+@><:f240,2CG Times,0,0,0>2.6.6 - Fonction <+!>Utiliser_Carte<-!> :
+
+<+@><:f240,2CG Times,0,0,0>Si le joueur a assez d'argent pour pouvoir 
+payer la sortie de prison, il conserve la carte pour une autre occasion.  
+Sinon, il utilise la carte.
+
+<+@><:f240,2CG Times,0,0,0>  
+
+<+@><:f240,2CG Times,0,0,0>2.6.7 - Fonction <+!>Troc_Possible<-!> :
+
+<+@><:f240,2CG Times,0,0,0>Cette fonction renvoie renvoie true pour indiquer 
+que le troc a <\i>t<\i> programm<\i>.
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>2.6.8 - Fonction <+!>Reponse_Troc_S<-!> :
+
+<+@><:f240,2CG Times,0,0,0>Cette fonction indique si un troc propos<\i> 
+par un joueur est accept<\i> par le joueur simul<\i>.  
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>2.6.9 - Proc<\i>dure <+!>Jouer_Troc<-!> :
+
+<+@><:f240,2CG Times,0,0,0>Cette proc<\i>dure permet au joueur simul<\i> 
+de proposer un troc <\`> un autre joueur.
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><-#><-)>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><+)><:f240,2CG Times,0,0,0>
+
+<+@><+#><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>								
+
+<+@><:f240,2CG Times,0,0,0>
+
+<+@><:f240,2CG Times,0,0,0>
+

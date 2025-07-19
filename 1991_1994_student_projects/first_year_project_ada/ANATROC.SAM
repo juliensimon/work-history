@@ -1,0 +1,1449 @@
+[ver]
+	4
+[sty]
+	
+[files]
+[prn]
+	HP DeskJet 500 Scalable
+[lang]
+	3
+[desc]
+	
+	
+	
+	
+	
+	697705703
+	1
+	697705252
+[fopts]
+	0
+	2
+	0
+	0
+[lnopts]
+	2
+	Texte
+[docopts]
+	5
+	2
+[tag]
+	Texte
+	2
+	[fnt]
+		Tms Rmn
+		240
+		0
+		49152
+	[algn]
+		225
+		2
+		0
+		0
+		0
+	[spc]
+		17
+		277
+		2
+		141
+		0
+		2
+		100
+	[brk]
+		4
+	[line]
+		8
+		0
+		2
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		0
+		
+		0
+		2
+		0
+		0
+		0
+		0
+		0
+	[nfmt]
+		24
+		1
+		2
+		,
+		 
+		F
+[tag]
+	Texte simple
+	3
+	[fnt]
+		Tms Rmn
+		240
+		0
+		49152
+	[algn]
+		225
+		2
+		0
+		0
+		0
+	[spc]
+		17
+		277
+		2
+		0
+		0
+		2
+		100
+	[brk]
+		4
+	[line]
+		8
+		0
+		2
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		0
+		
+		0
+		2
+		0
+		0
+		0
+		0
+		0
+	[nfmt]
+		24
+		1
+		2
+		,
+		 
+		F
+[tag]
+	Puce 1
+	4
+	[fnt]
+		Tms Rmn
+		240
+		0
+		49152
+	[algn]
+		1
+		2
+		850
+		283
+		283
+	[spc]
+		17
+		277
+		2
+		141
+		0
+		2
+		100
+	[brk]
+		4
+	[line]
+		8
+		0
+		2
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		0
+		<*1>
+		360
+		2
+		1
+		0
+		0
+		0
+		0
+	[nfmt]
+		24
+		1
+		2
+		,
+		 
+		F
+[tag]
+	Puce 2
+	5
+	[fnt]
+		Tms Rmn
+		240
+		0
+		49152
+	[algn]
+		1
+		2
+		1134
+		283
+		283
+	[spc]
+		17
+		277
+		2
+		141
+		0
+		2
+		100
+	[brk]
+		4
+	[line]
+		8
+		0
+		2
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		0
+		<*0>
+		360
+		2
+		1
+		0
+		0
+		0
+		0
+	[nfmt]
+		24
+		1
+		2
+		,
+		 
+		F
+[tag]
+	Retrait 1
+	6
+	[fnt]
+		Tms Rmn
+		240
+		0
+		49152
+	[algn]
+		193
+		2
+		1134
+		0
+		0
+	[spc]
+		17
+		277
+		2
+		141
+		0
+		2
+		100
+	[brk]
+		4
+	[line]
+		8
+		0
+		2
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		0
+		
+		0
+		2
+		0
+		0
+		0
+		0
+		0
+	[nfmt]
+		24
+		1
+		2
+		,
+		 
+		F
+[tag]
+	Retrait 2
+	7
+	[fnt]
+		Tms Rmn
+		240
+		0
+		49152
+	[algn]
+		193
+		2
+		1417
+		0
+		0
+	[spc]
+		17
+		277
+		2
+		141
+		0
+		2
+		100
+	[brk]
+		4
+	[line]
+		8
+		0
+		2
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		0
+		
+		0
+		2
+		0
+		0
+		0
+		0
+		0
+	[nfmt]
+		24
+		1
+		2
+		,
+		 
+		F
+[tag]
+	N</p> liste
+	8
+	[fnt]
+		Tms Rmn
+		240
+		0
+		49152
+	[algn]
+		1
+		2
+		850
+		283
+		283
+	[spc]
+		17
+		277
+		2
+		141
+		0
+		2
+		100
+	[brk]
+		4
+	[line]
+		8
+		0
+		2
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		1
+		<*:>.
+		360
+		2
+		1
+		0
+		4
+		0
+		0
+	[nfmt]
+		24
+		1
+		2
+		,
+		 
+		F
+[tag]
+	Gras & centr<\i>
+	9
+	[fnt]
+		Tms Rmn
+		240
+		0
+		49153
+	[algn]
+		228
+		2
+		0
+		0
+		0
+	[spc]
+		17
+		277
+		2
+		170
+		0
+		2
+		100
+	[brk]
+		4
+	[line]
+		8
+		0
+		2
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		0
+		
+		0
+		2
+		0
+		0
+		0
+		0
+		0
+	[nfmt]
+		24
+		1
+		2
+		,
+		 
+		F
+[tag]
+	Texte tableau
+	11
+	[fnt]
+		Tms Rmn
+		240
+		0
+		49152
+	[algn]
+		226
+		2
+		0
+		0
+		0
+	[spc]
+		17
+		277
+		2
+		141
+		0
+		2
+		100
+	[brk]
+		0
+	[line]
+		8
+		0
+		2
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		0
+		
+		0
+		2
+		0
+		0
+		0
+		0
+		0
+	[nfmt]
+		24
+		1
+		2
+		,
+		 
+		F
+[tag]
+	Filet dessus
+	12
+	[fnt]
+		Tms Rmn
+		240
+		0
+		49152
+	[algn]
+		225
+		2
+		0
+		0
+		0
+	[spc]
+		17
+		277
+		2
+		283
+		113
+		2
+		100
+	[brk]
+		4
+	[line]
+		5
+		0
+		2
+		0
+		1
+		2
+		1
+		133
+		10
+		1
+	[spec]
+		0
+		0
+		
+		0
+		2
+		0
+		0
+		0
+		0
+		0
+	[nfmt]
+		24
+		1
+		2
+		,
+		 
+		F
+[tag]
+	Alin<\i>a
+	0
+	[fnt]
+		Tms Rmn
+		240
+		0
+		49152
+	[algn]
+		161
+		2
+		0
+		1134
+		0
+	[spc]
+		17
+		277
+		2
+		141
+		0
+		2
+		100
+	[brk]
+		4
+	[line]
+		8
+		0
+		2
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		0
+		
+		0
+		2
+		0
+		0
+		0
+		0
+		0
+	[nfmt]
+		24
+		1
+		2
+		,
+		 
+		F
+[lay]
+	Standard
+	516
+	[rght]
+		16839
+		11907
+		2
+		1417
+		1417
+		2
+		1417
+		1417
+		2
+		1
+		0
+		1
+		0
+		2
+		1
+		1417
+		10490
+		5
+		1
+		1103
+		1
+		1433
+		1
+		2880
+		1
+		4320
+		1
+		5760
+	[hrght]
+	[lyfrm]
+		1
+		11200
+		0
+		0
+		11905
+		1417
+		1
+		1
+		3
+		1
+		0
+		0
+		0
+	[frmlay]
+		1417
+		11905
+		1
+		1417
+		0
+		2
+		0
+		1417
+		0
+		1
+		0
+		1
+		1
+		0
+		1
+		1417
+		10488
+		0
+	[txt]
+<+B><:S+-2><+!><:f280,,0,0,0><-!><:S-><:f><+!><:S+-2><:f280,,0,0,0><:R1,3,2,4252,3,8504,1,8640><-!><:f240,,0,0,0>
+
+<+B><:R1,3,2,4252,3,8504,1,8640><:S+-2><+!><:f280,,0,0,0><-!><:S-><:f><+!><:S+-2><:f280,,0,0,0><-!><:f240,,0,0,0>
+
+<+B><:R1,3,2,4252,3,8504,1,8640><:S+-2><+!><:f280,,0,0,0>T.E.P INFORMATIQUE<-!><:f240,,0,0,0>
+
+<+B><:R1,3,2,4252,3,8504,1,8640><:S+-2><+!><:f280,,0,0,0>T.E.P INFORMATIQUE<-!><:f240,,0,0,0>
+
+<+B><:R1,3,2,4252,3,8504,1,8640><:S+-2><+!><:f280,,0,0,0>T.E.P INFORMATIQUE<-!><:f240,,0,0,0>
+
+<+B><:R1,3,2,4252,3,8504,1,8640><:S+-2><+!><:f280,,0,0,0>T.E.P INFORMATIQUE<-!><:f240,,0,0,0>
+
+<+B><:R1,3,2,4252,3,8504,1,8640><:S+-2><+!><:f280,,0,0,0>T.E.P INFORMATIQUE<-!><:f240,,0,0,0>
+
+<+B><:R1,3,2,4252,3,8504,1,8640><:S+-2><+!><:f280,,0,0,0>T.E.P INFORMATIQUE<-!><:f240,,0,0,0>
+
+<+B><:R1,3,2,4252,3,8504,1,8640><:S+-2><+!><:f280,,0,0,0>T.E.P INFORMATIQUE<-!><:f240,,0,0,0>
+
+<+B><:R1,3,2,4252,3,8504,1,8640><:S+-2><+!><:f280,,0,0,0>T.E.P INFORMATIQUE<-!><:f240,,0,0,0>
+
+<:S+-2>
+
+>
+	[frght]
+	[lyfrm]
+		1
+		13248
+		0
+		15422
+		11905
+		16839
+		1
+		1
+		3
+		1
+		0
+		0
+		0
+	[frmlay]
+		16839
+		11905
+		1
+		1417
+		0
+		2
+		15422
+		1417
+		0
+		1
+		0
+		1
+		1
+		0
+		1
+		1417
+		10488
+		0
+	[txt]
+>
+[elay]
+[l1]
+	0
+[pg]
+	15
+	9 0 18 512 16384 0 0 65535 2 Standard	1 0 0	0 0 0 0 0 0 0 65535 0 0 0 0 0 0
+	36 0 88 0 16384 1 0 65535 2 Standard	33 0 0	0 0 0 0 0 0 0 65535 0 0 0 0 0 0
+	64 82 56 0 16384 0 0 65535 2 Standard	53 0 0	0 0 0 0 0 0 0 65535 0 0 0 0 0 0
+	77 0 18 512 16384 0 0 65535 2 Standard	53 0 0	0 0 0 0 0 0 0 65535 0 0 0 0 0 0
+	88 0 18 768 16384 0 0 65535 2 Standard	53 0 0	0 0 0 0 0 0 0 65535 0 0 0 0 0 0
+	107 0 23 512 16384 0 0 65534 7 Standard	93 0 0	0 0 0 0 0 0 0 65535 0 0 0 0 0 0
+	113 0 23 512 16384 0 0 65534 7 Standard	93 0 0	0 0 0 0 0 0 0 65535 0 0 0 0 0 0
+	135 108 45 0 16384 1 0 65534 45 Standard	114 0 0	0 0 0 0 0 0 0 65535 0 0 0 0 0 0
+	158 0 62 0 16384 0 0 65534 51 Standard	158 0 0	0 0 0 0 0 0 0 65535 0 0 0 0 0 0
+	178 0 23 512 16384 0 0 65534 7 Standard	171 0 0	0 0 0 0 0 0 0 65535 0 0 0 0 0 0
+	190 0 23 768 16384 0 0 65534 7 Standard	189 0 0	0 0 0 0 0 0 0 65535 0 0 0 0 0 0
+	198 0 23 768 16384 0 0 65534 7 Standard	197 0 0	0 0 0 0 0 0 0 65535 0 0 0 0 0 0
+	208 0 67 768 16384 0 0 65534 51 Standard	208 0 0	0 0 0 0 0 0 0 65535 0 0 0 0 0 0
+	226 0 18 256 16384 0 0 65534 7 Standard	217 0 0	0 0 0 0 0 0 0 65535 0 0 0 0 0 0
+	233 0 23 768 16384 0 0 65534 7 Standard	227 0 0	0 0 0 0 0 0 0 65535 0 0 0 0 0 0
+[edoc]
+<:R1,12,1,720,1,1440,1,2160,1,2880,1,3600,1,4320,1,5040,1,5760,1,6480,1,7200,1,7920,1,8640><+!><+#><:f280,,0,0,0><-!><-#><:f><+!><+#><:f280,,0,0,0><:f240,2CG Times,0,0,0><-!><+!><:f240,2CG Times,0,0,0><:f><-!><-!><-#><+)>3 
+- Le Troc :
+
+<+C><+#><-#><+!><+#><-!><-#><:f240,,0,0,0><:f><:f240,,0,0,0><:f><:f240,,0,0,0><:f><:f240,,0,0,0><:f><+!><+#><:f240,,0,0,0><-!><-#><:f><+!><+#><-#><:f240,,0,0,0><-!><+#>3.1 
+- Pr<\i>sentation :
+
+<+C><+!><-!><:f240,,0,0,0>L'action du troc est un partie int<\i>ressante 
+du jeux de Monopoly car elle <\i>tend la phase de jeux <\`> autre 
+chose qu'une suite de jets de d<\i>s. C'est une partie relativement 
+ardue <\`> traiter car elle poss<\h>de de nombreuses approches. Comme 
+le reste du programme, l'approche que nous en avons fait est tr<\h>s 
+statistique et math<\i>matique, avec en plus une grande partie de 
+simulation double ou m<\j>me triple pour la partie Jouer Troc.
+
+<+C><:f240,,0,0,0><:f><+!><:f240,,0,0,0><-!><:f><+!><:f240,,0,0,0><-!><:f><+!><-!><:f240,,0,0,0>On 
+a trois grandes parties dans le troc: la r<\i>ponse <\`> donner, l'<\i>valuation 
+des trocs que l'on veut faire et la gestion de trocs d<\i>j<\`> effectu<\i>s.
+
+<+C><:f240,,0,0,0>
+
+<+C><:f240,,0,0,0>On a choisit de faire deux pakages diff<\i>rents: 
+
+<+C><:f240,,0,0,0>			-un uniquement pour la gestion de la liste de troc.
+
+<+C><:f240,,0,0,0>			-un pour les deux autres parties, la partie Jouer 
+Troc 					appelant R<\i>ponse Troc continuellement.
+
+<+C><:f240,,0,0,0><:p >
+
+<+C><+!><+#><:f240,,0,0,0><-!><-#><:f><+!><+#><-#><:f240,,0,0,0><-!><+#>3.2 
+- Le paquetage Gestion_Liste_Troc :
+
+<+C><+!><:f240,,0,0,0>Analyse globale
+
+<+C><+!><-!><:f240,,0,0,0>Pour g<\i>rer la liste des trocs d<\i>j<\`> 
+effectu<\i> le choix s'est port<\i> sur une liste simple, chain<\i>e 
+par un pointeur vers l'avant.
+
+<+C><:f240,,0,0,0>Cette structure dynamique permet une gestion optimale 
+de la m<\i>moire et une tr<\h>s grande souplesse au niveau du nombre 
+de troc <\`> garder en m<\i>moire: si un troc auparavant refus<\i> 
+est accept<\i>, il est tout a fait possible de l'<\i>liminer de la 
+liste sans probl<\h>me.
+
+<+C><:f240,,0,0,0>
+
+<+C><+!><:f240,,0,0,0>Impl<\i>mentation
+
+<+C><+!><-!><+#><:f240,,0,0,0>Dans la sp<\i>cification
+
+<+C><+#><-#><:f240,,0,0,0>On definit le type <+!><:f240,,0,0,0>T_Troc<-!><:f240,,0,0,0> 
+regroupant les deux joueur et les deux terrains <\`> troquer.
+
+<+C><:f240,,0,0,0>On definit la constante <+!><:f240,,0,0,0>Troc_null<-!><:f240,,0,0,0> 
+du type <+!><:f240,,0,0,0>T_Troc<-!><:f240,,0,0,0>. C'est un troc 
+bidon entre transparent et transparent d'une part, belleville et belleville 
+d'autre part. Cette constante va servir dans toutes la proc<\i>dure 
+<+!><:f240,,0,0,0>Jouer_Troc<-!><:f240,,0,0,0> comme comparaison pour 
+les retours de fonction.
+
+<+C><:f240,,0,0,0>On definit enfin les cinq primitives de manipulation 
+de la liste de trocs d<\i>j<\`> effectu<\i>s.
+
+<+C><:f240,,0,0,0>
+
+<+C><:R1,9,1,3020,1,3600,1,4320,1,5040,1,5760,1,6480,1,7200,1,7920,1,8640><:f240,,0,0,0>Proc<\i>dure 
+	: <+!><:f240,,0,0,0>Ajout_troc<-!><:f240,,0,0,0>.
+
+<+C><:f240,,0,0,0>Param<\h>tres 	: le troc , in du type <+!><:f240,,0,0,0>T_troc<-!><:f240,,0,0,0>.
+
+<+C><:f240,,0,0,0>Commentaires	: Ajoute le troc <\`> la liste, si celui-ci 
+existe d<\i>j<\`> alors on augment le nombre d'essais de ce troc de 
+1.
+
+<+C><:f240,,0,0,0>
+
+<+C><:f240,,0,0,0>Fonction 	: <+!><:f240,,0,0,0>Nbe_Troc<-!><:f240,,0,0,0>.
+
+<+C><:f240,,0,0,0>Param<\h>tres	: le troc, in  du type <+!><:f240,,0,0,0>T_Troc<-!><:f240,,0,0,0>.
+
+<+C><:f240,,0,0,0>Retour	: integer :le nombre d'essais du troc.
+
+<+C><:f240,,0,0,0>Commentaires	: Si le troc n'a jamais <\i>t<\i> tent<\i> 
+le retour vaut z<\i>ro.
+
+<+C><:f240,,0,0,0>
+
+<+C><:f240,,0,0,0>Procedure	: <+!><:f240,,0,0,0>D<\i>truit_Troc<-!><:f240,,0,0,0>.
+
+<+C><:f240,,0,0,0>Param<\h>tres	: le troc, in, du type <+!><:f240,,0,0,0>T_Troc<-!><:f240,,0,0,0>.
+
+<+C><:f240,,0,0,0>Commentaires	: Si le troc que l'on demande de d<\i>truire 
+n'a pas encore <\i>t<\i> propos<\i>, il ne se passe rien, pas d'erreur.
+
+<+C><:R1,9,1,3020,1,3600,1,4320,1,5040,1,5760,1,6480,1,7200,1,7920,1,8640><:f240,,0,0,0>
+
+<+C><:f240,,0,0,0>Procedure	: <+!><:f240,,0,0,0>Sauvegarde_troc<-!><:f240,,0,0,0>.
+
+<+C><:f240,,0,0,0>Param<\h>tres	: le nom du fichier ADA, in , du type 
+String.
+
+<+C><:f240,,0,0,0>Commentaires	: effectue la sauvegarde de la liste des 
+trocs d<\i>j<\`> effectu<\i>s.
+
+<+C><:f240,,0,0,0>
+
+<+C><:f240,,0,0,0>Procedure	: <+!><:f240,,0,0,0>Restaurer_Troc<-!><:f240,,0,0,0>.
+
+<+C><:f240,,0,0,0>Param<\h>tres	: le nom du fichier ADA, in, du type  
+String.
+
+<+C><:f240,,0,0,0>Commentaires	: Charge la liste des trocs en m<\i>moire.
+
+<+C><:f240,,0,0,0>
+
+<+C><+#><:f240,,0,0,0>Dans le corps
+
+<+C><+#><-#><:f240,,0,0,0>
+
+<+C><:f240,,0,0,0>Dans le corps du paquetage apparaissent toutes les structures 
+de la liste proprement dite, elles sont donc invisibles pour les autres 
+paquetages.
+
+<+C><:f240,,0,0,0>
+
+<+C><:R1,9,1,3020,1,3600,1,4320,1,5040,1,5760,1,6480,1,7200,1,7920,1,8640><:f240,,0,0,0>Type	: 
+<+!><:f240,,0,0,0>T_Cellule_Troc<-!><:f240,,0,0,0>.
+
+<+C><:f240,,0,0,0>Structure	: record comprenant le troc (<+!><:f240,,0,0,0>T_Troc<-!><:f240,,0,0,0>), 
+le nombre d'essais d<\i>j<\`> tent<\i>s (Integer), le pointeur vers 
+le troc suivant (<+!><:f240,,0,0,0>Lien_cellule_Troc<-!><:f240,,0,0,0>).
+
+<+C><:f240,,0,0,0>
+
+<+C><:f240,,0,0,0>Type	: <+!><:f240,,0,0,0>Lien_Cellule_Troc<-!><:f240,,0,0,0>.
+
+<+C><:f240,,0,0,0>Structure	: Access sur le type <+!><:f240,,0,0,0>T_Cellule_Troc<-!><:f240,,0,0,0>.
+
+<+C><:f240,,0,0,0>
+
+<+C><:f240,,0,0,0>Variables	: <+!><:f240,,0,0,0>Tete_Liste_Troc <-!><:f240,,0,0,0>du 
+type <+!><:f240,,0,0,0>Lien_Cellule_Troc<-!><:f240,,0,0,0>.
+
+<+C><:R1,9,1,3020,1,3600,1,4320,1,5040,1,5760,1,6480,1,7200,1,7920,1,8640><:f240,,0,0,0>Commentaires	: 
+Cette variable est globale au paquetage, mais invisible des autres. 
+Elle repr<\i>sente la seule occupation m<\i>moire (dans les variables) 
+de cette partie s'il n'y a pas de troc tent<\i>. Cela repr<\i>sente 
+une <\i>conomie de place certaine.
+
+<+C><:f240,,0,0,0>
+
+<+C><:f240,,0,0,0>Proc<\i>dure 	: <+!><:f240,,0,0,0>Ajout_troc<-!><:f240,,0,0,0>.
+
+<+C><:f240,,0,0,0>Param<\h>tres 	: le troc , in du type <+!><:f240,,0,0,0>T_troc<-!><:f240,,0,0,0>.
+
+<+C><:f240,,0,0,0>M<\i>thode	: Si le troc n'existe pas, il est ajout<\i> 
+en t<\j>te de liste. Sinon on se place sur lui et on augmente le nombre 
+d'essais effectu<\i> de 1.
+
+<+C><:f240,,0,0,0>
+
+<+C><:f240,,0,0,0>
+
+<+C><:f240,,0,0,0>
+
+<+C><:f240,,0,0,0>Fonction 	: <+!><:f240,,0,0,0>Nbe_Troc<-!><:f240,,0,0,0>.
+
+<+C><:f240,,0,0,0>Param<\h>tres	: le troc, in , du type <+!><:f240,,0,0,0>T_Troc<-!><:f240,,0,0,0>.
+
+<+C><:f240,,0,0,0>Retour	: integer :le nombre d'essais du troc.
+
+<+C><:f240,,0,0,0>M<\i>thode	:	on parcourt toute la liste en regardant 
+si le troc existe, et dans ce cas on r<\i>cup<\h>re le nombre d'essais 
+effectu<\i>s.
+
+<+C><:f240,,0,0,0>
+
+<+C><:f240,,0,0,0>Procedure	: <+!><:f240,,0,0,0>D<\i>truit_Troc<-!><:f240,,0,0,0>.
+
+<+C><:f240,,0,0,0>Param<\h>tres	: le troc, in, du type <+!><:f240,,0,0,0>T_Troc<-!><:f240,,0,0,0>.
+
+<+C><:f240,,0,0,0>M<\i>thode	:	On se place sur le troc que l'on veut d<\i>truire. 
+Puis on relie le troc precedent au troc suivant, puis on d<\i>truit 
+le troc incrimin<\i>. Si le troc n'existe pas il ne se passe rien.
+
+<+C><:f240,,0,0,0>
+
+<+C><:f240,,0,0,0>Procedure	: <+!><:f240,,0,0,0>Sauvegarde_troc<-!><:f240,,0,0,0>.
+
+<+C><:f240,,0,0,0>Param<\h>tres	: le nom du fichier ADA, in , du type 
+<+!><:f240,,0,0,0>String<-!><:f240,,0,0,0>.
+
+<+C><:f240,,0,0,0>M<\i>thode	:	Le choix du fichier s'est port<\i> sur 
+un fichier <\`> acc<\h>s direct bien qu'un fichier sequentiel soit 
+suffisant, cela <\`> cause des erreurs de d<\i>tection de fin de fichier 
+dues au compilateur. On sauvegarde les trocs dans l'ordre o<\y> ils 
+on <\i>t<\i> cr<\i><\i>s, celui-ci n'ayant pas vraiement d'importance. 
+Le nom du fichier est choisi par la proc<\i>dure <+!><:f240,,0,0,0>Sauvegarder_Joueur<-!><:f240,,0,0,0> 
+de mani<\h>re a uniformiser les noms.
+
+<+C><:f240,,0,0,0>
+
+<+C><:f240,,0,0,0>Procedure	: <+!><:f240,,0,0,0>Restaurer_Troc<-!><:f240,,0,0,0>.
+
+<+C><:f240,,0,0,0>Param<\h>tres	: le nom du fichier ADA, in, du type  
+<+!><:f240,,0,0,0>String<-!><:f240,,0,0,0>.
+
+<+C><:f240,,0,0,0>M<\i>thode	:	La r<\i>cup<\i>ration se fait <\`> partir 
+du fichier indiqu<\i> en entr<\i>e. Si la liste des trocs n'est pas 
+vide on la vide d'abord (exemple de la partie r<\i>cup<\i>r<\i>e au 
+milieu d'une autre). Les trocs sont remis dans la liste dans leur 
+ordre de sauvegarde.
+
+<+C><:f240,,0,0,0><:p >
+
+<+C><+!><+#><:f240,,0,0,0><-!><-#><:f><+!><+#><:f240,,0,0,0><-!><-#><:f><+!><+#><:f240,,0,0,0><-!>3.3 
+- Le paquetage Gestion_Troc :<-!><-#><:f><:f240,,0,0,0>
+
+<+C><+#><:f240,,0,0,0>
+
+<+C><+!><:f240,,0,0,0>Analyse globale
+
+<+C><+!><-!><:f240,,0,0,0>
+
+<+C><+#><:f240,,0,0,0>Jouer troc.
+
+<+C><+#><-#><:f240,,0,0,0>Pour jouer le troc on se trouve face <\`> des 
+probl<\h>mes de choix multiples et de classement sur des listes de 
+terrains et de trocs. En effet il faut non seulement d<\i>terminer 
+les terrains qu'on est susceptible de troquer mais il faut aussi les 
+classer pour d'abord essayer de se d<\i>barrasser des terrains qui 
+nous int<\i>ressent le moins.
+
+<+C><:f240,,0,0,0>Pour <\i>valuer les trocs int<\i>ressants pour lui l'ordinateur 
+appelle r<\i>ponse troc avec la proposition de troc qu'il a en t<\j>te 
+pour <\i>valuer si l'<\i>change est int<\i>ressant ou pas pour lui. 
+Le probl<\h>me est alors que, pour que l'<\i>change ait une bonne 
+chance de se produire, il ne faut pas que ce troc soit trop d<\i>savantageux 
+pour l'autre joueur.
+
+<+C><:f240,,0,0,0>C'est ici que la simulation prend toute sa force: l'ordinateur 
+se glisse dans la peau du joueur recevant la proposition de troc et 
+<\i>value si la proposition serait int<\i>ressante pour lui. Cela 
+est aussi effectu<\i> gr<\b>ce <\`> la proc<\i>dure r<\i>ponse troc, 
+mais avec les param<\h>tres inverses.
+
+<+C><:f240,,0,0,0>On se retrouve donc avec un classement de trocs int<\i>ressants 
+pour nous et acceptables pour l'autre.
+
+<+C><:f240,,0,0,0>On propose donc le premier de la liste. S'il est refus<\i>, 
+au prochain tour de troc on ne le proposera pas mais un autre, le 
+premier ayant <\i>t<\i> stock<\i> dans la liste des trocs d<\i>j<\`> 
+propos<\i>s. Dans le cas o<\y> il n'y a que un seul troc int<\i>ressant, 
+on se contente de proposer celui-ci, mais pas <\`> tous les tours 
+de trocs, seulement une fois sur trois, les conditions g<\i>n<\i>rales 
+de la partie ayant ainsi le temps d'<\i>voluer.
+
+<+C><:f240,,0,0,0><:p >
+
+<+C><:f240,,0,0,0>
+
+<+C><:f240,,0,0,0>
+
+<+C><:f240,,0,0,0>
+
+<+C><+!><+#><:f240,,0,0,0>Algorithme de Jouer_Troc (J2) :
+
+<:R1,18,1,280,1,560,1,840,1,1120,1,1380,1,1700,1,2000,1,2260,1,2520,1,2880,1,3600,1,4320,1,5040,1,5760,1,6480,1,7200,1,7920,1,8640><+!><+#><:S+-1><:S-><-#><:f240,,0,0,0>
+
+<+!><:f240,,0,0,0>	<-!><:f240,,0,0,0>D<\i>terminer la liste class<\i>e 
+des propri<\i>t<\i>s P1 que l'on veut obtenir.
+
+<:f240,,0,0,0>	D<\i>terminer la liste class<\i>e des propri<\i>tes 
+P2 que l'on est pr<\j>t <\`> troquer.
+
+<:f240,,0,0,0>	Determiner la liste des trocs int<\i>ressant pour le 
+joueur.
+
+<:f240,,0,0,0>	S<\i>lectionner celui qui a le plus de chance de passer.
+
+<:f240,,0,0,0>	<+!><:f240,,0,0,0>Si<-!><:f240,,0,0,0> il n'est pas 
+accept<\i> <+!><:f240,,0,0,0>alors<-!><:f240,,0,0,0> le sauvegarder 
+dans la liste.
+
+<:f240,,0,0,0>	
+
+<+C><:S+-2><+#><:f240,,0,0,0>Remarques:
+
+<+C><+#><:S+-2><-#><:f240,,0,0,0>La seule partie difficile de cette algo 
+est la d<\i>termination des listes P1 et P2, le reste <\i>tant de 
+la manipulation de tableaux sans grande difficult<\i>s.
+
+<+C><:S+-2><:f240,,0,0,0>La s<\i>lection et classement des terrains P1 
+se fait de la mani<\h>re suivante:
+
+<+C><:S+-2><:f240,,0,0,0>On regarde quelles sont les s<\i>ries dont il 
+ne manque qu'une carte pour <\j>tre compl<\h>tes, on d<\i>termine 
+la carte manquante et on les classe par importance ascendante. On 
+fait de m<\j>me avec les s<\i>ries o<\y> 2 cartes manquent.
+
+<+C><:S+-2><:f240,,0,0,0>Pour la liste P2 on fait l'inverse: d'abord les 
+s<\i>ries o<\y> il manque 2 cartes  puis les s<\i>ries o<\y> seul 
+une carte fait d<\i>faut, le classement se faisant par importance 
+strat<\i>gique descendante cette fois ci.
+
+<+C><:S+-2><:f240,,0,0,0>
+
+<+C><:S+-2><:f240,,0,0,0>La partie sauvegarde des pr<\i>cedent trocs est 
+r<\i>alis<\i> dans un autre paquetage. 
+
+<+C><:S+-2><:f240,,0,0,0><:p >
+
+<+C><:S+-2><:f240,,0,0,0>
+
+<+C><:S+-2><+#><:f240,,0,0,0>R<\i>ponse Troc
+
+<+C><+#><:S+-2><-#><:f240,,0,0,0>Dans le cadre de r<\i>ponse troc, il 
+faut non seulement tenir compte des possibilit<\i>s avantageuses pour 
+soi mais aussi pour les autres. En effet, il est impossible d'accepter 
+un troc sans importance pour soi mais qui permet <\`> deux autres 
+joueurs de compl<\i>ter une de leur s<\i>rie importante sur un troc 
+futur. Cela est une r<\h>gle de survie de base qui va donc se retrouver 
+dans tout l'algorithme: si la s<\i>rie que je peux compl<\i>ter n'est 
+pas, soit de m<\j>me niveau que la s<\i>rie de mon adversaire dans 
+le cas d'un <\i>change <\`> deux, soit du m<\j>me niveau que le milieu 
+des s<\i>ries des deux adversaires dans le cas d'<\i>changes multiples.
+
+<+C><:S+-2><:f240,,0,0,0>Donc, dans le cas ou l'<\i>change propos<\i> 
+ne compl<\h>te pas une de mes s<\i>ries, on v<\i>rifie les possibilit<\i>s 
+de troc futur avec d'autres joueurs, et on accepte l'<\i>change suivant 
+le classement des trois <\i>changes, classement fortement d<\i>pendant 
+du type de joueur consid<\i>r<\i> et du plateau de jeux en place, 
+les coefficients de classement <\i>tant variables suivant la r<\h>gle 
+pr<\i>cis<\i>e pr<\i>c<\i>demment.
+
+<+C><:S+-2><:f240,,0,0,0>Dans le cas particulier ou le troc entre les 
+deux premiers joueurs ne compl<\h>te aucune s<\i>rie on est suppos<\i> 
+regarder dans les jeux de tous les autres joueurs pour <\i>valuer 
+les possibles futurs trocs. Cela s'av<\h>re trop couteux en temps 
+de calcul, et de plus, relativement compliqu<\i> car on va se retrouver 
+<\`> comparer deux listes de trocs possibles sans vraiment avoir de 
+chance de juger s'ils sont acceptables ou non. Une m<\i>thode pour 
+le voir serais un appel r<\i>cursif de r<\i>ponse troc, mais les cas 
+terminaux <\i>tant mal d<\i>finis on pourrait se retrouver avec une 
+boucle infini, cette solution n'a donc pas <\i>t<\i> retenu.
+
+<+C><:S+-2><:f240,,0,0,0><:p >
+
+<+C><:R1,18,1,280,1,560,1,840,1,1120,1,1380,1,1700,1,2000,1,2260,1,2520,1,2880,1,3600,1,4320,1,5040,1,5760,1,6480,1,7200,1,7920,1,8640><:S+-2><+!><+#><:f240,,0,0,0>Algorithme 
+de Reponse_Troc_S (J1,Prop1,J2,Prop2) :
+
+<+C><+!><+#><:S+-2><-!><-#><:f240,,0,0,0>	<+!><:f240,,0,0,0>si<-!><:f240,,0,0,0> 
+prop2 n'appartient pas <\`> une s<\i>rie compl<\h>te de J2
+
+<+C><:S+-2><:f240,,0,0,0>		<+!><:f240,,0,0,0>si<-!><:f240,,0,0,0> prop1 
+complete une des s<\i>ries de J2
+
+<+C><:S+-2><:f240,,0,0,0>			<+!><:f240,,0,0,0>si<-!><:f240,,0,0,0> prop2 
+compl<\h>te une des s<\i>rie de j1
+
+<+C><:S+-2><:f240,,0,0,0>				comparer l'importance strat<\i>gique des 
+deux s<\i>ries
+
+<+C><:S+-2><:f240,,0,0,0>				accepter le troc en fonction du resultat.
+
+<+C><:S+-2><:f240,,0,0,0>			<+!><:f240,,0,0,0>sinon<-!><:f240,,0,0,0> 
+(Prop2 ne compl<\h>te pas une des s<\i>ries de j1)
+
+<+C><:S+-2><:f240,,0,0,0>				<+!><:f240,,0,0,0>si<-!><:f240,,0,0,0> prop2 
+compl<\h>te une s<\i>rie d'un tierce joueur J3
+
+<+C><:S+-2><:f240,,0,0,0>					liste des cartes  de j3 qui compl<\h>tent 
+une des s<\i>ries de j1.
+
+<+C><:S+-2><:f240,,0,0,0>					<+!><:f240,,0,0,0>sur toutes les prop<-!><:f240,,0,0,0>3 
+de la liste des cartes de j3
+
+<+C><:S+-2><:f240,,0,0,0>						<+!><:f240,,0,0,0>Si<-!><:f240,,0,0,0> 
+l'<\i>cart entre la valeur de Prop2 et la valeur 									  moyenne 
+de prop1 et de prop3 depasse 20
+
+<+C><:S+-2><:f240,,0,0,0>							refuser le troc
+
+<+C><:S+-2><:f240,,0,0,0>						<+!><:f240,,0,0,0>sinon<-!><:f240,,0,0,0> 
+
+<+C><:S+-2><:f240,,0,0,0>							accepter
+
+<+C><:S+-2><:f240,,0,0,0>				<+!><:f240,,0,0,0>sinon<-!><:f240,,0,0,0> 
+(prop2 ne compl<\h>te aucune s<\i>rie)
+
+<+C><:S+-2><:f240,,0,0,0>					accepter le troc
+
+<+C><:S+-2><:f240,,0,0,0>		<+!><:f240,,0,0,0>sinon<-!><:f240,,0,0,0> (prop1 
+ne compl<\h>te pas une des s<\i>ries de j2)
+
+<+C><:S+-2><:f240,,0,0,0>			<+!><:f240,,0,0,0>si<-!><:f240,,0,0,0> prop2 
+compl<\h>te une des s<\i>ries de j1
+
+<+C><:S+-2><:f240,,0,0,0>				<+!><:f240,,0,0,0>si<-!><:f240,,0,0,0> prop1 
+compl<\h>te une s<\i>rie d'un tierce joueur j3
+
+<+C><:S+-2><:f240,,0,0,0>					liste des cartes de j3 qui compl<\h>tent 
+une des s<\i>rie de j2
+
+<+C><:S+-2><:f240,,0,0,0>					<+!><:f240,,0,0,0>sur toutes les prop3 <-!><:f240,,0,0,0>de 
+la liste des cartes de j3
+
+<+C><:S+-2><:f240,,0,0,0>						<+!><:f240,,0,0,0>Si<-!><:f240,,0,0,0> 
+l'<\i>cart entre la valeur de Prop2 et la valeur 									  moyenne 
+de prop1 et de prop3 depasse 20
+
+<+C><:S+-2><:f240,,0,0,0>							refuser le troc
+
+<+C><:S+-2><:f240,,0,0,0>						<+!><:f240,,0,0,0>sinon <-!><:f240,,0,0,0>
+
+<+C><:S+-2><:f240,,0,0,0>							accepter
+
+<+C><:S+-2><:f240,,0,0,0>				<+!><:f240,,0,0,0>sinon <-!><:f240,,0,0,0>(prop1 
+ne compl<\h>te pas une s<\i>rie d'un tierce joueur)
+
+<+C><:S+-2><:f240,,0,0,0>					refuser le troc
+
+<+C><:S+-2><:f240,,0,0,0>			<+!><:f240,,0,0,0>sinon<-!><:f240,,0,0,0> 
+( prop2 ne compl<\h>te pas une serie de J1)
+
+<+C><:S+-2><:f240,,0,0,0>				<+!><:f240,,0,0,0>si<-!><:f240,,0,0,0> prop2 
+compl<\h>te une des s<\i>rie d'un tierce joueur j3
+
+<+C><:S+-2><:f240,,0,0,0>										et celui-ci possede une carte compl<\i>tant 
+une des
+
+<+C><:S+-2><:f240,,0,0,0>										s<\i>ries de J1
+
+<+C><:S+-2><:f240,,0,0,0>					refuser le troc
+
+<+C><:S+-2><:f240,,0,0,0>				<+!><:f240,,0,0,0>sinon<-!><:f240,,0,0,0> 
+( prop2 ne compl<\h>te une serie d'aucun joueur)
+
+<+C><:S+-2><:f240,,0,0,0>					comparer la valeur de j1 et J2
+
+<+C><:S+-2><:f240,,0,0,0>					accepter ou non.
+
+<+C><:S+-2><:f240,,0,0,0>
+
+<+C><:S+-2><+!><:f240,,0,0,0>
+
+<+C><+!><:S+-2><:f240,,0,0,0>
+
+<+C><+!><:S+-2><:f240,,0,0,0>
+
+<+C><+!><:S+-2><:f240,,0,0,0>impl<\i>mentation
+
+<+C><+!><:S+-2><-!><+#><:f240,,0,0,0>
+
+<+C><+#><:S+-2><:f240,,0,0,0>Dans la sp<\i>cification
+
+<+C><+#><:S+-2><-#><:f240,,0,0,0>La sp<\i>cification du Paquetage <+!><:f240,,0,0,0>G_Troc<-!><:f240,,0,0,0> 
+est tr<\h>s simple, en effet elle ne contient que les renvois de deux 
+des proc<\i>dures du paquetage Simulation.
+
+<+C><:S+-2><:f240,,0,0,0>
+
+<+C><:R1,9,1,3020,1,3600,1,4320,1,5040,1,5760,1,6480,1,7200,1,7920,1,8640><:S+-2><:f240,,0,0,0>
+
+<+C><:S+-2><:f240,,0,0,0>Proc<\i>dure 	: <+!><:f240,,0,0,0>Jouer_Troc<-!><:f240,,0,0,0>.
+
+<+C><:S+-2><:f240,,0,0,0>Param<\h>tres	: joueur, in, de type <+!><:f240,,0,0,0>T_joueur<-!><:f240,,0,0,0>.
+
+<+C><:R1,9,1,3020,1,3600,1,4320,1,5040,1,5760,1,6480,1,7200,1,7920,1,8640><:S+-2><:f240,,0,0,0>Commentaires	: 
+Traitement de la proposition d'un troc.
+
+<+C><:S+-2><:f240,,0,0,0>
+
+<+C><:S+-2><:f240,,0,0,0>Fonction	: <+!><:f240,,0,0,0>R<\i>ponse_troc<-!><:f240,,0,0,0>.
+
+<+C><:S+-2><:f240,,0,0,0>Param<\h>tres	:	joueur proposant le troc (<+!><:f240,,0,0,0>T_Joueur<-!><:f240,,0,0,0>)
+
+<+C><:S+-2><:f240,,0,0,0>	  terrain propos<\i> (<+!><:f240,,0,0,0>T_Propri<\i>t<\i>s<-!><:f240,,0,0,0>)
+
+<+C><:S+-2><:f240,,0,0,0>		Joueur simule (<+!><:f240,,0,0,0>T_Joueur<-!><:f240,,0,0,0>)
+
+<+C><:S+-2><:f240,,0,0,0>		Terrain d<\i>sir<\i> (<+!><:f240,,0,0,0>T_Propri<\i>t<\i>s<-!><:f240,,0,0,0>);
+
+<+C><:S+-2><:f240,,0,0,0>Retour	:	<+!><:f240,,0,0,0>Boolean<-!><:f240,,0,0,0> 
+vrai si le troc est accept<\i>.
+
+<+C><:S+-2><:f240,,0,0,0>
+
+<+C><:S+-2><+#><:f240,,0,0,0>Dans le corps
+
+<+C><:R1,9,1,3020,1,3600,1,4320,1,5040,1,5760,1,6480,1,7200,1,7920,1,8640><+#><:S+-2><-#><:f240,,0,0,0>
+
+<+C><:S+-2><:f240,,0,0,0>Type	:	<+!><:f240,,0,0,0>T_Tab_Troc_Contenu<-!><:f240,,0,0,0>.
+
+<+C><:S+-2><:f240,,0,0,0>Structure	:	 tableau non contraint de troc (<+!><:f240,,0,0,0>T_Troc<-!><:f240,,0,0,0>). 
+Les indices sont des i<+!><:f240,,0,0,0>ntegers<-!><:f240,,0,0,0>.
+
+<+C><:S+-2><:f240,,0,0,0>
+
+<+C><:S+-2><:f240,,0,0,0>Type	:	<+!><:f240,,0,0,0>T_Tab_Troc<-!><:f240,,0,0,0>.
+
+<+C><:S+-2><:f240,,0,0,0>Structure	:	pointeur vers un <+!><:f240,,0,0,0>T_Tab_Troc_contenu<-!><:f240,,0,0,0>: 
+le seul moyen de passer un tableau de troc d'une proc<\i>dure <\`> 
+l'autre sans conna<\n>tre <\`> l'avance le nombre d'<\i>l<\i>ments.
+
+<+C><:S+-2><:f240,,0,0,0>
+
+<+C><:S+-2><:f240,,0,0,0><:p >
+
+<+C><:R1,9,1,3020,1,3600,1,4320,1,5040,1,5760,1,6480,1,7200,1,7920,1,8640><:S+-2><:f240,,0,0,0><:S-><:f><:S+-2><:f240,,0,0,0><:S-><:f><:S+-2><:f240,,0,0,0><:S-><:f><:S+-2><:f240,,0,0,0><:S-><:f><:S+-2><:f240,,0,0,0>Proc<\i>dure	:	<+!><:f240,,0,0,0>D<\i>termine_
+Liste_prop_desirees<-!><:f240,,0,0,0>.
+
+<+C><:S+-2><:f240,,0,0,0>Param<\h>tres	:	le joueur (in <+!><:f240,,0,0,0>T_Joueur<-!><:f240,,0,0,0>).
+
+<+C><:S+-2><:f240,,0,0,0>Retour	:	un pointeur <+!><:f240,,0,0,0>T_Liste_Propri<\i>tes<-!><:f240,,0,0,0> 
+vers le tableau r<\i>sultat.
+
+<+C><:S+-2><:f240,,0,0,0>Commentaires	:	D<\i>termine les propri<\i>t<\i>s 
+que peut d<\i>sirer un joueur et les classe en fonction du nombre 
+de terrains manquants dans la s<\i>rie et son importance strat<\i>gique.
+
+<+C><:S+-2><:f240,,0,0,0>M<\i>thode	:	
+
+<+C><:S+-2><:f240,,0,0,0>On cr<\i>e un tableau de couleur (<+!><:f240,,0,0,0>T_Couleur<-!><:f240,,0,0,0>) 
+des propri<\i>t<\i>s que l'on classe en ordre d<\i>croissant suivant 
+la valeur de la s<\i>rie consid<\i>r<\i>. Ce tri est fait par un algorithme 
+de tri <\`> bulles, celui-ci ayant une vitesse suffisante sur un  
+tableau de cette taille et <\i>tant de complexit<\i> m<\i>moire N.
+
+<+C><:S+-2><:f240,,0,0,0>On charge ensuite dans un tableau de <+!><:f240,,0,0,0>T_Liste_Propri<\i>t<\i>s<-!><:f240,,0,0,0> 
+toutes les cartes manquantes dans chaque s<\i>rie o<\y> on poss<\h>de 
+au moins une carte. On compte le nombre de cartes manquantes en m<\j>me 
+temps.
+
+<+C><:S+-2><:f240,,0,0,0>On remplit ensuite le tableau r<\i>sultat avec 
+d'abord les terrains des s<\i>ries o<\y> il manque un seul terrain, 
+cela suivant l'ordre du tableau class<\i> des couleurs, puis on fait 
+de m<\j>me avec les cartes des s<\i>ries o<\y> il manque deux cartes.
+
+<+C><:S+-2><:f240,,0,0,0>On <\i>limine tous les pointeurs restant pour 
+ne rien laisser dans la pile.
+
+<+C><:S+-2><:f240,,0,0,0>On retourne le pointeur sur le tableau r<\i>sultat.
+
+<+C><:R1,9,1,3020,1,3600,1,4320,1,5040,1,5760,1,6480,1,7200,1,7920,1,8640><:S+-2><:f240,,0,0,0>
+
+<+C><:S+-2><:f240,,0,0,0><:p >
+
+<+C><:R1,9,1,3020,1,3600,1,4320,1,5040,1,5760,1,6480,1,7200,1,7920,1,8640><:S+-2><:f240,,0,0,0><:S-><:f><:S+-2><:f240,,0,0,0><:S-><:f><:S+-2><:f240,,0,0,0>Proc<\i>dure	:	<+!><:f240,,0,0,0>Determine_Liste_prop_trocables<-!><:f240,,0,0,0>.
+
+<+C><:S+-2><:f240,,0,0,0>Param<\h>tres	:	le joueur (in <+!><:f240,,0,0,0>T_Joueur<-!><:f240,,0,0,0>).
+
+<+C><:S+-2><:f240,,0,0,0>Retour	:	un pointeur <+!><:f240,,0,0,0>T_Liste_Prorpietes<-!><:f240,,0,0,0> 
+vers le tableau r<\i>sultat.
+
+<+C><:S+-2><:f240,,0,0,0>Commentaires	:	D<\i>termine les propri<\i>t<\i>s 
+que peut troquer un joueur et les classe en fonction du nombre de 
+terrains manquants dans la s<\i>rie et son importance strat<\i>gique.
+
+<+C><:S+-2><:f240,,0,0,0>M<\i>thode	:	
+
+<+C><:S+-2><:f240,,0,0,0>La m<\i>thode est la m<\j>me que pr<\i>c<\i>demment 
+sauf que le tri est effectu<\i> dans l'ordre croissant et que les 
+terrains des s<\i>ries o<\y> il manque deux cartes sont plac<\i>s 
+en premier dans le tableau r<\i>sultat.
+
+<+C><:R1,9,1,3020,1,3600,1,4320,1,5040,1,5760,1,6480,1,7200,1,7920,1,8640><:S+-2><:f240,,0,0,0>
+
+<+C><:S+-2><:f240,,0,0,0><:p >
+
+<+C><:S+-2><:f240,,0,0,0><:S-><:f><:R1,9,1,3020,1,3600,1,4320,1,5040,1,5760,1,6480,1,7200,1,7920,1,8640><:S+-2><:f240,,0,0,0>Proc<\i>dure	:	<+!><:f240,,0,0,0>Quels_Trocs_Interessant<-!><:f240,,0,0,0>.
+
+<+C><:S+-2><:f240,,0,0,0>Param<\h>tres	:	Nom du Joueur (in <+!><:f240,,0,0,0>T_Joueur<-!><:f240,,0,0,0>), 
+les propri<\i>t<\i>s d<\i>sir<\i>es et les propri<\i>t<\i>s troquables 
+(in <+!><:f240,,0,0,0>T_Propri<\i>t<\i>s<-!><:f240,,0,0,0>).
+
+<+C><:S+-2><:f240,,0,0,0>Retour	:	Le tableau des trocs ( <+!><:f240,,0,0,0>T_Tab_Troc<-!><:f240,,0,0,0>).
+
+<+C><:S+-2><:f240,,0,0,0>Commentaires	:	Cette proc<\i>dure d<\i>termine 
+quels sont les trocs int<\i>ressant pour le joueur entre les <\i>l<\i>ments 
+des deux listes.
+
+<+C><:S+-2><:f240,,0,0,0>M<\i>thode	:
+
+<+C><:S+-2><:f240,,0,0,0>Pour stocker temporairement les trocs int<\i>ressants 
+on a deux m<\i>thodes: soit une liste que l'on cr<\i>e au fur et <\`> 
+mesure de la d<\i>couverte des trocs int<\i>ressants, soit un tableau 
+de la taille du nombre maximal de trocs possibles entre les deux listes. 
+La m<\i>thode de la liste nous oblige <\`> cr<\i>er toute une nouvelle 
+structure de gestion de liste pour une seule proc<\i>dure(ou <\`> 
+l'instancier dans le cas d'un paquetage g<\i>n<\i>rique). Le tableau 
+fait au maximum 196 cases,  qui <\`> priori ne font pas plus de 10 
+octets (2 pour chaque terrains plus 2 pour chaque joueur plus 2 de 
+structure), le tableau n'occupera donc pas plus de 2 KOctets dans 
+la zone des variables. Ainsi, bien que l'optique g<\i>n<\i>rale de 
+nos choix ait <\i>t<\i> une occupation m<\i>moire minimale, ici c'est 
+le tableau qui a <\i>t<\i> retenu, le travail de gestion <\i>tant 
+infiniment plus simple et plus rapide. De plus l'occupation m<\i>moire 
+ne dure que le temps de la proc<\i>dure.
+
+<+C><:S+-2><:f240,,0,0,0>Les deux listes <\i>tant ordonn<\i>es, on les 
+parcourt dans l'ordre en testant toutes les combinaisons de trocs 
+possibles avec R<\i>ponse_Troc_S et on retient les propositions int<\i>ressantes 
+pour le joueur. On compte les trocs retenus en m<\j>me temps.
+
+<+C><:S+-2><:f240,,0,0,0>On cr<\i>e alors le pointeur vers le tableau 
+r<\i>sultat de la bonne taille, on y transfert tous les <\i>l<\i>ments 
+int<\i>ressants et on rend la main.
+
+<+C><:S+-2><:f240,,0,0,0>
+
+<+C><:R1,9,1,3020,1,3600,1,4320,1,5040,1,5760,1,6480,1,7200,1,7920,1,8640><:S+-2><:f240,,0,0,0><:p >
+
+<+C><:S+-2><:f240,,0,0,0><:S-><:f><:S+-2><:f240,,0,0,0><:S-><:f><:R1,9,1,3020,1,3600,1,4320,1,5040,1,5760,1,6480,1,7200,1,7920,1,8640><:S+-2><:f240,,0,0,0>Proc<\i>dure	:	<+!><:f240,,0,0,0>Premier_trocs_acceptables<-!><:f240,,0,0,0>.
+
+<+C><:S+-2><:f240,,0,0,0>Param<\h>tres	:	la liste des trocs possible (<+!><:f240,,0,0,0>T_Tab_Troc<-!><:f240,,0,0,0>).
+
+<+C><:S+-2><:f240,,0,0,0>Retour	:	le troc choisi (<+!><:f240,,0,0,0>T_Troc<-!><:f240,,0,0,0>).
+
+<+C><:S+-2><:f240,,0,0,0>Commentaires	:	Cette fonction s<\i>lectionne 
+parmis les trocs ayants <\i>t<\i>s jug<\i>s acceptables celui qui 
+a le plus de chance de passer.
+
+<+C><:S+-2><:f240,,0,0,0>M<\i>thode	:
+
+<+C><:S+-2><:f240,,0,0,0>Tant qu'on n'a pas atteint la fin du tableau 
+on regarde si le troc propos<\i> est acceptable par l'autre, s'il 
+a d<\i>ja <\i>t<\i> propos<\i> on augmente le nombre de propositions 
+de 1 mais on ne le s<\i>lectionne que si ce nombre est multiple de 
+3.
+
+<+C><:S+-2><:f240,,0,0,0>Si aucun troc n'est s<\i>lectionn<\i>, on retourne 
+le <+!><:f240,,0,0,0>Troc_Null<-!><:f240,,0,0,0>.
+
+<+C><:S+-2><:f240,,0,0,0>
+
+<+C><:R1,9,1,3020,1,3600,1,4320,1,5040,1,5760,1,6480,1,7200,1,7920,1,8640><:S+-2><:f240,,0,0,0>Proc<\i>dure 
+	: <+!><:f240,,0,0,0>Jouer_Troc<-!><:f240,,0,0,0>.
+
+<+C><:S+-2><:f240,,0,0,0>Param<\h>tres	: joueur, in, de type <+!><:f240,,0,0,0>T_joueur<-!><:f240,,0,0,0>.
+
+<+C><:S+-2><:f240,,0,0,0>M<\i>thode	:
+
+<+C><:S+-2><:f240,,0,0,0>D'apr<\h>s l'algorithme de la proc<\i>dure on 
+va avoir besoin de deux listes de terrains, ceux que l'on veut et 
+ceux que l'on peut c<\i>der. Ces deux listes sont d<\i>clar<\i>es 
+dans les variables sous la forme d'un <+!><:f240,,0,0,0>T_Liste_Propri<\i>t<\i>s<-!><:f240,,0,0,0> 
+car le nombre de terrains dans chaque cat<\i>gorie est tr<\h>s variable.
+
+<+C><:S+-2><:f240,,0,0,0>On va aussi avoir besoin d'une liste de trocs 
+possibles qui est, pour les m<\j>mes raisons du type <+!><:f240,,0,0,0>T_Liste_Troc<-!><:f240,,0,0,0>.
+
+<+C><:S+-2><:f240,,0,0,0>
+
+<+C><:S+-2><:f240,,0,0,0>On n'a plus maintenant qu'<\`> manipuler des 
+listes tout au long de r<\i>ponse troc, ce qui explique sa faible 
+taille.
+
+<+C><:S+-2><:f240,,0,0,0>
+
+<+C><:S+-2><:f240,,0,0,0>
+
+<+C><:S+-2><:f240,,0,0,0>
+
+<+C><:R1,9,1,3020,1,3600,1,4320,1,5040,1,5760,1,6480,1,7200,1,7920,1,8640><:S+-2><:f240,,0,0,0>Fonction	: 
+<+!><:f240,,0,0,0>R<\i>ponse_troc<-!><:f240,,0,0,0>.
+
+<+C><:S+-2><:f240,,0,0,0>Param<\h>tres	:	joueur proposant le troc (<+!><:f240,,0,0,0>T_Joueur<-!><:f240,,0,0,0>)
+
+<+C><:S+-2><:f240,,0,0,0>	  terrain propos<\i> (<+!><:f240,,0,0,0>T_Propri<\i>t<\i>s<-!><:f240,,0,0,0>)
+
+<+C><:S+-2><:f240,,0,0,0>		Joueur simule (<+!><:f240,,0,0,0>T_Joueur<-!><:f240,,0,0,0>)
+
+<+C><:S+-2><:f240,,0,0,0>		Terrain d<\i>sir<\i> (<+!><:f240,,0,0,0>T_Propri<\i>t<\i>s<-!><:f240,,0,0,0>);
+
+<+C><:S+-2><:f240,,0,0,0>Retour	:	Boolean vrai si le troc est accept<\i>.
+
+<+C><:S+-2><:f240,,0,0,0><:p >
+
+<+C><:R1,9,1,3020,1,3600,1,4320,1,5040,1,5760,1,6480,1,7200,1,7920,1,8640><:S+-2><:f240,,0,0,0>M<\i>thode	:	
+
+<+C><:R1,12,1,720,1,1440,1,2160,1,2880,1,3600,1,4320,1,5040,1,5760,1,6480,1,7200,1,7920,1,8640><:S+-2><:f240,,0,0,0>L'algorithme 
+de R<\i>ponse_Troc est appliqu<\i> directement en aissayant juste 
+de r<\i>duire les temps de calcul car cette proc<\i>drue est appell<\i>e 
+<\i>norm<\i>ment.
+
+<+C><:S+-2><+#><:f240,,0,0,0>
+
+<+#><:S+-2>
+
