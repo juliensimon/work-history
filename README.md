@@ -18,7 +18,7 @@ This repository contains legacy work artifacts from **Julien Simon's** engineeri
 
 ### 🏢 Professional Experience
 - **[Oberthur Card Systems](./2001_2006_oberthur_card_systems/)** - Java Card applets, cryptographic implementations, and training materials
-- **[SchlumbergerSema](./2003_schlumberger_sema/)** - Java Card disassembler and filesystem implementations
+- **[SchlumbergerSema](./2003_schlumberger_sema/)** - Java Card disassembler and reverse engineering tools
 - **[DigiPlug](./2007_2008_digiplug/)** - Infrastructure architecture and ISO27001 procedures
 - **[Criteo](./2010_2014_criteo/)** - Infrastructure engineering, MongoDB expertise, and conference presentations
 - **[Viadeo](./2015_viadeo/)** - Data analysis with Octave and executive presentations
