@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete User Manual - Interactive Quizz System</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #2c3e50;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #ecf0f1;
+            border-radius: 8px;
+        }
+        .title {
+            font-size: 32px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        .subtitle {
+            font-size: 18px;
+            color: #34495e;
+            margin-bottom: 30px;
+        }
+        .welcome {
+            background-color: #e8f5e8;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 4px solid #27ae60;
+        }
+        .contact {
+            background-color: #fff3cd;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 4px solid #f39c12;
+        }
+        .toc {
+            background-color: #e3f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 4px solid #2196f3;
+        }
+        .toc h3 {
+            margin-top: 0;
+            color: #1976d2;
+        }
+        .toc ol {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .toc li {
+            margin: 8px 0;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 10px;
+        }
+        h1 {
+            font-size: 28px;
+            margin-top: 40px;
+        }
+        h2 {
+            font-size: 24px;
+            margin-top: 30px;
+        }
+        h3 {
+            font-size: 20px;
+            margin-top: 25px;
+        }
+        p {
+            margin: 15px 0;
+        }
+        .section {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #6c757d;
+        }
+        .feature {
+            background-color: #e8f5e8;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 10px 0;
+            border-left: 3px solid #27ae60;
+        }
+        .feature-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        .feature-desc {
+            color: #7f8c8d;
+        }
+        .highlight {
+            background-color: #fff3cd;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        .authors {
+            text-align: center;
+            margin-top: 60px;
+            padding: 20px;
+            background-color: #ecf0f1;
+            border-radius: 8px;
+        }
+        .ui-description {
+            background-color: #e8f4fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #3498db;
+        }
+        .ui-description h4 {
+            margin-top: 0;
+            color: #1976d2;
+        }
+        .warning {
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 15px 0;
+            border-left: 4px solid #dc3545;
+        }
+        .tip {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 15px 0;
+            border-left: 4px solid #17a2b8;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="title">Interactive Quizz System</div>
+        <div class="subtitle">Complete User Manual</div>
+    </div>
+
+    <div class="welcome">
+        <h2>Welcome to The Interactive Quizz System!</h2>
+        <p>This IQS is very powerful, yet very simple to use. Thanks to colorful windows, menus and mouse support, writing quizzes has never been so easy.</p>
+        <p>We hope you'll enjoy using it as much as we did creating it!</p>
+    </div>
+
+    <div class="contact">
+        <h3>Support the Authors</h3>
+        <p>If you like this program and are willing to support its authors, please send $25 to the following address:</p>
+        <div style="text-align: center; font-weight: bold; margin: 20px 0;">
+            <div>N.DARNEAU & J.SIMON</div>
+            <div>28, rue Notre Dame des Champs</div>
+            <div>75006 PARIS</div>
+            <div>FRANCE</div>
+        </div>
+    </div>
+
+    <div class="toc">
+        <h3>Table of Contents</h3>
+        <ol>
+            <li><strong>Introduction to the Interactive Quizz System</strong></li>
+            <li><strong>Student's Section</strong></li>
+            <li><strong>Teacher's Section</strong></li>
+            <li><strong>Sysop's Section</strong></li>
+            <li><strong>Conclusion</strong></li>
+        </ol>
+    </div>
+
+    <h1>1. Introduction to the Interactive Quizz System</h1>
+    <p>Let's start with a few general remarks about the IQS.</p>
+    
+    <div class="ui-description">
+        <h4>Menu-Driven Interface</h4>
+        <p>As you will quickly notice, this program is menu-driven: this means that you don't have to worry about quirky key combinations. All you have to do is click the mouse in a window to see the appropriate menu appear. Click again on one of the choices and that's it!</p>
+        <p><strong>Try it! Don't you love it already? Sure you do!</strong></p>
+    </div>
+
+    <div class="feature">
+        <div class="feature-title">Authentication System</div>
+        <div class="feature-desc">The first thing to do is to make sure that you're allowed to run the program. You will be prompted for your full name and password. The program will check them and clear you if they're correct. Indeed, we don't want people to play around with each other's data.</div>
+    </div>
+
+    <div class="tip">
+        <strong>Getting Started:</strong> Once you're clear, a window will open and you'll be ready to go to work. Have fun!
+    </div>
+
+    <h1>2. Student's Section</h1>
+    <p>If we did things right (and I think we did), you should see this window:</p>
+    
+    <div class="ui-description">
+        <h4>Student Interface Layout</h4>
+        <p>The left-hand window lists the numbers of the available quizzes. If you click on one of them, you will see a short description appear in the right-hand window. See how simple it is?</p>
+    </div>
+
+    <p>Let's now examine the available options. Click anywhere in the right-hand window.</p>
+
+    <div class="section">
+        <h3>Available Student Options</h3>
+        
+        <div class="feature">
+            <div class="feature-title">Take quiz</div>
+            <div class="feature-desc">Selecting it starts the exam. The questions are successively printed in the right-hand window and you will be prompted for the correct answer. Remember: you have a limited time to answer the question, so don't waste it! When the quiz is over, your score is stored for later use.</div>
+        </div>
+
+        <div class="feature">
+            <div class="feature-title">Grades</div>
+            <div class="feature-desc">You'll probably be eager to know how well you've done. That's what this option is for. Click on it and the following statistics will be displayed in the right-hand window:</div>
+            <ul>
+                <li>your grade and your rank among the students who took the quiz</li>
+                <li>the time you spent answering the quiz, and your rank</li>
+                <li>the average score</li>
+                <li>the average time</li>
+            </ul>
+        </div>
+
+        <div class="feature">
+            <div class="feature-title">Change password</div>
+            <div class="feature-desc">This one is pretty obvious: it lets you change your password.</div>
+        </div>
+    </div>
+
+    <div class="tip">
+        <strong>Student Tip:</strong> That's it! Good luck!
+    </div>
+
+    <h1>3. Teacher's Section</h1>
+    <p>Hi, teach! I mean, good morning Sir!</p>
+    
+    <div class="ui-description">
+        <h4>Teacher Interface</h4>
+        <p>That's how things should look on your screen once you clicked in the right-hand window (if they don't, well, why don't you have a beer: it won't help much but it'll cool you down).</p>
+        <p>In the right-hand window are displayed the number of the quizzes you've written so far. If you click on one of them, you'll see a short description appear in the right-hand window.</p>
+    </div>
+
+    <div class="section">
+        <h3>Available Teacher Options</h3>
+        
+        <div class="feature">
+            <div class="feature-title">Add quiz</div>
+            <div class="feature-desc">Creates a new quiz. You'll see its number appear after the other numbers.</div>
+        </div>
+
+        <div class="feature">
+            <div class="feature-title">Remove quiz</div>
+            <div class="feature-desc">Deletes permanently the selected quiz. Use with caution!</div>
+        </div>
+
+        <div class="feature">
+            <div class="feature-title">Edit quiz</div>
+            <div class="feature-desc">Lets you modify a quiz.</div>
+        </div>
+
+        <div class="feature">
+            <div class="feature-title">Publish quiz</div>
+            <div class="feature-desc">Makes a quiz available to all your students. You may want to publish a quiz once you've finished writing it.</div>
+        </div>
+
+        <div class="feature">
+            <div class="feature-title">Grades</div>
+            <div class="feature-desc">Will print in the right-hand window the following statistics:</div>
+            <ul>
+                <li>the list of the students who took the quiz, sorted by descending score</li>
+                <li>the average score</li>
+                <li>the same list, sorted by ascending time</li>
+                <li>the average time</li>
+            </ul>
+        </div>
+
+        <div class="feature">
+            <div class="feature-title">Password</div>
+            <div class="feature-desc">Enables you to change your password.</div>
+        </div>
+    </div>
+
+    <h3>Editing Quizzes</h3>
+    <p>If you selected Edit quiz, you should see this:</p>
+    
+    <div class="ui-description">
+        <h4>Quiz Editor Interface</h4>
+        <p>As usual, the right-hand window's purpose is to display information about the selected item. The upper left-hand window lists the questions. The lower left-hand window lists the possible answers corresponding to the selected question.</p>
+    </div>
+
+    <p>Click in any of the left-hand window. A menu will appear. It'll give you three options:</p>
+    <ul>
+        <li><strong>Add</strong> creates a new item</li>
+        <li><strong>Remove</strong> deletes permanently the selected item. Again, use with caution!</li>
+        <li><strong>Edit</strong> lets you modify the selected item</li>
+    </ul>
+
+    <div class="section">
+        <h3>Question Structure</h3>
+        <p>A question is made of:</p>
+        <ul>
+            <li><strong>the question itself:</strong> Complete the sentence: My _____ is rich.</li>
+            <li><strong>the score granted</strong> if the answer is right, wrong or if the student doesn't answer in time</li>
+            <li><strong>the time given</strong> to the student to answer the question</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h3>Answer Structure</h3>
+        <p>A possible answer is made of:</p>
+        <ul>
+            <li><strong>the answer itself:</strong> tailor</li>
+            <li><strong>its validity:</strong> true (or false)</li>
+        </ul>
+    </div>
+
+    <div class="tip">
+        <strong>Teacher Tip:</strong> You're now ready to start writing quizzes. Please, don't be too hard on your students!
+    </div>
+
+    <h1>4. Sysop's Section</h1>
+    <p>As Sysop, you are responsible for the administration of the program. You are the only one allowed to add or remove students, teachers, etc.</p>
+    
+    <div class="warning">
+        <strong>Important:</strong> You also are a teacher, which means that the Teacher's Section applies to you. We suggest that you read it carefully before reading any further.
+    </div>
+
+    <div class="ui-description">
+        <h4>Sysop Interface</h4>
+        <p>After you logged in, you will see this:</p>
+        <p>The first option is nothing really new: it just opens a Teacher window, just like the one we just studied. Please refer to the Teacher's Section for more details.</p>
+        <p>The last option isn't new either: Password lets you change your password.</p>
+    </div>
+
+    <h3>Administration Panel</h3>
+    <p>Let's study the option Administration. Click on it and here we go:</p>
+    
+    <div class="ui-description">
+        <h4>Administration Interface Layout</h4>
+        <ul>
+            <li><strong>Upper-left window:</strong> lists the available school years</li>
+            <li><strong>Lower-left window:</strong> lists the students who are attending the selected year</li>
+            <li><strong>Upper-right window:</strong> lists the teachers who are teaching to these students</li>
+            <li><strong>Lower-right window:</strong> displays information about the selected item</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h3>Administration Options</h3>
+        <p>Click in any of the list windows and a menu will appear, giving you three options:</p>
+        
+        <div class="feature">
+            <div class="feature-title">Add</div>
+            <div class="feature-desc">Creates a new item.</div>
+        </div>
+
+        <div class="feature">
+            <div class="feature-title">Remove</div>
+            <div class="feature-desc">Deletes the selected item permanently (Have I said this before?)</div>
+        </div>
+
+        <div class="feature">
+            <div class="feature-title">Edit</div>
+            <div class="feature-desc">Lets you edit the selected item. That's the item's name, plus its password if it's a student or a teacher.</div>
+        </div>
+    </div>
+
+    <div class="warning">
+        <strong>Sysop Responsibility:</strong> Well, you know all there is to know. Remember: you are in charge. Try to be worthy!
+    </div>
+
+    <h1>5. Conclusion</h1>
+    <p>Well, we hope you don't feel queasy after all this.</p>
+    <p>That's a terrible joke, but do you know how late it is?</p>
+    <p><strong>Adios amigos!</strong></p>
+
+    <div class="authors">
+        <p><em>Developed by Nathalie DARNEAU and Julien SIMON</em></p>
+        <p><em>I.S.E.P. - 1992-1993</em></p>
+        <p><em>binôme A2R2C</em></p>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,16 @@
+-scom/oberthurcs/formation/exercices
+A000000077FFFFFF02=Ex2.class
+*.class
+-ncom.oberthurcs.formation.exercices
+-pA000000077FFFFFFFF
+-v1.0
+-ddebugconv.txt
+-c.\javacard\Ex2.cap
+-e.\javacard\Ex2.exp
+C:\Exercices\JavaCard\api\java\lang\javacard\lang.exp
+C:\Exercices\JavaCard\api\javacard\framework\javacard\framework.exp
+C:\Exercices\JavaCard\api\javacard\security\javacard\security.exp
+C:\Exercices\JavaCard\api\javacardx\crypto\javacard\crypto.exp
+C:\Exercices\JavaCard\api\visa\openplatform\javacard\openplatform.exp
+C:\Exercices\JavaCard\api\com\delarue\javacard\javacard\javacard.exp
+..\filesystem\javacard\filesystem.exp

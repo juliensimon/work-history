@@ -1,0 +1,441 @@
+
+Package name: com.oberthurcs.formation.exercices.client
+Minor_version: 0
+Major_version: 1
+AID: 
+  aid[0]=0xA0
+  aid[1]=0x00
+  aid[2]=0x00
+  aid[3]=0x00
+  aid[4]=0x77
+  aid[5]=0xFF
+  aid[6]=0xFF
+  aid[7]=0xFF
+  aid[8]=0xFF
+  aid[9]=0x02
+
+Token: 7
+
+public super  class com/oberthurcs/formation/exercices/client/Ex5_Client extends javacard/framework/Applet; // Token: 255
+Implements directly 
+Implements indirectly: 
+{
+	// Static fields -----------------------------------------------------------------------------------
+
+	public static final byte INS_LIST_DIR= 0xE8;                         // Token: 255
+
+	// String fields -----------------------------------------------------------------------------------
+
+
+	// Instance fields ---------------------------------------------------------------------------------
+
+	protected []byte serverAIDbytes;                                     // Token: 0
+	protected javacard/framework/AID serverAID;                          // Token: 1
+
+	// Inherited virtual methods -----------------------------------------------------------------------
+
+	protected final boolean selectingApplet()                             // Token: 3
+	public void deselect()                                                // Token: 4
+	public javacard/framework/Shareable getShareableInterfaceObject(javacard/framework/AID,byte)// Token: 5
+	public boolean select()                                               // Token: 6
+	public boolean equals(java/lang/Object)                               // Token: 0
+	protected final void register()                                       // Token: 1
+	protected final void register([]byte,short,byte)                      // Token: 2
+	public abstract void process(javacard/framework/APDU)                 // Token: 7
+
+	// Static and Init Methods -------------------------------------------------------------------------
+
+	public static void install([]byte,short,byte)                         // Token: 0
+	//offset = 1
+	{
+	  // Java Byte Codes
+
+		>> Nargs: 3	Max_locals: 3 <<
+
+		// Java Variables
+		Slot 0 : []byte bArray (pc:0 length:11)
+		Slot 1 : short bOffset (pc:0 length:11)
+		Slot 2 : byte bLength (pc:0 length:11)
+
+		//Exceptions
+
+		[0x0] 0xBB 0x0006        	| [0] new Class:com/oberthurcs/formation/exercices/client/Ex5_Client// line: 29
+		[0x3] 0x59               	| [3] dup                                                     // line: 29
+		[0x4] 0xB7 0x0007        	| [4] invokespecial com/oberthurcs/formation/exercices/client/Ex5_Client.<init>()V// line: 29
+		[0x7] 0xB6 0x0008        	| [7] invokevirtual javacard/framework/Applet.register()V     // line: 29
+		[0xa] 0xB1               	| [10] return                                                 // line: 29
+
+	  // JavaCard Byte Codes
+
+		>> Nargs: 3	Max_locals: 0 <<
+
+		// JavaCard Variables
+		Slot 0: []byte bArray
+		Slot 1: short bOffset
+		Slot 2: byte bLength
+
+		//Exceptions
+
+		[0x0] 0x8F 0x0002        	| [0] new Class:com/oberthurcs/formation/exercices/client/Ex5_Client
+		[0x3] 0x3D               	| [3] dup                                                     
+		[0x4] 0x8C 0x0006        	| [4] invokespecial com/oberthurcs/formation/exercices/client/Ex5_Client.<init>()V
+		[0x7] 0x8B 0x000E        	| [7] invokevirtual javacard/framework/Applet.register()V     
+		[0xa] 0x7A               	| [10] return                                                 
+	}
+
+	protected void <init>()                                               // Token: 1
+	//offset = 14
+	{
+	  // Java Byte Codes
+
+		>> Nargs: 0	Max_locals: 1 <<
+
+		// Java Variables
+		Slot 0 : com/oberthurcs/formation/exercices/client/Ex5_Client this (pc:0 length:81)
+
+		//Exceptions
+
+		[0x0] 0x2A               	| [0] aload_0                                                 // line: 17
+		[0x1] 0xB7 0x0001        	| [1] invokespecial javacard/framework/Applet.<init>()V       // line: 17
+		[0x4] 0x2A               	| [4] aload_0                                                 // line: 17
+		[0x5] 0x10 0xa           	| [5] bipush Value: 10                                        // line: 10
+		[0x7] 0xBC 0x8           	| [7] newarray Value: 8                                       // line: 10
+		[0x9] 0x59               	| [9] dup                                                     // line: 10
+		[0xa] 0x03               	| [10] iconst_0                                               // line: 10
+		[0xb] 0x10 0xa0          	| [11] bipush Value: -96                                      // line: 10
+		[0xd] 0x54               	| [13] bastore                                                // line: 10
+		[0xe] 0x59               	| [14] dup                                                    // line: 10
+		[0xf] 0x04               	| [15] iconst_1                                               // line: 10
+		[0x10] 0x03              	| [16] iconst_0                                               // line: 10
+		[0x11] 0x54              	| [17] bastore                                                // line: 10
+		[0x12] 0x59              	| [18] dup                                                    // line: 10
+		[0x13] 0x05              	| [19] iconst_2                                               // line: 10
+		[0x14] 0x03              	| [20] iconst_0                                               // line: 10
+		[0x15] 0x54              	| [21] bastore                                                // line: 10
+		[0x16] 0x59              	| [22] dup                                                    // line: 10
+		[0x17] 0x06              	| [23] iconst_3                                               // line: 10
+		[0x18] 0x03              	| [24] iconst_0                                               // line: 10
+		[0x19] 0x54              	| [25] bastore                                                // line: 10
+		[0x1a] 0x59              	| [26] dup                                                    // line: 10
+		[0x1b] 0x07              	| [27] iconst_4                                               // line: 10
+		[0x1c] 0x10 0x77         	| [28] bipush Value: 119                                      // line: 10
+		[0x1e] 0x54              	| [30] bastore                                                // line: 10
+		[0x1f] 0x59              	| [31] dup                                                    // line: 10
+		[0x20] 0x08              	| [32] iconst_5                                               // line: 10
+		[0x21] 0x02              	| [33] iconst_m1                                              // line: 10
+		[0x22] 0x54              	| [34] bastore                                                // line: 10
+		[0x23] 0x59              	| [35] dup                                                    // line: 10
+		[0x24] 0x10 0x6          	| [36] bipush Value: 6                                        // line: 10
+		[0x26] 0x02              	| [38] iconst_m1                                              // line: 10
+		[0x27] 0x54              	| [39] bastore                                                // line: 10
+		[0x28] 0x59              	| [40] dup                                                    // line: 10
+		[0x29] 0x10 0x7          	| [41] bipush Value: 7                                        // line: 10
+		[0x2b] 0x02              	| [43] iconst_m1                                              // line: 10
+		[0x2c] 0x54              	| [44] bastore                                                // line: 10
+		[0x2d] 0x59              	| [45] dup                                                    // line: 10
+		[0x2e] 0x10 0x8          	| [46] bipush Value: 8                                        // line: 10
+		[0x30] 0x08              	| [48] iconst_5                                               // line: 10
+		[0x31] 0x54              	| [49] bastore                                                // line: 10
+		[0x32] 0x59              	| [50] dup                                                    // line: 10
+		[0x33] 0x10 0x9          	| [51] bipush Value: 9                                        // line: 10
+		[0x35] 0x04              	| [53] iconst_1                                               // line: 10
+		[0x36] 0x54              	| [54] bastore                                                // line: 10
+		[0x37] 0xB5 0x0002       	| [55] putfield Field: serverAIDbytes [B                      // line: 10
+		[0x3a] 0x2A              	| [58] aload_0                                                // line: 10
+		[0x3b] 0xBB 0x0003       	| [59] new Class:javacard/framework/AID                       // line: 18
+		[0x3e] 0x59              	| [62] dup                                                    // line: 18
+		[0x3f] 0x2A              	| [63] aload_0                                                // line: 18
+		[0x40] 0xB4 0x0002       	| [64] getfield Field: serverAIDbytes [B                      // line: 18
+		[0x43] 0x03              	| [67] iconst_0                                               // line: 18
+		[0x44] 0x2A              	| [68] aload_0                                                // line: 18
+		[0x45] 0xB4 0x0002       	| [69] getfield Field: serverAIDbytes [B                      // line: 18
+		[0x48] 0xBE              	| [72] arraylength                                            // line: 18
+		[0x49] 0x91              	| [73] i2b                                                    // line: 18
+		[0x4a] 0xB7 0x0004       	| [74] invokespecial javacard/framework/AID.<init>([BSB)V     // line: 18
+		[0x4d] 0xB5 0x0005       	| [77] putfield Field: serverAID Ljavacard/framework/AID;     // line: 18
+		[0x50] 0xB1              	| [80] return                                                 // line: 18
+
+	  // JavaCard Byte Codes
+
+		>> Nargs: 1	Max_locals: 0 <<
+
+		// JavaCard Variables
+		Slot 0: com/oberthurcs/formation/exercices/client/Ex5_Client this
+
+		//Exceptions
+
+		[0x0] 0x18               	| [0] aload_0                                                 
+		[0x1] 0x8C 0x000F        	| [1] invokespecial javacard/framework/Applet.<init>()V       
+		[0x4] 0x18               	| [4] aload_0                                                 
+		[0x5] 0x10 0xa           	| [5] bspush Value: 10                                        
+		[0x7] 0x90 0xb           	| [7] newarray Value: 11                                      
+		[0x9] 0x3D               	| [9] dup                                                     
+		[0xa] 0x03               	| [10] sconst_0                                               
+		[0xb] 0x10 0xa0          	| [11] bspush Value: -96                                      
+		[0xd] 0x38               	| [13] bastore                                                
+		[0xe] 0x3D               	| [14] dup                                                    
+		[0xf] 0x04               	| [15] sconst_1                                               
+		[0x10] 0x03              	| [16] sconst_0                                               
+		[0x11] 0x38              	| [17] bastore                                                
+		[0x12] 0x3D              	| [18] dup                                                    
+		[0x13] 0x05              	| [19] sconst_2                                               
+		[0x14] 0x03              	| [20] sconst_0                                               
+		[0x15] 0x38              	| [21] bastore                                                
+		[0x16] 0x3D              	| [22] dup                                                    
+		[0x17] 0x06              	| [23] sconst_3                                               
+		[0x18] 0x03              	| [24] sconst_0                                               
+		[0x19] 0x38              	| [25] bastore                                                
+		[0x1a] 0x3D              	| [26] dup                                                    
+		[0x1b] 0x07              	| [27] sconst_4                                               
+		[0x1c] 0x10 0x77         	| [28] bspush Value: 119                                      
+		[0x1e] 0x38              	| [30] bastore                                                
+		[0x1f] 0x3D              	| [31] dup                                                    
+		[0x20] 0x08              	| [32] sconst_5                                               
+		[0x21] 0x02              	| [33] sconst_m1                                              
+		[0x22] 0x38              	| [34] bastore                                                
+		[0x23] 0x3D              	| [35] dup                                                    
+		[0x24] 0x10 0x6          	| [36] bspush Value: 6                                        
+		[0x26] 0x02              	| [38] sconst_m1                                              
+		[0x27] 0x38              	| [39] bastore                                                
+		[0x28] 0x3D              	| [40] dup                                                    
+		[0x29] 0x10 0x7          	| [41] bspush Value: 7                                        
+		[0x2b] 0x02              	| [43] sconst_m1                                              
+		[0x2c] 0x38              	| [44] bastore                                                
+		[0x2d] 0x3D              	| [45] dup                                                    
+		[0x2e] 0x10 0x8          	| [46] bspush Value: 8                                        
+		[0x30] 0x08              	| [48] sconst_5                                               
+		[0x31] 0x38              	| [49] bastore                                                
+		[0x32] 0x3D              	| [50] dup                                                    
+		[0x33] 0x10 0x9          	| [51] bspush Value: 9                                        
+		[0x35] 0x04              	| [53] sconst_1                                               
+		[0x36] 0x38              	| [54] bastore                                                
+		[0x37] 0x87 0x00         	| [55] putfield_a Field: serverAIDbytes [B                    
+		[0x39] 0x18              	| [57] aload_0                                                
+		[0x3a] 0x8F 0x0004       	| [58] new Class:javacard/framework/AID                       
+		[0x3d] 0x3D              	| [61] dup                                                    
+		                         	|                                                             
+		[0x3e] 0xAD 0x00         	| [62] getfield_a_this Field: serverAIDbytes [B               
+		[0x40] 0x03              	| [64] sconst_0                                               
+		                         	|                                                             
+		[0x41] 0xAD 0x00         	| [65] getfield_a_this Field: serverAIDbytes [B               
+		[0x43] 0x92              	| [67] arraylength                                            
+		[0x44] 0x5B              	| [68] s2b                                                    
+		[0x45] 0x8C 0x000A       	| [69] invokespecial javacard/framework/AID.<init>([BSB)V     
+		[0x48] 0x87 0x01         	| [72] putfield_a Field: serverAID Ljavacard/framework/AID;   
+		[0x4a] 0x7A              	| [74] return                                                 
+	}
+
+
+	// Virtual Methods ---------------------------------------------------------------------------------
+
+	private void processListDir(javacard/framework/APDU)                  // Token: 255
+	//offset = 91
+	{
+	  // Java Byte Codes
+
+		>> Nargs: 1	Max_locals: 5 <<
+
+		// Java Variables
+		Slot 0 : com/oberthurcs/formation/exercices/client/Ex5_Client this (pc:0 length:49)
+		Slot 1 : javacard/framework/APDU apdu (pc:0 length:49)
+		Slot 2 : []byte buffer (pc:5 length:43)
+		Slot 3 : com/oberthurcs/formation/filesystem/SharedDirectory sharedMasterFile (pc:31 length:17)
+		Slot 4 : short length (pc:41 length:7)
+
+		//Exceptions
+
+		[0x0] 0x2B               	| [0] aload_1                                                 // line: 56
+		[0x1] 0xB6 0x0009        	| [1] invokevirtual javacard/framework/APDU.getBuffer()[B     // line: 56
+		[0x4] 0x4D               	| [4] astore_2                                                // line: 56
+		[0x5] 0x2C               	| [5] aload_2                                                 // line: 56
+		[0x6] 0x05               	| [6] iconst_2                                                // line: 58
+		[0x7] 0xB8 0x000D        	| [7] invokestatic javacard/framework/Util.getShort([BS)S     // line: 58
+		[0xa] 0x99 0x00 0x09     	| [10] ifeq 19                                                // line: 58
+		[0xd] 0x11 0x6a 0x86     	| [13] sipush Value: 27270                                    // line: 58
+		[0x10] 0xB8 0x000B       	| [16] invokestatic javacard/framework/ISOException.throwIt(S)V// line: 59
+		[0x13] 0x2A              	| [19] aload_0                                                // line: 59
+		[0x14] 0xB4 0x0005       	| [20] getfield Field: serverAID Ljavacard/framework/AID;     // line: 61
+		[0x17] 0x03              	| [23] iconst_0                                               // line: 61
+		[0x18] 0xB8 0x000E       	| [24] invokestatic javacard/framework/JCSystem.getAppletShareableInterfaceObject(Ljavacard/framework/AID;B)Ljavacard/framework/Shareable;// line: 61
+		[0x1b] 0xC0 0x000F       	| [27] checkcast Class:com/oberthurcs/formation/filesystem/SharedDirectory// line: 61
+		[0x1e] 0x4E              	| [30] astore_3                                               // line: 61
+		[0x1f] 0x2D              	| [31] aload_3                                                // line: 61
+		[0x20] 0x2C              	| [32] aload_2                                                // line: 69
+		[0x21] 0x03              	| [33] iconst_0                                               // line: 69
+		[0x22] 0xB9 0x0010 0x03 0x00	| [34] invokeinterface com/oberthurcs/formation/filesystem/SharedDirectory.listDir([BS)S Nargs:3// line: 69
+		[0x27] 0x36 0x04         	| [39] istore LV Index: 4                                     // line: 69
+		[0x29] 0x2B              	| [41] aload_1                                                // line: 69
+		[0x2a] 0x03              	| [42] iconst_0                                               // line: 70
+		[0x2b] 0x15 0x04         	| [43] iload LV Index: 4                                      // line: 70
+		[0x2d] 0xB6 0x0011       	| [45] invokevirtual javacard/framework/APDU.setOutgoingAndSend(SS)V// line: 70
+		[0x30] 0xB1              	| [48] return                                                 // line: 70
+
+	  // JavaCard Byte Codes
+
+		>> Nargs: 2	Max_locals: 3 <<
+
+		// JavaCard Variables
+		Slot 0: com/oberthurcs/formation/exercices/client/Ex5_Client this
+		Slot 1: javacard/framework/APDU apdu
+		Slot 2: []byte buffer
+		Slot 3: com/oberthurcs/formation/filesystem/SharedDirectory sharedMasterFile
+		Slot 4: short length
+
+		//Exceptions
+
+		[0x0] 0x19               	| [0] aload_1                                                 
+		[0x1] 0x8B 0x0008        	| [1] invokevirtual javacard/framework/APDU.getBuffer()[B     
+		[0x4] 0x2D               	| [4] astore_2                                                
+		[0x5] 0x1A               	| [5] aload_2                                                 
+		[0x6] 0x05               	| [6] sconst_2                                                
+		[0x7] 0x8D 0x0007        	| [7] invokestatic javacard/framework/Util.getShort([BS)S     
+		[0xa] 0x60 0x8           	| [10] ifeq 18                                                
+		[0xc] 0x11 0x6a 0x86     	| [12] sspush Value: 27270                                    
+		[0xf] 0x8D 0x000C        	| [15] invokestatic javacard/framework/ISOException.throwIt(S)V
+		                         	|                                                             
+		[0x12] 0xAD 0x01         	| [18] getfield_a_this Field: serverAID Ljavacard/framework/AID;
+		[0x14] 0x03              	| [20] sconst_0                                               
+		[0x15] 0x8D 0x000B       	| [21] invokestatic javacard/framework/JCSystem.getAppletShareableInterfaceObject(Ljavacard/framework/AID;B)Ljavacard/framework/Shareable;
+		[0x18] 0x94 0x00 0x0003  	| [24] checkcast Atype: 0 Index: 3                            
+		[0x1c] 0x2E              	| [28] astore_3                                               
+		[0x1d] 0x1B              	| [29] aload_3                                                
+		[0x1e] 0x1A              	| [30] aload_2                                                
+		[0x1f] 0x03              	| [31] sconst_0                                               
+		[0x20] 0x8E 0x03 0x0003 0x00	| [32] invokeinterface Nargs: 3 com/oberthurcs/formation/filesystem/SharedDirectory.listDir([BS)S Interface method token: 0
+		[0x25] 0x29 0x04         	| [37] sstore LV Index: 4                                     
+		[0x27] 0x19              	| [39] aload_1                                                
+		[0x28] 0x03              	| [40] sconst_0                                               
+		[0x29] 0x16 0x04         	| [41] sload LV Index: 4                                      
+		[0x2b] 0x8B 0x0009       	| [43] invokevirtual javacard/framework/APDU.setOutgoingAndSend(SS)V
+		[0x2e] 0x7A              	| [46] return                                                 
+	}
+
+	public boolean select()                                               // Token: 6
+	//offset = 140
+	{
+	  // Java Byte Codes
+
+		>> Nargs: 0	Max_locals: 1 <<
+
+		// Java Variables
+		Slot 0 : com/oberthurcs/formation/exercices/client/Ex5_Client this (pc:0 length:2)
+
+		//Exceptions
+
+		[0x0] 0x04               	| [0] iconst_1                                                // line: 23
+		[0x1] 0xAC               	| [1] ireturn                                                 // line: 23
+
+	  // JavaCard Byte Codes
+
+		>> Nargs: 1	Max_locals: 0 <<
+
+		// JavaCard Variables
+		Slot 0: com/oberthurcs/formation/exercices/client/Ex5_Client this
+
+		//Exceptions
+
+		[0x0] 0x04               	| [0] sconst_1                                                
+		[0x1] 0x78               	| [1] sreturn                                                 
+	}
+
+	public void process(javacard/framework/APDU)                          // Token: 7
+	//offset = 144
+	{
+	  // Java Byte Codes
+
+		>> Nargs: 1	Max_locals: 4 <<
+
+		// Java Variables
+		Slot 0 : com/oberthurcs/formation/exercices/client/Ex5_Client this (pc:0 length:67)
+		Slot 1 : javacard/framework/APDU apdu (pc:0 length:67)
+		Slot 2 : []byte buffer (pc:5 length:61)
+		Slot 3 : short Lc (pc:10 length:56)
+
+		//Exceptions
+
+		[0x0] 0x2B               	| [0] aload_1                                                 // line: 34
+		[0x1] 0xB6 0x0009        	| [1] invokevirtual javacard/framework/APDU.getBuffer()[B     // line: 34
+		[0x4] 0x4D               	| [4] astore_2                                                // line: 34
+		[0x5] 0x2C               	| [5] aload_2                                                 // line: 34
+		[0x6] 0x07               	| [6] iconst_4                                                // line: 35
+		[0x7] 0x33               	| [7] baload                                                  // line: 35
+		[0x8] 0x93               	| [8] i2s                                                     // line: 35
+		[0x9] 0x3E               	| [9] istore_3                                                // line: 35
+		[0xa] 0x2A               	| [10] aload_0                                                // line: 35
+		[0xb] 0xB6 0x000A        	| [11] invokevirtual javacard/framework/Applet.selectingApplet()Z// line: 37
+		[0xe] 0x99 0x00 0x04     	| [14] ifeq 18                                                // line: 37
+		[0x11] 0xB1              	| [17] return                                                 // line: 37
+		[0x12] 0x2C              	| [18] aload_2                                                // line: 37
+		[0x13] 0x03              	| [19] iconst_0                                               // line: 39
+		[0x14] 0x33              	| [20] baload                                                 // line: 39
+		[0x15] 0x10 0x80         	| [21] bipush Value: -128                                     // line: 39
+		[0x17] 0x9F 0x00 0x09    	| [23] if_icmpeq 32                                           // line: 39
+		[0x1a] 0x11 0x6e 0x0     	| [26] sipush Value: 28160                                    // line: 39
+		[0x1d] 0xB8 0x000B       	| [29] invokestatic javacard/framework/ISOException.throwIt(S)V// line: 40
+		[0x20] 0x2C              	| [32] aload_2                                                // line: 40
+		[0x21] 0x04              	| [33] iconst_1                                               // line: 42
+		[0x22] 0x33              	| [34] baload                                                 // line: 42
+		[0x23] 0xAB              	| [35] lookupswitch                                           // line: 42
+		                         	|    Zeroed bytes: 0
+		   0x00000019            	|    Default bytes: 60
+		   0x00000001            	|    nPairs: 1
+		   0xFFFFFFE8 0x00000011 	|    -24: 52
+
+		[0x34] 0x2A              	| [52] aload_0                                                // line: 42
+		[0x35] 0x2B              	| [53] aload_1                                                // line: 44
+		[0x36] 0xB7 0x000C       	| [54] invokespecial com/oberthurcs/formation/exercices/client/Ex5_Client.processListDir(Ljavacard/framework/APDU;)V// line: 44
+		[0x39] 0xA7 0x00 0x09    	| [57] goto 66                                                // line: 44
+		[0x3c] 0x11 0x6d 0x0     	| [60] sipush Value: 27904                                    // line: 45
+		[0x3f] 0xB8 0x000B       	| [63] invokestatic javacard/framework/ISOException.throwIt(S)V// line: 48
+		[0x42] 0xB1              	| [66] return                                                 // line: 48
+
+	  // JavaCard Byte Codes
+
+		>> Nargs: 2	Max_locals: 2 <<
+
+		// JavaCard Variables
+		Slot 0: com/oberthurcs/formation/exercices/client/Ex5_Client this
+		Slot 1: javacard/framework/APDU apdu
+		Slot 2: []byte buffer
+		Slot 3: short Lc
+
+		//Exceptions
+
+		[0x0] 0x19               	| [0] aload_1                                                 
+		[0x1] 0x8B 0x0008        	| [1] invokevirtual javacard/framework/APDU.getBuffer()[B     
+		[0x4] 0x2D               	| [4] astore_2                                                
+		[0x5] 0x1A               	| [5] aload_2                                                 
+		[0x6] 0x07               	| [6] sconst_4                                                
+		[0x7] 0x25               	| [7] baload                                                  
+		                         	|                                                             
+		[0x8] 0x32               	| [8] sstore_3                                                
+		[0x9] 0x18               	| [9] aload_0                                                 
+		[0xa] 0x8B 0x000D        	| [10] invokevirtual javacard/framework/Applet.selectingApplet()Z
+		[0xd] 0x60 0x3           	| [13] ifeq 16                                                
+		[0xf] 0x7A               	| [15] return                                                 
+		[0x10] 0x1A              	| [16] aload_2                                                
+		[0x11] 0x03              	| [17] sconst_0                                               
+		[0x12] 0x25              	| [18] baload                                                 
+		[0x13] 0x10 0x80         	| [19] bspush Value: -128                                     
+		[0x15] 0x6A 0x8          	| [21] if_scmpeq 29                                           
+		[0x17] 0x11 0x6e 0x0     	| [23] sspush Value: 28160                                    
+		[0x1a] 0x8D 0x000C       	| [26] invokestatic javacard/framework/ISOException.throwIt(S)V
+		[0x1d] 0x1A              	| [29] aload_2                                                
+		[0x1e] 0x04              	| [30] sconst_1                                               
+		[0x1f] 0x25              	| [31] baload                                                 
+		[0x20] 0x75              	| [32] slookupswitch                                          
+		   0x0010                	|    Default bytes: 48
+		   0x0001                	|    Npairs: 1
+		   0xFFE8 0x0009         	|    -24: 41
+
+		[0x29] 0x18              	| [41] aload_0                                                
+		[0x2a] 0x19              	| [42] aload_1                                                
+		[0x2b] 0x8C 0x0005       	| [43] invokespecial com/oberthurcs/formation/exercices/client/Ex5_Client.processListDir(Ljavacard/framework/APDU;)V
+		[0x2e] 0x70 0x8          	| [46] goto 54                                                
+		[0x30] 0x11 0x6d 0x0     	| [48] sspush Value: 27904                                    
+		[0x33] 0x8D 0x000C       	| [51] invokestatic javacard/framework/ISOException.throwIt(S)V
+		[0x36] 0x7A              	| [54] return                                                 
+	}
+
+}
+

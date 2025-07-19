@@ -1,0 +1,482 @@
+-----------------------------------------------------------------------
+CapFile:
+********************************************************************
+Header Component:
+ TAG: 1
+ Size: 19
+ magic: 0xdecaffed
+ minor_version: 1
+ major_version: 2
+ flags: 0x4
+ Package_info: minor_version: 0 major_version: 1
+	aid_length: 9
+	aid[0]=0xA0
+	aid[1]=0x00
+	aid[2]=0x00
+	aid[3]=0x00
+	aid[4]=0x77
+	aid[5]=0xFF
+	aid[6]=0xFF
+	aid[7]=0xFF
+	aid[8]=0xFF
+********************************************************************
+Directory Component:
+ Tag: 2
+ Size: 31
+ Component size[0]=19
+ Component size[1]=31
+ Component size[2]=13
+ Component size[3]=21
+ Component size[4]=50
+ Component size[5]=12
+ Component size[6]=191
+ Component size[7]=10
+ Component size[8]=29
+ Component size[9]=0
+ Component size[10]=107
+ Image size: 0
+ Array init count: 0
+ Array init size: 0
+ Import Count: 2
+ Applet Count: 1
+ Custom Count: 0
+********************************************************************
+Imports Component:
+ TAG: 4
+ Size: 21
+ Count : 2
+ Package_info: minor_version: 0 major_version: 1
+	aid_length: 7
+	aid[0]=0xA0
+	aid[1]=0x00
+	aid[2]=0x00
+	aid[3]=0x00
+	aid[4]=0x62
+	aid[5]=0x00
+	aid[6]=0x01
+ Package_info: minor_version: 0 major_version: 1
+	aid_length: 7
+	aid[0]=0xA0
+	aid[1]=0x00
+	aid[2]=0x00
+	aid[3]=0x00
+	aid[4]=0x62
+	aid[5]=0x01
+	aid[6]=0x01
+********************************************************************
+Applet Component:
+ Tag: 3
+ Size: 13
+ Count: 1
+	AID_length: 9
+	AID[0]=0xA0
+	AID[1]=0x00
+	AID[2]=0x00
+	AID[3]=0x00
+	AID[4]=0x77
+	AID[5]=0xFF
+	AID[6]=0xFF
+	AID[7]=0xFF
+	AID[8]=0x01
+	install_method_offset: 1
+********************************************************************
+Class Component:
+ Tag: 6
+ Size :12
+	ClassInfo Component, offset= 0 (0x0000)
+		Flags:0x00, Interface count: 0
+		SuperClass:
+			External Class Ref: package_token: 0x81 class_token: 0x03
+		declared_instance_size:1
+		first_referenced_token:255
+		reference_count:0
+		public_method_table_base:7
+		public_method_table_count:1
+		package_method_table_base:0
+		package_method_table_count:0
+		public_virtual_method_table[0]=21
+********************************************************************
+Method Component:
+ Tag: 7
+ Size: 191
+ Handlers_count: 0
+ Exception handlers:
+ Methods Info:
+ Methods Info[0]= 	Method Info Component, offset= 1 (0x01)
+	Method Header Info :
+	bitfield: 0x2
+	bitfield2: 0x30
+	bytecodes[0]=143	(0x8F)
+	bytecodes[1]=0	(0x00)
+	bytecodes[2]=1	(0x01)
+	bytecodes[3]=61	(0x3D)
+	bytecodes[4]=140	(0x8C)
+	bytecodes[5]=0	(0x00)
+	bytecodes[6]=2	(0x02)
+	bytecodes[7]=139	(0x8B)
+	bytecodes[8]=0	(0x00)
+	bytecodes[9]=6	(0x06)
+	bytecodes[10]=122	(0x7A)
+ Methods Info[1]= 	Method Info Component, offset= 14 (0x0E)
+	Method Header Info :
+	bitfield: 0x1
+	bitfield2: 0x10
+	bytecodes[0]=24	(0x18)
+	bytecodes[1]=140	(0x8C)
+	bytecodes[2]=0	(0x00)
+	bytecodes[3]=7	(0x07)
+	bytecodes[4]=122	(0x7A)
+ Methods Info[2]= 	Method Info Component, offset= 21 (0x15)
+	Method Header Info :
+	bitfield: 0x4
+	bitfield2: 0x22
+	bytecodes[0]=25	(0x19)
+	bytecodes[1]=139	(0x8B)
+	bytecodes[2]=0	(0x00)
+	bytecodes[3]=9	(0x09)
+	bytecodes[4]=45	(0x2D)
+	bytecodes[5]=26	(0x1A)
+	bytecodes[6]=7	(0x07)
+	bytecodes[7]=37	(0x25)
+	bytecodes[8]=50	(0x32)
+	bytecodes[9]=24	(0x18)
+	bytecodes[10]=139	(0x8B)
+	bytecodes[11]=0	(0x00)
+	bytecodes[12]=5	(0x05)
+	bytecodes[13]=96	(0x60)
+	bytecodes[14]=3	(0x03)
+	bytecodes[15]=122	(0x7A)
+	bytecodes[16]=26	(0x1A)
+	bytecodes[17]=3	(0x03)
+	bytecodes[18]=37	(0x25)
+	bytecodes[19]=16	(0x10)
+	bytecodes[20]=128	(0x80)
+	bytecodes[21]=106	(0x6A)
+	bytecodes[22]=8	(0x08)
+	bytecodes[23]=17	(0x11)
+	bytecodes[24]=110	(0x6E)
+	bytecodes[25]=0	(0x00)
+	bytecodes[26]=141	(0x8D)
+	bytecodes[27]=0	(0x00)
+	bytecodes[28]=11	(0x0B)
+	bytecodes[29]=26	(0x1A)
+	bytecodes[30]=5	(0x05)
+	bytecodes[31]=141	(0x8D)
+	bytecodes[32]=0	(0x00)
+	bytecodes[33]=3	(0x03)
+	bytecodes[34]=96	(0x60)
+	bytecodes[35]=8	(0x08)
+	bytecodes[36]=17	(0x11)
+	bytecodes[37]=106	(0x6A)
+	bytecodes[38]=134	(0x86)
+	bytecodes[39]=141	(0x8D)
+	bytecodes[40]=0	(0x00)
+	bytecodes[41]=11	(0x0B)
+	bytecodes[42]=26	(0x1A)
+	bytecodes[43]=4	(0x04)
+	bytecodes[44]=37	(0x25)
+	bytecodes[45]=115	(0x73)
+	bytecodes[46]=0	(0x00)
+	bytecodes[47]=116	(0x74)
+	bytecodes[48]=0	(0x00)
+	bytecodes[49]=2	(0x02)
+	bytecodes[50]=0	(0x00)
+	bytecodes[51]=8	(0x08)
+	bytecodes[52]=0	(0x00)
+	bytecodes[53]=21	(0x15)
+	bytecodes[54]=0	(0x00)
+	bytecodes[55]=116	(0x74)
+	bytecodes[56]=0	(0x00)
+	bytecodes[57]=46	(0x2E)
+	bytecodes[58]=0	(0x00)
+	bytecodes[59]=116	(0x74)
+	bytecodes[60]=0	(0x00)
+	bytecodes[61]=62	(0x3E)
+	bytecodes[62]=0	(0x00)
+	bytecodes[63]=116	(0x74)
+	bytecodes[64]=0	(0x00)
+	bytecodes[65]=89	(0x59)
+	bytecodes[66]=31	(0x1F)
+	bytecodes[67]=5	(0x05)
+	bytecodes[68]=106	(0x6A)
+	bytecodes[69]=8	(0x08)
+	bytecodes[70]=17	(0x11)
+	bytecodes[71]=103	(0x67)
+	bytecodes[72]=0	(0x00)
+	bytecodes[73]=141	(0x8D)
+	bytecodes[74]=0	(0x00)
+	bytecodes[75]=11	(0x0B)
+	bytecodes[76]=25	(0x19)
+	bytecodes[77]=139	(0x8B)
+	bytecodes[78]=0	(0x00)
+	bytecodes[79]=8	(0x08)
+	bytecodes[80]=50	(0x32)
+	bytecodes[81]=24	(0x18)
+	bytecodes[82]=26	(0x1A)
+	bytecodes[83]=8	(0x08)
+	bytecodes[84]=141	(0x8D)
+	bytecodes[85]=0	(0x00)
+	bytecodes[86]=3	(0x03)
+	bytecodes[87]=137	(0x89)
+	bytecodes[88]=0	(0x00)
+	bytecodes[89]=112	(0x70)
+	bytecodes[90]=78	(0x4E)
+	bytecodes[91]=26	(0x1A)
+	bytecodes[92]=3	(0x03)
+	bytecodes[93]=175	(0xAF)
+	bytecodes[94]=0	(0x00)
+	bytecodes[95]=141	(0x8D)
+	bytecodes[96]=0	(0x00)
+	bytecodes[97]=4	(0x04)
+	bytecodes[98]=59	(0x3B)
+	bytecodes[99]=25	(0x19)
+	bytecodes[100]=3	(0x03)
+	bytecodes[101]=5	(0x05)
+	bytecodes[102]=139	(0x8B)
+	bytecodes[103]=0	(0x00)
+	bytecodes[104]=10	(0x0A)
+	bytecodes[105]=112	(0x70)
+	bytecodes[106]=62	(0x3E)
+	bytecodes[107]=31	(0x1F)
+	bytecodes[108]=4	(0x04)
+	bytecodes[109]=106	(0x6A)
+	bytecodes[110]=8	(0x08)
+	bytecodes[111]=17	(0x11)
+	bytecodes[112]=103	(0x67)
+	bytecodes[113]=0	(0x00)
+	bytecodes[114]=141	(0x8D)
+	bytecodes[115]=0	(0x00)
+	bytecodes[116]=11	(0x0B)
+	bytecodes[117]=25	(0x19)
+	bytecodes[118]=139	(0x8B)
+	bytecodes[119]=0	(0x00)
+	bytecodes[120]=8	(0x08)
+	bytecodes[121]=50	(0x32)
+	bytecodes[122]=24	(0x18)
+	bytecodes[123]=61	(0x3D)
+	bytecodes[124]=133	(0x85)
+	bytecodes[125]=0	(0x00)
+	bytecodes[126]=26	(0x1A)
+	bytecodes[127]=8	(0x08)
+	bytecodes[128]=37	(0x25)
+	bytecodes[129]=65	(0x41)
+	bytecodes[130]=137	(0x89)
+	bytecodes[131]=0	(0x00)
+	bytecodes[132]=112	(0x70)
+	bytecodes[133]=35	(0x23)
+	bytecodes[134]=31	(0x1F)
+	bytecodes[135]=4	(0x04)
+	bytecodes[136]=106	(0x6A)
+	bytecodes[137]=8	(0x08)
+	bytecodes[138]=17	(0x11)
+	bytecodes[139]=103	(0x67)
+	bytecodes[140]=0	(0x00)
+	bytecodes[141]=141	(0x8D)
+	bytecodes[142]=0	(0x00)
+	bytecodes[143]=11	(0x0B)
+	bytecodes[144]=25	(0x19)
+	bytecodes[145]=139	(0x8B)
+	bytecodes[146]=0	(0x00)
+	bytecodes[147]=8	(0x08)
+	bytecodes[148]=50	(0x32)
+	bytecodes[149]=24	(0x18)
+	bytecodes[150]=61	(0x3D)
+	bytecodes[151]=133	(0x85)
+	bytecodes[152]=0	(0x00)
+	bytecodes[153]=26	(0x1A)
+	bytecodes[154]=8	(0x08)
+	bytecodes[155]=37	(0x25)
+	bytecodes[156]=67	(0x43)
+	bytecodes[157]=137	(0x89)
+	bytecodes[158]=0	(0x00)
+	bytecodes[159]=112	(0x70)
+	bytecodes[160]=8	(0x08)
+	bytecodes[161]=17	(0x11)
+	bytecodes[162]=109	(0x6D)
+	bytecodes[163]=0	(0x00)
+	bytecodes[164]=141	(0x8D)
+	bytecodes[165]=0	(0x00)
+	bytecodes[166]=11	(0x0B)
+	bytecodes[167]=122	(0x7A)
+********************************************************************
+Static Field Component:
+ TAG: 8
+ Size: 10
+ image_size: 0
+ reference_count: 0
+ Array init count: 0
+ default_value_count: 0
+ non_default_value_count: 0
+********************************************************************
+Constant Pool Component:
+ Tag: 5
+ Size: 50
+ Count: 12
+ ConstantPool[0]= 
+	Instance Field Ref Tag:2
+		internal_class_ref: 0x0000
+		Token: 0x00
+ ConstantPool[1]= 
+	CF_CONSTANT_Classref: Tag: 1
+		internal_class_ref: 0x0000
+	Padding: 0
+ ConstantPool[2]= 
+	Static Method Ref Tag: 6
+		Internal_static_ref:  Padding: 0 Offset: 14 (0x000E)
+ ConstantPool[3]= 
+	Static Method Ref Tag: 6
+		Static External Ref: package_token: 0x81 class_token: 0x10 token: 0x04
+ ConstantPool[4]= 
+	Static Method Ref Tag: 6
+		Static External Ref: package_token: 0x81 class_token: 0x10 token: 0x06
+ ConstantPool[5]= 
+	Virtual Method Ref Tag: 3
+		External Class Ref: package_token: 0x81 class_token: 0x03
+		Token: 0x03
+ ConstantPool[6]= 
+	Virtual Method Ref Tag: 3
+		External Class Ref: package_token: 0x81 class_token: 0x03
+		Token: 0x01
+ ConstantPool[7]= 
+	Static Method Ref Tag: 6
+		Static External Ref: package_token: 0x81 class_token: 0x03 token: 0x00
+ ConstantPool[8]= 
+	Virtual Method Ref Tag: 3
+		External Class Ref: package_token: 0x81 class_token: 0x0A
+		Token: 0x06
+ ConstantPool[9]= 
+	Virtual Method Ref Tag: 3
+		External Class Ref: package_token: 0x81 class_token: 0x0A
+		Token: 0x01
+ ConstantPool[10]= 
+	Virtual Method Ref Tag: 3
+		External Class Ref: package_token: 0x81 class_token: 0x0A
+		Token: 0x08
+ ConstantPool[11]= 
+	Static Method Ref Tag: 6
+		Static External Ref: package_token: 0x81 class_token: 0x07 token: 0x01
+********************************************************************
+Reference Location Component:
+ Tag: 9
+ Size: 29
+ byte_index_count: 6
+ offsets_to_byte_indices[0]=111
+ offsets_to_byte_indices[1]=6
+ offsets_to_byte_indices[2]=31
+ offsets_to_byte_indices[3]=6
+ offsets_to_byte_indices[4]=21
+ offsets_to_byte_indices[5]=6
+ byte2_index_count: 19
+ offsets_to_byte2_indices[0]=4
+ offsets_to_byte2_indices[1]=4
+ offsets_to_byte2_indices[2]=3
+ offsets_to_byte2_indices[3]=7
+ offsets_to_byte2_indices[4]=7
+ offsets_to_byte2_indices[5]=9
+ offsets_to_byte2_indices[6]=16
+ offsets_to_byte2_indices[7]=5
+ offsets_to_byte2_indices[8]=8
+ offsets_to_byte2_indices[9]=34
+ offsets_to_byte2_indices[10]=4
+ offsets_to_byte2_indices[11]=7
+ offsets_to_byte2_indices[12]=11
+ offsets_to_byte2_indices[13]=7
+ offsets_to_byte2_indices[14]=12
+ offsets_to_byte2_indices[15]=4
+ offsets_to_byte2_indices[16]=23
+ offsets_to_byte2_indices[17]=4
+ offsets_to_byte2_indices[18]=19
+********************************************************************
+Descriptor Component:
+ Tag: 11
+ Size: 107
+ Class Count: 1
+ Classes[0]
+	token: 255
+	access_flag: 0x01
+	internal_class_ref: 0x0000
+	interface_count: 0
+	field_count: 1
+	method_count: 3
+	fields[0]
+		token: 0
+		access_flag: 0x02
+		internal_class_ref: 0x0000
+		Token: 0x00
+		type: 0x8004
+	methods[0]
+		token: 7
+		access_flag: 0x01
+		method_offset: 21
+		type_offset: 50
+		bytecode_count: 168
+		exception_handler_count: 0
+		exception_handler_index: 0
+	methods[1]
+		token: 0
+		access_flag: 0x09
+		method_offset: 1
+		type_offset: 47
+		bytecode_count: 11
+		exception_handler_count: 0
+		exception_handler_index: 0
+	methods[2]
+		token: 1
+		access_flag: 0x81
+		method_offset: 14
+		type_offset: 28
+		bytecode_count: 5
+		exception_handler_count: 0
+		exception_handler_index: 0
+ CP_type_count: 12
+ constant_pool_types[0]= 26
+ constant_pool_types[1]= -1
+ constant_pool_types[2]= 28
+ constant_pool_types[3]= 30
+ constant_pool_types[4]= 33
+ constant_pool_types[5]= 36
+ constant_pool_types[6]= 28
+ constant_pool_types[7]= 28
+ constant_pool_types[8]= 38
+ constant_pool_types[9]= 40
+ constant_pool_types[10]= 42
+ constant_pool_types[11]= 45
+ type_desc[0]
+	nibble_count: 1
+	type[0]= 0x40
+ type_desc[1]
+	nibble_count: 1
+	type[0]= 0x10
+ type_desc[2]
+	nibble_count: 3
+	type[0]= 0xB4
+	type[1]= 0x40
+ type_desc[3]
+	nibble_count: 4
+	type[0]= 0xB4
+	type[1]= 0x44
+ type_desc[4]
+	nibble_count: 1
+	type[0]= 0x20
+ type_desc[5]
+	nibble_count: 1
+	type[0]= 0x40
+ type_desc[6]
+	nibble_count: 1
+	type[0]= 0xB0
+ type_desc[7]
+	nibble_count: 3
+	type[0]= 0x44
+	type[1]= 0x10
+ type_desc[8]
+	nibble_count: 2
+	type[0]= 0x41
+ type_desc[9]
+	nibble_count: 4
+	type[0]= 0xB4
+	type[1]= 0x31
+ type_desc[10]
+	nibble_count: 6
+	type[0]= 0x68
+	type[1]= 0x10
+	type[2]= 0xA1

@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Technical Documentation - QCM System</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #2c3e50;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #ecf0f1;
+            border-radius: 8px;
+        }
+        .title {
+            font-size: 32px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        .subtitle {
+            font-size: 18px;
+            color: #34495e;
+            margin-bottom: 30px;
+        }
+        .toc {
+            background-color: #e3f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 4px solid #2196f3;
+        }
+        .toc h3 {
+            margin-top: 0;
+            color: #1976d2;
+        }
+        .toc ol {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .toc li {
+            margin: 8px 0;
+        }
+        h1, h2, h3, h4 {
+            color: #2c3e50;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 10px;
+        }
+        h1 {
+            font-size: 28px;
+            margin-top: 40px;
+        }
+        h2 {
+            font-size: 24px;
+            margin-top: 30px;
+        }
+        h3 {
+            font-size: 20px;
+            margin-top: 25px;
+        }
+        h4 {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        p {
+            margin: 15px 0;
+        }
+        .class-section {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #6c757d;
+        }
+        .class-name {
+            font-weight: bold;
+            color: #495057;
+            font-size: 18px;
+        }
+        .comparison {
+            background-color: #fff3cd;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 4px solid #f39c12;
+        }
+        .code-block {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            padding: 15px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            overflow-x: auto;
+        }
+        .method {
+            background-color: #e8f5e8;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+            border-left: 3px solid #27ae60;
+        }
+        .method-name {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .method-desc {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
+        .highlight {
+            background-color: #fff3cd;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        .authors {
+            text-align: center;
+            margin-top: 60px;
+            padding: 20px;
+            background-color: #ecf0f1;
+            border-radius: 8px;
+        }
+        .requirements {
+            background-color: #e8f4fd;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 4px solid #3498db;
+        }
+        .requirements ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .requirements li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="title">Complete Technical Documentation</div>
+        <div class="subtitle">QCM System - Smalltalk Implementation</div>
+    </div>
+
+    <div class="toc">
+        <h3>Table of Contents</h3>
+        <ol>
+            <li><strong>Cahier des charges</strong></li>
+            <li><strong>Mérites et démérites comparés de C++ et de Smalltalk</strong>
+                <ul>
+                    <li>Smalltalk, un vrai langage objet</li>
+                    <li>Lourdeur et réutilisabilité discutable de C++</li>
+                    <li>Manque de sécurité et héritage rustique de Smalltalk</li>
+                </ul>
+            </li>
+            <li><strong>Choix des objets</strong>
+                <ul>
+                    <li>Les objets utilisateurs (Eleve, Professeur, Gestionnaire)</li>
+                    <li>Les objets composant un QCM (Reponse, Question, Qcm)</li>
+                    <li>Les objets de gestion (Promotion, Ecole, CorpsEnseignant, Statistiques)</li>
+                </ul>
+            </li>
+            <li><strong>Réutilisation des objets prédéfinis</strong></li>
+            <li><strong>Les ajouts aux objets existants</strong></li>
+            <li><strong>Les nouveaux objets</strong></li>
+            <li><strong>Le listing des classes</strong></li>
+            <li><strong>Les programmes de test</strong></li>
+            <li><strong>Le programme principal</strong></li>
+        </ol>
+    </div>
+
+    <div class="requirements">
+        <h1>1. Cahier des charges</h1>
+        <p>Le but de ce T.E.P est de réaliser un programme permettant de gérer des questionnaires à choix multiples (QCM).</p>
+        
+        <h3>Les caractéristiques du programme sont les suivantes :</h3>
+        <ul>
+            <li><strong>Un professeur peut créer, modifier, supprimer et sauver sur disque un QCM.</strong><br>
+                Il peut également demander des statistiques concernant les élèves ayant passé le QCM.</li>
+            <li><strong>Un élève peut passer un QCM, ceci dans le temps imparti par le rédacteur du QCM.</strong><br>
+                Il peut aussi consulter les résultats obtenus lors des QCM passés.</li>
+            <li><strong>Un seul professeur, appelé gestionnaire, est autorisé à administrer le système.</strong></li>
+            <li><strong>Chaque utilisateur du système possède un mot de passe,</strong> qui lui garantit la sécurité et la confidentialité de ses données.</li>
+        </ul>
+    </div>
+
+    <div class="comparison">
+        <h2>2. Mérites et démérites comparés de C++ et de Smalltalk</h2>
+        
+        <p>Avant d'entamer l'analyse proprement dite, nous tenons ici à justifier le choix de Smalltalk face à C++.</p>
+        <p>Les références constantes de Mme MOUSTAFIADES à Smalltalk, lors du cours de Programmation orientée objet, ainsi que l'époustouflante présentation de M. COURTOIS, nous ont donné envie d'en savoir plus sur ce langage. Nous avons trouvé stimulant de découvrir et d'apprendre à utiliser un nouvel outil logiciel, d'autant plus qu'il différait de ceux utilisés jusqu'ici.</p>
+        
+        <h3>2.1. Smalltalk, un vrai langage objet</h3>
+        <p>La différence la plus frappante entre C++ et Smalltalk réside dans le caractère purement objet de ce dernier. En effet, toutes les données d'un programme Smalltalk appartiennent à une classe bien définie : un entier appartient à la classe Integer, un réel à la classe Float, etc.</p>
+        <p>La conception orientée objet prend ici tout son sens, puisqu'elle est la seule méthode applicable.</p>
+        <p>Par contre, le C++ pose de ce point de vue quelques problèmes : à quelle classe appartient un pointeur ? une référence ? Bien que C++ possède toutes les caractéristiques d'un langage objet, il reste une surcouche de C. À cet égard, il est parfois tentant d'amalgamer programmation structurée et programmation objet. Le résultat est généralement un gloubi-boulga peu digeste...</p>
+        
+        <h3>2.2. Lourdeur et réutilisabilité discutable de C++</h3>
+        <p>C++ puise dans le C sa puissance et sa rapidité, mais aussi une certaine lourdeur syntaxique. Elle entraîne une faible lisibilité des sources, qui nuit à la maintenabilité et à la réutilisabilité du code : en effet, quoi de plus frustrant que de passer des heures à tenter de comprendre le fonctionnement d'un programme au code rendu illisible par un programmeur amateur de cryptogrammes comme celui-ci :</p>
+        <div class="code-block">lib=new LiberationServeur (_resto,_resto->horloge()->heure()+tempsService,this)</div>
+        <p>Au contraire, Smalltalk possède une syntaxe plus proche de l'anglais, ce qui facilite d'autant plus la lecture des sources. De plus, le principe de réutilisabilité est au cœur de Smalltalk, qui met à la disposition du programmeur un vaste choix de classes prédéfinies, facilement accessibles grâce au feuilleteur de classes (traduction hardie de class browser). Enfin, l'interpréteur permet de déverminer (traduction encore plus hardie de debugging) progressivement le programme en signalant immédiatement les erreurs de syntaxe.</p>
+        
+        <h3>2.3. Manque de sécurité et héritage rustique de Smalltalk</h3>
+        <p>L'atout majeur de C++, dans le cas qui nous intéresse, est la sécurité qu'il offre. En effet, la compilation des sources rend impossible toute modification du programme, et donc toute atteinte à la confidentialité des données. Cet atout réside également dans la supériorité d'UNIX sur MS-DOS dans le domaine de la sécurité (comme dans la plupart des domaines d'ailleurs).</p>
+        <p>Smalltalk étant un langage interprété, tous les sources y sont accessibles (y compris ceux du langage lui-même), ce qui permet à un élève soucieux de valider à tout prix son module d'Électromagnétisme (au hasard) de faire le nécessaire.</p>
+        <p>Plus sérieusement, le mécanisme d'héritage de Smalltalk se limite à un héritage simple. De plus, Smalltalk ne possède pas d'équivalent aux parties Private, Protected et Public d'une classe définie en C++. Ceci ne permet donc pas de restreindre l'accès à certaines méthodes d'une classe. Il ne possède pas non plus l'équivalent de l'instruction FORBID, qui permet d'interdire à une classe dérivée l'accès à une méthode de la classe de base.</p>
+        <p>La philosophie de Smalltalk résidant dans l'ouverture et la facilité d'utilisation, il n'est pas étonnant de ne pas y retrouver tous les mécanismes qui font de C++ un langage sécurisé.</p>
+        <p><strong>Globalement, même si la raison imposerait le recours à C++ pour une application de ce genre, le cœur a parlé en choisissant ce langage sympathique et original qu'est Smalltalk. Nous avons tenté, au cours de notre analyse, de remédier à ses "défauts".</strong></p>
+    </div>
+
+    <h1>3. Choix des objets</h1>
+    <p>La simple lecture du cahier des charges permet de déduire quelques uns des objets nécessaires à la réalisation du programme.</p>
+    <p>On peut les diviser en trois grandes catégories :</p>
+    <ul>
+        <li>les objets utilisateurs</li>
+        <li>les objets composant un QCM</li>
+        <li>les objets de gestion</li>
+    </ul>
+
+    <h2>3.1. Les objets utilisateurs</h2>
+    <p>Ces objets vont nous permettre de représenter les utilisateurs du programme, c'est-à-dire les élèves et les oppresseurs, euh pardon, les professeurs.</p>
+    <p>A tout seigneur, tout honneur : commençons donc par les élèves.</p>
+
+    <div class="class-section">
+        <div class="class-name">La classe Eleve</div>
+        <p>Le cahier des charges définit ainsi les actions autorisées à l'élève :</p>
+        <p><em>"Un élève peut passer un QCM, et ceci dans le temps imparti par le rédacteur du QCM. Il peut aussi consulter les résultats obtenus lors des QCM passés."</em></p>
+        <p><strong>Précisions du cahier des charges :</strong></p>
+        <ul>
+            <li>un élève ne peut passer que les QCM réservés par ses professeurs</li>
+            <li>il ne peut pas consulter les résultats d'un QCM qu'il n'a pas passé</li>
+            <li>il ne peut pas repasser un QCM qu'il a déjà passé</li>
+        </ul>
+    </div>
+
+    <div class="class-section">
+        <div class="class-name">La classe Professeur</div>
+        <p>Le cahier des charges définit ainsi les actions autorisées au professeur :</p>
+        <p><em>"Un professeur peut créer, modifier, supprimer et sauver sur disque un QCM. Il peut également demander des statistiques concernant les élèves ayant passé le QCM."</em></p>
+        <p><strong>Précisions du cahier des charges :</strong></p>
+        <ul>
+            <li>Un professeur ne peut lire ou modifier que ses QCM</li>
+            <li>Un professeur ne peut pas lire les résultats d'un QCM qu'il n'a pas écrit</li>
+            <li>Un professeur ne peut ni ajouter, ni supprimer un élève ou professeur</li>
+        </ul>
+    </div>
+
+    <div class="class-section">
+        <div class="class-name">La classe Gestionnaire</div>
+        <p>Le cahier des charges définit ainsi les actions autorisées au gestionnaire :</p>
+        <p><em>"Un seul professeur, appelé gestionnaire, est autorisé à administrer le système."</em></p>
+        <p><strong>Précisions du cahier des charges :</strong></p>
+        <ul>
+            <li>Un gestionnaire a toutes les prérogatives d'un professeur</li>
+            <li>Lui seul est autorisé à ajouter ou supprimer un élève, une promotion ou un professeur</li>
+        </ul>
+    </div>
+
+    <h2>3.2. Les objets composant un QCM</h2>
+    <p>Il serait désastreux de créer un objet QCM monolithique. En effet, sa structure est trop compliquée pour être décrite efficacement : il faut le décomposer en sous-éléments.</p>
+    <p>Un Qcm est composé de questions, qui sont elles-mêmes composées de réponses.</p>
+
+    <div class="class-section">
+        <div class="class-name">La classe Reponse</div>
+        <p>Une réponse possède les attributs suivants :</p>
+        <ul>
+            <li>un énoncé</li>
+            <li>elle est vraie ou fausse</li>
+        </ul>
+    </div>
+
+    <div class="class-section">
+        <div class="class-name">La classe Question</div>
+        <p>Une question possède les attributs suivants :</p>
+        <ul>
+            <li>un énoncé</li>
+            <li>le temps imparti à l'élève pour y répondre</li>
+            <li>le barème</li>
+            <li>la liste des réponses proposées</li>
+        </ul>
+    </div>
+
+    <div class="class-section">
+        <div class="class-name">La classe Qcm</div>
+        <p>Un Qcm possède les attributs suivants :</p>
+        <ul>
+            <li>un titre</li>
+            <li>un numéro, qui correspond au nom du fichier dans lequel il sera sauvegardé</li>
+            <li>la liste des questions qui le composent</li>
+        </ul>
+    </div>
+
+    <h2>3.3. Les objets de gestion</h2>
+
+    <div class="class-section">
+        <div class="class-name">La classe Promotion</div>
+        <p>Une promotion est composée d'un groupe d'élèves de taille variable (pas seulement les élèves, mais aussi le groupe...). Elle possède également un nom, qui permet de la différencier des autres. Seul le gestionnaire a le droit d'en modifier le contenu.</p>
+    </div>
+
+    <div class="class-section">
+        <div class="class-name">La classe Ecole</div>
+        <p>Une école est composée de plusieurs promotions. Nous nous sommes ici limités à une seule promotion et n'avons donc pas implémenté cette classe. Cependant, elle ne pose aucun problème particulier.</p>
+    </div>
+
+    <div class="class-section">
+        <div class="class-name">La classe CorpsEnseignant</div>
+        <p>Le corps enseignant d'une école est composé de l'ensemble des professeurs qui y enseignent. Lors de sa création, le nom du gestionnaire est entré dans le programme une fois pour toutes. Lui seul a le droit d'en modifier le contenu.</p>
+    </div>
+
+    <div class="class-section">
+        <div class="class-name">La classe Statistiques</div>
+        <p>Chaque Qcm possède une instance de cette classe. Elle contient la liste des élèves qui ont passé le Qcm, la note qu'ils ont obtenu et le temps qu'ils ont passé à y répondre.</p>
+        <p>A l'aide de ces données, on calcule les différents résultats que peuvent demander un élève ou un professeur :</p>
+        <ul>
+            <li>la moyenne en temps ou en note des élèves qui ont passé le Qcm (élève et professeur)</li>
+            <li>le classement en temps ou en note d'un élève (élève uniquement)</li>
+            <li>le classement en temps ou en note de tous les élèves qui l'ont passé (professeur uniquement)</li>
+        </ul>
+    </div>
+
+    <h1>4. Réutilisation des objets prédéfinis</h1>
+    <p>L'un des grands avantages de Smalltalk est de fournir au programmeur une grande variété de classes prêtes à l'emploi. La réutilisabilité du code est donc bien à l'ordre du jour avec Smalltalk. Nous avons bien sûr tiré profit de ces classes en les utilisant telles quelles, tout en leur ajoutant de temps à autre une méthode de notre cru.</p>
+    <p>Nous détaillons donc ici l'ensemble des classes prédéfinies, ainsi que les méthodes associées, qui nous ont servi à construire notre programme.</p>
+
+    <h2>4.1. Object</h2>
+    <p>La classe Object est la superclasse de Smalltalk et définit les protocoles communs à tous les objets.</p>
+    
+    <div class="method">
+        <div class="method-name">at: anInteger put: anObject</div>
+        <div class="method-desc">remplace par anObject l'objet situé dans le receveur à la position indexée par anInteger. Cette méthode ne peut bien sûr être appliquée qu'aux objets contenant des objets indexés</div>
+    </div>
+    
+    <div class="method">
+        <div class="method-name">notNil</div>
+        <div class="method-desc">retourne vrai si le receveur n'est pas l'objet Nil, sinon retourne faux</div>
+    </div>
+    
+    <div class="method">
+        <div class="method-name">size</div>
+        <div class="method-desc">retourne le nombre de variables indexées contenues dans le receveur. Cette méthode ne peut bien sûr être appliquée qu'aux objets contenant des objets indexés</div>
+    </div>
+
+    <h2>4.2. Boolean</h2>
+    <p>La classe Boolean est une classe abstraite qui définit l'utilisation de valeurs logiques. Les deux valeurs possibles sont représentées par les deux sous-classes True et False.</p>
+    
+    <div class="method">
+        <div class="method-name">ifTrue: trueBlock ifFalse: falseBlock</div>
+        <div class="method-desc">si le receveur est vrai, évalue le contenu de trueBlock. Sinon, évalue celui de falseBlock. Les deux blocs ne doivent pas contenir d'arguments : on ne peut y déclarer de variables locales</div>
+    </div>
+
+    <h2>4.3. Collection</h2>
+    <p>La classe Collection est la superclasse des classes collection. Une collection est une structure de données permettant de stocker des objets de façon linéaire ou non-linéaire.</p>
+    
+    <div class="method">
+        <div class="method-name">isEmpty</div>
+        <div class="method-desc">retourne vrai si le récepteur ne contient pas d'éléments, retourne faux sinon</div>
+    </div>
+    
+    <div class="method">
+        <div class="method-name">detect: aBlock ifNone: exceptionBlock</div>
+        <div class="method-desc">retourne le premier élément du receveur pour lequel l'évaluation de aBlock vaut true. s'il n'y en a pas, exceptionBlock est évalué</div>
+    </div>
+    
+    <div class="method">
+        <div class="method-name">select: aBlock</div>
+        <div class="method-desc">retourne une collection composée des éléments pour lesquels l'évaluation de aBlock vaut true. S'il n'y en a pas, retourne une collection vide</div>
+    </div>
+
+    <h3>4.3.1. FixedSizeCollection</h3>
+    <p>La classe FixedSizeCollection est une classe abstraite qui fournit les méthodes permettant de travailler avec des collections d'objets indexés de taille fixe. Celle-ci ne peut varier dynamiquement : seule la valeur des éléments peut être modifiée.</p>
+
+    <h1>5. Les ajouts aux objets existants</h1>
+    <p>Extensions apportées aux classes prédéfinies pour adapter le système aux besoins spécifiques du QCM.</p>
+
+    <h1>6. Les nouveaux objets</h1>
+    <p>Classes spécifiques développées pour le système de QCM.</p>
+
+    <h1>7. Le listing des classes</h1>
+
+    <h2>7.1. La classe Reponse</h2>
+    <div class="code-block">
+Bag subclass: #Reponse
+  instanceVariableNames: 
+    'texteReponse bonneReponse '
+  classVariableNames: ''
+  poolDictionaries: '' !
+    </div>
+
+    <h3>Méthodes principales :</h3>
+    <div class="method">
+        <div class="method-name">ecrireTexte: aString</div>
+        <div class="method-desc">Affecte au texte de la réponse la chaîne passée en paramètre</div>
+    </div>
+    <div class="method">
+        <div class="method-name">ecrireBonneReponse: aBoolean</div>
+        <div class="method-desc">Affecte à la réponse le booléen: true si elle est exacte, false sinon</div>
+    </div>
+    <div class="method">
+        <div class="method-name">estBonne</div>
+        <div class="method-desc">Retourne le booléen true si elle est correcte et false sinon</div>
+    </div>
+
+    <h2>7.2. La classe Question</h2>
+    <div class="code-block">
+Bag variableSubclass: #Question
+  instanceVariableNames: 
+    'enonceQuestion nbPoints tempsImparti listeReponses '
+  classVariableNames: ''
+  poolDictionaries: '' !
+    </div>
+
+    <h3>Méthodes principales :</h3>
+    <div class="method">
+        <div class="method-name">poserQuestion</div>
+        <div class="method-desc">Affiche la question et ses réponses possibles puis demande une réponse en temps limité. Si celui-ci est dépassé, toute réponse est considérée fausse. La correction est automatique</div>
+    </div>
+    <div class="method">
+        <div class="method-name">nouvelleQuestion</div>
+        <div class="method-desc">Crée et saisit une question ainsi que tous ses paramètres</div>
+    </div>
+
+    <h2>7.3. La classe QCM</h2>
+    <div class="code-block">
+Bag subclass: #Qcm instanceVariableNames: 
+'numeroQcm titreQcm listeQuestions notes ' classVariableNames: ''
+poolDictionaries: '' !
+    </div>
+
+    <h3>Méthodes principales :</h3>
+    <div class="method">
+        <div class="method-name">passerQcm: anEleve</div>
+        <div class="method-desc">Fait passer le QCM à un élève si celui-ci ne l'a pas déjà passé. Met automatiquement à jour les statistiques du QCM et les listes des QCM passés et disponibles</div>
+    </div>
+    <div class="method">
+        <div class="method-name">editerQcm: aProfesseur</div>
+        <div class="method-desc">Propose une correction du QCM mais uniquement par le professeur l'ayant créé. Si le QCM est vide, crée de nouvelles questions</div>
+    </div>
+
+    <h2>7.4. La classe Statistiques</h2>
+    <div class="code-block">
+Bag subclass: #Statistiques instanceVariableNames: 
+'triAlpha triNote triTemps listeResultats ' classVariableNames: ''
+poolDictionaries: '' !
+    </div>
+
+    <h3>Méthodes principales :</h3>
+    <div class="method">
+        <div class="method-name">afficherResultatsEleve: aString</div>
+        <div class="method-desc">Affiche les résultats de l'élève au QCM s'il l'a passé</div>
+    </div>
+    <div class="method">
+        <div class="method-name">afficherResultatsProfesseur</div>
+        <div class="method-desc">Affiche les statistiques sur le QCM pour tous les élèves qui l'ont passé</div>
+    </div>
+    <div class="method">
+        <div class="method-name">moyenneNotes</div>
+        <div class="method-desc">Calcule la moyenne des notes des élèves qui ont passé le QCM</div>
+    </div>
+    <div class="method">
+        <div class="method-name">moyenneTemps</div>
+        <div class="method-desc">Calcule la moyenne des temps des élèves qui ont passé le QCM</div>
+    </div>
+
+    <h1>8. Les programmes de test</h1>
+    <p>Exemples de code de test pour valider le fonctionnement des classes :</p>
+
+    <h3>8.1. Test de la classe Eleve</h3>
+    <div class="code-block">
+| e |
+e:= Eleve new.
+e ecrireNom: 'juju';
+  ajouterQcm: 1;
+  ajouterQcm: 3.
+e lireNom afficher.
+e lireListeQcm.
+    </div>
+
+    <h3>8.2. Test de la classe Promotion</h3>
+    <div class="code-block">
+| prof p g |
+prof:= Professeur new.
+g:= Gestionnaire new.
+p:= Promotion new .
+p ecrireNom: 'annee2'.
+p lireNomPromotion .
+p ajouterElevePar: prof.
+p ajouterElevePar: g.
+(p lireListeEleves at: 1) lireNom afficher.
+p supprimerElevePar: g.
+(p lireListeEleves) size.
+    </div>
+
+    <h3>8.3. Test des classes Professeur et Gestionnaire</h3>
+    <div class="code-block">
+| p g |
+p:= Professeur new.
+g:= Gestionnaire new.
+g ecrireNom: 'gege'.
+g lireNom afficher.
+p lireNom afficher.
+p ajouterPromotion: 'annee2' Par:g ;
+  ajouterPromotion: 'annee1' Par:g ;
+  ajouterPromotion: 'annee3' Par:g ;
+  ajouterQcm: 'No 1' Par:g ;
+  ajouterQcm: 'No 2' Par:g ;
+  ecrireNom: 'boud'.
+p lireNom afficher.
+p supprimerPromotion: 'annee3' Par: g;
+  supprimerQcm: 'No 2' Par: g.
+p lireListePromotions ;
+  lireListeQcm.
+    </div>
+
+    <h1>9. Le programme principal</h1>
+    <p>Le programme principal orchestre l'ensemble du système QCM, gérant l'authentification des utilisateurs et la navigation entre les différentes sections (Élève, Professeur, Gestionnaire).</p>
+
+    <div class="authors">
+        <p><em>Developed by Nathalie DARNEAU and Julien SIMON</em></p>
+        <p><em>I.S.E.P. - 1992-1993</em></p>
+        <p><em>binôme A2R2C</em></p>
+    </div>
+</body>
+</html> 

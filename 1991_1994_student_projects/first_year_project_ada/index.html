@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyse Basée sur le Code - Projet Ada Monopoly</title>
+    <style>
+        body { font-family: "Times New Roman", serif; line-height: 1.6; margin: 40px; max-width: 900px; margin-left: auto; margin-right: auto; }
+        h1 { color: #2c3e50; text-align: center; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-bottom: 30px; }
+        h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 5px; margin-top: 30px; }
+        h3 { color: #34495e; margin-top: 25px; }
+        p { margin-bottom: 15px; text-align: justify; }
+        .footer { margin-top: 40px; text-align: center; font-style: italic; color: #7f8c8d; }
+        .content { margin-bottom: 30px; }
+        .code-block { background: #f8f9fa; border-left: 4px solid #3498db; padding: 15px; margin: 20px 0; font-family: monospace; }
+        .function { background: #e8f5e8; border: 1px solid #27ae60; border-radius: 5px; padding: 15px; margin: 15px 0; }
+        .function h4 { color: #27ae60; margin-top: 0; }
+        .warning { background: #fff3cd; border: 1px solid #ffc107; border-radius: 5px; padding: 15px; margin: 15px 0; }
+        .warning h4 { color: #856404; margin-top: 0; }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Analyse Basée sur le Code - Simulation d'un joueur de Monopoly</h1>
+        
+        <div class="warning">
+            <h4>⚠️ Documentation Révisée</h4>
+            <p>Cette documentation a été réécrite en analysant le code Ada source pour garantir l'exactitude des informations. Elle reste fidèle à la structure originale mais corrige les erreurs et omissions.</p>
+        </div>
+
+        <h2>1 - Présentation générale</h2>
+        
+        <h3>1.1 - Capacités du programme</h3>
+        <p>Ce programme simule jusqu'à 6 joueurs de Monopoly, chacun pouvant être simulé selon trois profils différents. Le programme effectue pour chaque joueur simulé les opérations suivantes :</p>
+        <ul>
+            <li>Achat et hypothèque de terrains</li>
+            <li>Troc de terrains avec les autres joueurs</li>
+            <li>Achat et vente de maisons</li>
+            <li>Sortie de prison</li>
+            <li>Gestion des cartes Chance et Communauté</li>
+        </ul>
+
+        <h3>1.2 - Approche stratégique</h3>
+        <p>Le programme implémente une approche statistique et mathématique basée sur :</p>
+        <ul>
+            <li><strong>Valeurs stratégiques</strong> : Chaque propriété a une valeur stratégique (0.0 à 1.0) selon le profil du joueur</li>
+            <li><strong>Évaluation des risques</strong> : Calcul des probabilités de lancers de dés et des dépenses potentielles</li>
+            <li><strong>Profils de joueurs</strong> : Trois types avec des stratégies distinctes</li>
+        </ul>
+
+        <h3>1.3 - Structure du programme</h3>
+        <p>Le programme est organisé en 8 paquetages principaux :</p>
+        <ol>
+            <li><strong>Types</strong> - Types et constantes de base</li>
+            <li><strong>Général</strong> - Fonctions d'information sur les propriétés</li>
+            <li><strong>Argent</strong> - Gestion de la fortune des joueurs</li>
+            <li><strong>Construction</strong> - Gestion des maisons</li>
+            <li><strong>Stratégie</strong> - Logique de décision (cœur du programme)</li>
+            <li><strong>Gestion_Troc</strong> - Système de troc entre joueurs</li>
+            <li><strong>Gestion_Liste_Troc</strong> - Historique des trocs</li>
+            <li><strong>Simulation</strong> - Simulation des parties</li>
+        </ol>
+
+        <h2>2 - Présentation détaillée</h2>
+
+        <h3>2.1 - Le paquetage Types</h3>
+        <div class="code-block">
+            <strong>Types principaux :</strong><br>
+            • T_Profil : (Pere_De_Famille, Investisseur, Golden_boy)<br>
+            • T_Probabilite : subtype T_Reel range 0.0 .. 1.0<br>
+            • T_Valeur_Terrains : array (T_Proprietes) of T_Probabilite<br>
+            • T_Joueur_Simule : record avec joueur, profil, caractéristiques<br>
+            • A_T_Joueur_Simule : access T_Joueur_Simule
+        </div>
+
+        <p><strong>Constantes importantes :</strong></p>
+        <ul>
+            <li><strong>Probabilites</strong> : Tableau des probabilités des lancers de dés (2 à 12)</li>
+            <li><strong>Risque_Tolere</strong> : Risque maximum toléré par profil (0.056, 0.111, 0.167)</li>
+            <li><strong>Valeur_Strategique_Terrains</strong> : Matrice des valeurs stratégiques par propriété et profil</li>
+        </ul>
+
+        <h3>2.2 - Le paquetage Général</h3>
+        
+        <div class="function">
+            <h4>Fonction Val_Serie</h4>
+            <p><strong>Signature :</strong> Val_Serie(joueur: T_Joueur; prop: T_Proprietes) return T_Probabilite</p>
+            <p><strong>Fonction :</strong> Renvoie la valeur stratégique qu'attache le joueur à la propriété. Si le joueur est simulé, utilise ses caractéristiques personnalisées ; sinon, utilise la valeur par défaut du profil Investisseur.</p>
+        </div>
+
+        <div class="function">
+            <h4>Fonction Proprietaire</h4>
+            <p><strong>Signature :</strong> Proprietaire(propriete: T_Proprietes) return T_Joueur</p>
+            <p><strong>Fonction :</strong> Détermine le propriétaire d'une propriété en parcourant tous les joueurs. Renvoie "transparent" si la banque possède le terrain.</p>
+        </div>
+
+        <div class="function">
+            <h4>Procédure Determiner_Serie</h4>
+            <p><strong>Signature :</strong> Determiner_Serie(propriete: T_Proprietes; couleur: out T_Couleur; case_depart, case_fin: out T_Cases)</p>
+            <p><strong>Fonction :</strong> Détermine à quelle série appartient une propriété et renvoie les cases délimitant cette série.</p>
+        </div>
+
+        <div class="function">
+            <h4>Fonction Carte_Complete</h4>
+            <p><strong>Signature :</strong> Carte_Complete(joueur: T_Joueur; prop: T_Proprietes) return Boolean</p>
+            <p><strong>Fonction :</strong> Détermine si un joueur possède toutes les propriétés d'une série complète.</p>
+        </div>
+
+        <div class="function">
+            <h4>Fonction Serie_Completement_Construite</h4>
+            <p><strong>Signature :</strong> Serie_Completement_Construite(case_depart, case_fin: T_Cases) return Boolean</p>
+            <p><strong>Fonction :</strong> Vérifie si une série est complètement construite (5 maisons sur chaque terrain).</p>
+        </div>
+
+        <h3>2.3 - Le paquetage Argent</h3>
+
+        <div class="function">
+            <h4>Procédure Fortune</h4>
+            <p><strong>Signature :</strong> Fortune(joueur: T_Joueur; argent, capital: out T_Monnaie)</p>
+            <p><strong>Fonction :</strong> Calcule le compte en banque et le capital immobilier d'un joueur. Le capital inclut les propriétés (valeur réduite de moitié si hypothéquée) et les maisons.</p>
+        </div>
+
+        <div class="function">
+            <h4>Procédure Fortune_Relative</h4>
+            <p><strong>Signature :</strong> Fortune_Relative(joueur: T_Joueur; rang_argent, rang_capital: out Integer; ecart_argent, ecart_capital: out Float)</p>
+            <p><strong>Fonction :</strong> Situe la fortune d'un joueur par rapport aux autres en calculant les rangs et écarts par rapport aux moyennes.</p>
+        </div>
+
+        <div class="function">
+            <h4>Fonction Cout_Case</h4>
+            <p><strong>Signature :</strong> Cout_Case(kase: T_Cases; lancer: T_Lancer_Des) return T_Monnaie</p>
+            <p><strong>Fonction :</strong> Calcule le coût de séjour sur une case spécifique (loyer, gare, compagnie, etc.).</p>
+        </div>
+
+        <div class="function">
+            <h4>Procédure Risque</h4>
+            <p><strong>Signature :</strong> Risque(joueur: T_Joueur; cout_du_lancer_le_plus_probable, cout_du_lancer_le_plus_couteux: out T_Monnaie; probabilite_de_ce_lancer: out T_Probabilite)</p>
+            <p><strong>Fonction :</strong> Évalue la dépense la plus probable (lancer de 7) et la plus élevée au prochain tour, ainsi que leurs probabilités respectives.</p>
+        </div>
+
+        <h3>2.4 - Le paquetage Construction</h3>
+
+        <div class="code-block">
+            <strong>Types :</strong><br>
+            • T_Serie : record avec case_depart, case_fin, serie_suivante<br>
+            • T_Liste_Series : access T_Serie<br>
+            • Tete_Liste_Series : constant T_Liste_Series := null
+        </div>
+
+        <div class="function">
+            <h4>Fonction Series_Constructibles</h4>
+            <p><strong>Signature :</strong> Series_Constructibles(pointeur_joueur_simule: A_T_Joueur_Simule) return T_Liste_Series</p>
+            <p><strong>Fonction :</strong> Crée une liste des séries sur lesquelles un joueur peut construire (tous les terrains possédés, non hypothéqués, moins de 5 maisons par terrain).</p>
+        </div>
+
+        <div class="function">
+            <h4>Procédure Choisir_Serie_A_Construire</h4>
+            <p><strong>Signature :</strong> Choisir_Serie_A_Construire(pointeur_joueur_simule: A_T_Joueur_Simule; liste: in out T_Liste_Series)</p>
+            <p><strong>Fonction :</strong> Détermine la série constructible de valeur stratégique la plus élevée et renvoie un pointeur sur cette série.</p>
+        </div>
+
+        <div class="function">
+            <h4>Fonction Choisir_Terrain_A_Construire</h4>
+            <p><strong>Signature :</strong> Choisir_Terrain_A_Construire(case_depart, case_fin: T_Cases) return T_Terrains</p>
+            <p><strong>Fonction :</strong> Recherche le terrain de la série où se trouvent le moins de maisons pour une construction équilibrée.</p>
+        </div>
+
+        <h3>2.5 - Le paquetage Stratégie</h3>
+
+        <div class="function">
+            <h4>Fonction Decision_Achat_Propriete</h4>
+            <p><strong>Signature :</strong> Decision_Achat_Propriete(pointeur_joueur_simule: A_T_Joueur_Simule) return Boolean</p>
+            <p><strong>Fonction :</strong> Prend la décision d'acheter ou non la propriété sur laquelle le joueur se trouve. Évalue la valeur stratégique, calcule le risque du tour suivant, et décide selon le profil du joueur.</p>
+        </div>
+
+        <div class="function">
+            <h4>Procédure Decision_Achat_Maisons</h4>
+            <p><strong>Signature :</strong> Decision_Achat_Maisons(pointeur_joueur_simule: A_T_Joueur_Simule; liste: T_Liste_Series)</p>
+            <p><strong>Fonction :</strong> Détermine sur quelle série puis sur quel terrain construire, et achète des maisons jusqu'à épuisement des fonds.</p>
+        </div>
+
+        <div class="function">
+            <h4>Procédure Mise_A_Jour_Valeur</h4>
+            <p><strong>Signature :</strong> Mise_A_Jour_Valeur(pointeur_joueur_simule: A_T_Joueur_Simule; propriete: T_Proprietes)</p>
+            <p><strong>Fonction :</strong> Met à jour la valeur stratégique d'une série dont le joueur vient d'acheter une propriété. Calcule une plus-value basée sur le nombre de propriétés possédées dans la série.</p>
+        </div>
+
+        <div class="function">
+            <h4>Procédure Vendre_Maison</h4>
+            <p><strong>Signature :</strong> Vendre_Maison(pointeur_joueur_simule: A_T_Joueur_Simule; maison_vendue: out Boolean)</p>
+            <p><strong>Fonction :</strong> Recherche un terrain contenant des maisons avec la valeur stratégique la plus faible et vend une maison.</p>
+        </div>
+
+        <div class="function">
+            <h4>Procédure Hypothequer_Propriete</h4>
+            <p><strong>Signature :</strong> Hypothequer_Propriete(pointeur_joueur_simule: A_T_Joueur_Simule; terrain_hypotheque: out Boolean)</p>
+            <p><strong>Fonction :</strong> Recherche une propriété non hypothéquée avec la valeur stratégique la plus faible et l'hypothèque.</p>
+        </div>
+
+        <div class="function">
+            <h4>Procédure Deshypothequer_Propriete</h4>
+            <p><strong>Signature :</strong> Deshypothequer_Propriete(pointeur_joueur_simule: A_T_Joueur_Simule)</p>
+            <p><strong>Fonction :</strong> Recherche la propriété hypothéquée avec la valeur stratégique la plus élevée et la déshypothèque si le joueur a assez d'argent.</p>
+        </div>
+
+        <h3>2.6 - Le paquetage Simulation</h3>
+
+        <div class="function">
+            <h4>Procédure Creer_Joueur</h4>
+            <p><strong>Signature :</strong> Creer_Joueur(Joueur: T_Joueur)</p>
+            <p><strong>Fonction :</strong> Crée un nouveau joueur simulé en choisissant aléatoirement son profil et en initialisant ses caractéristiques.</p>
+        </div>
+
+        <div class="function">
+            <h4>Fonction Sauvegarder</h4>
+            <p><strong>Signature :</strong> Sauvegarder(Joueur: T_Joueur) return String</p>
+            <p><strong>Fonction :</strong> Sauvegarde l'intégralité d'un joueur simulé dans un fichier à accès direct. Le nom du fichier est le nombre de secondes de l'horloge suivi de l'extension S_J.</p>
+        </div>
+
+        <div class="function">
+            <h4>Procédure Restaurer</h4>
+            <p><strong>Signature :</strong> Restaurer(Joueur: T_Joueur; Nom_Fichier: String)</p>
+            <p><strong>Fonction :</strong> Restaure un joueur simulé à partir d'un fichier sauvegardé lors d'une partie précédente.</p>
+        </div>
+
+        <div class="function">
+            <h4>Procédure Jouer</h4>
+            <p><strong>Signature :</strong> Jouer(Joueur: T_Joueur; Double: Boolean)</p>
+            <p><strong>Fonction :</strong> Procédure principale appelée par Gestion_Dialogue. Si le compte en banque est positif, tente de déshypothéquer, achète des propriétés, met à jour les valeurs stratégiques, et construit des maisons. Si le compte est négatif, vend des maisons puis hypothèque des terrains.</p>
+        </div>
+
+        <div class="function">
+            <h4>Fonction Choix_Chance</h4>
+            <p><strong>Signature :</strong> Choix_Chance(Joueur: T_Joueur) return Boolean</p>
+            <p><strong>Fonction :</strong> Si le joueur a assez d'argent, il paye pour éviter de tirer une carte qui pourrait l'obliger à réparer ses maisons. Sinon, il tire une carte chance.</p>
+        </div>
+
+        <div class="function">
+            <h4>Fonction Choix_Prison</h4>
+            <p><strong>Signature :</strong> Choix_Prison(Joueur: T_Joueur; Nb_Tour_Prison: Positive) return Boolean</p>
+            <p><strong>Fonction :</strong> Si le joueur a assez d'argent, il paye pour sortir de prison. Sinon, il reste en prison.</p>
+        </div>
+
+        <div class="function">
+            <h4>Fonction Utiliser_Carte</h4>
+            <p><strong>Signature :</strong> Utiliser_Carte(Joueur: T_Joueur; Nb_Tour_Prison: Positive) return Boolean</p>
+            <p><strong>Fonction :</strong> Si le joueur a assez d'argent pour payer la sortie de prison, il conserve la carte. Sinon, il utilise la carte.</p>
+        </div>
+
+        <div class="function">
+            <h4>Fonction Troc_Possible</h4>
+            <p><strong>Signature :</strong> Troc_Possible return Boolean</p>
+            <p><strong>Fonction :</strong> Renvoie true pour indiquer que le système de troc a été programmé et est disponible.</p>
+        </div>
+
+        <div class="function">
+            <h4>Fonction Reponse_Troc_S</h4>
+            <p><strong>Signature :</strong> Reponse_Troc_S(Joueur: T_Joueur; Propriete_Joueur: T_Proprietes; Joueur_Ordinateur: T_Joueur; Propriete_Ordinateur: T_Proprietes) return Boolean</p>
+            <p><strong>Fonction :</strong> Détermine si un troc proposé par un joueur est accepté par le joueur simulé selon des critères stratégiques.</p>
+        </div>
+
+        <div class="function">
+            <h4>Procédure Jouer_Troc</h4>
+            <p><strong>Signature :</strong> Jouer_Troc(Joueur: T_Joueur)</p>
+            <p><strong>Fonction :</strong> Permet au joueur simulé de proposer un troc à un autre joueur en analysant les opportunités stratégiques.</p>
+        </div>
+
+        <h2>3 - Le Troc</h2>
+
+        <h3>3.1 - Présentation</h3>
+        <p>Le système de troc est divisé en deux paquetages distincts :</p>
+        <ul>
+            <li><strong>Gestion_Liste_Troc</strong> : Gestion de l'historique des trocs</li>
+            <li><strong>Gestion_Troc</strong> : Logique de décision et proposition de trocs</li>
+        </ul>
+
+        <h3>3.2 - Le paquetage Gestion_Liste_Troc</h3>
+
+        <div class="code-block">
+            <strong>Type principal :</strong><br>
+            type T_TROC is record<br>
+            &nbsp;&nbsp;J1, J2 : T_JOUEUR;<br>
+            &nbsp;&nbsp;T1, T2 : T_PROPRIETES;<br>
+            end record;<br><br>
+            troc_null : constant T_TROC := (transparent, transparent, belleville, belleville);
+        </div>
+
+        <div class="function">
+            <h4>Procédure AJOUT_TROC</h4>
+            <p><strong>Signature :</strong> AJOUT_TROC(TROC: T_TROC)</p>
+            <p><strong>Fonction :</strong> Ajoute un troc à la liste. Si le troc existe déjà, augmente le nombre d'essais de 1.</p>
+        </div>
+
+        <div class="function">
+            <h4>Fonction NBE_TROC</h4>
+            <p><strong>Signature :</strong> NBE_TROC(TROC: T_TROC) return NATURAL</p>
+            <p><strong>Fonction :</strong> Renvoie le nombre d'essais déjà tentés pour un troc. Retourne 0 si le troc n'a jamais été tenté.</p>
+        </div>
+
+        <div class="function">
+            <h4>Procédure DETRUIT_TROC</h4>
+            <p><strong>Signature :</strong> DETRUIT_TROC(TROC: T_TROC)</p>
+            <p><strong>Fonction :</strong> Supprime un troc de la liste. Si le troc n'existe pas, aucune erreur n'est générée.</p>
+        </div>
+
+        <div class="function">
+            <h4>Procédure sauvegarder_troc</h4>
+            <p><strong>Signature :</strong> sauvegarder_troc(nom: String)</p>
+            <p><strong>Fonction :</strong> Sauvegarde la liste des trocs dans un fichier à accès direct pour éviter les erreurs de détection de fin de fichier.</p>
+        </div>
+
+        <div class="function">
+            <h4>Procédure restaurer_troc</h4>
+            <p><strong>Signature :</strong> restaurer_troc(nom: String)</p>
+            <p><strong>Fonction :</strong> Charge la liste des trocs depuis un fichier. Si la liste n'est pas vide, la vide d'abord avant de restaurer.</p>
+        </div>
+
+        <h3>3.3 - Le paquetage Gestion_Troc</h3>
+
+        <div class="function">
+            <h4>Procédure Jouer_Troc</h4>
+            <p><strong>Signature :</strong> Jouer_Troc(joueur: T_JOUEUR)</p>
+            <p><strong>Fonction :</strong> Analyse les opportunités de troc et propose des échanges stratégiques à d'autres joueurs.</p>
+        </div>
+
+        <div class="function">
+            <h4>Fonction Reponse_troc_s</h4>
+            <p><strong>Signature :</strong> Reponse_troc_s(joueur: T_JOUEUR; prop_joueur: T_PROPRIETES; joueur_ordi: T_JOUEUR; prop_ordi: T_PROPRIETES) return Boolean</p>
+            <p><strong>Fonction :</strong> Évalue si un troc proposé est avantageux pour le joueur simulé selon ses valeurs stratégiques et son profil.</p>
+        </div>
+
+        <h2>4 - Conclusion</h2>
+        <p>Ce programme implémente une simulation complète du jeu Monopoly avec des joueurs artificiels dotés de stratégies sophistiquées. L'approche basée sur les valeurs stratégiques et l'évaluation des risques permet de créer des joueurs réalistes qui adaptent leur comportement selon leur profil et les circonstances du jeu.</p>
+
+        <p>La modularité du code, organisé en paquetages spécialisés, facilite la maintenance et l'extension du programme. Chaque paquetage a une responsabilité claire et bien définie, contribuant à la robustesse de l'ensemble.</p>
+
+        <h2>5 - Appendices</h2>
+        <p>Cette documentation a été révisée en analysant directement le code source Ada pour garantir l'exactitude des informations. Toutes les signatures de fonctions et procédures correspondent exactement à celles définies dans les fichiers .ADS.</p>
+    </div>
+
+    <div class="footer">
+        <p>Documentation basée sur le code source Ada - Version révisée</p>
+        <p>Projet Ada - Simulation Monopoly (1991-1992)</p>
+        <p>Institut Supérieur d'Electronique de Paris</p>
+        <p><strong>Documentation fidèle au code source avec corrections et précisions</strong></p>
+    </div>
+</body>
+</html> 

@@ -1,145 +1,78 @@
-# FastFood Restaurant Simulation Project
+# Second Year Project - C++ Object-Oriented Programming
 
-This is a C++ project from 1992-1993 that simulates a restaurant queue system. The project was developed during engineering studies at **Institut Supérieur d'Electronique de Paris (ISEP)** and demonstrates object-oriented programming concepts with a custom class hierarchy.
+[![Year](https://img.shields.io/badge/Year-1992--1993-orange.svg)](https://github.com/juliensimon/work-history)
+[![Language](https://img.shields.io/badge/Language-C%2B%2B-blue.svg)](https://github.com/juliensimon/work-history)
+[![Focus](https://img.shields.io/badge/Focus-Object%20Oriented%20Programming-green.svg)](https://github.com/juliensimon/work-history)
 
-## Historical Context
+This directory contains **Julien Simon's** second-year engineering project - an object-oriented programming system implemented in C++.
 
-This project dates back to 1992-1993, during second-year engineering studies at ISEP. It represents early C++ development practices from the pre-standardization era, when:
-- C++ was still evolving (before C++98 standard)
-- Object-oriented programming was gaining mainstream adoption
-- Academic institutions were beginning to teach C++ as a primary programming language
-- DOS/Windows development environments were dominant
+## 📚 Project Overview
 
-The code demonstrates sophisticated concepts for student work of that era, including event-driven simulation, queue theory, and custom class hierarchies.
+This project demonstrates understanding of C++ programming language and object-oriented design principles. The system explores inheritance, polymorphism, encapsulation, and other OOP concepts through practical implementation.
 
-## Project Description
+## 🎯 Project Description
 
-The FastFood simulation models a restaurant with:
-- Multiple servers
-- Customer arrival events
-- Queue management
-- Service time simulation
-- Event-driven architecture
+A comprehensive object-oriented programming project that implements a restaurant simulation system. The project demonstrates advanced C++ concepts including class hierarchies, inheritance, polymorphism, and dynamic memory management. The simulation models a restaurant with multiple servers, customer queues, and event-driven architecture, showcasing real-world application of OOP principles.
 
-## Building the Project
+The simulation engine uses discrete event simulation techniques to accurately model customer arrival patterns, service times, and queue management. The object-oriented design features a comprehensive class hierarchy including customers, servers, queues, and time management systems. The project implements advanced C++ features such as virtual functions for polymorphic behavior, dynamic memory management, and template-based generic programming.
 
-### Prerequisites
-- C++ compiler (clang++ or g++)
-- Make
+## 🛠️ Technical Features
 
-### Build Instructions
+### C++ Programming Concepts
+- **Classes and Objects** - Object-oriented design implementation
+- **Inheritance** - Class hierarchies and code reuse
+- **Polymorphism** - Virtual functions and dynamic dispatch
+- **Templates** - Generic programming approaches
+- **Memory Management** - Manual memory allocation and deallocation
 
-1. **Clean build** (recommended for first build):
-   ```bash
-   make clean && make
-   ```
+### Object-Oriented Principles
+- **Encapsulation** - Data and methods bundled together
+- **Inheritance** - Code reuse through class hierarchies
+- **Polymorphism** - Interface flexibility and extensibility
+- **Abstraction** - Complex systems simplified through interfaces
 
-2. **Incremental build**:
-   ```bash
-   make
-   ```
+### Software Engineering Practices
+- **Header Files** - Proper separation of interface and implementation
+- **Modular Design** - Organized code structure
+- **Documentation** - Code comments and documentation
+- **Testing** - Verification of OOP concepts
 
-3. **Run the simulation**:
-   ```bash
-   ./fastfood
-   ```
+## 📊 Learning Outcomes
 
-### Build Targets
+This project demonstrates:
+- **OOP Mastery**: Understanding of object-oriented principles
+- **C++ Expertise**: Advanced C++ programming techniques
+- **Design Patterns**: Implementation of common OOP patterns
+- **Code Organization**: Professional software structure
+- **Problem Solving**: Complex system design and implementation
 
-- `make all` - Build the fastfood simulation program (default)
-- `make clean` - Remove build artifacts
-- `make install` - Install to /usr/local/bin
-- `make uninstall` - Remove from /usr/local/bin
-- `make run` - Build and run the program
-- `make help` - Show help message
+## 🎓 Educational Context
 
-## Project Structure
+### Second Year Engineering Focus
+- **Advanced Programming**: Moving beyond basic programming concepts
+- **Object-Oriented Design**: Learning modern software design principles
+- **Language Features**: Mastering C++ specific features
+- **System Design**: Large-scale software architecture
 
-### Main Files
-- `FASTFOOD.CPP` - Main program entry point
-- `RESTAURA.CPP/H` - Restaurant simulation class
-- `SERVEUR.CPP/H` - Server class
-- `FILEATTE.CPP/H` - Queue management
-- `TEMPS.CPP/H` - Time management
-- `ARRIVEEC.CPP/H` - Customer arrival events
-- `LIBERATI.CPP/H` - Server liberation events
+### C++ Language Benefits
+- **Performance**: High-performance programming capabilities
+- **Flexibility**: Multiple programming paradigms supported
+- **Control**: Low-level memory and system access
+- **Industry Standard**: Widely used in professional software development
 
-### Class Hierarchy
-- `Object` - Base class for all objects
-- `Collection` - Base class for collections
-- `IndexedCollection` - Indexed collections
-- `OrderedCollection` - Ordered collections
-- `SortedCollection` - Sorted collections
-- `Magnitude` - Comparable objects
+## 📄 Archive Notes
 
-### Compatibility Headers
-The project uses old-style C++ headers. Modern compatibility headers have been created:
-- `iostream.h` - Compatibility for old iostream
-- `String.h` - Compatibility for old string headers
-- `new.h` - Compatibility for old new headers
-- `OrderedCollection.h` - Symbolic link to ORDEREDC.H
-- `Magnitude.h` - Symbolic link to MAGNITUD.H
-- `IndexedCollection.h` - Symbolic link to INDEXEDC.H
-- `Collection.h` - Symbolic link to COLLECTI.H
+- All source files are preserved in their original form
+- Code demonstrates early adoption of OOP best practices
+- Header files show proper interface design
+- Implementation files showcase C++ programming techniques
 
-## Usage
+## 🔗 Related Links
 
-When you run the program, it will prompt you for:
-1. **Simulation duration** (in minutes)
-2. **Number of servers**
-3. **Average time between customer arrivals** (in minutes)
+- **[Academic Projects](../README.md)** - Overview of all academic projects
+- **[Main Repository](../../README.md)** - Complete work history
+- **[julien.org](https://julien.org)** - Julien's current work and expertise
 
-The simulation will then run and display statistics about the restaurant's performance.
+---
 
-## Technical Notes
-
-- This project uses C++98 standard
-- Compiler flags include `-fpermissive` for legacy code compatibility
-- The project demonstrates early object-oriented design patterns
-- All file names are in uppercase (DOS/Windows style)
-
-## C++ Evolution: 30 Years of Changes
-
-Building this 1992-1993 project on modern systems reveals significant changes in C++ over three decades:
-
-### What Was Different in 1992-1993:
-- **Headers**: Used `.h` extension (`iostream.h`, `String.h`) instead of modern headers
-- **Main Function**: `void main()` was acceptable (now requires `int main()`)
-- **Namespace**: No `std::` namespace usage - everything was in global scope
-- **String Handling**: Used `<String.h>` instead of modern `<string>`
-- **Memory Management**: Used `set_new_handler()` directly instead of `std::set_new_handler()`
-- **File Naming**: DOS-style uppercase filenames were standard
-
-### Modern Compatibility Challenges:
-1. **Header Compatibility**: Created modern wrapper headers for old-style includes
-2. **Compiler Standards**: Used `-std=c++98` and `-fpermissive` flags for legacy code
-3. **Pointer Casting**: Fixed pointer-to-integer casting warnings
-4. **Variable Scope**: Updated for-loop variable declarations to modern C++ standards
-5. **Include Paths**: Resolved case-sensitivity issues between include statements and actual filenames
-
-### What Hasn't Changed:
-- **Object-Oriented Design**: The class hierarchy and inheritance patterns remain valid
-- **Core Language Features**: Basic syntax, pointers, and memory management concepts
-- **Problem-Solving Approach**: The simulation logic and algorithms are timeless
-
-This project serves as a time capsule, showing both how far C++ has evolved and how well-designed code can remain functional across decades.
-
-## Troubleshooting
-
-If you encounter build issues:
-1. Ensure you have a C++ compiler installed
-2. Try `make clean && make` for a fresh build
-3. Check that all compatibility headers are present
-
-## Academic Context
-
-This project was developed as part of the second-year engineering curriculum at ISEP (Institut Supérieur d'Electronique de Paris) in 1992-1993. It represents a significant piece of early C++ educational work that demonstrates:
-
-- **Early OOP Adoption**: The project shows how object-oriented programming was being taught in engineering schools in the early 1990s
-- **Simulation Design**: Demonstrates practical application of queue theory and event-driven programming
-- **Software Engineering**: Shows structured approach to problem-solving and code organization
-- **Historical Value**: Preserves coding practices and design patterns from the pre-standardization C++ era
-
-## License
-
-This is an educational project from 1992-1993 developed during engineering studies at ISEP. Please respect the original academic context and the author's rights. 
+*This project represents Julien's transition to object-oriented programming, demonstrating mastery of C++ and modern software design principles.* 
