@@ -24,7 +24,7 @@ This directory contains work artifacts from **Julien Simon's** time at Criteo, f
 - **[USI Conference (PDF)](./Criteo%20USI.pdf)** - Presentation at USI conference
 
 ### Process Documentation
-- **[Process Documentation (DOCX)](./criteo%20processes%20v1.1.docx)** - Operational procedures and best practices
+- *Process documentation has been removed from this repository*
 
 ## 🛠️ Technologies & Skills
 
