@@ -1,0 +1,1787 @@
+
+Package name: com.oberthurcs.formation.filesystem
+Minor_version: 0
+Major_version: 1
+AID: 
+  aid[0]=0xA0
+  aid[1]=0x00
+  aid[2]=0x00
+  aid[3]=0x00
+  aid[4]=0x77
+  aid[5]=0x00
+  aid[6]=0x00
+  aid[7]=0x00
+  aid[8]=0x00
+
+Token: 6
+
+public super  class com/oberthurcs/formation/filesystem/BinaryFile extends com/oberthurcs/formation/filesystem/File; // Token: 1
+Implements directly 
+Implements indirectly: com/oberthurcs/formation/filesystem/Resource 
+{
+	// Static fields -----------------------------------------------------------------------------------
+
+	public static final short MAX_SIZE= 0x00FF;                          // Token: 255
+	public static final byte TYPE= 0x01;                                 // Token: 255
+
+	// String fields -----------------------------------------------------------------------------------
+
+
+	// Instance fields ---------------------------------------------------------------------------------
+
+	private []byte contents;                                             // Token: 0
+
+	// Inherited virtual methods -----------------------------------------------------------------------
+
+	public abstract short getSize()                                       // Token: 3
+	public boolean equals(java/lang/Object)                               // Token: 0
+	public short getId()                                                  // Token: 2
+	public com/oberthurcs/formation/filesystem/File getParent()           // Token: 1
+	public abstract byte getType()                                        // Token: 4
+
+	// Static and Init Methods -------------------------------------------------------------------------
+
+	protected void <init>(short,short)                                    // Token: 0
+	//offset = 115
+	{
+	  // Java Byte Codes
+
+		>> Nargs: 2	Max_locals: 3 <<
+
+		// Java Variables
+		Slot 0 : com/oberthurcs/formation/filesystem/BinaryFile this (pc:0 length:13)
+		Slot 1 : short _id (pc:0 length:13)
+		Slot 2 : short _size (pc:0 length:13)
+
+		//Exceptions
+
+		[0x0] 0x2A               	| [0] aload_0                                                 // line: 24
+		[0x1] 0x1B               	| [1] iload_1                                                 // line: 24
+		[0x2] 0xB7 0x0001        	| [2] invokespecial com/oberthurcs/formation/filesystem/File.<init>(S)V// line: 24
+		[0x5] 0x2A               	| [5] aload_0                                                 // line: 24
+		[0x6] 0x1C               	| [6] iload_2                                                 // line: 25
+		[0x7] 0xBC 0x8           	| [7] newarray Value: 8                                       // line: 25
+		[0x9] 0xB5 0x0002        	| [9] putfield Field: contents [B                             // line: 25
+		[0xc] 0xB1               	| [12] return                                                 // line: 25
+
+	  // JavaCard Byte Codes
+
+		>> Nargs: 3	Max_locals: 0 <<
+
+		// JavaCard Variables
+		Slot 0: com/oberthurcs/formation/filesystem/BinaryFile this
+		Slot 1: short _id
+		Slot 2: short _size
+
+		//Exceptions
+
+		[0x0] 0x18               	| [0] aload_0                                                 
+		[0x1] 0x1D               	| [1] sload_1                                                 
+		[0x2] 0x8C 0x000F        	| [2] invokespecial com/oberthurcs/formation/filesystem/File.<init>(S)V
+		[0x5] 0x18               	| [5] aload_0                                                 
+		[0x6] 0x1E               	| [6] sload_2                                                 
+		[0x7] 0x90 0xb           	| [7] newarray Value: 11                                      
+		[0x9] 0x87 0x02          	| [9] putfield_a Field: contents [B                           
+		[0xb] 0x7A               	| [11] return                                                 
+	}
+
+
+	// Virtual Methods ---------------------------------------------------------------------------------
+
+	public void update([]byte,short,short,short)                          // Token: 5
+	//offset = 129
+	{
+	  // Java Byte Codes
+
+		>> Nargs: 4	Max_locals: 5 <<
+
+		// Java Variables
+		Slot 0 : com/oberthurcs/formation/filesystem/BinaryFile this (pc:0 length:45)
+		Slot 1 : []byte src (pc:0 length:45)
+		Slot 2 : short srcOff (pc:0 length:45)
+		Slot 3 : short dstOff (pc:0 length:45)
+		Slot 4 : short len (pc:0 length:45)
+
+		//Exceptions
+
+		[0x0] 0x1D               	| [0] iload_3                                                 // line: 67
+		[0x1] 0x9B 0x00 0x18     	| [1] iflt 25                                                 // line: 67
+		[0x4] 0x1D               	| [4] iload_3                                                 // line: 67
+		[0x5] 0x2A               	| [5] aload_0                                                 // line: 67
+		[0x6] 0xB4 0x0002        	| [6] getfield Field: contents [B                             // line: 67
+		[0x9] 0xBE               	| [9] arraylength                                             // line: 67
+		[0xa] 0xA3 0x00 0x0F     	| [10] if_icmpgt 25                                           // line: 67
+		[0xd] 0x1D               	| [13] iload_3                                                // line: 67
+		[0xe] 0x15 0x04          	| [14] iload LV Index: 4                                      // line: 67
+		[0x10] 0x60              	| [16] iadd                                                   // line: 67
+		[0x11] 0x2A              	| [17] aload_0                                                // line: 67
+		[0x12] 0xB4 0x0002       	| [18] getfield Field: contents [B                            // line: 67
+		[0x15] 0xBE              	| [21] arraylength                                            // line: 67
+		[0x16] 0xA4 0x00 0x09    	| [22] if_icmple 31                                           // line: 67
+		[0x19] 0x11 0x6b 0x0     	| [25] sipush Value: 27392                                    // line: 67
+		[0x1c] 0xB8 0x0003       	| [28] invokestatic javacard/framework/ISOException.throwIt(S)V// line: 68
+		[0x1f] 0x2B              	| [31] aload_1                                                // line: 68
+		[0x20] 0x1C              	| [32] iload_2                                                // line: 70
+		[0x21] 0x2A              	| [33] aload_0                                                // line: 70
+		[0x22] 0xB4 0x0002       	| [34] getfield Field: contents [B                            // line: 70
+		[0x25] 0x1D              	| [37] iload_3                                                // line: 70
+		[0x26] 0x15 0x04         	| [38] iload LV Index: 4                                      // line: 70
+		[0x28] 0xB8 0x0005       	| [40] invokestatic javacard/framework/Util.arrayCopy([BS[BSS)S// line: 70
+		[0x2b] 0x57              	| [43] pop                                                    // line: 70
+		[0x2c] 0xB1              	| [44] return                                                 // line: 70
+
+	  // JavaCard Byte Codes
+
+		>> Nargs: 5	Max_locals: 0 <<
+
+		// JavaCard Variables
+		Slot 0: com/oberthurcs/formation/filesystem/BinaryFile this
+		Slot 1: []byte src
+		Slot 2: short srcOff
+		Slot 3: short dstOff
+		Slot 4: short len
+
+		//Exceptions
+
+		[0x0] 0x1F               	| [0] sload_3                                                 
+		[0x1] 0x62 0x11          	| [1] iflt 18                                                 
+		[0x3] 0x1F               	| [3] sload_3                                                 
+		                         	|                                                             
+		[0x4] 0xAD 0x02          	| [4] getfield_a_this Field: contents [B                      
+		[0x6] 0x92               	| [6] arraylength                                             
+		[0x7] 0x6E 0xb           	| [7] if_scmpgt 18                                            
+		[0x9] 0x1F               	| [9] sload_3                                                 
+		[0xa] 0x16 0x04          	| [10] sload LV Index: 4                                      
+		[0xc] 0x41               	| [12] sadd                                                   
+		                         	|                                                             
+		[0xd] 0xAD 0x02          	| [13] getfield_a_this Field: contents [B                     
+		[0xf] 0x92               	| [15] arraylength                                            
+		[0x10] 0x6F 0x8          	| [16] if_scmple 24                                           
+		[0x12] 0x11 0x6b 0x0     	| [18] sspush Value: 27392                                    
+		[0x15] 0x8D 0x001E       	| [21] invokestatic javacard/framework/ISOException.throwIt(S)V
+		[0x18] 0x19              	| [24] aload_1                                                
+		[0x19] 0x1E              	| [25] sload_2                                                
+		                         	|                                                             
+		[0x1a] 0xAD 0x02         	| [26] getfield_a_this Field: contents [B                     
+		[0x1c] 0x1F              	| [28] sload_3                                                
+		[0x1d] 0x16 0x04         	| [29] sload LV Index: 4                                      
+		[0x1f] 0x8D 0x001C       	| [31] invokestatic javacard/framework/Util.arrayCopy([BS[BSS)S
+		[0x22] 0x3B              	| [34] pop                                                    
+		[0x23] 0x7A              	| [35] return                                                 
+	}
+
+	public short getSize()                                                // Token: 3
+	//offset = 167
+	{
+	  // Java Byte Codes
+
+		>> Nargs: 0	Max_locals: 1 <<
+
+		// Java Variables
+		Slot 0 : com/oberthurcs/formation/filesystem/BinaryFile this (pc:0 length:5)
+
+		//Exceptions
+
+		[0x0] 0x2A               	| [0] aload_0                                                 // line: 74
+		[0x1] 0xB6 0x0006        	| [1] invokevirtual com/oberthurcs/formation/filesystem/BinaryFile.getLength()S// line: 74
+		[0x4] 0xAC               	| [4] ireturn                                                 // line: 74
+
+	  // JavaCard Byte Codes
+
+		>> Nargs: 1	Max_locals: 0 <<
+
+		// JavaCard Variables
+		Slot 0: com/oberthurcs/formation/filesystem/BinaryFile this
+
+		//Exceptions
+
+		[0x0] 0x18               	| [0] aload_0                                                 
+		[0x1] 0x8B 0x0010        	| [1] invokevirtual com/oberthurcs/formation/filesystem/BinaryFile.getLength()S
+		[0x4] 0x78               	| [4] sreturn                                                 
+	}
+
+	public short getLength()                                              // Token: 6
+	//offset = 174
+	{
+	  // Java Byte Codes
+
+		>> Nargs: 0	Max_locals: 1 <<
+
+		// Java Variables
+		Slot 0 : com/oberthurcs/formation/filesystem/BinaryFile this (pc:0 length:7)
+
+		//Exceptions
+
+		[0x0] 0x2A               	| [0] aload_0                                                 // line: 32
+		[0x1] 0xB4 0x0002        	| [1] getfield Field: contents [B                             // line: 32
+		[0x4] 0xBE               	| [4] arraylength                                             // line: 32
+		[0x5] 0x93               	| [5] i2s                                                     // line: 32
+		[0x6] 0xAC               	| [6] ireturn                                                 // line: 32
+
+	  // JavaCard Byte Codes
+
+		>> Nargs: 1	Max_locals: 0 <<
+
+		// JavaCard Variables
+		Slot 0: com/oberthurcs/formation/filesystem/BinaryFile this
+
+		//Exceptions
+
+		                         	|                                                             
+		[0x0] 0xAD 0x02          	| [0] getfield_a_this Field: contents [B                      
+		[0x2] 0x92               	| [2] arraylength                                             
+		                         	|                                                             
+		[0x3] 0x78               	| [3] sreturn                                                 
+	}
+
+	public void read([]byte,short,short,short)                            // Token: 7
+	//offset = 180
+	{
+	  // Java Byte Codes
+
+		>> Nargs: 4	Max_locals: 5 <<
+
+		// Java Variables
+		Slot 0 : com/oberthurcs/formation/filesystem/BinaryFile this (pc:0 length:45)
+		Slot 1 : []byte dst (pc:0 length:45)
+		Slot 2 : short dstOff (pc:0 length:45)
+		Slot 3 : short srcOff (pc:0 length:45)
+		Slot 4 : short len (pc:0 length:45)
+
+		//Exceptions
+
+		[0x0] 0x1D               	| [0] iload_3                                                 // line: 47
+		[0x1] 0x9B 0x00 0x18     	| [1] iflt 25                                                 // line: 47
+		[0x4] 0x1D               	| [4] iload_3                                                 // line: 47
+		[0x5] 0x2A               	| [5] aload_0                                                 // line: 47
+		[0x6] 0xB4 0x0002        	| [6] getfield Field: contents [B                             // line: 47
+		[0x9] 0xBE               	| [9] arraylength                                             // line: 47
+		[0xa] 0xA3 0x00 0x0F     	| [10] if_icmpgt 25                                           // line: 47
+		[0xd] 0x1D               	| [13] iload_3                                                // line: 47
+		[0xe] 0x15 0x04          	| [14] iload LV Index: 4                                      // line: 47
+		[0x10] 0x60              	| [16] iadd                                                   // line: 47
+		[0x11] 0x2A              	| [17] aload_0                                                // line: 47
+		[0x12] 0xB4 0x0002       	| [18] getfield Field: contents [B                            // line: 47
+		[0x15] 0xBE              	| [21] arraylength                                            // line: 47
+		[0x16] 0xA4 0x00 0x09    	| [22] if_icmple 31                                           // line: 47
+		[0x19] 0x11 0x6b 0x0     	| [25] sipush Value: 27392                                    // line: 47
+		[0x1c] 0xB8 0x0003       	| [28] invokestatic javacard/framework/ISOException.throwIt(S)V// line: 48
+		[0x1f] 0x2A              	| [31] aload_0                                                // line: 48
+		[0x20] 0xB4 0x0002       	| [32] getfield Field: contents [B                            // line: 51
+		[0x23] 0x1D              	| [35] iload_3                                                // line: 51
+		[0x24] 0x2B              	| [36] aload_1                                                // line: 51
+		[0x25] 0x1C              	| [37] iload_2                                                // line: 51
+		[0x26] 0x15 0x04         	| [38] iload LV Index: 4                                      // line: 51
+		[0x28] 0xB8 0x0004       	| [40] invokestatic javacard/framework/Util.arrayCopyNonAtomic([BS[BSS)S// line: 51
+		[0x2b] 0x57              	| [43] pop                                                    // line: 51
+		[0x2c] 0xB1              	| [44] return                                                 // line: 51
+
+	  // JavaCard Byte Codes
+
+		>> Nargs: 5	Max_locals: 0 <<
+
+		// JavaCard Variables
+		Slot 0: com/oberthurcs/formation/filesystem/BinaryFile this
+		Slot 1: []byte dst
+		Slot 2: short dstOff
+		Slot 3: short srcOff
+		Slot 4: short len
+
+		//Exceptions
+
+		[0x0] 0x1F               	| [0] sload_3                                                 
+		[0x1] 0x62 0x11          	| [1] iflt 18                                                 
+		[0x3] 0x1F               	| [3] sload_3                                                 
+		                         	|                                                             
+		[0x4] 0xAD 0x02          	| [4] getfield_a_this Field: contents [B                      
+		[0x6] 0x92               	| [6] arraylength                                             
+		[0x7] 0x6E 0xb           	| [7] if_scmpgt 18                                            
+		[0x9] 0x1F               	| [9] sload_3                                                 
+		[0xa] 0x16 0x04          	| [10] sload LV Index: 4                                      
+		[0xc] 0x41               	| [12] sadd                                                   
+		                         	|                                                             
+		[0xd] 0xAD 0x02          	| [13] getfield_a_this Field: contents [B                     
+		[0xf] 0x92               	| [15] arraylength                                            
+		[0x10] 0x6F 0x8          	| [16] if_scmple 24                                           
+		[0x12] 0x11 0x6b 0x0     	| [18] sspush Value: 27392                                    
+		[0x15] 0x8D 0x001E       	| [21] invokestatic javacard/framework/ISOException.throwIt(S)V
+		                         	|                                                             
+		[0x18] 0xAD 0x02         	| [24] getfield_a_this Field: contents [B                     
+		[0x1a] 0x1F              	| [26] sload_3                                                
+		[0x1b] 0x19              	| [27] aload_1                                                
+		[0x1c] 0x1E              	| [28] sload_2                                                
+		[0x1d] 0x16 0x04         	| [29] sload LV Index: 4                                      
+		[0x1f] 0x8D 0x001A       	| [31] invokestatic javacard/framework/Util.arrayCopyNonAtomic([BS[BSS)S
+		[0x22] 0x3B              	| [34] pop                                                    
+		[0x23] 0x7A              	| [35] return                                                 
+	}
+
+	public byte getType()                                                 // Token: 4
+	//offset = 218
+	{
+	  // Java Byte Codes
+
+		>> Nargs: 0	Max_locals: 1 <<
+
+		// Java Variables
+		Slot 0 : com/oberthurcs/formation/filesystem/BinaryFile this (pc:0 length:2)
+
+		//Exceptions
+
+		[0x0] 0x04               	| [0] iconst_1                                                // line: 29
+		[0x1] 0xAC               	| [1] ireturn                                                 // line: 29
+
+	  // JavaCard Byte Codes
+
+		>> Nargs: 1	Max_locals: 0 <<
+
+		// JavaCard Variables
+		Slot 0: com/oberthurcs/formation/filesystem/BinaryFile this
+
+		//Exceptions
+
+		[0x0] 0x04               	| [0] sconst_1                                                
+		[0x1] 0x78               	| [1] sreturn                                                 
+	}
+
+}
+
+
+public super  class com/oberthurcs/formation/filesystem/Directory extends com/oberthurcs/formation/filesystem/File; // Token: 2
+Implements directly 
+Implements indirectly: com/oberthurcs/formation/filesystem/Resource 
+{
+	// Static fields -----------------------------------------------------------------------------------
+
+	public static final byte TYPE;                                       // Token: 255
+
+	// String fields -----------------------------------------------------------------------------------
+
+
+	// Instance fields ---------------------------------------------------------------------------------
+
+	private []com/oberthurcs/formation/filesystem/File fileList;         // Token: 0
+	private byte count;                                                  // Token: 1
+	private byte capacity;                                               // Token: 2
+
+	// Inherited virtual methods -----------------------------------------------------------------------
+
+	public abstract short getSize()                                       // Token: 3
+	public boolean equals(java/lang/Object)                               // Token: 0
+	public short getId()                                                  // Token: 2
+	public com/oberthurcs/formation/filesystem/File getParent()           // Token: 1
+	public abstract byte getType()                                        // Token: 4
+
+	// Static and Init Methods -------------------------------------------------------------------------
+
+	protected void <init>(short,byte)                                     // Token: 0
+	//offset = 222
+	{
+	  // Java Byte Codes
+
+		>> Nargs: 2	Max_locals: 3 <<
+
+		// Java Variables
+		Slot 0 : com/oberthurcs/formation/filesystem/Directory this (pc:0 length:19)
+		Slot 1 : short _id (pc:0 length:19)
+		Slot 2 : byte _capacity (pc:0 length:19)
+
+		//Exceptions
+
+		[0x0] 0x2A               	| [0] aload_0                                                 // line: 37
+		[0x1] 0x1B               	| [1] iload_1                                                 // line: 37
+		[0x2] 0xB7 0x0001        	| [2] invokespecial com/oberthurcs/formation/filesystem/File.<init>(S)V// line: 37
+		[0x5] 0x2A               	| [5] aload_0                                                 // line: 37
+		[0x6] 0x1C               	| [6] iload_2                                                 // line: 38
+		[0x7] 0xB5 0x0002        	| [7] putfield Field: capacity B                              // line: 38
+		[0xa] 0x2A               	| [10] aload_0                                                // line: 38
+		[0xb] 0x1C               	| [11] iload_2                                                // line: 39
+		[0xc] 0xBD 0x0003        	| [12] anewarray Class:com/oberthurcs/formation/filesystem/File// line: 39
+		[0xf] 0xB5 0x0004        	| [15] putfield Field: fileList [Lcom/oberthurcs/formation/filesystem/File;// line: 39
+		[0x12] 0xB1              	| [18] return                                                 // line: 39
+
+	  // JavaCard Byte Codes
+
+		>> Nargs: 3	Max_locals: 0 <<
+
+		// JavaCard Variables
+		Slot 0: com/oberthurcs/formation/filesystem/Directory this
+		Slot 1: short _id
+		Slot 2: byte _capacity
+
+		//Exceptions
+
+		[0x0] 0x18               	| [0] aload_0                                                 
+		[0x1] 0x1D               	| [1] sload_1                                                 
+		[0x2] 0x8C 0x000F        	| [2] invokespecial com/oberthurcs/formation/filesystem/File.<init>(S)V
+		                         	|                                                             
+		[0x5] 0x1E               	| [5] sload_2                                                 
+		[0x6] 0xB6 0x06          	| [6] putfield_b_this Field: capacity B                       
+		[0x8] 0x18               	| [8] aload_0                                                 
+		[0x9] 0x1E               	| [9] sload_2                                                 
+		[0xa] 0x91 0x0007        	| [10] anewarray Class:com/oberthurcs/formation/filesystem/File
+		[0xd] 0x87 0x04          	| [13] putfield_a Field: fileList [Lcom/oberthurcs/formation/filesystem/File;
+		[0xf] 0x7A               	| [15] return                                                 
+	}
+
+
+	// Virtual Methods ---------------------------------------------------------------------------------
+
+	public byte getType()                                                 // Token: 4
+	//offset = 240
+	{
+	  // Java Byte Codes
+
+		>> Nargs: 0	Max_locals: 1 <<
+
+		// Java Variables
+		Slot 0 : com/oberthurcs/formation/filesystem/Directory this (pc:0 length:2)
+
+		//Exceptions
+
+		[0x0] 0x03               	| [0] iconst_0                                                // line: 29
+		[0x1] 0xAC               	| [1] ireturn                                                 // line: 29
+
+	  // JavaCard Byte Codes
+
+		>> Nargs: 1	Max_locals: 0 <<
+
+		// JavaCard Variables
+		Slot 0: com/oberthurcs/formation/filesystem/Directory this
+
+		//Exceptions
+
+		[0x0] 0x03               	| [0] sconst_0                                                
+		[0x1] 0x78               	| [1] sreturn                                                 
+	}
+
+	public com/oberthurcs/formation/filesystem/File get(short)            // Token: 5
+	//offset = 244
+	{
+	  // Java Byte Codes
+
+		>> Nargs: 1	Max_locals: 4 <<
+
+		// Java Variables
+		Slot 0 : com/oberthurcs/formation/filesystem/Directory this (pc:0 length:44)
+		Slot 1 : short fileId (pc:0 length:44)
+		Slot 2 : short index (pc:4 length:40)
+		Slot 3 : com/oberthurcs/formation/filesystem/File f (pc:2 length:42)
+
+		//Exceptions
+
+		[0x0] 0x01               	| [0] aconst_null                                             // line: 180
+		[0x1] 0x4E               	| [1] astore_3                                                // line: 180
+		[0x2] 0x03               	| [2] iconst_0                                                // line: 180
+		[0x3] 0x3D               	| [3] istore_2                                                // line: 181
+		[0x4] 0xA7 0x00 0x1E     	| [4] goto 34                                                 // line: 181
+		[0x7] 0x2A               	| [7] aload_0                                                 // line: 181
+		[0x8] 0xB4 0x0004        	| [8] getfield Field: fileList [Lcom/oberthurcs/formation/filesystem/File;// line: 183
+		[0xb] 0x1C               	| [11] iload_2                                                // line: 183
+		[0xc] 0x32               	| [12] aaload                                                 // line: 183
+		[0xd] 0x4E               	| [13] astore_3                                               // line: 183
+		[0xe] 0x2D               	| [14] aload_3                                                // line: 183
+		[0xf] 0xC6 0x00 0x0E     	| [15] ifnull 29                                              // line: 184
+		[0x12] 0x2D              	| [18] aload_3                                                // line: 184
+		[0x13] 0xB6 0x0007       	| [19] invokevirtual com/oberthurcs/formation/filesystem/File.getId()S// line: 184
+		[0x16] 0x1B              	| [22] iload_1                                                // line: 184
+		[0x17] 0xA0 0x00 0x06    	| [23] if_icmpne 29                                           // line: 184
+		[0x1a] 0xA7 0x00 0x10    	| [26] goto 42                                                // line: 184
+		[0x1d] 0x1C              	| [29] iload_2                                                // line: 185
+		[0x1e] 0x04              	| [30] iconst_1                                               // line: 181
+		[0x1f] 0x60              	| [31] iadd                                                   // line: 181
+		[0x20] 0x93              	| [32] i2s                                                    // line: 181
+		[0x21] 0x3D              	| [33] istore_2                                               // line: 181
+		[0x22] 0x1C              	| [34] iload_2                                                // line: 181
+		[0x23] 0x2A              	| [35] aload_0                                                // line: 181
+		[0x24] 0xB4 0x0002       	| [36] getfield Field: capacity B                             // line: 181
+		[0x27] 0xA1 0xFF 0xE0    	| [39] if_icmplt 7                                            // line: 181
+		[0x2a] 0x2D              	| [42] aload_3                                                // line: 181
+		[0x2b] 0xB0              	| [43] areturn                                                // line: 187
+
+	  // JavaCard Byte Codes
+
+		>> Nargs: 2	Max_locals: 2 <<
+
+		// JavaCard Variables
+		Slot 0: com/oberthurcs/formation/filesystem/Directory this
+		Slot 1: short fileId
+		Slot 2: short index
+		Slot 3: com/oberthurcs/formation/filesystem/File f
+
+		//Exceptions
+
+		[0x0] 0x01               	| [0] aconst_null                                             
+		[0x1] 0x2E               	| [1] astore_3                                                
+		[0x2] 0x03               	| [2] sconst_0                                                
+		[0x3] 0x31               	| [3] sstore_2                                                
+		[0x4] 0x70 0x16          	| [4] goto 26                                                 
+		                         	|                                                             
+		[0x6] 0xAD 0x04          	| [6] getfield_a_this Field: fileList [Lcom/oberthurcs/formation/filesystem/File;
+		[0x8] 0x1E               	| [8] sload_2                                                 
+		[0x9] 0x24               	| [9] aaload                                                  
+		[0xa] 0x2E               	| [10] astore_3                                               
+		[0xb] 0x1B               	| [11] aload_3                                                
+		[0xc] 0x66 0xb           	| [12] ifnull 23                                              
+		[0xe] 0x1B               	| [14] aload_3                                                
+		[0xf] 0x8B 0x000E        	| [15] invokevirtual com/oberthurcs/formation/filesystem/File.getId()S
+		[0x12] 0x1D              	| [18] sload_1                                                
+		[0x13] 0x6B 0x4          	| [19] if_scmpne 23                                           
+		[0x15] 0x70 0xa          	| [21] goto 31                                                
+		                         	|                                                             
+		                         	|                                                             
+		                         	|                                                             
+		                         	|                                                             
+		[0x17] 0x59 0x02 0x01    	| [23] sinc LV Index: 2 Const: 1                              
+		[0x1a] 0x1E              	| [26] sload_2                                                
+		                         	|                                                             
+		[0x1b] 0xAE 0x06         	| [27] getfield_b_this Field: capacity B                      
+		[0x1d] 0x6C 0xe9         	| [29] if_scmplt 6                                            
+		[0x1f] 0x1B              	| [31] aload_3                                                
+		[0x20] 0x77              	| [32] areturn                                                
+	}
+
+	public com/oberthurcs/formation/filesystem/File get(byte)             // Token: 6
+	//offset = 279
+	{
+	  // Java Byte Codes
+
+		>> Nargs: 1	Max_locals: 2 <<
+
+		// Java Variables
+		Slot 0 : com/oberthurcs/formation/filesystem/Directory this (pc:0 length:7)
+		Slot 1 : byte index (pc:0 length:7)
+
+		//Exceptions
+
+		[0x0] 0x2A               	| [0] aload_0                                                 // line: 152
+		[0x1] 0xB4 0x0004        	| [1] getfield Field: fileList [Lcom/oberthurcs/formation/filesystem/File;// line: 152
+		[0x4] 0x1B               	| [4] iload_1                                                 // line: 152
+		[0x5] 0x32               	| [5] aaload                                                  // line: 152
+		[0x6] 0xB0               	| [6] areturn                                                 // line: 152
+
+	  // JavaCard Byte Codes
+
+		>> Nargs: 2	Max_locals: 0 <<
+
+		// JavaCard Variables
+		Slot 0: com/oberthurcs/formation/filesystem/Directory this
+		Slot 1: byte index
+
+		//Exceptions
+
+		                         	|                                                             
+		[0x0] 0xAD 0x04          	| [0] getfield_a_this Field: fileList [Lcom/oberthurcs/formation/filesystem/File;
+		[0x2] 0x1D               	| [2] sload_1                                                 
+		[0x3] 0x24               	| [3] aaload                                                  
+		[0x4] 0x77               	| [4] areturn                                                 
+	}
+
+	public boolean add(com/oberthurcs/formation/filesystem/File)          // Token: 7
+	//offset = 286
+	{
+	  // Java Byte Codes
+
+		>> Nargs: 1	Max_locals: 5 <<
+
+		// Java Variables
+		Slot 0 : com/oberthurcs/formation/filesystem/Directory this (pc:0 length:149)
+		Slot 1 : com/oberthurcs/formation/filesystem/File file (pc:0 length:149)
+		Slot 2 : byte index (pc:2 length:147)
+		Slot 3 : com/oberthurcs/formation/filesystem/File f (pc:61 length:88)
+		Slot 4 : com/oberthurcs/formation/filesystem/RootDirectory mf (pc:66 length:83)
+
+		//Exceptions
+
+		[0x0] 0x03               	| [0] iconst_0                                                // line: 65
+		[0x1] 0x3D               	| [1] istore_2                                                // line: 65
+		[0x2] 0x2B               	| [2] aload_1                                                 // line: 65
+		[0x3] 0xC7 0x00 0x09     	| [3] ifnonnull 12                                            // line: 67
+		[0x6] 0x11 0x69 0x83     	| [6] sipush Value: 27011                                     // line: 67
+		[0x9] 0xB8 0x0006        	| [9] invokestatic javacard/framework/ISOException.throwIt(S)V// line: 68
+		[0xc] 0x2A               	| [12] aload_0                                                // line: 68
+		[0xd] 0x2B               	| [13] aload_1                                                // line: 70
+		[0xe] 0xB6 0x0007        	| [14] invokevirtual com/oberthurcs/formation/filesystem/File.getId()S// line: 70
+		[0x11] 0xB6 0x0008       	| [17] invokevirtual com/oberthurcs/formation/filesystem/Directory.get(S)Lcom/oberthurcs/formation/filesystem/File;// line: 70
+		[0x14] 0xC6 0x00 0x09    	| [20] ifnull 29                                              // line: 70
+		[0x17] 0x11 0x69 0x83    	| [23] sipush Value: 27011                                    // line: 70
+		[0x1a] 0xB8 0x0006       	| [26] invokestatic javacard/framework/ISOException.throwIt(S)V// line: 71
+		[0x1d] 0x2B              	| [29] aload_1                                                // line: 71
+		[0x1e] 0xB4 0x0009       	| [30] getfield Field: parent Lcom/oberthurcs/formation/filesystem/File;// line: 73
+		[0x21] 0xC6 0x00 0x09    	| [33] ifnull 42                                              // line: 73
+		[0x24] 0x11 0x69 0x83    	| [36] sipush Value: 27011                                    // line: 73
+		[0x27] 0xB8 0x0006       	| [39] invokestatic javacard/framework/ISOException.throwIt(S)V// line: 74
+		[0x2a] 0x2A              	| [42] aload_0                                                // line: 74
+		[0x2b] 0xB6 0x000A       	| [43] invokevirtual com/oberthurcs/formation/filesystem/Directory.getCurrentSize()B// line: 76
+		[0x2e] 0x2A              	| [46] aload_0                                                // line: 76
+		[0x2f] 0xB4 0x0002       	| [47] getfield Field: capacity B                             // line: 76
+		[0x32] 0xA0 0x00 0x09    	| [50] if_icmpne 59                                           // line: 76
+		[0x35] 0x11 0x6a 0x84    	| [53] sipush Value: 27268                                    // line: 76
+		[0x38] 0xB8 0x0006       	| [56] invokestatic javacard/framework/ISOException.throwIt(S)V// line: 77
+		[0x3b] 0x2A              	| [59] aload_0                                                // line: 77
+		[0x3c] 0x4E              	| [60] astore_3                                               // line: 79
+		[0x3d] 0xB8 0x000B       	| [61] invokestatic com/oberthurcs/formation/filesystem/RootDirectory.getInstance()Lcom/oberthurcs/formation/filesystem/RootDirectory;// line: 79
+		[0x40] 0x3A 0x04         	| [64] astore LV Index: 4                                     // line: 80
+		[0x42] 0x2D              	| [66] aload_3                                                // line: 80
+		[0x43] 0x2B              	| [67] aload_1                                                // line: 82
+		[0x44] 0xA6 0x00 0x09    	| [68] if_acmpne 77                                           // line: 82
+		[0x47] 0x11 0x69 0x83    	| [71] sipush Value: 27011                                    // line: 82
+		[0x4a] 0xB8 0x0006       	| [74] invokestatic javacard/framework/ISOException.throwIt(S)V// line: 82
+		[0x4d] 0x2D              	| [77] aload_3                                                // line: 82
+		[0x4e] 0xB4 0x0009       	| [78] getfield Field: parent Lcom/oberthurcs/formation/filesystem/File;// line: 83
+		[0x51] 0x4E              	| [81] astore_3                                               // line: 83
+		[0x52] 0x2D              	| [82] aload_3                                                // line: 83
+		[0x53] 0xC6 0x00 0x09    	| [83] ifnull 92                                              // line: 84
+		[0x56] 0x2D              	| [86] aload_3                                                // line: 84
+		[0x57] 0x19 0x04         	| [87] aload LV Index: 4                                      // line: 84
+		[0x59] 0xA6 0xFF 0xE9    	| [89] if_acmpne 66                                           // line: 84
+		[0x5c] 0x03              	| [92] iconst_0                                               // line: 84
+		[0x5d] 0x3D              	| [93] istore_2                                               // line: 86
+		[0x5e] 0xA7 0x00 0x14    	| [94] goto 114                                               // line: 86
+		[0x61] 0x2A              	| [97] aload_0                                                // line: 86
+		[0x62] 0xB4 0x0004       	| [98] getfield Field: fileList [Lcom/oberthurcs/formation/filesystem/File;// line: 87
+		[0x65] 0x1C              	| [101] iload_2                                               // line: 87
+		[0x66] 0x32              	| [102] aaload                                                // line: 87
+		[0x67] 0xC7 0x00 0x06    	| [103] ifnonnull 109                                         // line: 87
+		[0x6a] 0xA7 0x00 0x10    	| [106] goto 122                                              // line: 87
+		[0x6d] 0x1C              	| [109] iload_2                                               // line: 87
+		[0x6e] 0x04              	| [110] iconst_1                                              // line: 86
+		[0x6f] 0x60              	| [111] iadd                                                  // line: 86
+		[0x70] 0x91              	| [112] i2b                                                   // line: 86
+		[0x71] 0x3D              	| [113] istore_2                                              // line: 86
+		[0x72] 0x1C              	| [114] iload_2                                               // line: 86
+		[0x73] 0x2A              	| [115] aload_0                                               // line: 86
+		[0x74] 0xB4 0x0002       	| [116] getfield Field: capacity B                            // line: 86
+		[0x77] 0xA1 0xFF 0xEA    	| [119] if_icmplt 97                                          // line: 86
+		[0x7a] 0x2A              	| [122] aload_0                                               // line: 86
+		[0x7b] 0x4E              	| [123] astore_3                                              // line: 89
+		[0x7c] 0x2B              	| [124] aload_1                                               // line: 89
+		[0x7d] 0x2D              	| [125] aload_3                                               // line: 90
+		[0x7e] 0xB5 0x0009       	| [126] putfield Field: parent Lcom/oberthurcs/formation/filesystem/File;// line: 90
+		[0x81] 0x2A              	| [129] aload_0                                               // line: 90
+		[0x82] 0xB4 0x0004       	| [130] getfield Field: fileList [Lcom/oberthurcs/formation/filesystem/File;// line: 91
+		[0x85] 0x2A              	| [133] aload_0                                               // line: 91
+		[0x86] 0x59              	| [134] dup                                                   // line: 91
+		[0x87] 0xB4 0x0005       	| [135] getfield Field: count B                               // line: 91
+		[0x8a] 0x5A              	| [138] dup_x1                                                // line: 91
+		[0x8b] 0x04              	| [139] iconst_1                                              // line: 91
+		[0x8c] 0x60              	| [140] iadd                                                  // line: 91
+		[0x8d] 0x91              	| [141] i2b                                                   // line: 91
+		[0x8e] 0xB5 0x0005       	| [142] putfield Field: count B                               // line: 91
+		[0x91] 0x2B              	| [145] aload_1                                               // line: 91
+		[0x92] 0x53              	| [146] aastore                                               // line: 91
+		[0x93] 0x04              	| [147] iconst_1                                              // line: 91
+		[0x94] 0xAC              	| [148] ireturn                                               // line: 92
+
+	  // JavaCard Byte Codes
+
+		>> Nargs: 2	Max_locals: 3 <<
+
+		// JavaCard Variables
+		Slot 0: com/oberthurcs/formation/filesystem/Directory this
+		Slot 1: com/oberthurcs/formation/filesystem/File file
+		Slot 2: byte index
+		Slot 3: com/oberthurcs/formation/filesystem/File f
+		Slot 4: com/oberthurcs/formation/filesystem/RootDirectory mf
+
+		//Exceptions
+
+		[0x0] 0x03               	| [0] sconst_0                                                
+		[0x1] 0x31               	| [1] sstore_2                                                
+		[0x2] 0x19               	| [2] aload_1                                                 
+		[0x3] 0x67 0x8           	| [3] ifnonnull 11                                            
+		[0x5] 0x11 0x69 0x83     	| [5] sspush Value: 27011                                     
+		[0x8] 0x8D 0x001E        	| [8] invokestatic javacard/framework/ISOException.throwIt(S)V
+		[0xb] 0x18               	| [11] aload_0                                                
+		[0xc] 0x19               	| [12] aload_1                                                
+		[0xd] 0x8B 0x000E        	| [13] invokevirtual com/oberthurcs/formation/filesystem/File.getId()S
+		[0x10] 0x8B 0x0014       	| [16] invokevirtual com/oberthurcs/formation/filesystem/Directory.get(S)Lcom/oberthurcs/formation/filesystem/File;
+		[0x13] 0x66 0x8          	| [19] ifnull 27                                              
+		[0x15] 0x11 0x69 0x83    	| [21] sspush Value: 27011                                    
+		[0x18] 0x8D 0x001E       	| [24] invokestatic javacard/framework/ISOException.throwIt(S)V
+		[0x1b] 0x19              	| [27] aload_1                                                
+		[0x1c] 0x83 0x01         	| [28] getfield_a Field: parent Lcom/oberthurcs/formation/filesystem/File;
+		[0x1e] 0x66 0x8          	| [30] ifnull 38                                              
+		[0x20] 0x11 0x69 0x83    	| [32] sspush Value: 27011                                    
+		[0x23] 0x8D 0x001E       	| [35] invokestatic javacard/framework/ISOException.throwIt(S)V
+		[0x26] 0x18              	| [38] aload_0                                                
+		[0x27] 0x8B 0x0017       	| [39] invokevirtual com/oberthurcs/formation/filesystem/Directory.getCurrentSize()B
+		                         	|                                                             
+		[0x2a] 0xAE 0x06         	| [42] getfield_b_this Field: capacity B                      
+		[0x2c] 0x6B 0x8          	| [44] if_scmpne 52                                           
+		[0x2e] 0x11 0x6a 0x84    	| [46] sspush Value: 27268                                    
+		[0x31] 0x8D 0x001E       	| [49] invokestatic javacard/framework/ISOException.throwIt(S)V
+		[0x34] 0x18              	| [52] aload_0                                                
+		[0x35] 0x2E              	| [53] astore_3                                               
+		[0x36] 0x8D 0x0012       	| [54] invokestatic com/oberthurcs/formation/filesystem/RootDirectory.getInstance()Lcom/oberthurcs/formation/filesystem/RootDirectory;
+		[0x39] 0x28 0x04         	| [57] astore LV Index: 4                                     
+		[0x3b] 0x1B              	| [59] aload_3                                                
+		[0x3c] 0x19              	| [60] aload_1                                                
+		[0x3d] 0x69 0x8          	| [61] if_acmpne 69                                           
+		[0x3f] 0x11 0x69 0x83    	| [63] sspush Value: 27011                                    
+		[0x42] 0x8D 0x001E       	| [66] invokestatic javacard/framework/ISOException.throwIt(S)V
+		[0x45] 0x1B              	| [69] aload_3                                                
+		[0x46] 0x83 0x01         	| [70] getfield_a Field: parent Lcom/oberthurcs/formation/filesystem/File;
+		[0x48] 0x2E              	| [72] astore_3                                               
+		[0x49] 0x1B              	| [73] aload_3                                                
+		[0x4a] 0x66 0x7          	| [74] ifnull 81                                              
+		[0x4c] 0x1B              	| [76] aload_3                                                
+		[0x4d] 0x15 0x04         	| [77] aload LV Index: 4                                      
+		[0x4f] 0x69 0xec         	| [79] if_acmpne 59                                           
+		[0x51] 0x03              	| [81] sconst_0                                               
+		[0x52] 0x31              	| [82] sstore_2                                               
+		[0x53] 0x70 0xf          	| [83] goto 98                                                
+		                         	|                                                             
+		[0x55] 0xAD 0x04         	| [85] getfield_a_this Field: fileList [Lcom/oberthurcs/formation/filesystem/File;
+		[0x57] 0x1E              	| [87] sload_2                                                
+		[0x58] 0x24              	| [88] aaload                                                 
+		[0x59] 0x67 0x4          	| [89] ifnonnull 93                                           
+		[0x5b] 0x70 0xc          	| [91] goto 103                                               
+		[0x5d] 0x1E              	| [93] sload_2                                                
+		[0x5e] 0x04              	| [94] sconst_1                                               
+		[0x5f] 0x41              	| [95] sadd                                                   
+		[0x60] 0x5B              	| [96] s2b                                                    
+		[0x61] 0x31              	| [97] sstore_2                                               
+		[0x62] 0x1E              	| [98] sload_2                                                
+		                         	|                                                             
+		[0x63] 0xAE 0x06         	| [99] getfield_b_this Field: capacity B                      
+		[0x65] 0x6C 0xf0         	| [101] if_scmplt 85                                          
+		[0x67] 0x18              	| [103] aload_0                                               
+		[0x68] 0x2E              	| [104] astore_3                                              
+		[0x69] 0x19              	| [105] aload_1                                               
+		[0x6a] 0x1B              	| [106] aload_3                                               
+		[0x6b] 0x87 0x01         	| [107] putfield_a Field: parent Lcom/oberthurcs/formation/filesystem/File;
+		                         	|                                                             
+		[0x6d] 0xAD 0x04         	| [109] getfield_a_this Field: fileList [Lcom/oberthurcs/formation/filesystem/File;
+		[0x6f] 0x18              	| [111] aload_0                                               
+		[0x70] 0x3D              	| [112] dup                                                   
+		[0x71] 0x84 0x05         	| [113] getfield_b Field: count B                             
+		[0x73] 0x3F 0x12         	| [115] dup_x MN: 18                                          
+		[0x75] 0x04              	| [117] sconst_1                                              
+		[0x76] 0x41              	| [118] sadd                                                  
+		[0x77] 0x5B              	| [119] s2b                                                   
+		[0x78] 0x88 0x05         	| [120] putfield_b Field: count B                             
+		[0x7a] 0x19              	| [122] aload_1                                               
+		[0x7b] 0x37              	| [123] aastore                                               
+		[0x7c] 0x04              	| [124] sconst_1                                              
+		[0x7d] 0x78              	| [125] sreturn                                               
+	}
+
+	public boolean remove(byte)                                           // Token: 8
+	//offset = 414
+	{
+	  // Java Byte Codes
+
+		>> Nargs: 1	Max_locals: 4 <<
+
+		// Java Variables
+		Slot 0 : com/oberthurcs/formation/filesystem/Directory this (pc:0 length:81)
+		Slot 1 : byte index (pc:0 length:81)
+		Slot 2 : com/oberthurcs/formation/filesystem/File file (pc:7 length:74)
+		Slot 3 : byte j (pc:24 length:57)
+
+		//Exceptions
+
+		[0x0] 0x2A               	| [0] aload_0                                                 // line: 132
+		[0x1] 0xB4 0x0004        	| [1] getfield Field: fileList [Lcom/oberthurcs/formation/filesystem/File;// line: 132
+		[0x4] 0x1B               	| [4] iload_1                                                 // line: 132
+		[0x5] 0x32               	| [5] aaload                                                  // line: 132
+		[0x6] 0x4D               	| [6] astore_2                                                // line: 132
+		[0x7] 0x2C               	| [7] aload_2                                                 // line: 132
+		[0x8] 0xC7 0x00 0x09     	| [8] ifnonnull 17                                            // line: 134
+		[0xb] 0x11 0x69 0x83     	| [11] sipush Value: 27011                                    // line: 134
+		[0xe] 0xB8 0x0006        	| [14] invokestatic javacard/framework/ISOException.throwIt(S)V// line: 135
+		[0x11] 0x2C              	| [17] aload_2                                                // line: 135
+		[0x12] 0x01              	| [18] aconst_null                                            // line: 137
+		[0x13] 0xB5 0x0009       	| [19] putfield Field: parent Lcom/oberthurcs/formation/filesystem/File;// line: 137
+		[0x16] 0x1B              	| [22] iload_1                                                // line: 137
+		[0x17] 0x3E              	| [23] istore_3                                               // line: 138
+		[0x18] 0xA7 0x00 0x16    	| [24] goto 46                                                // line: 138
+		[0x1b] 0x2A              	| [27] aload_0                                                // line: 138
+		[0x1c] 0xB4 0x0004       	| [28] getfield Field: fileList [Lcom/oberthurcs/formation/filesystem/File;// line: 139
+		[0x1f] 0x1D              	| [31] iload_3                                                // line: 139
+		[0x20] 0x2A              	| [32] aload_0                                                // line: 139
+		[0x21] 0xB4 0x0004       	| [33] getfield Field: fileList [Lcom/oberthurcs/formation/filesystem/File;// line: 139
+		[0x24] 0x1D              	| [36] iload_3                                                // line: 139
+		[0x25] 0x04              	| [37] iconst_1                                               // line: 139
+		[0x26] 0x60              	| [38] iadd                                                   // line: 139
+		[0x27] 0x32              	| [39] aaload                                                 // line: 139
+		[0x28] 0x53              	| [40] aastore                                                // line: 139
+		[0x29] 0x1D              	| [41] iload_3                                                // line: 139
+		[0x2a] 0x04              	| [42] iconst_1                                               // line: 138
+		[0x2b] 0x60              	| [43] iadd                                                   // line: 138
+		[0x2c] 0x91              	| [44] i2b                                                    // line: 138
+		[0x2d] 0x3E              	| [45] istore_3                                               // line: 138
+		[0x2e] 0x1D              	| [46] iload_3                                                // line: 138
+		[0x2f] 0x2A              	| [47] aload_0                                                // line: 138
+		[0x30] 0xB4 0x0005       	| [48] getfield Field: count B                                // line: 138
+		[0x33] 0x04              	| [51] iconst_1                                               // line: 138
+		[0x34] 0x64              	| [52] isub                                                   // line: 138
+		[0x35] 0xA1 0xFF 0xE6    	| [53] if_icmplt 27                                           // line: 138
+		[0x38] 0x2A              	| [56] aload_0                                                // line: 138
+		[0x39] 0xB4 0x0004       	| [57] getfield Field: fileList [Lcom/oberthurcs/formation/filesystem/File;// line: 140
+		[0x3c] 0x2A              	| [60] aload_0                                                // line: 140
+		[0x3d] 0xB4 0x0005       	| [61] getfield Field: count B                                // line: 140
+		[0x40] 0x04              	| [64] iconst_1                                               // line: 140
+		[0x41] 0x64              	| [65] isub                                                   // line: 140
+		[0x42] 0x01              	| [66] aconst_null                                            // line: 140
+		[0x43] 0x53              	| [67] aastore                                                // line: 140
+		[0x44] 0x2A              	| [68] aload_0                                                // line: 140
+		[0x45] 0x59              	| [69] dup                                                    // line: 141
+		[0x46] 0xB4 0x0005       	| [70] getfield Field: count B                                // line: 141
+		[0x49] 0x04              	| [73] iconst_1                                               // line: 141
+		[0x4a] 0x64              	| [74] isub                                                   // line: 141
+		[0x4b] 0x91              	| [75] i2b                                                    // line: 141
+		[0x4c] 0xB5 0x0005       	| [76] putfield Field: count B                                // line: 141
+		[0x4f] 0x04              	| [79] iconst_1                                               // line: 141
+		[0x50] 0xAC              	| [80] ireturn                                                // line: 142
+
+	  // JavaCard Byte Codes
+
+		>> Nargs: 2	Max_locals: 2 <<
+
+		// JavaCard Variables
+		Slot 0: com/oberthurcs/formation/filesystem/Directory this
+		Slot 1: byte index
+		Slot 2: com/oberthurcs/formation/filesystem/File file
+		Slot 3: byte j
+
+		//Exceptions
+
+		                         	|                                                             
+		[0x0] 0xAD 0x04          	| [0] getfield_a_this Field: fileList [Lcom/oberthurcs/formation/filesystem/File;
+		[0x2] 0x1D               	| [2] sload_1                                                 
+		[0x3] 0x24               	| [3] aaload                                                  
+		[0x4] 0x2D               	| [4] astore_2                                                
+		[0x5] 0x1A               	| [5] aload_2                                                 
+		[0x6] 0x67 0x8           	| [6] ifnonnull 14                                            
+		[0x8] 0x11 0x69 0x83     	| [8] sspush Value: 27011                                     
+		[0xb] 0x8D 0x001E        	| [11] invokestatic javacard/framework/ISOException.throwIt(S)V
+		[0xe] 0x1A               	| [14] aload_2                                                
+		[0xf] 0x01               	| [15] aconst_null                                            
+		[0x10] 0x87 0x01         	| [16] putfield_a Field: parent Lcom/oberthurcs/formation/filesystem/File;
+		[0x12] 0x1D              	| [18] sload_1                                                
+		[0x13] 0x32              	| [19] sstore_3                                               
+		[0x14] 0x70 0x11         	| [20] goto 37                                                
+		                         	|                                                             
+		[0x16] 0xAD 0x04         	| [22] getfield_a_this Field: fileList [Lcom/oberthurcs/formation/filesystem/File;
+		[0x18] 0x1F              	| [24] sload_3                                                
+		                         	|                                                             
+		[0x19] 0xAD 0x04         	| [25] getfield_a_this Field: fileList [Lcom/oberthurcs/formation/filesystem/File;
+		[0x1b] 0x1F              	| [27] sload_3                                                
+		[0x1c] 0x04              	| [28] sconst_1                                               
+		[0x1d] 0x41              	| [29] sadd                                                   
+		[0x1e] 0x24              	| [30] aaload                                                 
+		[0x1f] 0x37              	| [31] aastore                                                
+		[0x20] 0x1F              	| [32] sload_3                                                
+		[0x21] 0x04              	| [33] sconst_1                                               
+		[0x22] 0x41              	| [34] sadd                                                   
+		[0x23] 0x5B              	| [35] s2b                                                    
+		[0x24] 0x32              	| [36] sstore_3                                               
+		[0x25] 0x1F              	| [37] sload_3                                                
+		                         	|                                                             
+		[0x26] 0xAE 0x05         	| [38] getfield_b_this Field: count B                         
+		[0x28] 0x04              	| [40] sconst_1                                               
+		[0x29] 0x43              	| [41] ssub                                                   
+		[0x2a] 0x6C 0xec         	| [42] if_scmplt 22                                           
+		                         	|                                                             
+		[0x2c] 0xAD 0x04         	| [44] getfield_a_this Field: fileList [Lcom/oberthurcs/formation/filesystem/File;
+		                         	|                                                             
+		[0x2e] 0xAE 0x05         	| [46] getfield_b_this Field: count B                         
+		[0x30] 0x04              	| [48] sconst_1                                               
+		[0x31] 0x43              	| [49] ssub                                                   
+		[0x32] 0x01              	| [50] aconst_null                                            
+		[0x33] 0x37              	| [51] aastore                                                
+		[0x34] 0x18              	| [52] aload_0                                                
+		[0x35] 0x3D              	| [53] dup                                                    
+		[0x36] 0x84 0x05         	| [54] getfield_b Field: count B                              
+		[0x38] 0x04              	| [56] sconst_1                                               
+		[0x39] 0x43              	| [57] ssub                                                   
+		[0x3a] 0x5B              	| [58] s2b                                                    
+		[0x3b] 0x88 0x05         	| [59] putfield_b Field: count B                              
+		[0x3d] 0x04              	| [61] sconst_1                                               
+		[0x3e] 0x78              	| [62] sreturn                                                
+	}
+
+	public byte getCurrentSize()                                          // Token: 9
+	//offset = 479
+	{
+	  // Java Byte Codes
+
+		>> Nargs: 0	Max_locals: 1 <<
+
+		// Java Variables
+		Slot 0 : com/oberthurcs/formation/filesystem/Directory this (pc:0 length:5)
+
+		//Exceptions
+
+		[0x0] 0x2A               	| [0] aload_0                                                 // line: 46
+		[0x1] 0xB4 0x0005        	| [1] getfield Field: count B                                 // line: 46
+		[0x4] 0xAC               	| [4] ireturn                                                 // line: 46
+
+	  // JavaCard Byte Codes
+
+		>> Nargs: 1	Max_locals: 0 <<
+
+		// JavaCard Variables
+		Slot 0: com/oberthurcs/formation/filesystem/Directory this
+
+		//Exceptions
+
+		                         	|                                                             
+		[0x0] 0xAE 0x05          	| [0] getfield_b_this Field: count B                          
+		[0x2] 0x78               	| [2] sreturn                                                 
+	}
+
+	public short getSize()                                                // Token: 3
+	//offset = 484
+	{
+	  // Java Byte Codes
+
+		>> Nargs: 0	Max_locals: 4 <<
+
+		// Java Variables
+		Slot 0 : com/oberthurcs/formation/filesystem/Directory this (pc:0 length:39)
+		Slot 1 : short result (pc:2 length:37)
+		Slot 2 : com/oberthurcs/formation/filesystem/File f (pc:4 length:35)
+		Slot 3 : byte i (pc:6 length:33)
+
+		//Exceptions
+
+		[0x0] 0x03               	| [0] iconst_0                                                // line: 193
+		[0x1] 0x3C               	| [1] istore_1                                                // line: 193
+		[0x2] 0x01               	| [2] aconst_null                                             // line: 193
+		[0x3] 0x4D               	| [3] astore_2                                                // line: 194
+		[0x4] 0x03               	| [4] iconst_0                                                // line: 194
+		[0x5] 0x3E               	| [5] istore_3                                                // line: 195
+		[0x6] 0xA7 0x00 0x17     	| [6] goto 29                                                 // line: 195
+		[0x9] 0x2A               	| [9] aload_0                                                 // line: 195
+		[0xa] 0xB4 0x0004        	| [10] getfield Field: fileList [Lcom/oberthurcs/formation/filesystem/File;// line: 197
+		[0xd] 0x1D               	| [13] iload_3                                                // line: 197
+		[0xe] 0x32               	| [14] aaload                                                 // line: 197
+		[0xf] 0x4D               	| [15] astore_2                                               // line: 197
+		[0x10] 0x1B              	| [16] iload_1                                                // line: 197
+		[0x11] 0x2C              	| [17] aload_2                                                // line: 198
+		[0x12] 0xB6 0x000F       	| [18] invokevirtual com/oberthurcs/formation/filesystem/File.getSize()S// line: 198
+		[0x15] 0x60              	| [21] iadd                                                   // line: 198
+		[0x16] 0x93              	| [22] i2s                                                    // line: 198
+		[0x17] 0x3C              	| [23] istore_1                                               // line: 198
+		[0x18] 0x1D              	| [24] iload_3                                                // line: 198
+		[0x19] 0x04              	| [25] iconst_1                                               // line: 195
+		[0x1a] 0x60              	| [26] iadd                                                   // line: 195
+		[0x1b] 0x91              	| [27] i2b                                                    // line: 195
+		[0x1c] 0x3E              	| [28] istore_3                                               // line: 195
+		[0x1d] 0x1D              	| [29] iload_3                                                // line: 195
+		[0x1e] 0x2A              	| [30] aload_0                                                // line: 195
+		[0x1f] 0xB4 0x0005       	| [31] getfield Field: count B                                // line: 195
+		[0x22] 0xA1 0xFF 0xE7    	| [34] if_icmplt 9                                            // line: 195
+		[0x25] 0x1B              	| [37] iload_1                                                // line: 195
+		[0x26] 0xAC              	| [38] ireturn                                                // line: 200
+
+	  // JavaCard Byte Codes
+
+		>> Nargs: 1	Max_locals: 3 <<
+
+		// JavaCard Variables
+		Slot 0: com/oberthurcs/formation/filesystem/Directory this
+		Slot 1: short result
+		Slot 2: com/oberthurcs/formation/filesystem/File f
+		Slot 3: byte i
+
+		//Exceptions
+
+		[0x0] 0x03               	| [0] sconst_0                                                
+		[0x1] 0x30               	| [1] sstore_1                                                
+		[0x2] 0x01               	| [2] aconst_null                                             
+		[0x3] 0x2D               	| [3] astore_2                                                
+		[0x4] 0x03               	| [4] sconst_0                                                
+		[0x5] 0x32               	| [5] sstore_3                                                
+		[0x6] 0x70 0x13          	| [6] goto 25                                                 
+		                         	|                                                             
+		[0x8] 0xAD 0x04          	| [8] getfield_a_this Field: fileList [Lcom/oberthurcs/formation/filesystem/File;
+		[0xa] 0x1F               	| [10] sload_3                                                
+		[0xb] 0x24               	| [11] aaload                                                 
+		[0xc] 0x2D               	| [12] astore_2                                               
+		[0xd] 0x1D               	| [13] sload_1                                                
+		[0xe] 0x1A               	| [14] aload_2                                                
+		[0xf] 0x8B 0x000D        	| [15] invokevirtual com/oberthurcs/formation/filesystem/File.getSize()S
+		[0x12] 0x41              	| [18] sadd                                                   
+		                         	|                                                             
+		[0x13] 0x30              	| [19] sstore_1                                               
+		[0x14] 0x1F              	| [20] sload_3                                                
+		[0x15] 0x04              	| [21] sconst_1                                               
+		[0x16] 0x41              	| [22] sadd                                                   
+		[0x17] 0x5B              	| [23] s2b                                                    
+		[0x18] 0x32              	| [24] sstore_3                                               
+		[0x19] 0x1F              	| [25] sload_3                                                
+		                         	|                                                             
+		[0x1a] 0xAE 0x05         	| [26] getfield_b_this Field: count B                         
+		[0x1c] 0x6C 0xec         	| [28] if_scmplt 8                                            
+		[0x1e] 0x1D              	| [30] sload_1                                                
+		[0x1f] 0x78              	| [31] sreturn                                                
+	}
+
+	public boolean remove(com/oberthurcs/formation/filesystem/File)       // Token: 10
+	//offset = 518
+	{
+	  // Java Byte Codes
+
+		>> Nargs: 1	Max_locals: 3 <<
+
+		// Java Variables
+		Slot 0 : com/oberthurcs/formation/filesystem/Directory this (pc:0 length:60)
+		Slot 1 : com/oberthurcs/formation/filesystem/File file (pc:0 length:60)
+		Slot 2 : byte index (pc:12 length:48)
+
+		//Exceptions
+
+		[0x0] 0x2B               	| [0] aload_1                                                 // line: 108
+		[0x1] 0xC7 0x00 0x09     	| [1] ifnonnull 10                                            // line: 108
+		[0x4] 0x11 0x69 0x83     	| [4] sipush Value: 27011                                     // line: 108
+		[0x7] 0xB8 0x0006        	| [7] invokestatic javacard/framework/ISOException.throwIt(S)V// line: 109
+		[0xa] 0x03               	| [10] iconst_0                                               // line: 109
+		[0xb] 0x3D               	| [11] istore_2                                               // line: 111
+		[0xc] 0xA7 0x00 0x18     	| [12] goto 36                                                // line: 111
+		[0xf] 0x2A               	| [15] aload_0                                                // line: 111
+		[0x10] 0xB4 0x0004       	| [16] getfield Field: fileList [Lcom/oberthurcs/formation/filesystem/File;// line: 113
+		[0x13] 0x1C              	| [19] iload_2                                                // line: 113
+		[0x14] 0x32              	| [20] aaload                                                 // line: 113
+		[0x15] 0x2B              	| [21] aload_1                                                // line: 113
+		[0x16] 0xA6 0x00 0x09    	| [22] if_acmpne 31                                           // line: 113
+		[0x19] 0x2A              	| [25] aload_0                                                // line: 113
+		[0x1a] 0x1C              	| [26] iload_2                                                // line: 115
+		[0x1b] 0xB6 0x000C       	| [27] invokevirtual com/oberthurcs/formation/filesystem/Directory.remove(B)Z// line: 115
+		[0x1e] 0xAC              	| [30] ireturn                                                // line: 115
+		[0x1f] 0x1C              	| [31] iload_2                                                // line: 115
+		[0x20] 0x04              	| [32] iconst_1                                               // line: 111
+		[0x21] 0x60              	| [33] iadd                                                   // line: 111
+		[0x22] 0x91              	| [34] i2b                                                    // line: 111
+		[0x23] 0x3D              	| [35] istore_2                                               // line: 111
+		[0x24] 0x1C              	| [36] iload_2                                                // line: 111
+		[0x25] 0x2A              	| [37] aload_0                                                // line: 111
+		[0x26] 0xB4 0x0005       	| [38] getfield Field: count B                                // line: 111
+		[0x29] 0xA1 0xFF 0xE6    	| [41] if_icmplt 15                                           // line: 111
+		[0x2c] 0x1C              	| [44] iload_2                                                // line: 111
+		[0x2d] 0x2A              	| [45] aload_0                                                // line: 118
+		[0x2e] 0xB4 0x0002       	| [46] getfield Field: capacity B                             // line: 118
+		[0x31] 0xA0 0x00 0x09    	| [49] if_icmpne 58                                           // line: 118
+		[0x34] 0x11 0x6a 0x82    	| [52] sipush Value: 27266                                    // line: 118
+		[0x37] 0xB8 0x0006       	| [55] invokestatic javacard/framework/ISOException.throwIt(S)V// line: 118
+		[0x3a] 0x03              	| [58] iconst_0                                               // line: 118
+		[0x3b] 0xAC              	| [59] ireturn                                                // line: 119
+
+	  // JavaCard Byte Codes
+
+		>> Nargs: 2	Max_locals: 1 <<
+
+		// JavaCard Variables
+		Slot 0: com/oberthurcs/formation/filesystem/Directory this
+		Slot 1: com/oberthurcs/formation/filesystem/File file
+		Slot 2: byte index
+
+		//Exceptions
+
+		[0x0] 0x19               	| [0] aload_1                                                 
+		[0x1] 0x67 0x8           	| [1] ifnonnull 9                                             
+		[0x3] 0x11 0x69 0x83     	| [3] sspush Value: 27011                                     
+		[0x6] 0x8D 0x001E        	| [6] invokestatic javacard/framework/ISOException.throwIt(S)V
+		[0x9] 0x03               	| [9] sconst_0                                                
+		[0xa] 0x31               	| [10] sstore_2                                               
+		[0xb] 0x70 0x14          	| [11] goto 31                                                
+		                         	|                                                             
+		[0xd] 0xAD 0x04          	| [13] getfield_a_this Field: fileList [Lcom/oberthurcs/formation/filesystem/File;
+		[0xf] 0x1E               	| [15] sload_2                                                
+		[0x10] 0x24              	| [16] aaload                                                 
+		[0x11] 0x19              	| [17] aload_1                                                
+		[0x12] 0x69 0x8          	| [18] if_acmpne 26                                           
+		[0x14] 0x18              	| [20] aload_0                                                
+		[0x15] 0x1E              	| [21] sload_2                                                
+		[0x16] 0x8B 0x0016       	| [22] invokevirtual com/oberthurcs/formation/filesystem/Directory.remove(B)Z
+		[0x19] 0x78              	| [25] sreturn                                                
+		[0x1a] 0x1E              	| [26] sload_2                                                
+		[0x1b] 0x04              	| [27] sconst_1                                               
+		[0x1c] 0x41              	| [28] sadd                                                   
+		[0x1d] 0x5B              	| [29] s2b                                                    
+		[0x1e] 0x31              	| [30] sstore_2                                               
+		[0x1f] 0x1E              	| [31] sload_2                                                
+		                         	|                                                             
+		[0x20] 0xAE 0x05         	| [32] getfield_b_this Field: count B                         
+		[0x22] 0x6C 0xeb         	| [34] if_scmplt 13                                           
+		[0x24] 0x1E              	| [36] sload_2                                                
+		                         	|                                                             
+		[0x25] 0xAE 0x06         	| [37] getfield_b_this Field: capacity B                      
+		[0x27] 0x6B 0x8          	| [39] if_scmpne 47                                           
+		[0x29] 0x11 0x6a 0x82    	| [41] sspush Value: 27266                                    
+		[0x2c] 0x8D 0x001E       	| [44] invokestatic javacard/framework/ISOException.throwIt(S)V
+		[0x2f] 0x03              	| [47] sconst_0                                               
+		[0x30] 0x78              	| [48] sreturn                                                
+	}
+
+	public byte getMaxSize()                                              // Token: 11
+	//offset = 569
+	{
+	  // Java Byte Codes
+
+		>> Nargs: 0	Max_locals: 1 <<
+
+		// Java Variables
+		Slot 0 : com/oberthurcs/formation/filesystem/Directory this (pc:0 length:5)
+
+		//Exceptions
+
+		[0x0] 0x2A               	| [0] aload_0                                                 // line: 43
+		[0x1] 0xB4 0x0002        	| [1] getfield Field: capacity B                              // line: 43
+		[0x4] 0xAC               	| [4] ireturn                                                 // line: 43
+
+	  // JavaCard Byte Codes
+
+		>> Nargs: 1	Max_locals: 0 <<
+
+		// JavaCard Variables
+		Slot 0: com/oberthurcs/formation/filesystem/Directory this
+
+		//Exceptions
+
+		                         	|                                                             
+		[0x0] 0xAE 0x06          	| [0] getfield_b_this Field: capacity B                       
+		[0x2] 0x78               	| [2] sreturn                                                 
+	}
+
+	public short listDir([]byte,short)                                    // Token: 12
+	//offset = 574
+	{
+	  // Java Byte Codes
+
+		>> Nargs: 2	Max_locals: 6 <<
+
+		// Java Variables
+		Slot 0 : com/oberthurcs/formation/filesystem/Directory this (pc:0 length:52)
+		Slot 1 : []byte buffer (pc:0 length:52)
+		Slot 2 : short offset (pc:0 length:52)
+		Slot 3 : byte size (pc:5 length:47)
+		Slot 4 : short length (pc:8 length:44)
+		Slot 5 : byte i (pc:11 length:41)
+
+		//Exceptions
+
+		[0x0] 0x2A               	| [0] aload_0                                                 // line: 162
+		[0x1] 0xB6 0x000A        	| [1] invokevirtual com/oberthurcs/formation/filesystem/Directory.getCurrentSize()B// line: 162
+		[0x4] 0x3E               	| [4] istore_3                                                // line: 162
+		[0x5] 0x03               	| [5] iconst_0                                                // line: 162
+		[0x6] 0x36 0x04          	| [6] istore LV Index: 4                                      // line: 163
+		[0x8] 0x03               	| [8] iconst_0                                                // line: 163
+		[0x9] 0x36 0x05          	| [9] istore LV Index: 5                                      // line: 164
+		[0xb] 0xA7 0x00 0x20     	| [11] goto 43                                                // line: 164
+		[0xe] 0x2B               	| [14] aload_1                                                // line: 164
+		[0xf] 0x1C               	| [15] iload_2                                                // line: 166
+		[0x10] 0x2A              	| [16] aload_0                                                // line: 166
+		[0x11] 0x15 0x05         	| [17] iload LV Index: 5                                      // line: 166
+		[0x13] 0xB6 0x000D       	| [19] invokevirtual com/oberthurcs/formation/filesystem/Directory.get(B)Lcom/oberthurcs/formation/filesystem/File;// line: 166
+		[0x16] 0xB6 0x0007       	| [22] invokevirtual com/oberthurcs/formation/filesystem/File.getId()S// line: 166
+		[0x19] 0xB8 0x000E       	| [25] invokestatic javacard/framework/Util.setShort([BSS)S   // line: 166
+		[0x1c] 0x3D              	| [28] istore_2                                               // line: 166
+		[0x1d] 0x15 0x04         	| [29] iload LV Index: 4                                      // line: 166
+		[0x1f] 0x05              	| [31] iconst_2                                               // line: 167
+		[0x20] 0x60              	| [32] iadd                                                   // line: 167
+		[0x21] 0x93              	| [33] i2s                                                    // line: 167
+		[0x22] 0x36 0x04         	| [34] istore LV Index: 4                                     // line: 167
+		[0x24] 0x15 0x05         	| [36] iload LV Index: 5                                      // line: 167
+		[0x26] 0x04              	| [38] iconst_1                                               // line: 164
+		[0x27] 0x60              	| [39] iadd                                                   // line: 164
+		[0x28] 0x91              	| [40] i2b                                                    // line: 164
+		[0x29] 0x36 0x05         	| [41] istore LV Index: 5                                     // line: 164
+		[0x2b] 0x15 0x05         	| [43] iload LV Index: 5                                      // line: 164
+		[0x2d] 0x1D              	| [45] iload_3                                                // line: 164
+		[0x2e] 0xA1 0xFF 0xE0    	| [46] if_icmplt 14                                           // line: 164
+		[0x31] 0x15 0x04         	| [49] iload LV Index: 4                                      // line: 164
+		[0x33] 0xAC              	| [51] ireturn                                                // line: 169
+
+	  // JavaCard Byte Codes
+
+		>> Nargs: 3	Max_locals: 3 <<
+
+		// JavaCard Variables
+		Slot 0: com/oberthurcs/formation/filesystem/Directory this
+		Slot 1: []byte buffer
+		Slot 2: short offset
+		Slot 3: byte size
+		Slot 4: short length
+		Slot 5: byte i
+
+		//Exceptions
+
+		[0x0] 0x18               	| [0] aload_0                                                 
+		[0x1] 0x8B 0x0017        	| [1] invokevirtual com/oberthurcs/formation/filesystem/Directory.getCurrentSize()B
+		[0x4] 0x32               	| [4] sstore_3                                                
+		[0x5] 0x03               	| [5] sconst_0                                                
+		[0x6] 0x29 0x04          	| [6] sstore LV Index: 4                                      
+		[0x8] 0x03               	| [8] sconst_0                                                
+		[0x9] 0x29 0x05          	| [9] sstore LV Index: 5                                      
+		[0xb] 0x70 0x1b          	| [11] goto 38                                                
+		[0xd] 0x19               	| [13] aload_1                                                
+		[0xe] 0x1E               	| [14] sload_2                                                
+		[0xf] 0x18               	| [15] aload_0                                                
+		[0x10] 0x16 0x05         	| [16] sload LV Index: 5                                      
+		[0x12] 0x8B 0x0015       	| [18] invokevirtual com/oberthurcs/formation/filesystem/Directory.get(B)Lcom/oberthurcs/formation/filesystem/File;
+		[0x15] 0x8B 0x000E       	| [21] invokevirtual com/oberthurcs/formation/filesystem/File.getId()S
+		[0x18] 0x8D 0x001B       	| [24] invokestatic javacard/framework/Util.setShort([BSS)S   
+		[0x1b] 0x31              	| [27] sstore_2                                               
+		                         	|                                                             
+		                         	|                                                             
+		                         	|                                                             
+		                         	|                                                             
+		[0x1c] 0x59 0x04 0x02    	| [28] sinc LV Index: 4 Const: 2                              
+		[0x1f] 0x16 0x05         	| [31] sload LV Index: 5                                      
+		[0x21] 0x04              	| [33] sconst_1                                               
+		[0x22] 0x41              	| [34] sadd                                                   
+		[0x23] 0x5B              	| [35] s2b                                                    
+		[0x24] 0x29 0x05         	| [36] sstore LV Index: 5                                     
+		[0x26] 0x16 0x05         	| [38] sload LV Index: 5                                      
+		[0x28] 0x1F              	| [40] sload_3                                                
+		[0x29] 0x6C 0xe4         	| [41] if_scmplt 13                                           
+		[0x2b] 0x16 0x04         	| [43] sload LV Index: 4                                      
+		[0x2d] 0x78              	| [45] sreturn                                                
+	}
+
+}
+
+
+public super abstract class com/oberthurcs/formation/filesystem/File extends java/lang/Object; // Token: 0
+Implements directly com/oberthurcs/formation/filesystem/Resource 
+Implements indirectly: 
+{
+	// Static fields -----------------------------------------------------------------------------------
+
+
+	// String fields -----------------------------------------------------------------------------------
+
+
+	// Instance fields ---------------------------------------------------------------------------------
+
+	protected short id;                                                  // Token: 0
+	protected com/oberthurcs/formation/filesystem/File parent;           // Token: 1
+
+	// Inherited virtual methods -----------------------------------------------------------------------
+
+	public boolean equals(java/lang/Object)                               // Token: 0
+
+	// Static and Init Methods -------------------------------------------------------------------------
+
+	public static com/oberthurcs/formation/filesystem/File getInstance(byte,short,byte)// Token: 0
+	//offset = 17
+	{
+	  // Java Byte Codes
+
+		>> Nargs: 3	Max_locals: 4 <<
+
+		// Java Variables
+		Slot 0 : byte fileType (pc:0 length:90)
+		Slot 1 : short fileId (pc:0 length:90)
+		Slot 2 : byte fileSize (pc:0 length:90)
+		Slot 3 : short size (pc:55 length:27)
+
+		//Exceptions
+
+		[0x0] 0x1A               	| [0] iload_0                                                 // line: 47
+		[0x1] 0xAB               	| [1] lookupswitch                                            // line: 47
+		   0x00 0x00             	|    Zeroed bytes: 2
+		   0x00000051            	|    Default bytes: 82
+		   0x00000002            	|    nPairs: 2
+		   0x00000000 0x0000001B 	|    0: 28
+		   0x00000001 0x0000002F 	|    1: 48
+
+		[0x1c] 0x1C              	| [28] iload_2                                                // line: 47
+		[0x1d] 0x9D 0x00 0x09    	| [29] ifgt 38                                                // line: 49
+		[0x20] 0x11 0x6a 0x80    	| [32] sipush Value: 27264                                    // line: 49
+		[0x23] 0xB8 0x0004       	| [35] invokestatic javacard/framework/ISOException.throwIt(S)V// line: 50
+		[0x26] 0xBB 0x0005       	| [38] new Class:com/oberthurcs/formation/filesystem/Directory// line: 50
+		[0x29] 0x59              	| [41] dup                                                    // line: 52
+		[0x2a] 0x1B              	| [42] iload_1                                                // line: 52
+		[0x2b] 0x1C              	| [43] iload_2                                                // line: 52
+		[0x2c] 0xB7 0x0006       	| [44] invokespecial com/oberthurcs/formation/filesystem/Directory.<init>(SB)V// line: 52
+		[0x2f] 0xB0              	| [47] areturn                                                // line: 52
+		[0x30] 0x1C              	| [48] iload_2                                                // line: 52
+		[0x31] 0x11 0x0 0xff     	| [49] sipush Value: 255                                      // line: 56
+		[0x34] 0x7E              	| [52] iand                                                   // line: 56
+		[0x35] 0x93              	| [53] i2s                                                    // line: 56
+		[0x36] 0x3E              	| [54] istore_3                                               // line: 56
+		[0x37] 0x1D              	| [55] iload_3                                                // line: 56
+		[0x38] 0x9E 0x00 0x0A    	| [56] ifle 66                                                // line: 57
+		[0x3b] 0x1D              	| [59] iload_3                                                // line: 57
+		[0x3c] 0x11 0x0 0xff     	| [60] sipush Value: 255                                      // line: 57
+		[0x3f] 0xA4 0x00 0x09    	| [63] if_icmple 72                                           // line: 57
+		[0x42] 0x11 0x6a 0x80    	| [66] sipush Value: 27264                                    // line: 57
+		[0x45] 0xB8 0x0004       	| [69] invokestatic javacard/framework/ISOException.throwIt(S)V// line: 58
+		[0x48] 0xBB 0x0007       	| [72] new Class:com/oberthurcs/formation/filesystem/BinaryFile// line: 58
+		[0x4b] 0x59              	| [75] dup                                                    // line: 59
+		[0x4c] 0x1B              	| [76] iload_1                                                // line: 59
+		[0x4d] 0x1D              	| [77] iload_3                                                // line: 59
+		[0x4e] 0xB7 0x0008       	| [78] invokespecial com/oberthurcs/formation/filesystem/BinaryFile.<init>(SS)V// line: 59
+		[0x51] 0xB0              	| [81] areturn                                                // line: 59
+		[0x52] 0x11 0x6a 0x80    	| [82] sipush Value: 27264                                    // line: 59
+		[0x55] 0xB8 0x0004       	| [85] invokestatic javacard/framework/ISOException.throwIt(S)V// line: 64
+		[0x58] 0x01              	| [88] aconst_null                                            // line: 64
+		[0x59] 0xB0              	| [89] areturn                                                // line: 66
+
+	  // JavaCard Byte Codes
+
+		>> Nargs: 3	Max_locals: 1 <<
+
+		// JavaCard Variables
+		Slot 0: byte fileType
+		Slot 1: short fileId
+		Slot 2: byte fileSize
+		Slot 3: short size
+
+		//Exceptions
+
+		[0x0] 0x1C               	| [0] sload_0                                                 
+		[0x1] 0x75               	| [1] slookupswitch                                           
+		   0x003F                	|    Default bytes: 64
+		   0x0002                	|    Npairs: 2
+		   0x0000 0x000D         	|    0: 14
+		   0x0001 0x0020         	|    1: 33
+
+		[0xe] 0x1E               	| [14] sload_2                                                
+		[0xf] 0x64 0x8           	| [15] ifgt 23                                                
+		[0x11] 0x11 0x6a 0x80    	| [17] sspush Value: 27264                                    
+		[0x14] 0x8D 0x001E       	| [20] invokestatic javacard/framework/ISOException.throwIt(S)V
+		[0x17] 0x8F 0x000A       	| [23] new Class:com/oberthurcs/formation/filesystem/Directory
+		[0x1a] 0x3D              	| [26] dup                                                    
+		[0x1b] 0x1D              	| [27] sload_1                                                
+		[0x1c] 0x1E              	| [28] sload_2                                                
+		[0x1d] 0x8C 0x0018       	| [29] invokespecial com/oberthurcs/formation/filesystem/Directory.<init>(SB)V
+		[0x20] 0x77              	| [32] areturn                                                
+		[0x21] 0x1E              	| [33] sload_2                                                
+		[0x22] 0x11 0x0 0xff     	| [34] sspush Value: 255                                      
+		[0x25] 0x53              	| [37] sand                                                   
+		                         	|                                                             
+		[0x26] 0x32              	| [38] sstore_3                                               
+		[0x27] 0x1F              	| [39] sload_3                                                
+		[0x28] 0x65 0x8          	| [40] ifle 48                                                
+		[0x2a] 0x1F              	| [42] sload_3                                                
+		[0x2b] 0x11 0x0 0xff     	| [43] sspush Value: 255                                      
+		[0x2e] 0x6F 0x8          	| [46] if_scmple 54                                           
+		[0x30] 0x11 0x6a 0x80    	| [48] sspush Value: 27264                                    
+		[0x33] 0x8D 0x001E       	| [51] invokestatic javacard/framework/ISOException.throwIt(S)V
+		[0x36] 0x8F 0x0008       	| [54] new Class:com/oberthurcs/formation/filesystem/BinaryFile
+		[0x39] 0x3D              	| [57] dup                                                    
+		[0x3a] 0x1D              	| [58] sload_1                                                
+		[0x3b] 0x1F              	| [59] sload_3                                                
+		[0x3c] 0x8C 0x0011       	| [60] invokespecial com/oberthurcs/formation/filesystem/BinaryFile.<init>(SS)V
+		[0x3f] 0x77              	| [63] areturn                                                
+		[0x40] 0x11 0x6a 0x80    	| [64] sspush Value: 27264                                    
+		[0x43] 0x8D 0x001E       	| [67] invokestatic javacard/framework/ISOException.throwIt(S)V
+		[0x46] 0x01              	| [70] aconst_null                                            
+		[0x47] 0x77              	| [71] areturn                                                
+	}
+
+	public void <init>(short)                                             // Token: 1
+	//offset = 91
+	{
+	  // Java Byte Codes
+
+		>> Nargs: 1	Max_locals: 2 <<
+
+		// Java Variables
+		Slot 0 : com/oberthurcs/formation/filesystem/File this (pc:0 length:10)
+		Slot 1 : short _id (pc:0 length:10)
+
+		//Exceptions
+
+		[0x0] 0x2A               	| [0] aload_0                                                 // line: 21
+		[0x1] 0xB7 0x0001        	| [1] invokespecial java/lang/Object.<init>()V                // line: 21
+		[0x4] 0x2A               	| [4] aload_0                                                 // line: 21
+		[0x5] 0x1B               	| [5] iload_1                                                 // line: 22
+		[0x6] 0xB5 0x0002        	| [6] putfield Field: id S                                    // line: 22
+		[0x9] 0xB1               	| [9] return                                                  // line: 22
+
+	  // JavaCard Byte Codes
+
+		>> Nargs: 2	Max_locals: 0 <<
+
+		// JavaCard Variables
+		Slot 0: com/oberthurcs/formation/filesystem/File this
+		Slot 1: short _id
+
+		//Exceptions
+
+		[0x0] 0x18               	| [0] aload_0                                                 
+		[0x1] 0x8C 0x001D        	| [1] invokespecial java/lang/Object.<init>()V                
+		                         	|                                                             
+		[0x4] 0x1D               	| [4] sload_1                                                 
+		[0x5] 0xB7 0x00          	| [5] putfield_s_this Field: id S                             
+		[0x7] 0x7A               	| [7] return                                                  
+	}
+
+
+	// Virtual Methods ---------------------------------------------------------------------------------
+
+	public abstract short getSize()                                       // Token: 3
+	//offset = 101
+	{
+	}
+
+	public com/oberthurcs/formation/filesystem/File getParent()           // Token: 1
+	//offset = 103
+	{
+	  // Java Byte Codes
+
+		>> Nargs: 0	Max_locals: 1 <<
+
+		// Java Variables
+		Slot 0 : com/oberthurcs/formation/filesystem/File this (pc:0 length:5)
+
+		//Exceptions
+
+		[0x0] 0x2A               	| [0] aload_0                                                 // line: 28
+		[0x1] 0xB4 0x0003        	| [1] getfield Field: parent Lcom/oberthurcs/formation/filesystem/File;// line: 28
+		[0x4] 0xB0               	| [4] areturn                                                 // line: 28
+
+	  // JavaCard Byte Codes
+
+		>> Nargs: 1	Max_locals: 0 <<
+
+		// JavaCard Variables
+		Slot 0: com/oberthurcs/formation/filesystem/File this
+
+		//Exceptions
+
+		                         	|                                                             
+		[0x0] 0xAD 0x01          	| [0] getfield_a_this Field: parent Lcom/oberthurcs/formation/filesystem/File;
+		[0x2] 0x77               	| [2] areturn                                                 
+	}
+
+	public short getId()                                                  // Token: 2
+	//offset = 108
+	{
+	  // Java Byte Codes
+
+		>> Nargs: 0	Max_locals: 1 <<
+
+		// Java Variables
+		Slot 0 : com/oberthurcs/formation/filesystem/File this (pc:0 length:5)
+
+		//Exceptions
+
+		[0x0] 0x2A               	| [0] aload_0                                                 // line: 26
+		[0x1] 0xB4 0x0002        	| [1] getfield Field: id S                                    // line: 26
+		[0x4] 0xAC               	| [4] ireturn                                                 // line: 26
+
+	  // JavaCard Byte Codes
+
+		>> Nargs: 1	Max_locals: 0 <<
+
+		// JavaCard Variables
+		Slot 0: com/oberthurcs/formation/filesystem/File this
+
+		//Exceptions
+
+		                         	|                                                             
+		[0x0] 0xAF 0x00          	| [0] getfield_s_this Field: id S                             
+		[0x2] 0x78               	| [2] sreturn                                                 
+	}
+
+	public abstract byte getType()                                        // Token: 4
+	//offset = 113
+	{
+	}
+
+}
+
+
+public interface abstract class com/oberthurcs/formation/filesystem/Resource extends java/lang/Object; // Token: 5
+Implements directly 
+Implements indirectly: 
+{
+	// Static fields -----------------------------------------------------------------------------------
+
+
+	// String fields -----------------------------------------------------------------------------------
+
+
+	// Instance fields ---------------------------------------------------------------------------------
+
+
+	// Inherited virtual methods -----------------------------------------------------------------------
+
+
+	// Static and Init Methods -------------------------------------------------------------------------
+
+
+	// Virtual Methods ---------------------------------------------------------------------------------
+
+	public abstract short getSize()                                       // Token: 0
+	//offset = 0
+	{
+	}
+
+}
+
+
+public super  class com/oberthurcs/formation/filesystem/RootDirectory extends com/oberthurcs/formation/filesystem/Directory; // Token: 3
+Implements directly 
+Implements indirectly: com/oberthurcs/formation/filesystem/Resource 
+{
+	// Static fields -----------------------------------------------------------------------------------
+
+	public static final short ROOT_ID= 0x3F00;                           // Token: 255
+	protected static com/oberthurcs/formation/filesystem/RootDirectory singleton;// Token: 0
+
+	// String fields -----------------------------------------------------------------------------------
+
+
+	// Instance fields ---------------------------------------------------------------------------------
+
+
+	// Inherited virtual methods -----------------------------------------------------------------------
+
+	public byte getType()                                                 // Token: 4
+	public com/oberthurcs/formation/filesystem/File get(short)            // Token: 5
+	public com/oberthurcs/formation/filesystem/File get(byte)             // Token: 6
+	public short getId()                                                  // Token: 2
+	public boolean remove(byte)                                           // Token: 8
+	public boolean add(com/oberthurcs/formation/filesystem/File)          // Token: 7
+	public byte getCurrentSize()                                          // Token: 9
+	public boolean equals(java/lang/Object)                               // Token: 0
+	public boolean remove(com/oberthurcs/formation/filesystem/File)       // Token: 10
+	public short getSize()                                                // Token: 3
+	public byte getMaxSize()                                              // Token: 11
+	public short listDir([]byte,short)                                    // Token: 12
+	public com/oberthurcs/formation/filesystem/File getParent()           // Token: 1
+
+	// Static and Init Methods -------------------------------------------------------------------------
+
+	public static com/oberthurcs/formation/filesystem/RootDirectory getInstance()// Token: 0
+	//offset = 622
+	{
+	  // Java Byte Codes
+
+		>> Nargs: 0	Max_locals: 1 <<
+
+		// Java Variables
+		Slot 0 : javacard/framework/ISOException e (pc:19 length:1)
+
+		//Exceptions
+			 pc:6 end pc:16 m_handler_pc:19 catched_class: javacard/framework/ISOException
+
+		[0x0] 0xB2 0x0003        	| [0] getstatic Field: singleton Lcom/oberthurcs/formation/filesystem/RootDirectory;// line: 34
+		[0x3] 0xC7 0x00 0x11     	| [3] ifnonnull 20                                            // line: 34
+		[0x6] 0xBB 0x0004        	| [6] new Class:com/oberthurcs/formation/filesystem/RootDirectory// line: 34
+		[0x9] 0x59               	| [9] dup                                                     // line: 36
+		[0xa] 0xB7 0x0005        	| [10] invokespecial com/oberthurcs/formation/filesystem/RootDirectory.<init>()V// line: 36
+		[0xd] 0xB3 0x0003        	| [13] putstatic Field: singleton Lcom/oberthurcs/formation/filesystem/RootDirectory;// line: 36
+		[0x10] 0xA7 0x00 0x04    	| [16] goto 20                                                // line: 36
+		[0x13] 0x4B              	| [19] astore_0                                               // line: 36
+		[0x14] 0xB2 0x0003       	| [20] getstatic Field: singleton Lcom/oberthurcs/formation/filesystem/RootDirectory;// line: 38
+		[0x17] 0xB0              	| [23] areturn                                                // line: 41
+
+	  // JavaCard Byte Codes
+
+		>> Nargs: 0	Max_locals: 1 <<
+
+		// JavaCard Variables
+		Slot 0: javacard/framework/ISOException e
+
+		//Exceptions
+			 pc:5 end pc:15 m_handler_pc:17 catched_class: javacard/framework/ISOException
+
+		[0x0] 0x7B 0x0003        	| [0] getstatic_a Field: singleton Lcom/oberthurcs/formation/filesystem/RootDirectory;
+		[0x3] 0x67 0xf           	| [3] ifnonnull 18                                            
+		[0x5] 0x8F 0x0009        	| [5] new Class:com/oberthurcs/formation/filesystem/RootDirectory
+		[0x8] 0x3D               	| [8] dup                                                     
+		[0x9] 0x8C 0x0013        	| [9] invokespecial com/oberthurcs/formation/filesystem/RootDirectory.<init>()V
+		[0xc] 0x7F 0x0003        	| [12] putstatic_a Field: singleton Lcom/oberthurcs/formation/filesystem/RootDirectory;
+		[0xf] 0x70 0x3           	| [15] goto 18                                                
+		[0x11] 0x2B              	| [17] astore_0                                               
+		[0x12] 0x7B 0x0003       	| [18] getstatic_a Field: singleton Lcom/oberthurcs/formation/filesystem/RootDirectory;
+		[0x15] 0x77              	| [21] areturn                                                
+	}
+
+	protected void <init>()                                               // Token: 1
+	//offset = 646
+	{
+	  // Java Byte Codes
+
+		>> Nargs: 0	Max_locals: 1 <<
+
+		// Java Variables
+		Slot 0 : com/oberthurcs/formation/filesystem/RootDirectory this (pc:0 length:15)
+
+		//Exceptions
+
+		[0x0] 0x2A               	| [0] aload_0                                                 // line: 24
+		[0x1] 0x11 0x3f 0x0      	| [1] sipush Value: 16128                                     // line: 24
+		[0x4] 0x10 0x7f          	| [4] bipush Value: 127                                       // line: 24
+		[0x6] 0xB7 0x0001        	| [6] invokespecial com/oberthurcs/formation/filesystem/Directory.<init>(SB)V// line: 24
+		[0x9] 0x2A               	| [9] aload_0                                                 // line: 24
+		[0xa] 0x2A               	| [10] aload_0                                                // line: 25
+		[0xb] 0xB5 0x0002        	| [11] putfield Field: parent Lcom/oberthurcs/formation/filesystem/File;// line: 25
+		[0xe] 0xB1               	| [14] return                                                 // line: 25
+
+	  // JavaCard Byte Codes
+
+		>> Nargs: 1	Max_locals: 0 <<
+
+		// JavaCard Variables
+		Slot 0: com/oberthurcs/formation/filesystem/RootDirectory this
+
+		//Exceptions
+
+		[0x0] 0x18               	| [0] aload_0                                                 
+		[0x1] 0x11 0x3f 0x0      	| [1] sspush Value: 16128                                     
+		[0x4] 0x10 0x7f          	| [4] bspush Value: 127                                       
+		[0x6] 0x8C 0x0018        	| [6] invokespecial com/oberthurcs/formation/filesystem/Directory.<init>(SB)V
+		                         	|                                                             
+		[0x9] 0x18               	| [9] aload_0                                                 
+		[0xa] 0xB5 0x01          	| [10] putfield_a_this Field: parent Lcom/oberthurcs/formation/filesystem/File;
+		[0xc] 0x7A               	| [12] return                                                 
+	}
+
+
+	// Virtual Methods ---------------------------------------------------------------------------------
+
+}
+
+
+public interface abstract class com/oberthurcs/formation/filesystem/SharedDirectory extends java/lang/Object; // Token: 6
+Implements directly javacard/framework/Shareable 
+Implements indirectly: 
+{
+	// Static fields -----------------------------------------------------------------------------------
+
+
+	// String fields -----------------------------------------------------------------------------------
+
+
+	// Instance fields ---------------------------------------------------------------------------------
+
+
+	// Inherited virtual methods -----------------------------------------------------------------------
+
+
+	// Static and Init Methods -------------------------------------------------------------------------
+
+
+	// Virtual Methods ---------------------------------------------------------------------------------
+
+	public abstract short listDir([]byte,short)                           // Token: 0
+	//offset = 0
+	{
+	}
+
+}
+
+
+public super  class com/oberthurcs/formation/filesystem/SharedRootDirectory extends com/oberthurcs/formation/filesystem/RootDirectory; // Token: 4
+Implements directly com/oberthurcs/formation/filesystem/SharedDirectory 
+Implements indirectly: javacard/framework/Shareable com/oberthurcs/formation/filesystem/Resource 
+{
+	// Static fields -----------------------------------------------------------------------------------
+
+
+	// String fields -----------------------------------------------------------------------------------
+
+
+	// Instance fields ---------------------------------------------------------------------------------
+
+
+	// Inherited virtual methods -----------------------------------------------------------------------
+
+	public byte getType()                                                 // Token: 4
+	public com/oberthurcs/formation/filesystem/File get(short)            // Token: 5
+	public com/oberthurcs/formation/filesystem/File get(byte)             // Token: 6
+	public short getId()                                                  // Token: 2
+	public boolean remove(byte)                                           // Token: 8
+	public boolean add(com/oberthurcs/formation/filesystem/File)          // Token: 7
+	public byte getCurrentSize()                                          // Token: 9
+	public boolean equals(java/lang/Object)                               // Token: 0
+	public short getSize()                                                // Token: 3
+	public boolean remove(com/oberthurcs/formation/filesystem/File)       // Token: 10
+	public byte getMaxSize()                                              // Token: 11
+	public com/oberthurcs/formation/filesystem/File getParent()           // Token: 1
+	public short listDir([]byte,short)                                    // Token: 12
+
+	// Static and Init Methods -------------------------------------------------------------------------
+
+	public static com/oberthurcs/formation/filesystem/RootDirectory getInstance()// Token: 0
+	//offset = 661
+	{
+	  // Java Byte Codes
+
+		>> Nargs: 0	Max_locals: 1 <<
+
+		// Java Variables
+		Slot 0 : javacard/framework/ISOException e (pc:19 length:1)
+
+		//Exceptions
+			 pc:6 end pc:16 m_handler_pc:19 catched_class: javacard/framework/ISOException
+
+		[0x0] 0xB2 0x0002        	| [0] getstatic Field: singleton Lcom/oberthurcs/formation/filesystem/RootDirectory;// line: 27
+		[0x3] 0xC7 0x00 0x11     	| [3] ifnonnull 20                                            // line: 27
+		[0x6] 0xBB 0x0003        	| [6] new Class:com/oberthurcs/formation/filesystem/SharedRootDirectory// line: 27
+		[0x9] 0x59               	| [9] dup                                                     // line: 29
+		[0xa] 0xB7 0x0004        	| [10] invokespecial com/oberthurcs/formation/filesystem/SharedRootDirectory.<init>()V// line: 29
+		[0xd] 0xB3 0x0002        	| [13] putstatic Field: singleton Lcom/oberthurcs/formation/filesystem/RootDirectory;// line: 29
+		[0x10] 0xA7 0x00 0x04    	| [16] goto 20                                                // line: 29
+		[0x13] 0x4B              	| [19] astore_0                                               // line: 29
+		[0x14] 0xB2 0x0002       	| [20] getstatic Field: singleton Lcom/oberthurcs/formation/filesystem/RootDirectory;// line: 31
+		[0x17] 0xB0              	| [23] areturn                                                // line: 34
+
+	  // JavaCard Byte Codes
+
+		>> Nargs: 0	Max_locals: 1 <<
+
+		// JavaCard Variables
+		Slot 0: javacard/framework/ISOException e
+
+		//Exceptions
+			 pc:5 end pc:15 m_handler_pc:17 catched_class: javacard/framework/ISOException
+
+		[0x0] 0x7B 0x0003        	| [0] getstatic_a Field: singleton Lcom/oberthurcs/formation/filesystem/RootDirectory;
+		[0x3] 0x67 0xf           	| [3] ifnonnull 18                                            
+		[0x5] 0x8F 0x000B        	| [5] new Class:com/oberthurcs/formation/filesystem/SharedRootDirectory
+		[0x8] 0x3D               	| [8] dup                                                     
+		[0x9] 0x8C 0x0019        	| [9] invokespecial com/oberthurcs/formation/filesystem/SharedRootDirectory.<init>()V
+		[0xc] 0x7F 0x0003        	| [12] putstatic_a Field: singleton Lcom/oberthurcs/formation/filesystem/RootDirectory;
+		[0xf] 0x70 0x3           	| [15] goto 18                                                
+		[0x11] 0x2B              	| [17] astore_0                                               
+		[0x12] 0x7B 0x0003       	| [18] getstatic_a Field: singleton Lcom/oberthurcs/formation/filesystem/RootDirectory;
+		[0x15] 0x77              	| [21] areturn                                                
+	}
+
+	protected void <init>()                                               // Token: 1
+	//offset = 685
+	{
+	  // Java Byte Codes
+
+		>> Nargs: 0	Max_locals: 1 <<
+
+		// Java Variables
+		Slot 0 : com/oberthurcs/formation/filesystem/SharedRootDirectory this (pc:0 length:5)
+
+		//Exceptions
+
+		[0x0] 0x2A               	| [0] aload_0                                                 // line: 18
+		[0x1] 0xB7 0x0001        	| [1] invokespecial com/oberthurcs/formation/filesystem/RootDirectory.<init>()V// line: 18
+		[0x4] 0xB1               	| [4] return                                                  // line: 18
+
+	  // JavaCard Byte Codes
+
+		>> Nargs: 1	Max_locals: 0 <<
+
+		// JavaCard Variables
+		Slot 0: com/oberthurcs/formation/filesystem/SharedRootDirectory this
+
+		//Exceptions
+
+		[0x0] 0x18               	| [0] aload_0                                                 
+		[0x1] 0x8C 0x0013        	| [1] invokespecial com/oberthurcs/formation/filesystem/RootDirectory.<init>()V
+		[0x4] 0x7A               	| [4] return                                                  
+	}
+
+
+	// Virtual Methods ---------------------------------------------------------------------------------
+
+}
+

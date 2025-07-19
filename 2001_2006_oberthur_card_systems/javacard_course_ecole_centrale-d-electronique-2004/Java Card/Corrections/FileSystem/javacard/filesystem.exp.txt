@@ -1,0 +1,596 @@
+ExportFile:
+EF_magic: 0xfacade
+EF_minor_version: 1
+EF_major_version: 2
+	Constant Pool: constant_pool_count:67
+	[0]=CONSTANT_Utf8_info:
+		"com.oberthurcs.formation.filesystem"
+	[1]=EF_CONSTANT_Package_info:
+		EF_flags: 1
+		EF_name_index: 0
+		EF_minor_version: 0
+		EF_major_version: 1
+		EF_aid_length: 9
+		   EF_aid[0]=0xA0
+		   EF_aid[1]=0x00
+		   EF_aid[2]=0x00
+		   EF_aid[3]=0x00
+		   EF_aid[4]=0x77
+		   EF_aid[5]=0x00
+		   EF_aid[6]=0x00
+		   EF_aid[7]=0x00
+		   EF_aid[8]=0x00
+	[2]=CONSTANT_Utf8_info:
+		"com/oberthurcs/formation/filesystem/File"
+	[3]=EF_CONSTANT_Classref_info:
+		EF_name_index: 2
+	[4]=CONSTANT_Utf8_info:
+		"java/lang/Object"
+	[5]=EF_CONSTANT_Classref_info:
+		EF_name_index: 4
+	[6]=CONSTANT_Utf8_info:
+		"getInstance"
+	[7]=CONSTANT_Utf8_info:
+		"(BSB)Lcom/oberthurcs/formation/filesystem/File;"
+	[8]=CONSTANT_Utf8_info:
+		"<init>"
+	[9]=CONSTANT_Utf8_info:
+		"(S)V"
+	[10]=CONSTANT_Utf8_info:
+		"equals"
+	[11]=CONSTANT_Utf8_info:
+		"(Ljava/lang/Object;)Z"
+	[12]=CONSTANT_Utf8_info:
+		"getParent"
+	[13]=CONSTANT_Utf8_info:
+		"()Lcom/oberthurcs/formation/filesystem/File;"
+	[14]=CONSTANT_Utf8_info:
+		"getId"
+	[15]=CONSTANT_Utf8_info:
+		"()S"
+	[16]=CONSTANT_Utf8_info:
+		"getSize"
+	[17]=CONSTANT_Utf8_info:
+		"getType"
+	[18]=CONSTANT_Utf8_info:
+		"()B"
+	[19]=CONSTANT_Utf8_info:
+		"id"
+	[20]=CONSTANT_Utf8_info:
+		"S"
+	[21]=CONSTANT_Utf8_info:
+		"parent"
+	[22]=CONSTANT_Utf8_info:
+		"Lcom/oberthurcs/formation/filesystem/File;"
+	[23]=CONSTANT_Utf8_info:
+		"com/oberthurcs/formation/filesystem/Resource"
+	[24]=EF_CONSTANT_Classref_info:
+		EF_name_index: 23
+	[25]=CONSTANT_Utf8_info:
+		"com/oberthurcs/formation/filesystem/BinaryFile"
+	[26]=EF_CONSTANT_Classref_info:
+		EF_name_index: 25
+	[27]=CONSTANT_Utf8_info:
+		"(SS)V"
+	[28]=CONSTANT_Utf8_info:
+		"update"
+	[29]=CONSTANT_Utf8_info:
+		"([BSSS)V"
+	[30]=CONSTANT_Utf8_info:
+		"getLength"
+	[31]=CONSTANT_Utf8_info:
+		"read"
+	[32]=CONSTANT_Utf8_info:
+		"ConstantValue"
+	[33]=CONSTANT_Utf8_info:
+		"TYPE"
+	[34]=CONSTANT_Utf8_info:
+		"B"
+	[35]=EF_CONSTANT_Integer_info:
+		 EF_bytes: 1
+	[36]=CONSTANT_Utf8_info:
+		"MAX_SIZE"
+	[37]=EF_CONSTANT_Integer_info:
+		 EF_bytes: 255
+	[38]=CONSTANT_Utf8_info:
+		"com/oberthurcs/formation/filesystem/Directory"
+	[39]=EF_CONSTANT_Classref_info:
+		EF_name_index: 38
+	[40]=CONSTANT_Utf8_info:
+		"(SB)V"
+	[41]=CONSTANT_Utf8_info:
+		"get"
+	[42]=CONSTANT_Utf8_info:
+		"(S)Lcom/oberthurcs/formation/filesystem/File;"
+	[43]=CONSTANT_Utf8_info:
+		"(B)Lcom/oberthurcs/formation/filesystem/File;"
+	[44]=CONSTANT_Utf8_info:
+		"add"
+	[45]=CONSTANT_Utf8_info:
+		"(Lcom/oberthurcs/formation/filesystem/File;)Z"
+	[46]=CONSTANT_Utf8_info:
+		"remove"
+	[47]=CONSTANT_Utf8_info:
+		"(B)Z"
+	[48]=CONSTANT_Utf8_info:
+		"getCurrentSize"
+	[49]=CONSTANT_Utf8_info:
+		"getMaxSize"
+	[50]=CONSTANT_Utf8_info:
+		"listDir"
+	[51]=CONSTANT_Utf8_info:
+		"([BS)S"
+	[52]=EF_CONSTANT_Integer_info:
+		 EF_bytes: 0
+	[53]=CONSTANT_Utf8_info:
+		"com/oberthurcs/formation/filesystem/RootDirectory"
+	[54]=EF_CONSTANT_Classref_info:
+		EF_name_index: 53
+	[55]=CONSTANT_Utf8_info:
+		"()Lcom/oberthurcs/formation/filesystem/RootDirectory;"
+	[56]=CONSTANT_Utf8_info:
+		"()V"
+	[57]=CONSTANT_Utf8_info:
+		"singleton"
+	[58]=CONSTANT_Utf8_info:
+		"Lcom/oberthurcs/formation/filesystem/RootDirectory;"
+	[59]=CONSTANT_Utf8_info:
+		"ROOT_ID"
+	[60]=EF_CONSTANT_Integer_info:
+		 EF_bytes: 16128
+	[61]=CONSTANT_Utf8_info:
+		"com/oberthurcs/formation/filesystem/SharedRootDirectory"
+	[62]=EF_CONSTANT_Classref_info:
+		EF_name_index: 61
+	[63]=CONSTANT_Utf8_info:
+		"com/oberthurcs/formation/filesystem/SharedDirectory"
+	[64]=EF_CONSTANT_Classref_info:
+		EF_name_index: 63
+	[65]=CONSTANT_Utf8_info:
+		"javacard/framework/Shareable"
+	[66]=EF_CONSTANT_Classref_info:
+		EF_name_index: 65
+EF_this_package: 1
+	Class Pool: class_pool_count:7
+	[0]=EF_Class_info: 
+		EF_token: 0
+		EF_access_flags: 0x0401
+		EF_name_index: 3    // 
+			EF_Super: super_count:1
+			[0]=5
+			EF_Interface: interface_count:1
+			[0]=24
+			Field Pool: field_pool_count:2
+			[0]=EF_Field Info:
+				EF_token:0
+				EF_access_flag:0x0004
+				EF_name_index:19    // 
+				EF_descriptor_index:20    // 
+					Attribute Pool: attribute_pool_count:0
+			[1]=EF_Field Info:
+				EF_token:1
+				EF_access_flag:0x0004
+				EF_name_index:21    // 
+				EF_descriptor_index:22    // 
+					Attribute Pool: attribute_pool_count:0
+			Method Pool: method_pool_count:7
+			[0]=EF_Method Info:
+				EF_token:0
+				EF_access_flag:0x0009
+				EF_name_index:6    // 
+				EF_descriptor_index:7    // null
+			[1]=EF_Method Info:
+				EF_token:1
+				EF_access_flag:0x0001
+				EF_name_index:8    // 
+				EF_descriptor_index:9    // null
+			[2]=EF_Method Info:
+				EF_token:0
+				EF_access_flag:0x0001
+				EF_name_index:10    // 
+				EF_descriptor_index:11    // null
+			[3]=EF_Method Info:
+				EF_token:1
+				EF_access_flag:0x0001
+				EF_name_index:12    // 
+				EF_descriptor_index:13    // null
+			[4]=EF_Method Info:
+				EF_token:2
+				EF_access_flag:0x0001
+				EF_name_index:14    // 
+				EF_descriptor_index:15    // null
+			[5]=EF_Method Info:
+				EF_token:3
+				EF_access_flag:0x0401
+				EF_name_index:16    // 
+				EF_descriptor_index:15    // null
+			[6]=EF_Method Info:
+				EF_token:4
+				EF_access_flag:0x0401
+				EF_name_index:17    // 
+				EF_descriptor_index:18    // null
+	[1]=EF_Class_info: 
+		EF_token: 1
+		EF_access_flags: 0x0001
+		EF_name_index: 26    // 
+			EF_Super: super_count:2
+			[0]=5
+			[1]=3
+			EF_Interface: interface_count:1
+			[0]=24
+			Field Pool: field_pool_count:2
+			[0]=EF_Field Info:
+				EF_token:255
+				EF_access_flag:0x0019
+				EF_name_index:33    // 
+				EF_descriptor_index:34    // 
+					Attribute Pool: attribute_pool_count:1
+					[0]=ConstantValue: 
+						Attribute_name_index: 32
+						Constantvalue_index: 35
+			[1]=EF_Field Info:
+				EF_token:255
+				EF_access_flag:0x0019
+				EF_name_index:36    // 
+				EF_descriptor_index:20    // 
+					Attribute Pool: attribute_pool_count:1
+					[0]=ConstantValue: 
+						Attribute_name_index: 32
+						Constantvalue_index: 37
+			Method Pool: method_pool_count:9
+			[0]=EF_Method Info:
+				EF_token:0
+				EF_access_flag:0x0004
+				EF_name_index:8    // 
+				EF_descriptor_index:27    // null
+			[1]=EF_Method Info:
+				EF_token:0
+				EF_access_flag:0x0001
+				EF_name_index:10    // 
+				EF_descriptor_index:11    // null
+			[2]=EF_Method Info:
+				EF_token:1
+				EF_access_flag:0x0001
+				EF_name_index:12    // 
+				EF_descriptor_index:13    // null
+			[3]=EF_Method Info:
+				EF_token:2
+				EF_access_flag:0x0001
+				EF_name_index:14    // 
+				EF_descriptor_index:15    // null
+			[4]=EF_Method Info:
+				EF_token:3
+				EF_access_flag:0x0001
+				EF_name_index:16    // 
+				EF_descriptor_index:15    // null
+			[5]=EF_Method Info:
+				EF_token:4
+				EF_access_flag:0x0001
+				EF_name_index:17    // 
+				EF_descriptor_index:18    // null
+			[6]=EF_Method Info:
+				EF_token:5
+				EF_access_flag:0x0001
+				EF_name_index:28    // 
+				EF_descriptor_index:29    // null
+			[7]=EF_Method Info:
+				EF_token:6
+				EF_access_flag:0x0001
+				EF_name_index:30    // 
+				EF_descriptor_index:15    // null
+			[8]=EF_Method Info:
+				EF_token:7
+				EF_access_flag:0x0001
+				EF_name_index:31    // 
+				EF_descriptor_index:29    // null
+	[2]=EF_Class_info: 
+		EF_token: 2
+		EF_access_flags: 0x0001
+		EF_name_index: 39    // 
+			EF_Super: super_count:2
+			[0]=5
+			[1]=3
+			EF_Interface: interface_count:1
+			[0]=24
+			Field Pool: field_pool_count:1
+			[0]=EF_Field Info:
+				EF_token:255
+				EF_access_flag:0x0019
+				EF_name_index:33    // 
+				EF_descriptor_index:34    // 
+					Attribute Pool: attribute_pool_count:1
+					[0]=ConstantValue: 
+						Attribute_name_index: 32
+						Constantvalue_index: 52
+			Method Pool: method_pool_count:14
+			[0]=EF_Method Info:
+				EF_token:0
+				EF_access_flag:0x0004
+				EF_name_index:8    // 
+				EF_descriptor_index:40    // null
+			[1]=EF_Method Info:
+				EF_token:0
+				EF_access_flag:0x0001
+				EF_name_index:10    // 
+				EF_descriptor_index:11    // null
+			[2]=EF_Method Info:
+				EF_token:1
+				EF_access_flag:0x0001
+				EF_name_index:12    // 
+				EF_descriptor_index:13    // null
+			[3]=EF_Method Info:
+				EF_token:2
+				EF_access_flag:0x0001
+				EF_name_index:14    // 
+				EF_descriptor_index:15    // null
+			[4]=EF_Method Info:
+				EF_token:3
+				EF_access_flag:0x0001
+				EF_name_index:16    // 
+				EF_descriptor_index:15    // null
+			[5]=EF_Method Info:
+				EF_token:4
+				EF_access_flag:0x0001
+				EF_name_index:17    // 
+				EF_descriptor_index:18    // null
+			[6]=EF_Method Info:
+				EF_token:5
+				EF_access_flag:0x0001
+				EF_name_index:41    // 
+				EF_descriptor_index:42    // null
+			[7]=EF_Method Info:
+				EF_token:6
+				EF_access_flag:0x0001
+				EF_name_index:41    // 
+				EF_descriptor_index:43    // null
+			[8]=EF_Method Info:
+				EF_token:7
+				EF_access_flag:0x0001
+				EF_name_index:44    // 
+				EF_descriptor_index:45    // null
+			[9]=EF_Method Info:
+				EF_token:8
+				EF_access_flag:0x0001
+				EF_name_index:46    // 
+				EF_descriptor_index:47    // null
+			[10]=EF_Method Info:
+				EF_token:9
+				EF_access_flag:0x0001
+				EF_name_index:48    // 
+				EF_descriptor_index:18    // null
+			[11]=EF_Method Info:
+				EF_token:10
+				EF_access_flag:0x0001
+				EF_name_index:46    // 
+				EF_descriptor_index:45    // null
+			[12]=EF_Method Info:
+				EF_token:11
+				EF_access_flag:0x0001
+				EF_name_index:49    // 
+				EF_descriptor_index:18    // null
+			[13]=EF_Method Info:
+				EF_token:12
+				EF_access_flag:0x0001
+				EF_name_index:50    // 
+				EF_descriptor_index:51    // null
+	[3]=EF_Class_info: 
+		EF_token: 3
+		EF_access_flags: 0x0001
+		EF_name_index: 54    // 
+			EF_Super: super_count:3
+			[0]=5
+			[1]=3
+			[2]=39
+			EF_Interface: interface_count:1
+			[0]=24
+			Field Pool: field_pool_count:2
+			[0]=EF_Field Info:
+				EF_token:0
+				EF_access_flag:0x000C
+				EF_name_index:57    // 
+				EF_descriptor_index:58    // 
+					Attribute Pool: attribute_pool_count:0
+			[1]=EF_Field Info:
+				EF_token:255
+				EF_access_flag:0x0019
+				EF_name_index:59    // 
+				EF_descriptor_index:20    // 
+					Attribute Pool: attribute_pool_count:1
+					[0]=ConstantValue: 
+						Attribute_name_index: 32
+						Constantvalue_index: 60
+			Method Pool: method_pool_count:15
+			[0]=EF_Method Info:
+				EF_token:0
+				EF_access_flag:0x0009
+				EF_name_index:6    // 
+				EF_descriptor_index:55    // null
+			[1]=EF_Method Info:
+				EF_token:1
+				EF_access_flag:0x0004
+				EF_name_index:8    // 
+				EF_descriptor_index:56    // null
+			[2]=EF_Method Info:
+				EF_token:0
+				EF_access_flag:0x0001
+				EF_name_index:10    // 
+				EF_descriptor_index:11    // null
+			[3]=EF_Method Info:
+				EF_token:1
+				EF_access_flag:0x0001
+				EF_name_index:12    // 
+				EF_descriptor_index:13    // null
+			[4]=EF_Method Info:
+				EF_token:2
+				EF_access_flag:0x0001
+				EF_name_index:14    // 
+				EF_descriptor_index:15    // null
+			[5]=EF_Method Info:
+				EF_token:3
+				EF_access_flag:0x0001
+				EF_name_index:16    // 
+				EF_descriptor_index:15    // null
+			[6]=EF_Method Info:
+				EF_token:4
+				EF_access_flag:0x0001
+				EF_name_index:17    // 
+				EF_descriptor_index:18    // null
+			[7]=EF_Method Info:
+				EF_token:5
+				EF_access_flag:0x0001
+				EF_name_index:41    // 
+				EF_descriptor_index:42    // null
+			[8]=EF_Method Info:
+				EF_token:6
+				EF_access_flag:0x0001
+				EF_name_index:41    // 
+				EF_descriptor_index:43    // null
+			[9]=EF_Method Info:
+				EF_token:7
+				EF_access_flag:0x0001
+				EF_name_index:44    // 
+				EF_descriptor_index:45    // null
+			[10]=EF_Method Info:
+				EF_token:8
+				EF_access_flag:0x0001
+				EF_name_index:46    // 
+				EF_descriptor_index:47    // null
+			[11]=EF_Method Info:
+				EF_token:9
+				EF_access_flag:0x0001
+				EF_name_index:48    // 
+				EF_descriptor_index:18    // null
+			[12]=EF_Method Info:
+				EF_token:10
+				EF_access_flag:0x0001
+				EF_name_index:46    // 
+				EF_descriptor_index:45    // null
+			[13]=EF_Method Info:
+				EF_token:11
+				EF_access_flag:0x0001
+				EF_name_index:49    // 
+				EF_descriptor_index:18    // null
+			[14]=EF_Method Info:
+				EF_token:12
+				EF_access_flag:0x0001
+				EF_name_index:50    // 
+				EF_descriptor_index:51    // null
+	[4]=EF_Class_info: 
+		EF_token: 4
+		EF_access_flags: 0x0801
+		EF_name_index: 62    // 
+			EF_Super: super_count:4
+			[0]=5
+			[1]=3
+			[2]=39
+			[3]=54
+			EF_Interface: interface_count:3
+			[0]=64
+			[1]=66
+			[2]=24
+			Field Pool: field_pool_count:0
+			Method Pool: method_pool_count:15
+			[0]=EF_Method Info:
+				EF_token:0
+				EF_access_flag:0x0009
+				EF_name_index:6    // 
+				EF_descriptor_index:55    // null
+			[1]=EF_Method Info:
+				EF_token:1
+				EF_access_flag:0x0004
+				EF_name_index:8    // 
+				EF_descriptor_index:56    // null
+			[2]=EF_Method Info:
+				EF_token:0
+				EF_access_flag:0x0001
+				EF_name_index:10    // 
+				EF_descriptor_index:11    // null
+			[3]=EF_Method Info:
+				EF_token:1
+				EF_access_flag:0x0001
+				EF_name_index:12    // 
+				EF_descriptor_index:13    // null
+			[4]=EF_Method Info:
+				EF_token:2
+				EF_access_flag:0x0001
+				EF_name_index:14    // 
+				EF_descriptor_index:15    // null
+			[5]=EF_Method Info:
+				EF_token:3
+				EF_access_flag:0x0001
+				EF_name_index:16    // 
+				EF_descriptor_index:15    // null
+			[6]=EF_Method Info:
+				EF_token:4
+				EF_access_flag:0x0001
+				EF_name_index:17    // 
+				EF_descriptor_index:18    // null
+			[7]=EF_Method Info:
+				EF_token:5
+				EF_access_flag:0x0001
+				EF_name_index:41    // 
+				EF_descriptor_index:42    // null
+			[8]=EF_Method Info:
+				EF_token:6
+				EF_access_flag:0x0001
+				EF_name_index:41    // 
+				EF_descriptor_index:43    // null
+			[9]=EF_Method Info:
+				EF_token:7
+				EF_access_flag:0x0001
+				EF_name_index:44    // 
+				EF_descriptor_index:45    // null
+			[10]=EF_Method Info:
+				EF_token:8
+				EF_access_flag:0x0001
+				EF_name_index:46    // 
+				EF_descriptor_index:47    // null
+			[11]=EF_Method Info:
+				EF_token:9
+				EF_access_flag:0x0001
+				EF_name_index:48    // 
+				EF_descriptor_index:18    // null
+			[12]=EF_Method Info:
+				EF_token:10
+				EF_access_flag:0x0001
+				EF_name_index:46    // 
+				EF_descriptor_index:45    // null
+			[13]=EF_Method Info:
+				EF_token:11
+				EF_access_flag:0x0001
+				EF_name_index:49    // 
+				EF_descriptor_index:18    // null
+			[14]=EF_Method Info:
+				EF_token:12
+				EF_access_flag:0x0001
+				EF_name_index:50    // 
+				EF_descriptor_index:51    // null
+	[5]=EF_Class_info: 
+		EF_token: 5
+		EF_access_flags: 0x0601
+		EF_name_index: 24    // 
+			EF_Super: super_count:1
+			[0]=5
+			EF_Interface: interface_count:0
+			Field Pool: field_pool_count:0
+			Method Pool: method_pool_count:1
+			[0]=EF_Method Info:
+				EF_token:0
+				EF_access_flag:0x0401
+				EF_name_index:16    // 
+				EF_descriptor_index:15    // null
+	[6]=EF_Class_info: 
+		EF_token: 6
+		EF_access_flags: 0x0E01
+		EF_name_index: 64    // 
+			EF_Super: super_count:1
+			[0]=5
+			EF_Interface: interface_count:1
+			[0]=66
+			Field Pool: field_pool_count:0
+			Method Pool: method_pool_count:1
+			[0]=EF_Method Info:
+				EF_token:0
+				EF_access_flag:0x0401
+				EF_name_index:50    // 
+				EF_descriptor_index:51    // null

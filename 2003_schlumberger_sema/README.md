@@ -1,6 +1,6 @@
 # SchlumbergerSema (2003)
 
-This directory contains legacy work artifacts from Julien Simon's time at **SchlumbergerSema**, where he worked on Java Card reverse engineering tools and filesystem implementations.
+This directory contains legacy work artifacts from Julien Simon's time at **SchlumbergerSema**, where he worked on Java Card reverse engineering tools.
 
 ## Contents
 
@@ -21,30 +21,6 @@ A comprehensive Java Card bytecode disassembler tool that can analyze and revers
 - Handles constant pool resolution
 - Provides method and class name resolution
 
-### 💾 Java Card Filesystem
-A complete filesystem implementation for Java Card applications.
-
-**Key Components:**
-- **File.java** - Base file system class
-- **DedicatedFile.java** - Directory implementation
-- **TransparentFile.java** - Binary file implementation
-- **RecordFile.java** - Record-based file implementation
-- **CyclicRecordFile.java** - Cyclic record file implementation
-
-**Features:**
-- Hierarchical file structure
-- Multiple file types (transparent, record, cyclic)
-- Access control mechanisms
-- File sharing capabilities
-- Memory-efficient implementation
-
-### 📁 File Applet
-A demonstration applet showcasing the filesystem implementation.
-
-**Components:**
-- **FileApplet.java** - Main applet implementation
-- **FileAppletScript.java** - Test script for applet functionality
-
 ## Technical Highlights
 
 ### Disassembler Capabilities
@@ -53,20 +29,14 @@ A demonstration applet showcasing the filesystem implementation.
 - **Symbol Resolution**: Resolves method names, class names, and constant references
 - **Multiple Formats**: Supports both JAR and TLV CAP file formats
 
-### Filesystem Architecture
-- **Object-Oriented Design**: Clean inheritance hierarchy for different file types
-- **Memory Management**: Efficient use of Java Card's limited memory
-- **Security Integration**: Built-in access control mechanisms
-- **Standards Compliance**: Follows ISO 7816 file system standards
-
 ## Historical Context
 
-This work represents early efforts in Java Card reverse engineering and filesystem development from 2003. The tools and implementations demonstrate:
+This work represents early efforts in Java Card reverse engineering from 2003. The tools demonstrate:
 
 - Early Java Card reverse engineering techniques
-- Comprehensive filesystem design for constrained environments
 - Practical applications of Java Card technology
 - Development of tools for smart card analysis
+- Comprehensive understanding of Java Card bytecode
 
 ## About Julien Simon
 

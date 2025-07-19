@@ -12,14 +12,6 @@ This directory contains work artifacts from **Julien Simon's** time at Oberthur 
 
 ## 📁 Project Structure
 
-### [Authentic Applet](./Authentic_applet/)
-**Java Card Security Implementation**
-
-- **Authentic.java** - Main applet implementation
-- **AuthenticAgent.java** - Agent functionality
-- **Documentation** - Technical specifications and requirements
-- **Focus**: Smart card authentication and security
-
 ### Technical Presentations
 - **[SmartTrust WIB 1.3 (PDF)](./SmartTrust%20WIB%201.3.pdf)** - Wireless Identity Module presentation
 - **[Security Applications with Java Card (PDF)](./Security%20applications%20with%20Java%20Card.pdf)** - Java Card security implementations
@@ -98,8 +90,6 @@ This work demonstrates:
 - **Cryptography**: Cryptographic algorithm implementation
 - **Security Systems**: Authentication and authorization
 - **Training & Education**: Technical knowledge transfer
-
-
 
 ## 📄 Presentation Highlights
 
