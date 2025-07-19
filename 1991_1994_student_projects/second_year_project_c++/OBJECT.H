@@ -29,7 +29,7 @@
 #define __OBJECT_H
 
 #include "classes.h"
-#include <iostream.h>
+#include "iostream.h"
 #include <string.h>
 
 // type de retour des fonctions "hash" (re-)definies dans toutes les classes

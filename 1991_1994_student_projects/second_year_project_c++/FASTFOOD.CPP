@@ -2,22 +2,22 @@
 // PROGRAMME PRINCIPAL
 
 #include "Restaura.h"
-#include <iostream.h>
-#include <String.h>
+#include "iostream.h"
+#include "String.h"
 #include <stdlib.h>
-#include <new.h>
+#include "new.h"
 
 void PlusDeMemoire() {
-   cout << "Pas assez de m‚moire.\n";
+   cout << "Pas assez de mï¿½moire.\n";
    exit(-1);
 }
 
-void main () {
+int main () {
    double dureePrevue;
    int nbServeurs;
    double tempsMoyenArriveeClients;
 
-   set_new_handler(PlusDeMemoire);
+   std::set_new_handler(PlusDeMemoire);
 
    do {
       cout << "Duree de la simulation : ";
@@ -40,5 +40,6 @@ void main () {
 
    resto.go();
 	 // Lancement de la simulation.
+   return 0;
 }
 

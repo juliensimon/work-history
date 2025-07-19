@@ -20,7 +20,7 @@ const Error * 	Nil = new Error;
 
 // HASH : par defaut, l'adresse du receveur
 hashValueType Object :: hash() const {
-	return hashValueType(this); 
+	return hashValueType((unsigned long)this); 
 } // HASH
 
 
@@ -43,7 +43,7 @@ int Object :: virtIsEqual(const Object* o) const {
 Object* Object :: error(char* sel, char* msg, int stp) const {
 	cerr 	<< "\nclass  : " << className()
 		<< "\nmethod : " << sel
-		<< "\naddress: " << int (this) << '\n'
+		<< "\naddress: " << (unsigned long)this << '\n'
 		<< msg << '\n';
 	if (stp) exit (stp);
 	return (Object*)this;

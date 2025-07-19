@@ -23,7 +23,7 @@ void OrderedCollection :: grow() {
 	_vec = new Object* [_maxSize];
 	for (int index = 0; index < siz; index++)
 		_vec[index] = tmp[index];
-	for (index = siz; index < _maxSize; index++)
+	for (int index = siz; index < _maxSize; index++)
 		_vec[index] = NIL;
 	delete tmp;
 } // GROW
@@ -40,7 +40,7 @@ void OrderedCollection :: putSpaceAtStart() {
 		_vec[end - i] = _vec[_last - i];
 	_first = end - _last;
 	_last = end;
-	for (i = 0; i < _first; i++)
+	for (int i = 0; i < _first; i++)
 		_vec[i] = NIL;
 } // PUTSPACEATSTART
 
@@ -55,7 +55,7 @@ void OrderedCollection :: putSpaceAtEnd() {
 		_vec[start+i] = _vec[_first+i];
 	_first = start;
 	_last = _first + siz - 1;
-	for (i = _last + 1; i < _maxSize; i++)
+	for (int i = _last + 1; i < _maxSize; i++)
 		_vec[i] = NIL;	
 } // PUTSPACEATEND
 
@@ -131,7 +131,8 @@ Object*	OrderedCollection :: addFirst	(const Object* o) {
 //	est inexistant.
 Object* OrderedCollection :: addBefore 
 		(const Object* toAdd, const Object* before) {
-	for (int i = _first; i <= _last && ! _vec[i]->isEqual(before); i++);
+	int i;
+	for (i = _first; i <= _last && ! _vec[i]->isEqual(before); i++);
 	if (i == _last+1) return add(toAdd);
 	int pos = i-_first;
 	putSpaceAfter(pos-1);
@@ -144,7 +145,8 @@ Object* OrderedCollection :: addBefore
 //	dans le vecteur. 
 Object* OrderedCollection :: addAfter 
 		(const Object* toAdd, const Object* after) {
-	for (int i = _first; i <= _last && ! _vec[i]->isEqual(after); i++);
+	int i;
+	for (i = _first; i <= _last && ! _vec[i]->isEqual(after); i++);
 	if (i == _last+1) return add(toAdd);
 	putSpaceAfter(i-_first);
 	_size++;

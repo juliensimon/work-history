@@ -1,8 +1,8 @@
 // Restaurant.C
 
-#include <iostream.h>
+#include "iostream.h"
 #include <stdlib.h>
-#include <String.h>
+#include "String.h"
 #include <math.h>
 #include "Restaura.h"
 #include "FileAtte.h"
@@ -19,7 +19,7 @@ void Restaurant :: initServeurs() {
 
    for (int i = 0; i < _nbServeurs; i++) {
 	 do {
-	    cout << "Temps Moyen de Service du serveur nø " << (i+1) << " : ";
+	    cout << "Temps Moyen de Service du serveur nï¿½ " << (i+1) << " : ";
 	    cin >> tempsMoyenService;
 	 } while (tempsMoyenService <= 0);
 
@@ -92,7 +92,7 @@ void Restaurant :: go () {
 
    for (int i = 0; i < _nbServeurs; i++) {
       serveur = _tableauServeurs[i];
-      cout << "Serveur nø " << (i+1) << ":\n";
+      cout << "Serveur nï¿½ " << (i+1) << ":\n";
       cout << "   Temps moyen de service    : "
 	   << ceill(serveur->tempsMoyenService()) << " minute(s)\n";
       cout << "   Temps total de service    : "

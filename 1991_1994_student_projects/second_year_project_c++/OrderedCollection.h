@@ -1,0 +1,6 @@
+#ifndef ORDEREDCOLLECTION_H
+#define ORDEREDCOLLECTION_H
+
+#include "ORDEREDC.H"
+
+#endif 
