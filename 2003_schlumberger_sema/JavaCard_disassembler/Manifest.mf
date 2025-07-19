@@ -1,3 +1,0 @@
-Manifest-Version: 0.1
-Main-Class: fr.netattitude.cappuccino.Cappuccino
-Created-By: 1.3.1 (Sun Microsystems Inc.)
