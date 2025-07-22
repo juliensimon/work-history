@@ -1,0 +1,63 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citeauthoryear{Accetta \bgroup \em et al.\egroup
+  }{1986}]{mach:foundation}
+M.~Accetta, R.~Baron, W.~Bolosky, D.~Golub, R.~Rashid, A.~Tevanian, et
+  M.~Young.
+\newblock {M}ach: {A} {N}ew {K}ernel {F}oundation {F}or {UNIX} {D}evelopment.
+\newblock In {\em Proceedings of the USENIX 1986 Summer Conference}, June 1986.
+
+\bibitem[\protect\citeauthoryear{Bokhari}{1979}]{distributed:ancetreMigration}
+S.~H. Bokhari.
+\newblock Dual {P}rocessor {S}cheduling with {D}ynamic {R}eassignement.
+\newblock {\em IEEE Transactions on Software Engineering}, SE(5):326--334, July
+  1979.
+
+\bibitem[\protect\citeauthoryear{Card \bgroup \em et al.\egroup
+  }{1993}]{masix:osf}
+R.~Card, E.~Commelin, S.~Dayras, et F.~M\'evel.
+\newblock {T}he {MASIX} {M}ulti-{S}erver {O}perating {S}ystem.
+\newblock In {\em OSF Workshop on Microkernel Technology for Distributed
+  Systems}, June 1993.
+
+\bibitem[\protect\citeauthoryear{Douglis et
+  Ousterhout}{1991}]{distributed:SpriteMigration}
+F.~Douglis et J.~Ousterhout.
+\newblock Transparent {P}rocess {M}igration : {D}esign {A}lternatives and the
+  {S}prite {I}mplementation.
+\newblock {\em Software-Practice and Experience}, 21:757--785, August 1991.
+
+\bibitem[\protect\citeauthoryear{Folliot et Sens}{1994}]{distributed:gatostar}
+Bertil Folliot et Pierre Sens.
+\newblock Gato{S}tar : {A} {F}ault-{T}olerant {L}oad {S}haring {F}acility for
+  {P}arallel {A}pplications.
+\newblock In {\em Proceedings of the First European Dependable Computing
+  Conference}, pages 581--598, Berlin, October 1994.
+
+\bibitem[\protect\citeauthoryear{Milojici\'c \bgroup \em et al.\egroup
+  }{1993}]{mach:milo93sedms}
+Dejan~S. Milojici\'c, Peter Giese, et Wolfgang Zint.
+\newblock Experiences with {L}oad distribution on top of the {M}ach
+  {M}icrokernel.
+\newblock In {\em Proceedings of the 4th USENIX SEDMS Symposium}, San Diego,
+  September 1993.
+
+\bibitem[\protect\citeauthoryear{Rozier}{1992}]{distributed:overviewchorus}
+M.~Rozier.
+\newblock Overview of the {C}horus {D}istributed {S}ystem.
+\newblock In {\em Proceedings of the USENIX Workshop on Micro-Kernels and Other
+  Kernel Architectures}, pages 39--70, April 1992.
+
+\bibitem[\protect\citeauthoryear{Tanenbaum \bgroup \em et al.\egroup
+  }{1990}]{distributed:AmoebaOverview}
+A.S. Tanenbaum, R.~van Renesse, H.~van Staveren, G.~J. Sharp, S.J. Mullender,
+  J.~Jansen, et G.~van Rossum.
+\newblock Experiences with the {A}moeba {D}istributed {O}perating {S}ystem.
+\newblock {\em Communication of the ACM}, 33:46--63, December 1990.
+
+\bibitem[\protect\citeauthoryear{Tevanian et Rashid}{1987}]{mach:basis}
+A.~Tevanian et R.~Rashid.
+\newblock {\em {M}ach: {A} {B}asis for {F}uture {UNIX} {D}evelopment}.
+\newblock Technical Report CMU-CS-87-139, 1987.
+
+\end{thebibliography}

@@ -1,0 +1,217 @@
+%
+% Le fichier de style personnel que c'est nous-memes qu'on l'a ecrit
+% que c'est nous que d'abord que.
+%
+% Historique :
+%   91/04/01 : pda/jt : reunion en enfin un seul fichier commun !
+%   92/08/02 : pda/jt : ajout des tolerances et des accents
+%
+
+\typeout {Configuration personnelle - pda (12 aout 1992)}
+
+%
+% Dimensions de la partie imprimable
+%
+
+\topmargin=-1.5cm
+\topskip=0.5cm
+\headheight=1.0cm
+\headsep=0.8cm
+\textheight=23cm
+
+\evensidemargin=0cm
+\oddsidemargin=0cm
+\textwidth=16cm
+\columnwidth=\textwidth
+
+%
+% Parametrages generaux
+%
+
+\frenchspacing
+\parskip=5mm
+\parindent=0mm
+% \sloppy
+% Les pretolerance et tolerance controlent la cesure des mots.
+% En mettant ces valeurs, on n'autorise la cesure que dans les
+% cas graves. Par defaut, pretolerance=100 et tolerance=200.
+% Si on met une valeur grande (10000 par ex.) pour pretolerance,
+% il n'y aura pas de cesure. Si on met -1, il y aura systematiquement
+% une cesure si necessaire.
+%\pretolerance=500
+%\tolerance=1000
+\hfuzz=3pt
+% Tassement des paragraphes. Un paragraphe est "\looseness" lignes
+% plus grand que sa taille "normale".
+% \looseness=-1
+% \brokenpenalty=5000 % ?????????
+
+%
+% Commandes utiles pour la majorite des textes...
+%
+
+\renewcommand {\arraystretch} {1.4}
+\newcommand {\unix} {Unix}
+\newcommand {\X} {X~Window}
+
+%
+% Macro "fig"
+% Syntaxe : \fig {<fichier>} {<legende>}
+% But : inclut la figure (dessinee avec xfig) contenue dans le fichier en
+%   la centrant, place la legende, et pose un label "fig:<fichier>"
+%
+
+\newcommand {\fig} [2]
+{
+    \begin {figure} [htbp]
+	\hrule
+	\vspace {1mm}
+	%\center {\input {#1}}
+	%\center {\epsffile {#1.ps}}
+	\begin {center}
+		\leavevmode
+		\epsfbox {#1.ps}
+	\end {center}
+	\vspace {1mm}
+	\caption {#2}
+	\vspace {1mm}
+	\hrule
+	\label {fig:#1}
+    \end {figure}
+}
+
+%
+% Macro "listing" (extrait de Gutemberg)
+% Syntaxe : \listing {<fichier>}
+% But : inclut le fichier en verbatim
+%
+
+\def\uncatcodespecials
+{\def\do##1{\catcode`##1=12 }\dospecials}
+\def\listing#1{\par\begingroup
+\setupverbatim\input #1 \endgroup}
+\def\setupverbatim{\tt %\lineno=0
+  \def\par{\leavevmode\endgraf}
+  \catcode`\`=\active
+  \obeylines \uncatcodespecials \obeyspaces
+  \parskip=0pt plus 1pt
+}
+{\obeyspaces\global\let =\ }
+	% let activespace = control space
+{\catcode`\`=\active \gdef`{\relax\lq}}
+
+%
+% Pour le programme "makeindex" (voir le fichier "makeidx.sty" associe)
+%
+
+\def\see#1#2{{ voir\/} #1}
+
+%
+% Macro "aujourdhui" (La date en francais)
+% Syntaxe : \aujourdhui
+%
+
+\def\aujourdhui{\number\day\space\ifcase\month\or
+    janvier\or f\'evrier\or mars\or avril\or mai\or juin\or
+    juillet\or ao\^ut\or septembre\or octobre\or novembre\or d\'ecembre\fi
+    \space\number\year
+}
+
+%
+% Choix du langage. Ne marche que pour les "latex" recents (version du
+% 25 mars 1992 ou plus recentes).
+%
+
+\def\francais{
+ \def\contentsname{Table des Mati\`eres}
+ \def\listfigurename{Liste des figures}
+ \def\listtablename{Liste des tableaux}
+ \def\bibname{Bibliographie}
+ \def\refname{R\'ef\'erences}
+ \def\indexname{Index}
+ \def\figurename{Figure}
+ \def\tablename{Tableau}
+ \def\chaptername{Chapitre}
+ \def\appendixname{Annexe}
+ \def\partname{Partie}
+ \def\abstractname{R\'esum\'e}
+}
+
+\def\english{
+ \def\contentsname{Contents}
+ \def\listfigurename{List of Figures}
+ \def\listtablename{List of Tables}
+ \def\bibname{Bibliography}
+ \def\refname{References}
+ \def\indexname{Index}
+ \def\figurename{Figure}
+ \def\tablename{Table}
+ \def\chaptername{Chapter}
+ \def\appendixname{Appendix}
+ \def\partname{Part}
+ \def\abstractname{Abstract}
+}
+
+\francais			% par defaut
+
+%
+% Les caracteres accentues Roman8
+%
+%\catcode`\Å=\active	\defÅ{\'e}
+%\catcode`\É=\active	\defÉ{\`e}
+%\catcode`\Á=\active	\defÁ{\^e}
+%\catcode`\Í=\active	\defÍ{\"e}
+%\catcode`\È=\active	\defÈ{\`a}
+%\catcode`\À=\active	\defÀ{\^a}
+%\catcode`\Ë=\active	\defË{\`u}
+%\catcode`\Ã=\active	\defÃ{\^u}
+%\catcode`\Ï=\active	\defÏ{\"u}
+%\catcode`\Â=\active	\defÂ{\^o}
+%\catcode`\Ñ=\active	\defÑ{\^\i}
+%\catcode`\Ý=\active	\defÝ{\"\i}
+%\catcode`\µ=\active	\defµ{\c c}
+%
+%\catcode`\Ü=\active	\defÜ{\'E}
+%\catcode`\£=\active	\def£{\`E}
+%\catcode`\¤=\active	\def¤{\^E}
+%\catcode`\¥=\active	\def¥{\"E}
+%\catcode`\¡=\active	\def¡{\`A}
+%\catcode`\¢=\active	\def¢{\^A}
+%\catcode`\­=\active	\def­{\`U}
+%\catcode`\®=\active	\def®{\^U}
+%\catcode`\Û=\active	\defÛ{\"U}
+%\catcode`\ß=\active	\defß{\^O}
+%\catcode`\¦=\active	\def¦{\^I}
+%\catcode`\§=\active	\def§{\"I}
+%\catcode`\´=\active	\def´{\c C}
+
+%
+% Les caracteres accentues ISO 8859.1
+%
+\catcode`\é=\active	\defé{\'e}
+\catcode`\è=\active	\defè{\`e}
+\catcode`\ê=\active	\defê{\^e}
+\catcode`\ë=\active	\defë{\"e}
+\catcode`\à=\active	\defà{\`a}
+\catcode`\â=\active	\defâ{\^a}
+\catcode`\ù=\active	\defù{\`u}
+\catcode`\û=\active	\defû{\^u}
+\catcode`\ü=\active	\defü{\"u}
+\catcode`\ô=\active	\defô{\^o}
+\catcode`\î=\active	\defî{\^\i}
+\catcode`\ï=\active	\defï{\"\i}
+\catcode`\ç=\active	\defç{\c c}
+
+\catcode`\É=\active	\defÉ{\'E}
+\catcode`\È=\active	\defÈ{\`E}
+\catcode`\Ê=\active	\defÊ{\^E}
+\catcode`\Ë=\active	\defË{\"E}
+\catcode`\À=\active	\defÀ{\`A}
+\catcode`\Â=\active	\defÂ{\^A}
+\catcode`\Ù=\active	\defÙ{\`U}
+\catcode`\Û=\active	\defÛ{\^U}
+\catcode`\Ü=\active	\defÜ{\"U}
+\catcode`\Ô=\active	\defÔ{\^O}
+\catcode`\Î=\active	\defÎ{\^I}
+\catcode`\Ï=\active	\defÏ{\"I}
+\catcode`\Ç=\active	\defÇ{\c C}

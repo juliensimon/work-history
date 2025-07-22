@@ -1,0 +1,657 @@
+
+\documentstyle [11pt,a4,epsf,fancyheadings,twoside,rcnamed,pdareport] {article}
+\title {\bf Etat de l'art des communications basées sur Mach}
+\author { Julien Simon
+	\thanks {This work has not been financed by the MASI Laboratory}
+	\\Julien.Simon@freenix.fr}
+\date{ 29 mars 1995}
+\begin{document}
+\maketitle
+
+\newcommand {\figps} [4]
+{
+    \begin {figure} [htbp]
+        \begin {center}
+                \leavevmode
+                \epsfxsize=#2
+                \epsfysize=#3
+                \epsfbox {#1.ps}
+        \end {center}
+        \caption {#4}
+        \label {fig:#1}
+    \end {figure}
+}
+
+\section {Objectifs}
+
+Notre objectif est d'offrir des services de communication susceptibles
+de satisfaire les besoins de toutes les composantes du système Masix, 
+c'est à dire :
+\begin{itemize} 
+\item les serveurs du système d'accueil~;
+\item les serveurs qui composent les différents environnements~;
+\item les applications qui s'exécutent au-dessus de ces environnements~;
+\end{itemize}
+
+Il va sans dire que chacune d'entre elles imposent des contraintes bien
+spécifiques au serveur réseau. Cependant, il est possible d'en dégager
+des besoins communs, que nous allons détailler un par un.
+
+\subsection {Transparence des communications inter-processus}
+
+Afin de concevoir le système Masix de manière cohérente et d'en 
+faciliter le développement, il est absolument indispensable que les 
+communications inter-processus distantes s'effectuent selon
+les m\^emes sémantiques que les communications locales.
+
+Deux t\^aches qui souhaitent communiquer ne doivent en aucun cas
+préjuger de leur localisation respective. En effet, certains
+mécanismes, comme la migration, peuvent provoquer le déplacement 
+d'une t\^ache d'un noeud du réseau vers un autre noeud. Par ailleurs,
+il est tout à fait envisageable que plusieurs occurences d'un m\^eme
+serveur coexistent sur le réseau, afin d'assurer une meilleure
+tolérance aux fautes. Dans ce cas, une t\^ache ne peut pas savoir
+à priori laquelle d'entre elles va traiter sa requ\^ete.
+
+Ces deux exemples illustrent le premier principe fondamental qui guidera
+la conception du serveur réseau, à savoir qu'il est absolument 
+impératif que toutes les entités communicantes aient l'illusion de 
+s'exécuter sur la m\^eme machine.
+
+\subsection {Performances maximales}
+
+Les performances des IPC ont-elles une importance dans les systèmes basés
+sur un micronoyau~? 
+La question parait surprenante, mais 
+~\cite{Bershad92} affirme qu'elles ne sont ne constituent pas un goulot 
+d'étranglement, et qu'il est par conséquent inutile de les optimiser.
+Par contre,~\cite{Hsieh93,Condict93,Condict94} affirment que les IPC sont au contraire le problème majeur de ces systèmes.
+
+Pour notre part,
+notre objectif en termes de performances est simple : atteindre, voire
+dépasser, les performances d'un système monolithique. 
+Cet objectif est certes ambitieux, mais en aucun cas irréalisable dans
+un système basé sur un micro-noyau.
+
+De nombreuses optimisations ont déjà été proposées et montrent que 
+cet objectif peut \^etre atteint. Nous les examinerons en détail lors de l'état
+de l'art.
+
+\subsection {Support multi-protocoles}
+
+Le système Masix est un système multi-environnements. Par conséquent,
+le serveur réseau doit \^etre capable de gérer les protocoles de
+communication propres à chaque environnement. De plus, il doit \^etre
+possible d'ajouter ou de retirer dynamiquement un protocole dans le serveur
+réseau. En effet, il serait inconcevable de le redémarrer à chaque
+fois qu'un environnement est lancé ou se termine.
+
+Afin d'atteindre ces objectifs, mais aussi afin d'en faciliter le développement,
+le serveur réseau devra posséder une structure modulaire, tout en conservant
+des performances élevées.
+
+\subsection {Sécurité des communications}
+
+La mise en place d'un système réparti comme Masix aggrave les problèmes de
+sécurité traditionnellement posés par les communications.
+En effet, les serveurs qui le composent peuvent échanger des informations
+par le réseau. Si ces informations étaient écoutées ou altérés, 
+la sécurité et l'intégrité du système pourraient s'en trouver gravement
+compromises.
+
+Nous veillerons donc à garantir la confidentialité des données qui
+circulent sur le réseau, gr\^ace à une authentification des entités
+communicantes et un cryptage des données.  
+
+\section {Etat de l'art des communications dans Mach}
+
+\subsection{Communications en mode noyau}
+
+\subsubsection {Communications inter-processus de Mach 3.0}
+
+Mach offre des mécanismes puissants de communication entre t\^aches
+~\cite {Draves90}.
+Les communications sont effectuées par des ports. Un port est simplement une
+file dans laquelle des messages peuvent \^etre ajoutés et retirés. Les
+opérations sur les ports sont effectuées via des droits sur ces ports qui
+sont accordés aux t\^aches. Trois types de droits existent~:
+\begin {enumerate}
+\item droit de réception, accordé à une seule t\^ache~;
+\item droits d'émission, accordés à plusieurs t\^aches~;
+\item droits d'émission unique, permettant à des t\^aches d'envoyer un ---
+et un seul --- message sur ce port.
+\end {enumerate}
+
+\figps {port} {125mm} {75mm} {Communication par ports dans Mach}
+
+Chaque port est géré par une seule t\^ache qui possède le droit
+de réception sur ce port. Certains ports privilégiés sont gérés
+directement par le noyau Mach lui-m\^eme.
+
+Les t\^aches accèdent aux ports via des noms de ports
+(identificateurs numériques) qui sont convertis de manière interne en
+droits par le noyau.
+
+Une t\^ache peut envoyer ou recevoir des messages sur des ports. Un
+message est simplement une structure contenant des données. Un message
+est composé~:
+\begin {itemize}
+\item d'une en-t\^ete décrivant le message~: taille du message, nom du port
+d'émission, nom du port de réception, type du message, code opération~;
+\item d'un ensemble de données typées~: type de données, nombre de
+données, valeurs.
+\end {itemize}
+
+Mach offre de nombreuses options pour l'envoi et la réception
+de messages. Quand un message est envoyé sur un port, la file correspondante
+peut \^etre pleine. Si elle n'est pas pleine, le message est copié dans la
+file. Si la file est pleine, la t\^ache émettrice a le choix entre quatre
+options~:
+\begin {enumerate}
+\item attendre indéfiniment qu'un message soit lu depuis la file~:
+la t\^ache émettrice est suspendue jusqu'à ce qu'une autre
+lise un message depuis le port et libère ainsi la place nécessaire au
+stockage du message dans la file~;
+\item attendre en spécifiant un délai~:
+la t\^ache émettrice est alors suspendue jusqu'à ce qu'une autre
+lise un message depuis le port et libère ainsi la place nécessaire au
+stockage du message dans la file ou jusqu'à ce qu'un délai
+spécifié soit écoulé~;
+\item ne pas attendre,
+le message n'est pas ajouté à la file si elle est pleine et la t\^ache
+émettrice est prévenue par un code d'erreur~;
+\item transmettre le message à Mach,
+le noyau Mach stocke le message et se charge de l'ajouter dans la
+file quand une place est libérée~; un seul message peut ainsi \^etre
+transmis à Mach pour une file pleine par t\^ache.
+\end {enumerate}
+
+ Mach offre de nombreux appels système permettant~:
+\begin {itemize}
+\item d'allouer ou désallouer des ports~;
+\item de transmettre des droits sur ports en~:
+        \begin {itemize}
+        \item copiant un droit d'émission pour une autre t\^ache, les deux
+                t\^aches possèdent alors ce droit~;
+        \item offrant un droit d'émission ou de réception à une autre
+                t\^ache, seule la deuxième t\^ache possède alors ce droit~;
+        \item transmettant un droit de réception à une autre t\^ache en le
+                convertissant en droit d'émission, la première t\^ache
+                possède alors un droit de réception et la deuxième un
+                droit d'émission sur le m\^eme port~;
+        \end {itemize}
+\item d'associer des noms aux ports~;
+\item d'envoyer et recevoir des messages sur des ports.
+\end {itemize}
+
+        
+Mach offre la possibilité de regrouper plusieurs droits de
+réception sur des ports en un ensemble de ports. Une t\^ache peut regrouper
+plusieurs ports en un tel ensemble et recevoir des messages sur cet
+ensemble. Dans ce cas, le premier message reçu sur l'un des ports
+faisant partie de l'ensemble est transmis à la t\^ache.
+
+Cette possibilité est particulièrement utile dans le cas d'un
+serveur chargé de gérer plusieurs objets représentés par des ports~:
+un ou plusieurs {\it threads} peuvent se placer en attente sur un ensemble de
+ports et \^etre réveillé lors de la réception de la première requ\^ete.
+
+\figps {portset} {125mm} {75mm} {Ensemble de ports}
+
+\label {IPC locales}
+Les IPC locales de Mach comportent quatre phases~:
+\begin{enumerate}
+\item copyin : le message est copié de l'espace d'adressage de la t\^ache vers une mémoire tampon du noyau. Les données out-of-line et les ports contenus dans le message sont convertis en représentations internes au noyau.
+\item queuing : le message est placé dans la file d'attente du port de destination~;
+\item dequeuing : le message est lu et converti.  
+\item copyout : le message est recopié dans l'espace d'adressage de son destinataire~; 
+\end{enumerate}
+
+La structure d'un message Mach, illustrée par la figure~\ref{fig:message}, est la suivante :
+\begin{itemize}
+\item une ent\^ete de taille fixe, qui contient :
+	\begin{itemize}
+	\item le port de destination~;
+	\item le port de réponse~;
+	\item la taille du message~;
+	\item le numéro de séquence~;
+	\item des flags, indiquant certaines propriétés du message~;
+	\end{itemize}
+\item un corps de taille variable, composé d'une ou plusieurs données. Chaque donnée est précédée d'un descripteur qui précise son type. Dans le cas où la donnée est OOL, seule l'adresse de la donnée est placée dans le message. 
+\end {itemize}
+
+\figps{message} {30mm} {65mm} {Structure d'un message Mach}
+
+\subsubsection {Extension des IPC à un réseau de processeurs} 
+
+~\cite {Barrera91} décrit un mécanisme d'extension des IPC locales de Mach 3.0 à l'échelle d'un réseau de processeurs. Il peut s'agir de stations de travail reliées par un réseau local ou d'une machine multiprocesseurs sans mémoire partagée. 
+
+Les objectifs de ce mécanisme sont :
+\begin{itemize}
+\item latence minimale~;
+\item intégration avec les IPC existantes ~\cite{Draves90}~;
+\item gestion des ports globaux : capacités, décompte des références, \dots.
+\end{itemize}
+
+\paragraph {Latence minimale : }
+
+plusieurs optimisations permettent de réduire le temps nécessaire à 
+la réception ou l'envoi d'un message :
+\begin{itemize}
+\item éviter des changements de contexte, notamment en modifiant le thread d'interruption pour qu'il effectue le plus de travail possible~;
+\item éviter des copies multiples des données :
+	\begin {itemize}
+	\item en partageant une mémoire tampon entre les applications et le pilote de périphérique. Cependant, cette solution pose des problèmes de sécurité car plusieurs applications se partagent une mémoire tampon unique. Le découpage de cette mémoire en plusieurs parties résoud ce problème, mais limite la taille maximale des messages.
+	\item en mappant les données dans l'espace d'adressage du noyau. Cependant, cette méthode n'est pas adaptée aux données out-of-line et pose également des problèmes de sécurité, liées au fonctionnement de la mémoire virtuelle de Mach. En effet, les pages mémoire mappées par le pilote risquent d'\^etre modifiées par l'application avant d'\^etre envoyées. Un certain nombre de solutions ont été étudiées pour résoudre ce problème.
+	\end{itemize}
+\end{itemize}
+
+\paragraph {Intégration avec les IPC existantes : }
+
+Comme nous l'avons vu au~\ref{IPC locales}, les IPC locales ont lieu en
+quatre étapes.
+L'intégration des IPC distantes intervient lors de la seconde étape : lorsque le message est sur le point d'\^etre placé dans la file d'attente, le noyau détermine s'il est destiné à une t\^ache distante. Si c'est le cas, il est converti, puis transmis sur le réseau. La conversion est différente : les données out-of-line sont recopiées dans le message et les ports traduits en ports globaux. Le message est traité de manière symétrique lors de sa réception.  
+
+\paragraph {Gestion des ports globaux : }
+
+\begin {itemize}
+\item nommage global : chaque port est nommé de manière unique, ce qui permet de déterminer la destination d'un message et de transmettre des droits sur un port entre deux t\^aches. L'identificateur d'un port contient des informations locales, qui facilitent les envois de message. Cependant, ces informations deviennent obsolètes lorsque le port migre. Par conséquent, une t\^ache qui migre doit changer de ports globaux. 
+\item utilisation d'un mandataire (ou {\it proxy})~;
+\item détection de l'absence d'émetteurs (ou {\it no-senders})~;
+\item mort des ports~;
+\item migration des ports~;
+\end{itemize}
+
+\paragraph {Fiabilité des IPC :}
+
+l'utilisation d'un réseau de communication impose certains mécanismes permettant de garantir la fiabilité des communications, c'est à dire l'arrivée à bon port de tout message émis.
+
+Ces mécanismes dépendent de la fiabilité du réseau :
+\begin {itemize}
+\item réseau fiable : acquittement négatif, envoyé lorsque le destinataire ne dispose pas de suffisamment de mémoire pour recevoir le message~;
+\item réseau non fiable : 
+	\begin{itemize}
+	\item acquittement positif, envoyé à chaque réception d'un message~;
+	\item si l'acquittement n'est pas rec{c}u, le message est retransmis aprés expiration d'un temporisateur~;  
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{IPC non typées} 
+
+OSF a modifié les IPC de Mach 3.0~\cite{Reynolds93} :
+\begin{itemize}
+\item remplacement des messages auto-descriptifs (cf.~\ref{IPC locales}) par desmessages contenant des données non typées~;
+\item nouvelles sémantiques pour l'envoi de données OOL~;
+\item ajout d'un jeton de sécurité ;
+\item ajout d'un {\it trailer} extensible dans chaque message ;
+\end{itemize}
+
+La structure d'un message non typé est décrite par la figure~\ref{fig:untyped_message}.
+
+Ils sont composés~:
+\begin{itemize}
+\item d'une ent\^ete~;
+\item de descripteurs optionnels gérés par le noyau~;
+\item du corps du message~;
+\item d'un trailer~;
+\end{itemize}
+
+\figps{untyped_message} {30mm} {65mm} {Message non typé}
+
+La structure des messages non typés est quasiment identique à celles des messages typés, ce qui permet de réutiliser une très grande partie du code existant. 
+
+Les différences sont les suivantes~:
+\begin{itemize}
+\item le numéro de séquence figure désormais dans le {\it trailer}~;
+\item les droits sur les ports et les données OOL figurent dans les descripteurs~;
+\end{itemize}
+
+Le noyau ne cherche pas à interpréter la structure des données~: les données ne sont donc pas encodées lors de la transmission du message~. C'est MIG qui se charge de l'encodage, selon le protocole NDR (Network Data Representation), déjà utilisé par DCE (Distributed Computing Environment). Ceci permet d'éviter le surco\^ut introduit par l'encodage et le décodage systématique des données, qui est inutile lorsque les machines sont homogènes~; 
+
+Les modifications des sémantiques des données OOL ont pour objectif d'améliorer les performances des serveurs, afin d'améliorer les capacités temps réel de Mach, et d'accro\^itre la sécurité.
+\begin{itemize}
+\item une option permettant de copier physiquement les données OOL lors de l'envoi d'un message a été ajoutée.  Elle résoud les problèmes de partage des données OOL entre la t\^ache et le noyau. De plus, la transmission de données OOL de petite taille entre deux noeuds devient plus rapide~;
+
+\item les IPC non typées améliorent également les performances des listes {\it gather/scatter} de données OOL. Il est désormais possible de définir une liste de mémoires tampons {\it déjà allouées} dans lesquelles seront copiées les données OOL lors de leur réception~;
+
+\item seules les données OOL sont transmises : il n'y a plus d'alignement sur les pages, ce qui posait un sérieux problème de sécurité. En effet, dans le cas d'une donnée OOL de quelques octets, toute la page était transmise. Un client pouvait ainsi avoir accès à des données privées du serveur~;
+
+\end{itemize}
+
+\subsubsection{NORMA}
+
+NORMA, développé par OSF~\cite{norma93,norma94} est une extension de Mach qui permet à des t\^aches distantes de communiquer en utilisant les sémantiques des IPC standards de Mach. Ainsi, les communications entre t\^aches distantes sont totalement transparentes.
+
+Lorsqu'une t\^ache envoie un droit d'émission sur un des ses ports à une t\^ache distante, ce port est pris en charge par NORMA : il devient ainsi un port NORMA. Chaque port NORMA possède un identificateur unique, appelé uid. Chaque noeud gère une table de correspondance, contenant les ports NORMA dont il connait l'existence. Un port NORMA figure dans la table de tout noeud sur lequel s'exécute une t\^ache possédant un droit d'émission sur ce port. Sur ces noeuds, le port est appelé port mandataire. Sur le noeud d'origine du port, celui-ci est appelé port principal.
+
+\paragraph {Structure de NORMA :}
+
+NORMA est composé de plusieurs modules :
+\begin{itemize}
+
+\item module de sortie : il convertit les messages au format NORMA, puis les passe au module de transport~;
+
+\item module de contr\^ole de flux : il gère le protocole de comuunication, qui fonctionne selon le modèle {\it stop-and-wait}~;
+
+\item module de transport : il constitue l'interface entre NORMA et le pilote de périphériques;
+
+\item module d'entrée : il réassemble les fragments et les place dans la file d'attente du port de destination~;
+
+\end{itemize}
+
+Les interactions entre ces modules sont décrites sur la figure~\ref{fig:norma}. 
+
+\figps{norma} {165mm} {75mm} {Interactions entre les modules de NORMA}
+
+Nous pouvons maintenant détailler les traitements effectués par NORMA. Supposons qu'une t\^ache A souhaite envoyer un message à une t\^ache B distante :
+
+\begin{enumerate}
+
+\item A compose le message et l'envoie par {\bf mach\_msg()}~;
+
+\item cet appel provoque une trappe dans le noyau, qui copie le message de l'espace d'adressage de A vers celui du noyau~;
+
+\item le noyau détermine que le message est destiné à une t\^ache distante et appelle NORMA, invoquant ainsi le module de sortie~;
+
+\item le module de sortie convertit le message au format NORMA :
+	\begin{itemize}
+	
+	\item les noms de ports contenus dans l'ent\^ete et le corps du message	en uid NORMA~;
+	
+	\item si le kmsg ne contient que des données inline et si sa taille est inférieure ou égale à une page, le module de sortie le transmet
+au module de contr\^ole de flux~; 	
+	
+	\item sinon, le module de sortie crée un ou plusieurs 		{\it page-list copy object}~.	
+
+	\end{itemize}
+
+\item lorsque le module de contr\^ole de flux décide qu'il est temps d'envoyer le premier paquet, il le transmet au module de sortie~;
+
+\item le module de sortie lui ajoute une en-t\^ete, puis le passe au module de transport~;
+
+\item le module de transport transmet le message, en utilisant les {\bf page-list copy object} et un mécanisme de continuation. Si sa taille dépasse la taille maximale d'une unité de transmission, celui-ci est fragmenté~;
+
+\item sur le noeud distant, le gestionnaire d'interruptions du pilote de périphérique réseau inovoque le module de transport, qui copie les fragments du  kmsg dans une mémoire tampon avant de les transmettre au module de contr\^ole de flux~;
+
+\item le module de contr\^ole de flux décide d'accepter les fragments et les transmet au module d'entrée~;
+
+\item le module d'entrée réassemble les fragments, place le message dans la file d'attente de la t\^ache destinataire puis acquitte la réception~;
+
+\item le message d'acquittement est transmis au module de transport~;
+
+\item le module de transport transmet le message d'acquittement sur le réseau~;
+
+\item sur le noeud de départ, le module de transport transmet le message d'acquittement au module de contr\^ole de flux~;
+
+\item le module de contr\^ole de flux décide que le paquet a bien été rec{c}u par son destinataire, et que le paquet suivant peut \^etre envoyé.
+
+\item Lorsque B est pr\^ete à recevoir le message, elle appelle {\bf mach\_msg()}. NORMA convertit le message au format standard, puis le recopie de l'espace d'adressage du noyau vers celui de B.
+
+\end {enumerate}
+
+\subsubsection{Mach Packet Filter}
+
+~\cite{Yuhara94} décrit un nouveau mécanisme de filtrage des paquets. Les filtres de CMU/Stanford ~\cite{Mogul87} et de Berkeley ~\cite{McCanne93} souffrent de deux défauts majeurs :
+\begin{enumerate}
+\item le temps de traitement des paquets est proportionnel au nombre d'entités communicantes , car chacune possède son propre filtre. Ceci est illusté par la figure~\ref{fig:old_filter}~;
+\item ils ne gèrent pas les messages fragmentés, qui doivent donc \^etre traités par une couche supérieure. En effet, seul le premier fragment contient l'adresse du destinataire. De plus, les fragments peuvent arriver dans le désordre, voire ne pas arriver du tout.
+\end{enumerate}
+
+~\figps {old_filter} {110mm} {55mm} {Ancien filtre de paquets}
+
+Pour résoudre le premier problème, le nouveau filtre tente d'envoyer tous les paquets d'un protocole déterminé en une seule étape : il n'y a donc plus qu'un seul filtre par protocole. Ceci est illustré par la figure~
+\ref{fig:new_filter}.
+
+~\figps {new_filter} {65mm} {55mm} {Nouveau filtre de paquets}
+
+Pour résoudre le second, il utilise une mémoire pour chaque filtre qui lui
+permet de faire le lien entre les informartions qui ne figurent que dans
+le premier fragment (destinataire) et les informations communes à tous les
+fragments (identificateur du message). Ainsi, le filtre peut suspendre le traitement des fragments du message tant que le premier fragment n'est pas arrivé.
+
+Ce nouveau filtre est particulièrement intéressant lorsqu'il est combiné avec l'implémentation réseau décrite dans ~\cite{Maeda93}. La structure
+du système qui en résulte est décrite par la figure~\ref{fig:packet+lib}.
+
+~\figps {packet+lib} {60mm} {80mm} {Combinaison du Mach Packet Filter et des librairies de protocoles}
+
+Les performances du nouveau filtre sont intéressantes, puisqu'il est 7,8 fois
+plus rapide que celui de CMU/Stanford et 4,3 fois plus rapide que celui de
+Berkeley.
+
+\subsection {Communications en mode utilisateur}
+
+\subsubsection {Le netmsg server}
+
+Le netmsg server ~\cite{netmsg89}, développé par CMU, constitue la première tentative d'extension des IPC locales de Mach 3.0 à l'échelle
+d'un réseau local.
+
+Il est composé d'une t\^ache Mach multithreadée, qui s'exécute en mode
+utilisateur sur chaque noeud du réseau. Les serveurs réseau communiquent
+entre eux afin d'avoir chacun une vue cohérente de l'ensemble des t\^aches
+qui s'exécutent sur tous les noeuds.
+
+\subsubsection{Structure du serveur}
+
+Les principaux services assurés sont :
+\begin{itemize}
+\item conversion des ports, gr\^ace à une base de données contenant les informations suivantes :
+\begin{itemize}
+\item un port local, représentant la t\^ache locale~;
+\item un port réseau, repéré par un identificateur unique, auquel sont
+associées certaines informations permettant de préserver la sécurité
+des communications~;
+\end {itemize}
+\item gestion des ports : vérification de la validité des informations contenues dans la base de données et mise à jour si nécessaire~;
+\item gestion des protocoles de transport : segmentation et réassemblage des messages, contr\^ole de flux, gestion des erreurs de transmission~; 
+\item gestion des messages : certaines informations contenues dans les messages Mach n'ont pas de sens à l'échelle du réseau. C'est le cas des données out-of-line ou des droits sur les ports. Il est donc impératif de les convertir
+une première fois avant de transmettre le message sur le réseau, puis 
+à nouveau avant de livrer le message à son destinataire. Une conversion est également nécessaire lorsque l'émetteur et le destinataire n'utilisent pas
+la m\^eme représentation interne des données (little endian ou big endian).
+\item nommage~;
+\item cryptage des messages~;
+\end {itemize}
+
+La figure~\ref {fig:netmsg} illustre la communication entre deux t\^aches Mach. 
+\figps {netmsg} {90mm} {50mm} {Communication gr\^ace au netmsg server}
+
+Cette approche souffre d'un certain nombre de problèmes qui dégradent 
+les performances de manière importante. En effet,  
+l'envoi et le réception d'un message nécessitent de nombreux changements de contexte, ainsi que de multiples copies des données. 
+
+Ces surco\^uts sont particulièrement pénalisants lorsque les messages sont
+de petite taille.
+
+\subsubsection {Mémoire partagée}
+
+~\cite{Reynolds91} propose une solution à ces problèmes de performances.
+La figure~\ref {fig:shared_memory} illustre ce mécanisme.
+
+\figps {shared_memory} {100mm} {80mm} {Mémoire partagée entre le serveur réseau et le pilote de périphériques}
+
+Il repose sur deux extensions du noyau :
+\begin{itemize}
+\item la possibilité de partager de la mémoire entre un pilote de périphériques du noyau et une t\^ache en mode utilisateur~;
+\item la possibilité pour un gestionnaire d'interruptions du noyau de débloquer un thread en mode utilisateur~;
+\end{itemize}
+
+Le serveur réseau et le pilote de périphériques réseau partagent en 
+lecture-écriture une région mémoire. Elle est composée de files de 
+messages et de mémoires tampons.
+
+Lors de l'arrivée d'un paquet, le gestionnaire d'interruptions de l'interface
+réseau le place dans la file appropriée et débloque un thread du serveur
+réseau qui traite le paquet.
+
+Le partage des files entre le gestionnaire d'interruption et le serveur posent
+des problèmes complexes :
+\begin{itemize}
+\item synchronisation des accès~;
+\item allocation et désallocation des tampons~;
+\end{itemize}
+
+De plus, une seule t\^ache utilisateur peut bénéficier de ce mécanisme.
+
+Cette implémentation augmente les performances de manière non négligeable, mais elles restent très inférieures à celles d'un système monolithique. 
+
+\subsubsection {Mapping du driver dans l'espace d'adressage du serveur}
+
+~\cite{Forin91} présente une autre solution pour améliorer les performances du netmsg server.
+Il s'agit ici de mapper le pilote de périphériques dans l'espace d'adressage du serveur, où
+figurent déjà les protocoles réseaux, ce qui permet d'éviter la recopie des messages entre l'espace d'adressage du micronoyau et celui du serveur, ainsi que de nombreux changements de contexte.
+
+En terme de performances, cette optimisation permet de doubler le taux de transfert du serveur
+réseau, ce qui reste toutefois encore loin des performances d'un système monolithique.
+
+La figure~\ref {fig:mapped_driver} illustre ce mécanisme.
+
+Mach 3.0 contient les appels systèmes permettant à une t\^ache utilisateur de mapper un
+pilote de périphérique dans son propre espace d'adressage, puis de communiquer directement avec ce
+périphérique : 
+\begin{itemize}
+\item {\bf device\_map()}~; 
+\item {\bf device\_open()}~; 
+\item {\bf device\_close()}~; 
+\item {\bf device\_get\_status()}~; 
+\item {\bf device\_set\_status()}~; 
+\item {\bf device\_read()}~; 
+\item {\bf device\_write()}~; 
+\end{itemize}
+
+\figps{mapped_driver} {95mm} {70mm} {Driver mappé dans l'espace d'adressage du serveur}
+
+\subsubsection {Adaptation du code réseau au micronoyau Mach}
+
+Les mesures de performances montrent systématiquement que les systèmes basés sur
+un micronoyau sont plus lents que les systèmes monolithiques. On pourrait donc en conclure
+que les micronoyaux sont ne sont pas adaptés aux communications réseau. Sans doute s'agirait-il
+là d'une conclusion un peu h\^ative.
+
+En effet,~\cite{Maeda92} montre qu'il est tout à fait possible d'obtenir de bonnes performances, à condition de tenir compte des spécificités du micronoyau. Cet article montre en substance que les performances réseau des micronoyaux sont mauvaises car le code réseau qu'ils utilisent est inadapté : il provient le plus souvent d'un système monolithique. C'est le cas d'Unix Server~\cite{Golub90}, qui utilise le code réseau de 4.3BSD.
+
+En modifiant les interactions entre le code réseau de Unix Server et le micronoyau, les auteurs ont nettement améliorié ses performances. Leurs optimisations sont les suivantes :
+\begin{itemize}
+\item pas d'utilisation des données out-of-line, qui obligent le noyau à mapper ces données dans son espace d'adressage. Lorsque les messages sont petits, il est moins co\^uteux de les lui envoyer directement~;
+\item envoyer les messages directement au pilote de périphériques, plut\^ot que de les envoyer au micronoyau~;
+\end {itemize}
+
+Unix Server ainsi modifié gagne en rapidité, mais ses performances restent très inférieures
+à celles de Mach 2.5. Elles sont par contre comparables à celles du serveur utilisant la
+mémoire partagée, décrit dans ~\cite{Forin91}.
+
+D'autres optimisations s'imposent donc pour espérer combler le décalage :
+\begin{itemize}
+\item réecriture des clients, qui appellent le serveur en utilisant des appels systèmes Mach, et non pas des appels Unix, afin d' éviter le passage dans l'émulateur~;
+\item déverrouillage des C-Threads du serveur, afin de réduire le nombre de changements de contexte
+.
+\end{itemize}
+
+Les auteurs ont développé un serveur UDP afin de tester l'efficacité de ces optimisations.
+Leurs mesures montrent que ces modifications permettent d'obtenir des performances supérieures à celles de Mach 2.5. 
+
+Le tableau suivant regroupe les performances des différentes implémentations de UDP décrites
+jusqu'ici. Les tests ont été effectués sur deux DECstation 2100 reliées par un réseau Ethernet. Le temps indiqué est la durée d'un aller-retour d'un message UDP.
+
+\begin{center}
+\begin{tabular}{|l|r|} \hline
+Implémentation de UDP & Temps (ms) \\ \hline\hline
+Mach 2.5 & 4,8 \\ \hline
+Unix Server (IPC, VM) & 19,5 \\
+Unix Server (IPC, pas de VM) & 14,3 \\
+Unix Server (ni IPC, ni VM) & 13,6 \\
+Unix Server (driver mappé) & 13,1 \\ \hline
+Serveur UDP & 4,2 \\ \hline
+\end{tabular}
+\end{center}
+
+La conclusion de cette expérience est que les communications réseau peuvent avoir lieu dans l'espace d'adressage du serveur sans dégrader les performances , à condition d'éviter au maximum les interactions avec le noyau.
+
+\subsubsection {Librairie de protocoles}
+
+~\cite{Maeda93} prolonge l'approche précédente en plac{c}ant le maximum de code réseau dans l'espace d'adressage des applications. Le code réseau est donc scindé en trois parties :
+\begin{itemize}
+\item une partie située dans le serveur, chargée des opérations qui nécessitent l'accès à des structures de données globales, et qui influent peu sur les performances des communications (établissement et terminaison d'une communication, routage, \dots)~;  
+\item une librairie multithreadée, mappée dans l'espace d'adressage de chaque application, qui implémente les sémantiques de la couche socket de 4.3BSD~;
+\item une couche d'interface au-dessus de l'adaptateur réseau, chargée d'envoyer et de recevoir les paquets.
+\end{itemize}
+
+La structure de ce système est décrite sur la figure~\ref{fig:library}.
+
+\figps{library} {95mm} {80mm} {Librarie réseau mappée}
+
+Plusieurs versions de la librairie ont été développées :
+\begin{itemize}
+\item la première version utilise le Mach Packet Filter ~\cite{Yuhara94} et les IPC pour communiquer avec le noyau. Les paquets sont envoyés un par un. 
+\item la seconde utilise le Mach Packet Filter (MPF) et une mémoire partagée entre entre le noyau et l'application. Ceci n'améliore pas le temps de latence de la transmission : lors de l'arrivée d'un paquet, celui-ci est d'abord copié dans un tampon du noyau avant d'\^etre lu par le MPF. 
+\item la troisième utilise un MPF mieux intégré au noyau : seule l'ent\^ete du paquet est transmise du noyau vers le MPF. Une fois que celui-ci a déterminé la destination du paquet, il le copie directement du noyau vers l'espace d'adressage du destinataire.
+\end{itemize}
+
+Afin d'améliorer encore les performances de la librairie, le fonctionnement de la couche socket a été légèrement modifié : l'application et la librairie partagent un tampon afin d'éviter une copie des données lors de l'envoi ou de la réception d'un paquet.
+
+
+Le tableau suivant indique les performances des différentes versions. Les mesures ont été effectuées entre deux DECstation 5000/200 reliées par un réseau Ethernet. Le débit et la latence de TCP ont été mesurés pour des paquets de 1 Ko. Les performances de Mach 2.5 et de Unix Server sont indiquées à titre de comparaison.
+
+\begin{center}
+\begin{tabular}{|l|c|c|} \hline
+& Débit (Ko/s) & Latence (ms) \\ \hline\hline
+Mach 2.5 & 1070 & 4,56 \\ \hline
+Unix Server & 740 & 7,82 \\ \hline
+Librairie MPF+IPC & 910 & 5,09\\
+Librairie MPF+SHM & 1076 & 5,32\\
+Librairie IMPF+SHM & 1088 & 5,09\\ \hline
+Librairie NEWAPI+MPF+IPC & 959 & 4,96 \\
+Librairie NEWAPI+MPF+SHM & 1083 & 4,94 \\
+Librairie NEWAPI+IMPF+SHM & 1099 & 4,80\\ \hline
+\end{tabular}
+\end{center}
+
+
+En conclusion, il est tout à fait possible d'obtenir des performances équivalentes, voire m\^eme supérieures, à celles d'un système monolithique, à condition :
+\begin{itemize}
+\item de bien décomposer les services et d'en placer le plus possible dans l'espace d'adressage des applications~;
+\item de tirer profit des spécificités du micronoyau pour optimiser les performances (pilote de périphériques mappés, mémoire partagée, \dots)~;
+\item d'améliorer le fonctionnement interne du protocole, tout en préservant ses sémantiques de départ~;
+\item d'éviter si possible le passage dans un émulateur Unix en réecrivant les clients pour qu'ils utilisent directement les appels Mach. Ceci est tout à fait envisageable pour les applications courantes comme {\bf ftp} ou {\bf telnet}. 
+\end {itemize}
+
+\subsection {Co-location}
+
+~\cite{Condict93}
+
+~\cite{Condict94}
+
+\section {Autres systèmes}
+
+\subsection{V kernel}
+
+VMTP :~\cite{Cheriton86}
+
+\subsection{Amoeba}
+
+FLIP :~\cite{Kaashoek93a}
+
+Communication de groupe :~\cite{Kaashoek92,Kaashoek93b}
+
+Comparaison entre communications en mode noyau et en mode utilisateur:~\cite{Oey95}
+
+\subsection{Sprite}
+
+\subsection{Firefly}
+
+~\cite{Schroeder90}
+
+\subsection{Chorus}
+
+\subsection{x-kernel}
+
+Présentation de x-kernel :~\cite{Hutchinson91}
+
+Implémentation de l'Université d'Arizona :~\cite{Orman93}
+
+Evaluation de x-kernel par OSF :~\cite{Travostino93}
+
+Implémentation d'OSF :~\cite{Sakaruba94}
+
+\bibliographystyle{rcnamed}
+\bibliography{net,etat,wanted}
+\end{document}
+

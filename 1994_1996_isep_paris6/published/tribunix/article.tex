@@ -1,0 +1,287 @@
+% -*-latex-*-
+%
+%
+\documentstyle [11pt,a4,pdareport,french] {article}
+
+\begin {document}
+
+% \title  {Le système d'exploitation Linux}
+% \author {Rémy Card\thanks{Remy.card@linux.org}
+%	\and René Cougnenc\thanks{Rene.Cougnenc@freenix.fr}
+%	\and Julien Simon\thanks{Julien.Simon@freenix.fr}
+%	}
+%\date   {}
+% \maketitle
+
+\begin {center}
+{
+\Large
+Le système d'exploitation Linux
+}
+
+Rémy Card, René Cougnenc, Julien Simon
+
+Remy.Card@linux.org, Rene.Cougnenc@freenix.fr, Julien.Simon@freenix.fr
+
+\end {center}
+
+\section {Historique de Linux}
+
+	Au cours de l'année 1991, un étudiant finlandais, nommé Linus Torvalds,
+a acheté un micro-ordinateur de type PC, afin d'étudier la programmation du
+microprocesseur i386. Ne voulant pas être limité par MS/DOS, il a tout d'abord
+utilisé un clone d'Unix, peu cher, appelé Minix. Minix possède lui-même
+certaines limitations qui, bien que moins importantes que celles de MS/DOS,
+sont assez génantes (limitation de la taille des exécutables à 64 kilo-octets,
+limitation des systèmes de fichiers à 64 méga-octets, temps de réponse
+déplorable, \ldots). Aussi, Linus Torvalds a commencé à ré-écrire certaines
+parties du système afin de lui ajouter des fonctionnalités et de le rendre
+plus efficace et a diffusé une distribution source de son travail via
+Internet. La première version de Linux (version 0.1 en août 1991) était née.
+
+	Cette première version était très limitée (elle ne comportait même pas
+de gestionnaire des disquettes) et n'était utilisable que sous Minix. Aussi, il
+est fort probable qu'elle ait été utilisée par très peu de personnes.
+Néanmoins, un
+petit nombre de << hackers >>\footnote {<< hacker >> est ici employé dans son
+sens originel, c'est-à-dire une personne compétente passionnée passant le
+plus gros de
+son temps à coder des programmes utiles, et non dans le sens où il est parfois
+employé pour désigner des << pirates >> informatiques.} ont découvert, à cette
+époque, cet embryon de système et ont vu en lui la base d'un système
+exploitable. Aussi, un certain nombre de personnes ont commencé à travailler
+avec Linus Torvalds afin d'enrichir le noyau.
+
+	Au cours des quatre dernières années, le développement du noyau Linux,
+ainsi que des utilitaires nécessaires pour en faire un système compatible avec
+Unix, a été mené de manière intensive par un ensemble de programmeurs, situés
+aux quatre coins du monde, communiquant via le réseau Internet. Ces
+développeurs ont implémenté de nombreuses fonctionnalités qui font de Linux
+aujourd'hui un clone efficace d'Unix pour micro-ordinateurs PC-386, Amiga
+et Atari\footnote{Des portages de Linux sont en cours et le noyau devrait
+fonctionner assez prochainement sur stations de travail Sparc et sur PC
+Alpha.}.
+
+\section {Méthode de développement}
+
+	La façon dont Linux a été développé (et continue à être développé) est
+assez originale. En effet, le développement de Linux n'est pas contrôlé par une
+organisation responsable du système~: un ensemble de développeurs, répartis
+dans le monde entier, collabore pour étendre les fonctionnalités du système,
+le plus souvent an dialoguant via Internet. Tout programmeur disposant des
+compétences nécessaires, de temps libre, et d'une certaine dose de courage,
+peut participer au développement du système.
+
+	Bien que le nom << Linux >> se réfère au noyau du système, le
+développement ne se confine pas à ce seul noyau~: certaines équipes
+travaillent sur d'autres projets, comme la conception et le développement
+de nouveaux utilitaires ou encore le développement des librairies partagées
+utilisées pour programmer.
+
+	Chaque équipe travaille selon une structure hiérarchique informelle~:
+une personne est respon\-sable d'un projet et plusieurs autres
+programmeurs participent au développement en contribuant du code. L'exemple
+typique de cette méthode de développement est le noyau lui-même~: Linus
+Torvalds maintient le noyau et c'est lui qui effectue les distributions source
+quand il estime que le code est utilisable~; chaque partie importante du
+noyau (comme la gestion du réseau, les gestionnaires de périphériques, le
+système de fichiers, \ldots) est sous la responsabilité d'un développeur
+qui centralise le travail d'autres programmeurs et les transmet à Linus
+Torvalds pour inclusion dans le noyau officiel\footnote {\'Evidemment, le
+responsable en question ne se contente pas de coordonner le développement et
+programme également.}.
+
+	Bien que cette méthode de développement puisse surprendre au premier
+abord, elle est très efficace. La totalité du noyau de Linux a été écrite
+par des volontaires, qui ont souvent passé des nuits entières à programmer
+et à corriger des bogues.
+
+	Le code développé dans le cadre de Linux est le plus souvent diffusé
+sous forme de programme source, sous la licence GNU (<< General Public
+License >>, ou GPL). La GPL stipule que les programmes source sont la
+propriété de leurs auteurs et qu'ils doivent être distribués sous forme de
+source. Cette licence autorise quiconque à revendre ces programmes mais elle
+impose que tout utilisateur puisse avoir accès aux programmes source. De plus,
+la GPL impose que toute modification de ces programmes est couverte par la
+même licence, et donc que les programmes seront toujours librement disponibles.
+
+\section {Fonctionnalités de Linux}
+
+\subsection {Le noyau}
+
+	Linux offre toutes les fonctionnalités d'un clone Unix sur
+micro-ordinateurs PC-386. Il fournit un
+environnement de travail multi-utilisateurs, plusieurs personnes peuvent
+utiliser la machine au même moment, et multi-tâches, chaque utilisateur peut
+exécuter plusieurs programmes en parallèle. Le système fonctionne en mode
+protégé, exécute du code 32 bits\footnote {contrairement à d'autres systèmes
+qui s'exécutent en mode 16 bits et sont donc moins performants\ldots}, et
+utilise les mécanismes de protection du processeur pour garantir qu'aucun
+processus ne peut perturber l'exécution des autres ou du système lui-même.
+
+	Le noyau implémente les sémantiques Unix~: processus concurrents,
+chargement à la demande des
+program\-mes exécutables avec partage de pages et copie en écriture,
+pagination, systèmes de fichiers, support des protocoles réseau TCP/IP.
+
+	Il supporte, de plus, la majorité des périphériques existant dans
+le monde PC (y compris les cartes sonores) et permet de relire les partitions
+MS/DOS, OS/2 et tous les formats standards de CD/ROM.
+
+\subsection {Applications}
+
+	Les librairies de développement dans Linux sont basées sur les
+librairies GNU, de la << Free Software Fundation >>. Ces libraries offrent
+un haut degré de comptabilité avec les différents << standards >> Unix (Posix,
+BSD, System V), ce qui permet de compiler facilement tout type d'application
+disponible au niveau source pour Unix. Ces librairies existent sous forme de
+bibliothèques partagées, ce qui signifie que le code des fonctions de librairie
+n'est chargé qu'une seule fois en mémoire et que les programmes exécutables
+sont plus petits en taille sur les disques.
+
+	La plupart des utilitaires standards Unix sont disponibles sous Linux,
+aussi bien les com\-mandes de base que des applications plus evoluées, comme
+les compilateurs et éditeurs de texte. La plupart des ces utilitaires sont
+des programmes GNU,
+qui supportent des extensions qu'on ne retrouve pas dans les versions BSD
+ou System V de ces programmes, mais qui restent compatibles avec ces
+dernières. Certains programmes, notamment les utilitaires réseau, sont des
+programmes BSD. En résumé, pratiquement tout programme Unix diffusé sous
+forme de source peut être compilé sous Linux et s'exécute parfaitement, grâce
+à la compatibilité implémentée dans le noyau et dans les librairies.
+
+	En plus des programmes standards, Linux supporte de << grosses >>
+applications. On retrouve l'interface graphique X Window (XFree86 3 basé
+sur X11R6), un environnement de dévelop\-pement très complet comprenant toutes
+les bibliothèques standard, compilateurs et débogueurs dispo\-nibles sous Unix
+(C, C++, Objective-C, Smalltalk, Fortran, Pascal, Lisp, Scheme, Ada, gdb,
+\ldots). L'utilisateur dispose également d'outils très puissants de formatage
+de texte, comme nroff, \TeX, et \LaTeX\footnote {Cet article a d'ailleurs
+été rédigé sous Linux avec l'éditeur Emacs sous X-Window puis formaté avec
+\LaTeX.}.
+
+\subsection {Compatibilité avec d'autres systèmes}
+
+	Linux n'est pas compatible directement avec les applications
+développées pour d'autres sys\-tèmes d'exploitation. Afin de permettre aux
+utilisateurs de Linux de bénéficier des applications qu'ils possèdent déjà,
+que ce soit sous MS/DOS, Windows ou des systèmes Unix commerciaux, des
+émulateurs sont en cours de développement et permettent déjà d'exécuter des
+applications << étrangères >>.
+
+	L'émulateur MS/DOS utilise le mode virtuel 8086 du processeur i386
+pour exécuter des applications DOS. Il implémente les fonctionnalités de
+MS/DOS dans un processus et assure ainsi l'interfaçage entre l'application et
+le système en émulant les appels système effectués par le programme. \`A ce
+jour, de nombreuses applications fonctionnent correctement sous l'émulateur
+MS/DOS et la liste s'allonge tous les jours.
+
+	L'émulateur WINE est assez similaire à WABI, développé par Sun
+Microsystems~: il permet d'exécuter des applications Windows en convertissant
+leurs appeles graphiques en requêtes adressées à l'environnement X Window. \`A
+ce jour, seul un petit nombre d'applications Windows fonctionne correctement
+mais le développement de WINE n'en est qu'à ses débuts et les progrès semblent
+prometteurs.
+
+	Le module de compatibilité iBCS2 permet d'exécuter des
+applications développées pour des systèmes Unix commerciaux sur
+micro-ordinateurs PC-386. Cet émulateur convertit les appels système se
+conformant au standard iBCS2 (qui définit le format des primitives système
+ainsi que celui de leurs arguments) en appels natifs traîtés par le noyau
+Linux. Il est ainsi possible d'exécuter de manière transparente des programmes
+développés pour d'autres systèmes, comme SCO par exemple.
+
+	Le but de ces différents émulateurs est de permettre d'utiliser des
+applications commerciales sous Linux. Il faut désormais signaler que certains
+éditeurs de logiciels considèrent maintenant Linux comme un marché potentiel
+pour leurs produits et envisagent de porter leurs applications sous Linux. De
+la sorte, il est probable qu'un certain nombre d'applications commerciales
+tourneront bientôt en mode natif sous Linux, sans nécessiter
+d'émulateur. L'exemple le plus frappant de cette tendance consiste en
+le portage du jeu DOOM qui fonctionne sous Linux dans l'environnement X
+Window\footnote {L'existence de ce jeu sous Linux explique d'ailleurs les
+efforts des communautés FreeBSD et NetBSD à implémenter un émulateur Linux
+afin de pouvoir utiliser ce jeu\ldots}.
+
+\section {Disponibilité de Linux}
+
+	Linux, et ses programmes associés, étant diffusés librement sous la
+licence GNU, ils sont disponibles au téléchargement sur de nombreux serveurs
+FTP de part le monde. Les trois sites primaires de distribution sont les
+suivants~:
+\begin {itemize}
+\item {\tt tsx-11.mit.edu}, dans le répertoire {\tt /pub/linux}~;
+\item {\tt ftp.funet.fi}, dans le répertoire {\tt /pub/OS/Linux}~;
+\item {\tt sunsite.unc.edu}, dans le répertoire {\tt /pub/Linux}.
+\end {itemize}
+
+	De nombreux serveurs FTP effectuent des miroirs réguliers de ces sites,
+permettant ainsi d'accéder rapidement aux mêmes données en raison de la
+proximité géographique. En France, on peut citer les serveurs suivants~:
+\begin {itemize}
+\item {\tt ftp.ibp.fr}, dans le répertoire {\tt /pub/linux}~;
+\item {\tt ftp.fdn.org}, dans le répertoire {\tt /pub/Linux}~;
+\item {\tt ftp.loria.fr}, dans le répertoire {\tt /pub/linux}~;
+\item {\tt ftp.univ-angers.fr}, dans le répertoire {\tt /pub/Linux}.
+\end {itemize}
+
+	De nombreuses distributions binaires du système sont également
+disponibles pour un prix raisonnable sous forme de CD/ROM. Ceci permet aux
+personnes intéressées d'installer un système Linux, même si elles n'ont pas
+accès au réseau Internet. Il est à noter que ces CD/ROM ne sont pas toujours
+à jour, vu l'évolution rapide de Linux, mais ils sont généralement édités
+périodiquement afin d'incorporer les dernières versions disponibles.
+
+\section {Sources d'informations sur Linux}
+
+	Linux fait l'objet de plusieurs forums de discussion Usenet, aussi
+bien en langue anglaise (comp.os.linux.advocacy, comp.os.linux.announce,
+comp.os.linux.answers, comp.os.linux.develop\-ment.apps,
+comp.os.linux.development.system,
+comp.os.linux.hardware, comp.os.linux.network\-ing, comp.os.linux.misc,
+comp.os.linux.setup, comp.os.linux.x) qu'en français (fr.comp.os.linux).
+
+	De nombreuses documentations sont désormais également accessibles.
+Les << HOWTO >> décrivent, brièvement mais clairement, l'installation et
+l'utilisation d'une partie du système. De plus, un groupe de documentation,
+le << Linux Documentation Project >>, publie des guides complets qui sont
+diffusés librement. Le serveur FTP {\tt ftp.ibp.fr} offre ces documentations
+dans le répertoire {\tt /pub/linux/docs} ainsi que leurs traductions françaises
+dans le répertoire {\tt /pub/linux/french}.
+
+	Enfin, il faut signaler que certains éditeurs commencent à publier des
+livres complets sur Linux. Les premiers livres publiés sur Linux étaient
+rédigés en allemand mais il existe maintenant des livres en anglais sur Linux,
+certains de ces livres étant traduits en français.
+
+\section {\'Evolution future de Linux}
+
+	La version actuelle du noyau de Linux est 1.2. Bien que Linux soit
+déjà très complet et compétitif avec des systèmes d'exploitation commerciaux,
+le développement du système continue.
+
+	Des portages du noyau sont en cours afin de réaliser des versions
+s'exécutant sur stations de travail Sparc et PC Alpha, en plus des versions
+actuelles fonctionnant sur micro-ordinateurs PC-386, Amiga et Atari. De
+nouvelles fonctionnalités sont également à l'étude et devraient être
+disponibles prochainement.
+
+	Le noyau n'est pas la seule partie du système à évoluer. Des équipes
+de développement travaillent pour étendre les fonctionnalités des
+utilitaires et des librairies. On peut citer, notamment, l'utilisation
+imminente du format de fichier exécutable ELF qui permettra la création de
+librairies dynamiques et une compatibilité plus grande avec les versions
+d'Unix commerciaux s'exécutant sur PC-386.
+
+\end {document}
+
+
+
+
+
+
+
+
+
+
+

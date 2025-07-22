@@ -1,0 +1,324 @@
+\documentstyle [12pt,epsf,PDPTA] {article}
+
+\begin{document}
+
+\Title{Building~a~Distributed~Generic~Layer for~Multiple~Personality~Support on~top~of~the~Mach~Microkernel}
+
+\bibliographystyle{unsrt}
+
+
+\newcommand {\figps} [4]
+{
+    \begin{figure} [ht]
+       \begin{center}
+		\leavevmode
+                \epsfxsize=#2
+                \epsfysize=#3
+                \epsffile {#1.ps}
+        	\caption {#4}
+        	\label {fig:#1}
+        \end{center}
+    \end{figure}
+}
+
+
+\begin{oneAuthor}
+Franck M\'evel and Julien Simon\footnote{This work has been funded by the Institut Sup\'erieur d'Electronique de Paris, 26 rue Notre-Dame des Champs, 75006 PARIS, FRANCE.}  \\
+Laboratoire MASI, Institut Blaise Pascal\\ 
+Universit\'e Paris VI\\
+4 place Jussieu\\
+75252 PARIS CEDEX 05, FRANCE\\
+Phone: +33 (1) 44 27 71 04\\
+Fax: +33 (1) 44 27 62 86\\
+\{Franck.Mevel,Julien.Simon\}@masi.ibp.fr
+\end{oneAuthor}
+
+
+\Abstract{
+	Masix
+is a distributed multi-server operating system, based on 
+	the Mach microkernel, with multiple personality support. 
+	Its main feature is a {\it Distributed Generic Layer} (DGL), 
+	which offers distributed services to the personalities. 
+	The distributed multi-server architecture of Masix  
+	grants it a high modularity, but also raises many issues, which 
+	cannot be solved without adequate communication services. 
+	Thus, after a brief description of the structure of Masix, we study 
+	some of the features of the communication services offered by the DGL~: 
+	location transparency, multi-protocol support, reliability, 
+	confidentiality and performance.
+	Then, we describe a higher level feature of the DGL, i.e. 
+	migration support.
+	Thanks to the definition of a new entity called {\it Generic Process}, 
+	our migration mechanism is transparent to the personalities, and 
+	induces minimal residual dependencies.
+}
+
+
+\noindent
+
+{\it Keywords:} 
+{\small distributed system, microkernel, Mach, personality, communication, migration}
+
+\section{Introduction}
+
+In the past few years, the design of distributed operating systems has been
+moving towards a microkernel approach. 
+Indeed, microkernels offer many advantages compared with monolithic systems, 
+such as portability, modularity and dynamicity.
+In particular, the Mach microkernel~\cite{mach:foundation} has been
+widely used to build many Unix-like systems, centralized like
+Lites~\cite{Helander94} and Mach-US~\cite{mach-us95}, or distributed
+such as Sprite~\cite{Kupfer93}. Other operating system personalities have
+been implemented on top of Mach, like DOS~\cite{dos91} or OS/2~\cite{os293}.
+As far as we know, no distributed system has investigated the problems
+related to multiple personality support.
+
+This paper describes the Masix\footnote{The Masix homepage is located at {\bf http://www-masi.ibp.fr/masix}.} distributed operating system~\cite{masix:osf}, based on the Mach microkernel, currently under development at the MASI Laboratory. 
+Its primary goal is the simultaneous
+execution of multiple personalities, in order to run concurrently on 
+a same workstation applications from the Unix, DOS, OS/2 and Win32 worlds.
+Masix also pools the resources of a workstation local area network (LAN), independently from
+the personalities that run on each node, thanks to a Distributed Generic
+Layer (DGL).
+ 
+We first present the overall structure of the Masix system, then its 
+most critical generic mechanism, i.e. communications, and finally its support
+for migration of user processes.
+
+\section {Overall structure}
+
+Masix is built according to the multi-server model, which grants it a high
+modularity. Indeed, each server can be written and tested independently from
+the others. Also, it is possible to add or remove dynamically a server to
+the system.
+
+Masix is made up of two layers, shown on Figure~\ref{fig:masix2-us}. The upper
+one is the personalities, which implement the semantics of traditional
+operating systems. The lower one is
+the Distributed Generic Layer (DGL), which offers generic
+services to the multiple personalities (communication, shared memory,
+process management, fault tolerance,~\dots).
+
+\figps{masix2-us}{150mm}{100mm}{Overall structure of the Masix System}
+
+Masix is based on the Mach 3.0 microkernel. As such, Mach does not provide
+all the traditional functionalities usually found in an operating system.
+It only provides~:
+\begin{itemize}
+\item task and thread management, which is the implementation basis for 
+processes. A task is a resource allocation unit, whereas a thread is an
+execution unit~;
+\item local interprocess communication (IPC), according to a client-server model
+ based on ports and messages. A port is an unidirectional communication channel,
+protected by send and receive rights. A message is a set of typed data, sent to a port~;
+\item physical and virtual memory management~;
+\item physical peripherals management.
+\end{itemize}
+
+
+\section {The Generic Network Server}
+
+Many problems arise because of the modularity of Masix, such as the difficulty
+of keeping a global state of the system, because of its distribution
+among the microkernel and the various servers. As a consequence, many
+communications are initiated between servers running on a same node on
+the one hand, and between servers running on different nodes on the other hand. 
+Thus, Masix needs adequate communication mechanisms to minimize their extra 
+cost. 
+They are provided by the Generic Network Server (GNS), and fit
+the needs of all the components of the Masix system, i.e. the DGL servers
+and the personality servers.
+
+\subsection{Location transparency}
+
+To simplify the design and implementation of Masix, it is desireable that
+remote IPCs follow the same semantics as the local IPCs provided by Mach.
+Thus, inter-task communications are based on the {\bf mach\_msg()} primitive,
+no matter where the tasks are located.
+This way, two communicating tasks do not have to make assumptions about their 
+respective locations. 
+This is all the more important since some mechanisms of Masix can move a running task from one node to another. One of them is migration, which we present in the next section.
+
+To achieve this level of transparency, we extend the communication model
+of Mach by interposing the GNS between the tasks and the microkernel.
+A typical communication now takes place as shown on Figure~\ref{fig:comm2}.
+
+\figps{comm2}{100mm}{70mm}{New communication model}
+
+\begin{enumerate}
+\item task A looks up the name of task B. This name actually is a port~;
+\item since B is not local (and has not communicated so far), its name is unknown to the name server. Assuming B is remote, the name server requests from the
+GNS a multicast to the name servers running on the network~;
+\item the GNS multicasts the name resolution request~; 
+\item the name server running on B's node answers the multicast by sending the pair {\it (node number,port name)}, which is a unique global 
+identifier for task B~;
+\item the GNS stores this information, and forwards it to the name server. It also creates a proxy port for B, giving the receive right to itself and the send right to A~; 
+\item the name server delivers B's proxy port to A~;
+\item A send its message on B's proxy port. The message is received by the GNS, which translates the proxy port into B's global identifier {\it (node number, port name)}~;
+\item using its own protocol, the GNS sends the message to the GNS running on B's node~; 
+\item the GNS forwards the message to B.
+\end{enumerate}
+
+This mechanism may seem very costly, but it happens only once, since B's global
+identifier is now cached by the GNS running on A's node.
+Furthermore, the following steps can be optimized :
+\begin{itemize}
+\item step 4 : instead of replying only to the GNS running on A's node, the name server running on B's node could multicast B's global identifier to every node. This way, B could be reached by any task without further name resolution~;
+\item step 8 : in the same way, the GNS running on A's node could multicast A's global identifier to every GNS, so that A could be reached quickly by every task, and particularly by B, which is very likely to reply to A. To speed up B's answer a little more, the GNS could also create a proxy port for A as soon as its global identifier is known. This way, when A's message would reach B, everything would be set up for a quick answer. 
+\end{itemize}
+
+\subsection{Multi-protocol support}
+
+Since Masix is a multi-personality system, the GNS
+manages the protocols specific to each personality (TCP/IP, IPX,~\dots),
+because it has to be aware of the state of every communication initiated by the
+applications. Indeed, the termination of an environment demands that 
+all connections
+based on its network protocols be closed. It is thus mandatory that every
+protocol used by a personality is known to the GNS. 
+For this purpose, the server enforces on the protocols the use of a 
+dynamic registration/unregistration interface.
+
+\subsection{Reliability}
+
+A distributed system running on a LAN is vulnerable to node faults and to 
+communication links faults. This issue is all the more acute in Masix
+that the system is made up of multiple servers, each of which might fault.
+This is the reason  why a server can be replicated, 
+to guarantee its availability.  Thus, Masix includes 
+reliable group communication
+ primitives~\cite{Schiper93,Hadzi94}, which are in charge of fault detection 
+and recovery, as well as maintaining the coherency of replicated data. 
+We are also investigating the possible use of failure detectors~\cite{Chandra91}.
+
+\subsection{Confidentiality}
+
+In Masix, traditional network security issues take a new dimension.
+Indeed, servers exchange private information through the network. Were this
+information to be eavesdropped or altered, the security and the integrity
+of the system could be severely compromised. This is the reason why the
+GNS provide cryptographic services to the personality servers. Furthermore, 
+thanks to its mandatory registration interface, the GNS
+controls the access to the physical network. Since unregistered protocols
+are denied access to the network, a misbehaving application is prevented from using its own protocol.
+
+\subsection{Performance}
+
+Most measures indicate that microkernel-based systems have worse networking
+performance than monolithic systems~\cite{Maeda92}. One might then conclude 
+that microkernels are inherently unfit for distributed architectures.
+On the contrary,~\cite{Maeda93} show that a microkernel-based system can 
+match the networking performance of a monolithic system. 
+This is achieved by
+splitting a protocol functionalities between the network server and a
+library mapped into the applications' address space, as shown on Figure~\ref{fig:libs}.
+
+\figps{libs}{100mm}{70mm}{Protocol architecture}
+
+The library contains the performance-critical services, such as sending and
+receiving data. This prevents numerous and costly context switches
+between the applications and the server. The latter only
+contains the services which require its direct intervention, 
+such as opening and closing a connection. We are currently working on this decomposition.
+
+\section {Migration mechanism}
+
+\subsection {Related work}
+
+Few studies have been led on migration on top of the Mach microkernel. 
+~\cite{mach:milo93sedms} has worked
+on migration of Mach tasks. Task migration is implemented on top of Mach,
+but outside of any operating system emulation server. The major advantage is 
+that
+the migration mechanism is totally transparent to the applications running on
+any operating system emulated on top of Mach.\\
+However, since the Mach task migrates while the personality process 
+remains on the source node, all system calls must be redirected to that
+node. This induces strong residual dependencies, which is a major drawback.\\
+ Nevertheless, this solution is based on an extended version 
+of Mach, which supports network IPC and distributed shared 
+memory~\cite{norma93}. These extensions make system calls forwarding easier.
+Furthermore, this approach is interesting in the case of tightly coupled 
+multi-processor 
+machines which use fast and reliable communication links, but may not be
+relevant in the case of a LAN where communications are costly
+and subject to failures.
+
+\subsection {Goals and definitions}
+
+We propose a migration support mechanism independent from the operating systems
+personalities, and we define a new execution entity, 
+called Generic Process (GP).
+Each GP is tagged by a unique global identifier and corresponds to a Mach task, possibly
+multi-threaded. The only restriction is that a GP can migrate only to the nodes
+which run the personality of the corresponding process.
+Thus, we define two classes of user processes, the sedentary processes and the
+nomad processes~:
+\begin{itemize} 
+\item Sedentary processes will never migrate, because they are tied
+to the node's hardware (like the X server or the network daemons) or
+because they require frequent interactions with the user (like the shells).
+They are spawned by their personality process server and are only known by
+the node they were created on.
+\item Nomad processes may migrate to another node. They are spawned by the 
+Generic Process Server (GPS) on the behalf of a personality and are associated
+to a GP. Since the DGL handles the processes' movements, migration becomes transparent to the personalities. This means that system calls 
+need not be forwarded to the processes's birth node, except those dealing with 
+user interactions. 
+\end{itemize}
+
+\subsection{Creation of a nomad process}
+The creation of a nomad process takes place as shown on Figure~\ref{fig:generic-create} :
+\figps{generic-create}{133mm}{100mm}{Generic process creation}
+\begin{enumerate}
+\item on node 1, personality A requests the creation of a new nomad process. As a consequence, the GPS creates a GP~;
+\item this creation is propagated to every node of the network, so that each GPS may be aware of the new GP. This way, it could later migrate to any node, even if they did not run personality A prior to its creation~; 
+\item the creation of the new nomad process is multicasted to every occurrence of personality A running on the network. They create local copies of the process' ports, which will be used in case the process moves to their node. 
+\end{enumerate}
+
+Since the ports used by the personality servers to communicate with the process are available locally, and since the servers periodically receive updates on its state, every node running that personality is in a position to handle it.
+Thus, the migration of a nomad process is transparent to its personality. 
+
+This mechanism limits residual dependencies, since most of the system calls
+can be processed by the local personality servers. Only a few have to be 
+redirected to the home node.
+ 
+\subsection{Migration as a Load Distribution and Fault Tolerance Mechanism}
+
+The migration decisions are taken by the GPS, according to a multi-criteria
+algorithm, based on CPU time, IPCs, and so on. 
+The major issue is to collect the corresponding information, which are 
+disseminated in the microkernel and the servers. Each generic server manages
+a fraction of this information~:
+\begin{itemize}
+\item the GPS knows the CPU time consumed by a GP~;
+\item the GNS counts the messages sent and received by a GP~;
+\item the Generic File Server knows the number of open files and their
+respective physical location.
+\end{itemize}
+Periodically, the GPS polls the other servers to collect the relevant information. It has thus a global picture of the processes' state and may then take
+migration decisions. We plan to implement and test several migration
+algorithms. We are also investigating the possibility to use 
+a different migration policy for each personality. 
+
+The Masix system can also initiate the mandatory migration of a GP. This
+can be very useful when a node has to be stopped, for instance because of
+maintenance operations. This way, long-lived applications may be moved
+to another node without losing the work accomplished so far.
+
+\section{Conclusion}
+
+We have presented the structure of the Masix distributed operating
+system, and particularly some features of its Distributed Generic Layer, 
+which offers
+distributed services to traditional operating systems personalities.
+We have detailed some of the requirements of the Generic Network Server, which is
+a crucial part of the system. We have also
+proposed a transparent migration mechanism that may be used as a test 
+platform for migration policies. 
+
+
+\bibliography{ft,distributed,abbrev,wanted,etat,masix,net,mach}
+\end{document}
+

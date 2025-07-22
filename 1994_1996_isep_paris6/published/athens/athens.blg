@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d (TeX Live 2025)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: athens.aux
+The style file: unsrt.bst
+Database file #1: ft.bib
+Database file #2: distributed.bib
+Database file #3: abbrev.bib
+Database file #4: wanted.bib
+Database file #5: etat.bib
+Database file #6: masix.bib
+Database file #7: net.bib
+Database file #8: mach.bib
+You've used 14 entries,
+            1791 wiz_defined-function locations,
+            538 strings with 5980 characters,
+and the built_in function-call counts, 3395 in all, are:
+= -- 277
+> -- 143
+< -- 6
++ -- 53
+- -- 39
+* -- 186
+:= -- 502
+add.period$ -- 43
+call.type$ -- 14
+change.case$ -- 15
+chr.to.int$ -- 0
+cite$ -- 14
+duplicate$ -- 194
+empty$ -- 371
+format.name$ -- 39
+if$ -- 813
+int.to.chr$ -- 0
+int.to.str$ -- 14
+missing$ -- 11
+newline$ -- 73
+num.names$ -- 14
+pop$ -- 78
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 100
+stack$ -- 0
+substring$ -- 132
+swap$ -- 65
+text.length$ -- 6
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 24
+width$ -- 16
+write$ -- 152

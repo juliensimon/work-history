@@ -1,0 +1,98 @@
+% Version of 8 April 1993
+%
+
+\subsection{The Virtual System Configuration}
+ 
+   As MASIX is a multi-environment distributed operating system, the number of resources and most of all their types are supposed to be very important. Therefore, the need for a configuration management system becomes obvious.
+   This configuration management system will manage both physical and logical resources. It will also provides structures such as domains (\cite {langsford92}) and a directory to store informations (\cite {boutaba93}). Those structures will be also useful for the other aspects of management of system (i.e. fault management, security, ...).
+
+   In this part of this paper, we intend to present one of the solutions we've chosen to achieve a maximal automatization of our management system. It concern the communication between two management nodes.\\
+
+   Our management structure is composed of management nodes. Each node is has a management agent which is responsible for all the resources attached it. Decisions may be taken at the node level for the less important ones (e.g. modification of some unimportant state flags...) and at a higher level for the others. There are two ways for an agent to communicate with its superior after an extraordinary event.
+
+\begin{itemize}
+
+	\item The first one is to send a trap to the higher level of the management hierarchy. The main advantage of this solution is to be the quickest one. However, there may be rapidly jams on the network if several importants events occur in a short laps of time. Whastoever the trap the node send has to contain enough information for its superior \cite {rose91} .\\
+
+	\item The other solution would be a polling approach. It has the advantage to avoid network traffic jam because it's the superior which periodically queries its lower level nodes about their resources (as some AI based management systems do). The problem is to determine when it must do it and how often.
+
+\end{itemize}
+ 
+   To solve this problem we decided to introduce a notion of priority level scale for each resource of the system. The level accorded to a resource depends on the impact the resource may have on the distributed system.\\
+   For instance the environnments supported by Masix (or its extended file system) will be of high level whereas a standalone machine will have a low level (or a printer).\\
+   Thus resources with a high level priority will not be queried because the node which manage them knows those resources will send it a trap if an extrardinary event occurs. Therefore the polling-based approach will just involve low level priority resources.\\
+   Those priority will have to be defined at during the initalization of the management system and will be dinamically modifiable.
+
+   This notion of priority scale will be implemented at the level of the Administration and Configuration Server (ACS) which is the first server to run when MASIX is booted ( \cite {masix:osf}) at the local system level. We, thus, have to extend ACS to a distributed aspect. 
+ 
+
+
+\subsection {Distributed Tasks Management}
+
+% texte de l'introduction
+%
+
+A dynamic task management (DTM for short) will allow applications and users to benefit of all the 
+processing power over the network and to have a better reliance on the system. 
+To achieve this, hosts need a view of the system's global state.
+They also need to take distributed agreement about their choices to improve system performance. 
+Last, they need an efficient process transfert mechanism.
+
+The basic characteristics of our DTM are a full transparency to users, migration of tasks for 
+load balancing and a fault tolerance objective. 
+Our DTM rally a set of services like information exchange between host about their load and state and
+naming and location tramsparency of entities over the network.
+
+We first describe the group management of processes and then our propositions on migration policy. 
+
+
+Processes in a system are never executing alone. 
+They interacts with other processes that build up an application and with the ressources managed by the system. 
+Migration of one process will influence the performance of the others, we have to define processes group 
+which are based on relations between themselves. 
+
+With non-preemtive placement, processes group are easy to define with statistic on previous executions or with 
+information given by the user. 
+On the contrary dynamic processes group definition is hard to obtain because hosts only have a partial view of the system. 
+Definition of processes group for load distribution \cite {dickman91} induce the definition of forces between processes 
+(attraction-repulsion \cite {folliot:these}, \cite {tokoro90}).
+
+In a distributed system, services and devices are spread over the network and rarely moved. On the contrary, 
+process are created and assigned to hosts dynamically on the system.
+We then define different group of processes, based on memory and CPU usage, communications and devices access. 
+Each group has a major gravity centre, fixed points. Distance between distant processes being in the same group 
+can be evaluated that represent the ratio cost/advantage(C/A for short) of migrating them on another host.
+
+Three major issues have to been solved
+\begin{itemize}
+        \item Which process shall migrate ?
+        \item When should migration append ?
+        \item Where should execution restart ?
+\end{itemize}
+
+We extend the multi-criteria algorithms defined in \cite {folliot:these} to a dynamic system. 
+We are using the same refinement technical by using the bottle-necks of the host. 
+With static constraints (i.e the binary architecture) we first define the migreable processes. Thru 
+the refinements each host has a set of eligible processes. After a distributed agreement, the group of processes is migrated.
+The order in refinements is defined by the resource that will better improve the overall host performances.\\
+	\\Our migration mechanism concepts are :
+\begin{itemize}
+        \item We defines four migration states depending on the local load (acceptance / inactive / placement / migration ).
+        \item There is two migration axes. For the hosts based on multicriteria load (i.e cpu, memory, network, processes queue)
+ and for each process based on multicrieria forces (i.e : memory usage, cpu utilization and system calls forwarded to mach, 
+local or distant servers).
+        \item Bottle-necks on each host define the refinements order in migreable process selection.
+        \item Local set of inactive hosts is managed that is used for finding a destination host. 
+This hosts send their load to the others. Each host can enter the set if his load if lower than the last in the set. 
+\end{itemize}
+
+The cost is the sum of the migration mechanism and the overhead due to original host servers access.
+The advantage is the performance speed-up for the migrating process and for the local process. 
+
+According to \cite {dejan93}, host load is not enough to an efficient migration policy. Informations on the network's 
+use is important. The gain for the process can be evaluated in term of number and size of messages exchanged and by the
+time the process has waited for response of the distant servers. 
+For each communicating object and for different periods of time, we keep the communications statistics.
+By knowing which hosts are concerned by this objects we can evaluate the more interesting host for
+migrating a process in a local point of view. 
+

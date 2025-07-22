@@ -1,0 +1,194 @@
+
+SIPAR WORKSHOP ON PARALLEL AND DISTRIBUTED SYSTEMS
+Biel-Bienne, Switzerland, October 6, 1995
+
+http://www.isbiel.ch/~don/sipar/
+
+
+GENERAL INFORMATION
+
+This workshop offers the opportunity for in-depth exploration of selected
+topics and for presenting the most recent research and development findings
+in these rapidly changing fields. This SIPAR workshop will provide an
+opportunity for participating researchers to discuss various aspects of their
+work and to intensify the collaboration of different research institutions.
+
+Registration deadline: September 30
+
+
+WORKSHOP PROGRAM
+
+The workshop is divided into two concurrent tracks.
+
+Track 1
+
+10:00	Efficient Data Distribution on Mesh-connected Multicomputer
+	Olivier Suciu, Technische Hochschule Darmstadt, Deutschland	
+
+10:20	Automatic Data Distribution for Distributed Memory Parallel Computers
+	Claude G. Diderich, Swiss Federal Institute of Technology, Lausanne
+	Marc Gengler, Ecole Normale Superieure de Lyon, France
+
+10:40	A Static Mapping for Distributed Shared Memory Multiprocessing Models
+	Csaba Andras Moritz, Royal Institute for Technology Stockholm, Sweden
+
+11:00	Coffee Break
+
+11:20	Optimal Parallel Algorithm for Gaussian Elimination with Two Processors
+	Mounir Marrakchi, Faculte des Sciences, Sfax, Tunisia
+
+11:40	Vers une Approche Automatique de Parallelisation de Nids de Boucles
+	Conditionnelles Statiques
+       Mohamed Jemni, Zaher Mahjoub, Faculte des Sciences de Tunis, Tunisie
+
+12:00	SPMD code generation for affine recurrence equations
+	Christophe Reffay, Universite de Franche-Comte, France
+
+12:20	Lunch
+
+13:30	SIPAR General Assembly
+
+14:00	Compilation d'un langage fonctionnel base sur des flots de
+	donnees en PVM
+	Marc Hamelin, Jacques Julliand, Universite de Franche-Comte, France
+
+14:20	Integrating task-parallel computations into data-parallel applications
+	Kilian Stoffel, Shamik D. Sharma, James Hendler, Joel Saltz,
+	University of Maryland, College Park, USA
+
+14:40	A parallelizable scheme for partitioning unstructured meshes
+	N. Bouhmala, H,-H. Nageli, and P.-A. Knutti, University of Neuchatel
+
+15:00	P-CoLa: Vers un langage de coordination physico-logique
+	Christian Renevey et Michele Courant, Universite de Fribourg
+
+15:20	Coffee Break
+
+15:40	Programmation Evolutionniste Parallele
+	Mouloud Oussaidene, Bastien Chopard, Universite de Geneve
+	Marco Tomassini, Swiss Federal Institute of Technology, Lausanne
+
+16:00	Asynchronous Strategies for the Parallelization of Tabu Search Applied
+	to the Logical Test Of VLSI Circuits
+	Renata Machado Aiex, Catholic University of Rio de Janeiro, Brazil
+
+16:20	Parallelization of a Classical Molecular Dynamics Code
+	Roman Geus, CSCS, Manno
+
+16:40	Radio Wave Propagation Simulator on Scalable Parallel Computers
+	Pascal O. Luthi, Bastien Chopard, Jean-Frederic Wagen,
+	Universite de Geneve
+
+17:00	Simulation of the foreign exchange rate market and its
+	parallel implementation
+	Rodolphe Chatagny, Bastien Chopard, Universite de Geneve
+
+17:20	Data Modeling Programming Assistant Interface for Parallel Systems
+	Peter Messmer, Gina Chu, Chris Britton, CSCS, Manno
+
+Track 2
+
+10:00	A low cost Multi-DSP Architecture and Associated Efficient
+	Scheduling Strategies
+	Thomas Bauer, Ole Ejlersen, Niels H. Larsen, Thomas C. Leer, Peter Koch
+	Institute for Electronic Systems, Aalborg University, Denmark
+
+10:20	Software Reuse in Parallel Programming
+	Guilbo Peng, G. Libert, Pierre Manneback
+	Faculte Polytechnique de Mons, Belgium
+
+10:40	Overview of the Masix Distributed Operating System
+	Fanck Mevel, Julien Simon, Universite Paris VI, France
+
+11:00	Coffee Break
+
+11:20	Etude comparative d'equilibrage de charge sur multicalculateurs
+	Pascal Chatonnay, Benedicte Hermann, Laurent Philippe,
+	Universite de Franche-Comte, France
+
+11:40	Measurement of contention pheonomena on the CRAY T3D architecture
+	Michel Pahud, Thierry Cornu,
+	Swiss Federal Institute of Technology, Lausanne
+
+12:00	Performance Comparison of the Message-Passing and the Data-Parallel
+	Programming Paradigms using Application Kernels
+	Rosario Lorenzo, Paulo Adelino, CSCS, Manno
+
+12:20	Lunch
+
+13:30	SIPAR General Assembly
+
+14:00	High Performance Fortran Interface for ScaLAPACK
+	Yoshimi Murakami, CSCS, Manno
+
+14:20	D^3E: a Domain Decomposition Development Environment
+	N. El Mansouri, H.-H. Nageli, and S. Oualibouch,
+	University of Neuchatel
+
+14:40	Object-Based Consistency in a Distributed Shared Memory
+	Thilo Kielmann, Guido Wirtz, University of Siegen, Germany
+
+15:00	Bridging the Gap: A Generic Distributed Coordination Model for
+       Massively Parallel Systems
+	Oliver Krone, Marc Aguilar, Universite de Fribourg
+
+15:20	Coffee Break
+
+15:40	High Order Gauchy Machines
+	S. Cuche, E. Fiesler, IDIAP, Martigny
+
+16:00	Boolean Logic Inspired High Order Perceptron Contruction
+	A. De Pol, G. Thimm, E. Fiesler, IDIAP, Martigny
+
+16:20	A Consensus Service for Asyncrhonous Distributed System
+	Pascal A. Felber, Swiss Federal Institute of Technology, Lausanne
+
+16:40	CAP: a methodology for the hierarchical specification of
+	pipelined parallel applications
+	Benoit A. Gennart, Roger D. Hersch,
+	Swiss Federal Institute of Technology, Lausanne
+
+17:00	Experiments with Distributed Shared Memory
+	Hans Eberle, Martin Gitsels, Christian Kleitsch,
+	Swiss Federal Institute of Techology, Zurich
+
+17:20	Incremental Object-Oriented Implementation of Concurrent
+	Systems based on Prototyping of Formal Specifications.
+	Didier Buchs, Jarle Hulaas,
+	Swiss Federal Institute of Techology, Lausanne
+
+
+ORGANIZATION
+
+Symposium Site: SIPAR95 will take place at the Biel School of Engineering,
+Rue de la Source 21, CH-2501 Biel-Bienne, Switzerland. Two conference
+rooms will be allocated for the conference. For transportation
+information, please consult our WWW page.
+
+Proceedings: The proceedings will be distributed to all participants
+during the workshop.
+
+Workshop Languages: English, French, German
+
+Registration, Contact information: For registration, please fill-out
+our registration form on the Web or contact directly:
+
+Nicolas Droux, Biel School of Engineering,
+Rue de la Source 21, CH-2501 Biel-Bienne, Switzerland
+Phone: +41 32 266 314, Fax: +41 32 266 523, E-mail: droux@info.isbiel.ch
+
+The workshop is free.
+
+
+THE SIPAR COMMITTEE
+
+Dr. M. Aguilar --- University of Fribourg
+Prof. H. Burkhart --- University of Basel
+Dr. A. Gunzinger --- ETH Zuerich
+Dr. H. Halin --- ETH Zuerich
+Prof. C. Heritier --- University of Geneva
+Prof. B. Hirsbrunner --- University of Fribourg
+Prof. A. Kuendig --- ETH Zuerich
+Prof. H. H. Naegeli --- University of Neuchatel
+Dr. E. Rothauser --- IBM Research Laboratory
+Prof. A. Schiper --- EPFL Lausanne

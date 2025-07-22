@@ -1,0 +1,23 @@
+Type de papier (mettez un X devant la bonne ligne !):
+	X Journees d'etudes
+
+Auteurs                : Franck Mevel et Julien Simon
+
+Titre: An Overview of the Masix Distributed System
+
+Nom de la conference   : SIPAR Workshop on Parallel and Distributed Computing
+
+Sigle de la conference : SIPAR'95
+
+Date                   : 5 octobre 1995
+
+Lieu                   : Biel School of Engineering, Biel-Bienne, Suisse
+
+Les pages              : 83-86
+
+Nom du (des) fichiers depose (s)
+(noms que vous avez donner aux fichiers que vous me faite parvenir
+lire ci-dessous):
+
+biel95.ps.gz
+

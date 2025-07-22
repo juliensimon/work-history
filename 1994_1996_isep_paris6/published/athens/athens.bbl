@@ -1,0 +1,86 @@
+\begin{thebibliography}{10}
+
+\bibitem{mach:foundation}
+M.~Accetta, R.~Baron, W.~Bolosky, D.~Golub, R.~Rashid, A.~Tevanian, and
+  M.~Young.
+\newblock {M}ach: {A} {N}ew {K}ernel {F}oundation {F}or {UNIX} {D}evelopment.
+\newblock In {\em Proceedings of the USENIX 1986 Summer Conference}, June 1986.
+
+\bibitem{Helander94}
+J.~Helander.
+\newblock Unix under {M}ach - the {L}ites {S}erver.
+\newblock Master's thesis, Helsinki University of Technology, December 1994.
+
+\bibitem{mach-us95}
+J.~Stevenson and D.~Julin.
+\newblock Mach-{U}s: {U}nix on {G}eneric {O}{S} {O}bject {S}ervers.
+\newblock In {\em Proceedings of the 1995 Usenix Conference}, January 1995.
+
+\bibitem{Kupfer93}
+Michael~D. Kupfer.
+\newblock Sprite on {M}ach.
+\newblock In {\em Proceedings of the Third Usenix Mach Symposium}, April 1993.
+
+\bibitem{dos91}
+G.~Malan, R.~Rashid, D.~Golub, and R.~Baron.
+\newblock {DOS} as a {M}ach 3.0 {A}pplication.
+\newblock In {\em Proceedings of the 1st Usenix Mach Symposium}, pages 27--40.
+  Carnegie Mellon University, November 1991.
+
+\bibitem{os293}
+J.~Phelan, J.~Arendt, and G.~Orsby.
+\newblock An {O}{S}/2 {P}ersonality on {M}ach.
+\newblock In {\em Proceedings of the 2nd Usenix Mach Symposium}, pages
+  191--201, April 1993.
+
+\bibitem{masix:osf}
+R.~Card, E.~Commelin, S.~Dayras, and F.~M\'evel.
+\newblock {T}he {MASIX} {M}ulti-{S}erver {O}perating {S}ystem.
+\newblock In {\em OSF Workshop on Microkernel Technology for Distributed
+  Systems}, June 1993.
+
+\bibitem{Schiper93}
+A.~Schiper and A.~Sandoz.
+\newblock Uniform {R}eliable {M}ulticast in a {V}irtually {S}ynchronous
+  {E}nvironment.
+\newblock In {\em Proceedings of the 13th International Conference on
+  Distributed Computing Systems}, pages 561--568, May 1993.
+
+\bibitem{Hadzi94}
+V.~Hadzilacos and S.~Toueg.
+\newblock A modular approach to fault-tolerant broadcasts and related problems.
+\newblock Technical Report TR94-1425, Cornell University, 1994.
+
+\bibitem{Chandra91}
+T.~Chandra and S.~Toueg.
+\newblock Unreliable failure detectors for asynchronous systems.
+\newblock In {\em Proceeding of thr 10th ACM Symposium on Principles of
+  Distributed Computing}, pages 325--340, August 1991.
+
+\bibitem{Maeda92}
+C.~Maeda and B.~Bershad.
+\newblock Networking {P}erformance for {M}icrokernels.
+\newblock In {\em Proceedings of the 3rd Workshop on Workstation Operating
+  Systems}, April 1992.
+
+\bibitem{Maeda93}
+C.~Maeda and B.~Bershad.
+\newblock Protocol {S}ervice {D}ecomposition for {H}igh {P}erformance
+  {N}etworking.
+\newblock In {\em Proceedings of the 14th ACM Symposium on Operating Systems
+  Principles}, pages 244--255, December 1993.
+
+\bibitem{mach:milo93sedms}
+Dejan~S. Milojici\'c, Peter Giese, and Wolfgang Zint.
+\newblock Experiences with {L}oad distribution on top of the {M}ach
+  {M}icrokernel.
+\newblock In {\em Proceedings of the 4th USENIX SEDMS Symposium}, San Diego,
+  September 1993.
+
+\bibitem{norma93}
+B.~Bryant, A.~Langerman, S.~Sears, and D.~Black.
+\newblock {N}orma {I}pc: {A} {T}ask-to-{T}ask {C}ommunication {S}ystem for
+  {M}ulticomputer {S}ystems.
+\newblock Technical report, Open Software Foundation, October 1993.
+
+\end{thebibliography}

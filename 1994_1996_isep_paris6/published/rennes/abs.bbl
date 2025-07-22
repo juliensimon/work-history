@@ -1,0 +1,61 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citeauthoryear{Accetta \bgroup \em et al.\egroup
+  }{1986}]{mach:foundation}
+M.~Accetta, R.~Baron, W.~Bolosky, D.~Golub, R.~Rashid, A.~Tevanian, et
+  M.~Young.
+\newblock {M}ach: {A} {N}ew {K}ernel {F}oundation {F}or {UNIX} {D}evelopment.
+\newblock In {\em Proceedings of the USENIX 1986 Summer Conference}, June 1986.
+
+\bibitem[\protect\citeauthoryear{Card \bgroup \em et al.\egroup
+  }{1993}]{masix:osf}
+R.~Card, E.~Commelin, S.~Dayras, et F.~M\'evel.
+\newblock {T}he {MASIX} {M}ulti-{S}erver {O}perating {S}ystem.
+\newblock In {\em OSF Workshop on Microkernel Technology for Distributed
+  Systems}, June 1993.
+
+\bibitem[\protect\citeauthoryear{Hadzilacos et Toueg}{1994}]{Hadzi94}
+V.~Hadzilacos et S.~Toueg.
+\newblock {\em A Modular Approach to Fault-Tolerant Broadcasts and Related
+  Problems}.
+\newblock Technical Report TR94-1425, Cornell University, 1994.
+
+\bibitem[\protect\citeauthoryear{Maeda et Bershad}{1992}]{Maeda92}
+C.~Maeda et B.~Bershad.
+\newblock Networking {P}erformance for {M}icrokernels.
+\newblock In {\em Proceedings of the 3rd Workshop on Workstation Operating
+  Systems}, April 1992.
+
+\bibitem[\protect\citeauthoryear{Maeda et Bershad}{1993}]{Maeda93}
+C.~Maeda et B.~Bershad.
+\newblock Protocol {S}ervice {D}ecomposition for {H}igh {P}erformance
+  {N}etworking.
+\newblock In {\em Proceedings of the 14th ACM Symposium on Operating Systems
+  Principles}, pages 244--255, December 1993.
+
+\bibitem[\protect\citeauthoryear{M\'evel et Simon}{1995}]{jrprc}
+F.~M\'evel et J.~Simon.
+\newblock R\'epartition de {C}harge au dessus du {M}icro-noyau {M}ach :
+  {I}nt\'egration de la {M}igration dans le {S}yst\`eme {M}asix.
+\newblock In {\em Actes des Journ\'ees de Recherche sur le Placement Dynamique
+  et la R\'epartition de Charge}, pages 77--80, Mai 1995.
+
+\bibitem[\protect\citeauthoryear{Schiper et Sandoz}{1993}]{Schiper93}
+A.~Schiper et A.~Sandoz.
+\newblock Uniform {R}eliable {M}ulticast in a {V}irtually {S}ynchronous
+  {E}nvironment.
+\newblock In {\em Proceedings of the 13th International Conference on
+  Distributed Computing Systems}, pages 561--568, May 1993.
+
+\bibitem[\protect\citeauthoryear{Stevenson et Julin}{1995}]{mach-us95}
+J.~Stevenson et D.~Julin.
+\newblock Mach-{U}s: {U}nix on {G}eneric {O}{S} {O}bject {S}ervers.
+\newblock In {\em Proceedings of the 1995 Usenix Conference}, January 1995.
+
+\bibitem[\protect\citeauthoryear{Tschudin}{1991}]{Tschudin91}
+C.~Tschudin.
+\newblock Flexible {P}rotocol {S}tacks.
+\newblock In {\em Proceedings of the SIGCOMM '91 Symposium}, pages 197--204,
+  September 1991.
+
+\end{thebibliography}

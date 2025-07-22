@@ -1,0 +1,23 @@
+\subsection{The Virtual System Configuration}
+ 
+   In the Masix virtual system, the number of resources and most of all their types are very important. Therefore, the need for a configuration management system becomes obvious.
+   This configuration management system manages both physical and logical resources. It also provides structures such as domains (\cite {langsford92}) and a directory to store informations. Those structures are also useful for the other aspects of management of system (i.e. fault management, security, ...).
+
+   Our management structure is composed of management nodes. Each node has a management agent which is responsible for all the resources attached to it. Decisions may be taken at the node level for the less important ones (e.g. modification of some unimportant state flags...) and at a higher level for the others. There are two ways for an agent to communicate with its superior after an extraordinary event.
+
+\begin{itemize}
+
+	\item The first one is to send a trap to the higher level of the management hierarchy. The main advantage of this solution is to be the quickest one. However, there may be rapidly jams on the network if several importants events occur in short laps of time. Whatsoever the trap sent by the node has to contain enough information for its superior\cite {rose91}.
+
+	\item The other solution uses a polling approach. It has the advantage of avoiding network traffic jam because the superior periodically queries its lower level nodes about their resources (as some AI based management systems do). The problem is to determine when and how often it must do it.
+
+\end{itemize}
+ 
+   To solve this problem, we have introduced a notion of priority level scale for each resource of the system. The level accorded to a resource depends on the impact the resource may have on the distributed system.
+   For instance, the environments supported by Masix are of high level whereas a standalone machine or a printer has a low level.
+
+   Thus resources with a high level priority are not queried because the node which manage them knows those resources will send it a trap if an extrardinary event occurs. Therefore the polling-based approach just involves low level priority resources.
+   Those priorites have to be defined at during the initalization of the management system and are dynamically modifiable.
+
+   The notion of priority scale is managed by a server which is a distributed
+counterpart to the local ACS.

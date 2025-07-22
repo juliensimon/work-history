@@ -1,0 +1,72 @@
+% For Copyright information & comments, look at the following original file:
+% english.doc                             
+%%      checksum        = "15712 72 107 2338"
+\def\beginlanguage{\english}%
+\expandafter\ifx\csname englishTeXmods\endcsname\relax%
+\else \endinput \fi%
+\long\def\@ifundefined#1#2#3{\expandafter\ifx\csname%
+                             #1\endcsname\relax#2\else#3\fi}%
+\global\let\ifnonenglishheadings\iffalse%
+\gdef\captionsenglish{%
+     \ifx\captionsnames\captionsenglish\else
+   \def\pagename{page}%
+   \def\refname{References}%
+   \def\abstractname{Abstract}%
+   \def\bibname{Bibliography}%
+   \def\contentsname{Table of Contents}%
+   \def\listfigurename{List of Figures}%
+   \def\listtablename{List of Tables}%
+   \def\indexname{Index}%
+   \def\seename{{\em see}}%
+   \def\seealsoname{{\em see also}}%
+   \def\figurename{Figure}%
+   \def\tablename{Table}%
+   \def\partname{Part}%
+   \def\glossaryname{Glossary}%
+   \def\kwname{{\bf Keywords}: }%
+   \def\draftname{DRAFT}%
+   \def\prefacename{Preface}%
+\ifx\opening\undefined\else%
+   \def\headtoname{To}%
+   \def\ccname{cc}%
+   \def\enclname{Encl}%
+   \def\PSname{PS:}%
+   \def\Objectname{Subject:}%
+   \def\YourRefname{Your Ref:}%
+   \def\OurRefname{Our Ref:}%
+\fi%
+\ifnonenglishheadings%
+\else%
+   \def\chaptername{Chapter}%
+\fi%
+   \def\appendixname{Appendix}%
+     \fi%
+\let\captionsnames\captionsenglish%
+}%
+\@ifundefined{englishTeXmods}{%
+    \gdef\englishTeXmods{%
+                         \ifx\captionsnames\captionsenglish\else
+                             \captionsenglish%
+                         \fi%
+           \let\switchtolanguage\endenglish%
+         \edef\@tempa{\noexpand\@nodocument}%
+         \edef\@tempb{\the\everypar}%
+         \ifx\@tempa\@tempb%
+           \let\endLORI\endL\def\endL{\let\endL\endLORI}%
+         \else%
+           \csname beginL\endcsname%
+         \fi%
+                         }}{}%
+\@ifundefined{english}{\gdef\english{\relax}}{}%
+\@ifundefined{switchtolanguage}{%
+                                \gdef\switchtolanguage#1{#1}}{}%
+\let\@enstORI\switchtolanguage%
+\let\englishORI\english%
+\def\endenglish{\let\switchtolanguage\@enstORI%
+                \csname endL\endcsname%
+                \ignorespaces}%
+\def\english{\switchtolanguage\englishTeXmods\englishORI%
+             \ignorespaces}%
+\english%
+\endinput%
+

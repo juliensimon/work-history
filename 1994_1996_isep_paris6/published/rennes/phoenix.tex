@@ -1,0 +1,431 @@
+\documentstyle [french,epsf,rcnamed] {article}
+
+
+\title{Services de communication r\'epartis dans le syst\`eme Masix}
+
+\newcommand {\figps} [4]
+{
+    \begin{figure} [ht]
+       \begin{center}
+                \leavevmode
+                \epsfxsize=#2
+                \epsfysize=#3
+                \epsfbox {#1.ps}
+                \caption {#4}
+                \label {fig:#1}
+        \end{center}
+    \end{figure}
+}
+
+
+\author{
+Franck M\'evel et Julien Simon\\
+Laboratoire MASI, Institut Blaise Pascal\\
+Universit\'e Paris VI\\
+4 place Jussieu\\
+75252 PARIS CEDEX 05, FRANCE\\
+T\'el: (1) 44 27 71 04\\
+Fax: (1) 44 27 62 86\\
+\{Franck.Mevel,Julien.Simon\}@masi.ibp.fr\\
+http://www-masi.ibp.fr/masix
+}
+
+\frenchspacing
+
+\renewcommand{\baselinestretch}{2}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+Depuis quelques ann\'ees, la conception de syst\`emes d'exploitation r\'epartis
+s'oriente vers des approches \`a base de micro-noyaux. En effet, ceux-ci offrent de nombreux avantages par rapport aux syst\`emes monolithiques, comme
+la portabilit\'e, la modularit\'e et la dynamicit\'e. 
+Cependant, les syst\`emes bas\'es sur un micro-noyau posent de nouveaux 
+probl\`emes, li\'es notamment \`a la d\'ecentralisation des informations. 
+Afin de r\'esoudre ces probl\`emes de mani\`ere efficace, le syst\`eme 
+d'exploitation doit disposer de services de communication r\'epartis adapt\'es.
+
+Masix~\cite{masix:osf} est un syst\`eme d'exploitation r\'eparti bas\'e sur le 
+micro-noyau Mach~\cite{mach:foundation}, en cours de d\'eveloppement au 
+Laboratoire MASI. Apr\`es une br\`eve pr\'esentation des services de 
+communication offerts par Mach, de la structure de Masix et de travaux 
+similaires aux notres, nous \'etudions quelques-uns des besoins du syst\`eme 
+Masix en termes de communications, \`a savoir la transparence, la s\'ecurite 
+et de bonnes performances. Puis, nous d\'etaillons les solutions que nous
+ avons mises au point.
+
+\section {Le micro-noyau Mach}
+
+Masix repose sur le micro-noyau Mach 3.0, d\'evelopp\'e \`a Carnegie Mellon University.  Mach a \'et\'e largement 
+utilis\'e pour b\^atir de nombreux syst\`emes compatibles avec Unix, 
+certains centralis\'es comme Lites~\cite{Helander94} et 
+Mach-US~\cite{mach-us95}, d'autres r\'epartis comme Sprite~\cite{Kupfer93}. 
+D'autres environnements ont \'et\'e impl\'ement\'es au-dessus de Mach, 
+comme DOS~\cite{dos91} ou OS/2~\cite{Phelan93}. 
+Cependant, \`a notre connaissance, aucun de ces syst\`emes n'a \'etudi\'e 
+en d\'etail les probl\`emes li\'es au multi-environnement.
+
+Mach offre des m\'ecanismes puissants de commu\-nication entre 
+t\^aches~\cite{Draves90}. Les communications sont effectu\'ees par des ports. Un port est simplement une file dans laquelle des messages peuvent \^etre ajout\'es et retir\'es. 
+Les op\'erations sur les ports sont effectu\'ees via des droits sur 
+ces ports qui sont accord\'es aux t\^aches. Trois types de droits existent~:
+\begin {enumerate}
+\item droit de r\'eception, accord\'e \`a une seule t\^ache~;
+\item droits d'\'emission, accord\'es \`a plusieurs t\^aches~;
+\item droits d'\'emission unique, permettant \`a des t\^aches d'envoyer un ---
+et un seul --- message sur ce port.
+\end {enumerate}
+
+Chaque port est g\'er\'e par une seule t\^ache qui poss\`ede le droit
+de r\'eception sur ce port. Certains ports privil\'egi\'es sont g\'er\'es
+directement par le noyau Mach lui-m\^eme.
+
+Les t\^aches acc\`edent aux ports via des noms de ports
+(identificateurs num\'eriques) qui sont convertis de mani\`ere interne en
+droits par le noyau.
+
+Une t\^ache peut envoyer ou recevoir des messages sur des ports. Un
+message est simplement une structure contenant des donn\'ees. Un message
+est compos\'e~:
+\begin {itemize}
+\item d'une en-t\^ete d\'ecrivant le message~: taille du message, nom du port
+d'\'emission, nom du port de r\'eception, type du message, code op\'eration~;
+\item d'un ensemble de donn\'ees typ\'ees~: type de donn\'ees, nombre de
+donn\'ees, valeurs.
+\end {itemize}
+
+\section{Structure du syst\`eme Masix}
+
+L'objectif principal de Masix est l'ex\'ecution simultan\'ee de plusieurs 
+environnements, afin d'utiliser parall\`element sur une m\^eme station 
+de travail des applications Unix, DOS, OS/2, Win32,~\dots. 
+Il permet \'egalement de mettre en commun les ressources d'un r\'eseau 
+(processeurs, m\'emoire, p\'eriph\'eriques, fichiers), 
+ind\'ependamment des diff\'erents environnements qui peuvent s'ex\'ecuter
+sur chaque station.
+
+Masix est construit selon le mod\`ele multi-serveurs, ce qui lui conf\`ere une 
+grande modularit\'e. En effet, chaque serveur, qui offre des fonctionnalit\'es 
+orthogonales, peut \^etre \'ecrit et test\'e ind\'ependamment des autres.
+De plus, il est possible d'ajouter ou de retirer dynamiquement un serveur 
+au syst\`eme.
+
+Comme l'illustre la figure~\ref{fig:masix2}, Masix est compos\'e de deux couches, elles-m\^emes form\'ees de plusieurs serveurs~:
+\begin{itemize}
+\item les environnements, qui impl\'ementent les s\'eman\-tiques des 
+syst\`emes d'exploitation traditionnels : Unix, DOS, OS/2, Win32,~\dots~;
+\item en dessous, le syst\`eme d'accueil g\'en\'erique r\'eparti, 
+qui offre des services r\'epartis aux environnements : communications, gestion de processus, tol\'erance aux fautes,~\dots.
+\end{itemize}
+
+\figps{masix2}{90mm}{65mm}{Structure du syst\`eme Masix}
+
+\section{Besoins}
+
+L'architecture multi-serveurs r\'epartie du syst\`eme Masix pose 
+certains probl\`emes, comme la gestion de l'\'etat global du syst\`eme. 
+En effet, les informations qui le composent sont r\'eparties entre 
+le micro-noyau et les diff\'erents serveurs. De ce fait, de nombreuses 
+communications ont lieu, d'une part entre les diff\'erents serveurs 
+s'ex\'ecutant sur un noeud, et d'autre part entre les diff\'erents noeuds 
+du r\'eseau. 
+
+Nous examinons donc trois des propri\'et\'es que doivent poss\'eder les services de
+ communication de Masix~:
+\begin{itemize}
+\item la transparence,
+\item la s\'ecurit\'e,
+\item les performances.
+\end{itemize}
+
+\subsection{Transparence des communications}
+
+Afin de concevoir le syst\`eme Masix de ma\-ni\`ere coh\'erente et d'en 
+faciliter le d\'eveloppement, il est pr\'ef\'erable que les 
+communications inter-processus distantes s'effectuent selon
+les m\^emes s\'emantiques que les communications locales offertes par
+Mach, c'est \`a dire gr\^ace \`a la primitive {\bf mach\_msg()}, quelle que soit la localisation des t\^aches.
+
+Ainsi, deux t\^aches qui souhaitent communiquer n'ont pas \`a 
+pr\'ejuger de leur localisation respective. Ceci est d'autant plus important que certains m\'ecanismes de Masix, comme la migration~\cite{athens95}, peuvent 
+entrainer le d\'eplacement d'une t\^ache d'un noeud du r\'eseau 
+vers un autre noeud. 
+
+\subsection{S\'ecurit\'e des communications}
+
+L'architecture de Masix amplifient les probl\`emes traditionnels 
+de s\'ecurit\'e des communications r\'eseau. 
+Parmi eux, les principaux sont~:
+\begin{itemize}
+
+\item l'espionnage : il prend pour cible les liens de com\-munications. En effet, ceux-ci \`a la merci de sondes physiques permettant d'intercepter l'int\'egralit\'e des donn\'ees qu y circulent. Si cette attaque est couronn\'ee de succ\`es, la confidentialit\'e des communications est compromise.
+S'il est tr\`es difficile d'emp\^echer ce
+type d'attaque, il est n\'eanmoins possible de s'en prot\'eger gr\^ace au
+chiffrement syst\'ematique des messages qui empruntent le r\'eseau~;
+
+\item l'alt\'eration : un processus mal intentionn\'e peut intercepter un message, le modifier et le r\'eemettre. Par exemple, il pourrait modifier l'adresse du destinataire ou les donn\'ees que le message contient. Toutefois, si le 
+message est chiffr\'e de mani\`ere appropri\'ee, il ne peut pas \^etre alt\'er\'e sans que son destinataire ne s'en aper\c{c}oive. De plus, cette attaque parait difficile \`a mettre en place sur un r\'eseau de type Ethernet. Elle vise 
+plut\^ot les r\'eseaux de type << store-and-forward >>~;
+
+\item la r\'eemission : un espion peut re\'emettre une s\'equence de messages qu'il a intercept\'es \`a destination d'un serveur. Cette attaque est d\'elicate \`a contrer car l'espion n'a pas besoin de connaitre le contenu des messages. Par cons\'equent, le chiffrement n'est pas suffisant pour s'en prot\'eger et il faut recourir \`a des m\'ethodes d'estampillage permettant de dater les messages~;
+
+\item l'imposture : elle consiste pour un processus 
+\`a obtenir des informations pour lesquelles il n'est pas habilit\'e, en utilisant l'identit\'e d'un processus qui, lui, l'est. Ainsi, un serveur peut \^etre dup\'e par un faux client, qui acc\`ede \`a ses services sans autorisation et modifie son \'etat. De m\^eme, un client peut \^etre dup\'e par un faux serveur et 
+lui transmettre des informations confidentielles. 
+Par cons\'equent, il est indispensable d'authentifier les entit\'es communicantes avant de d\'ebuter tout \'echange de donn\'ees.
+\end{itemize}
+
+\subsection{Performances}
+
+La plupart des mesures montrent que les syst\`emes
+bas\'es sur un micro-noyau ont des performances r\'eseau inf\'erieures
+\`a celles des syst\`emes monolithiques~\cite{Maeda92}. On
+pourrait donc en d\'eduire que les micro-noyaux sont intrins\`equement
+inadapt\'es aux architectures r\'eparties. 
+Or, la plupart des syst\`emes bas\'es sur le micro-noyau Mach
+utilisent un code r\'eseau inadapt\'e, car il provient le plus souvent d'un syst\`eme monolithique. C'est le cas d'Unix Server~\cite{Golub90}, qui utilise le code r\'eseau de 4.3BSD.
+En l'occurence, il est tout \`a fait possible d'obtenir de bonnes performances, \`a condition de tenir compte des sp\'ecificit\'es du micro-noyau.
+
+\section {Travaux existants}
+
+Nous pr\'esentons de mani\`ere succinte les principaux travaux men\'es \`a ce 
+jour sur les communications au-dessus de Mach. 
+
+\subsubsection{Netmsgserver}
+
+Le << netmsgserver >> developp\'e par Carnegie Mellon University~\cite{Sansom86} constitue la premi\`ere tentative d'extension des IPC locales de Mach \`a l'\'echelle
+d'un r\'eseau local.
+
+Il est compos\'e d'une t\^ache Mach multithread\'ee, qui s'ex\'ecute en mode
+utilisateur sur chaque noeud du r\'eseau. Les serveurs r\'eseau communiquent
+entre eux afin d'avoir chacun une vue coh\'erente de l'ensemble des t\^aches
+qui s'ex\'ecutent sur tous les noeuds.
+
+Les principaux services assur\'es sont :
+\begin{itemize}
+\item conversion des ports, gr\^ace \`a une base de donn\'ees contenant les 
+informations suivantes :
+\begin{itemize}
+\item un port local, repr\'esentant la t\^ache locale~;
+\item un~port~r\'eseau,~rep\'er\'e~par~un~identificateur unique, auquel sont
+associ\'ees certaines infor\-mations permettant de pr\'eserver la s\'ecurit\'e
+des communications~;
+\end {itemize}
+\item gestion des ports : v\'erification de la validit\'e des 
+informations contenues dans la base de donn\'ees et mise \`a jour 
+si n\'ecessaire~;
+\item gestion des protocoles de transport : segmentation et r\'eassemblage des 
+messages, contr\^ole de flux, gestion des erreurs de transmission~; 
+\item gestion des messages : certaines informations contenues dans les messages 
+Mach n'ont pas de sens \`a l'\'echelle du r\'eseau. C'est notamment le cas
+des droits sur les ports. Il est donc imp\'eratif de les convertir
+une premi\`ere fois avant de transmettre le message sur le r\'eseau, puis 
+\`a nouveau avant de livrer le message \`a son destinataire. Une conversion est \'egalement n\'ecessaire lorsque l'\'emetteur et le destinataire n'utilisent pas
+la m\^eme repr\'esentation interne des donn\'ees (<< little-endian >> ou << big-endian >>).
+\item nommage~;
+\item chiffrement des messages, selon un algorithme d\'eriv\'e de DES~\cite{des77}~;
+\end {itemize}
+
+Le << netmsgserver >> offre donc aux t\^aches des services de communication 
+transparents et s\'ecuris\'es. Malheureusement, ses performances sont 
+m\'ediocres car chaque envoi de message n\'ecessite de co\^uteux changements 
+de contexte.
+
+\subsubsection{NORMA}
+
+NORMA, d\'evelopp\'e par OSF~\cite{norma93,norma94} est une extension de Mach 
+qui permet \`a des t\^aches distantes de communiquer en utilisant les 
+s\'emantiques des IPC standards de Mach. Ainsi, les communications entre 
+t\^aches distantes sont totalement transparentes.
+
+Lorsqu'une t\^ache envoie un droit d'\'emission sur un des ses ports \`a une t\^ache distante, ce port est pris en charge par NORMA : il devient ainsi un port 
+NORMA. Chacun d'eux poss\`ede un identificateur unique. Chaque 
+noeud g\`ere une table de correspondance, contenant les ports NORMA 
+dont il connait l'existence. 
+
+NORMA offre des services de communication transpa\-rents,~au~prix~de~nombreuses modifications~du~noyau. Toutefois, cette extension ne comporte~pas~\`a~notre
+ connais\-sance de services d'authentification ou de chiffrement.
+
+\section {Le serveur r\'eseau g\'en\'erique}
+
+Le serveur r\'eseau g\'en\'erique (SRG) offre des services de communication susceptibles de satisfaire les besoins de toutes les composantes du syst\`eme 
+Masix, c'est \`a dire les serveurs du syst\`eme d'accueil et les 
+serveurs qui composent les diff\'erents environnements. 
+
+\subsection{Transparence des communications}
+
+Afin d'atteindre un degr\'e total de transparence, nous \'etendons le mod\`ele
+de communication de Mach, en interposant le SRG entre les t\^aches et le
+micro-noyau.
+
+La figure~\ref{fig:name_resolve-fr} illustre la premi\`ere phase du d\'eroulement d'une communication entre deux t\^aches, \`a savoir la r\'esolution du nom. Nous consid\'erons deux t\^aches A et B, s'ex\'ecutant sur des noeuds diff\'erents, n'ayant jamais \'echang\'e de messages avec des t\^aches distantes, mais toutefois enregistr\'ees aupr\`es de leurs serveurs de noms respectifs. De plus, nous appellons \(R_{a}\), \(R_{b}\) leurs serveurs r\'eseau et \(N_{a}\), \(N_{b}\) leurs serveurs de noms.
+
+\figps{name_resolve-fr}{90mm}{55mm}{R\'esolution de nom entre deux t\^aches distantes}
+
+\begin{enumerate}
+\item A fournit \`a \(N_{a}\) le nom de B et lui demande le port correspondant~;
+\item comme B est une t\^ache distante, \(N_{a}\) ne connait pas ce port. Par cons\'equent, il demande \`a \(R_{a}\) la r\'esolution du nom de B~;
+\item \(R_{a}\) envoie une requ\^ete, qui contient le nom de la t\^ache recherch\'ee et le num\'ero du noeud sur lequel A s'ex\'ecute~;
+\item \(R_{b}\) re\c{c}oit la requ\^ete. Comme B n'a jamais communiqu\'e avec l'exterieur, son nom lui est inconnu. \(R_{b}\) fournit donc \`a \(N_{b}\) le nom de B et lui demande le port correspondant~;
+\item \(N_{b}\) envoie \`a \(R_{b}\) le port de B~;
+\item \(R_{b}\) stocke cette information, puis il r\'epond \`a la requ\^ete de \(R_{a}\) en lui envoyant le port de B et le num\'ero de son noeud. Ce couple (num\'ero de noeud, port) constitue un identificateur permettant de localiser une t\^ache de mani\`ere unique~;
+\item \(R_{a}\) stocke cet identificateur et cr\'ee un port mandataire pour B. Puis, il indique \`a \(N_{a}\) le port mandataire, et lui donne un droit d'\'emission sur ce port~;
+\item \(N_{a}\) indique \`a A le port mandataire et lui donne un droit d'\'emission sur ce port. D\`es lors, A connait le 
+port mandataire de B et la communication peut avoir lieu, comme l'illustre la figure~\ref{fig:a-b}~;
+
+\figps{a-b}{80mm}{55mm}{Communication entre deux t\^aches distantes}
+
+\item A envoie un message vers le port mandataire de B~;
+\item comme \(R_{a}\) poss\`ede le droit en r\'eception sur ce port, il re\c{c}oit le
+ message. Il traduit les ports locaux (le port mandataire de B et le port de r\'eponse de A) en identificateurs globaux et transmet le message \`a \(R_{b}\). 
+\item \(R_{b}\) effectue la traduction inverse et livre le message \`a B.
+\end{enumerate}
+
+Ce protocole de r\'esolution de nom peut sembler terriblement co\^uteux. Toutefois, la r\'esolution compl\`ete du nom de B n'a lieu qu'une seule fois sur le noeud de A. Supposons qu'une autre t\^ache s'ex\'ecutant sur ce noeud souhaite communiquer avec B : elle demande le port de B \`a \(N_{a}\) (\'etape 1), qui lui fournit imm\'ediatement le port mandataire de B (\'etape 8). 
+
+Par contre, si une t\^ache situ\'ee sur un troisi\`eme noeud souhaite communiquer avec B, la r\'esolution compl\`ete doit avoir lieu sur ce noeud.
+Il est toutefois possible d'\'eviter toute nouvelle r\'esolution compl\`ete en modifiant l'\'etape 6 : au lieu de r\'epondre uniquement \`a \(R_{a}\), \(R_{b}\) peut envoyer l'identificateur unique de B \`a tous les SRG du r\'eseau. Ainsi, B est connue de tous les noeuds et la r\'esolution de son nom se limitera \`a un appel au serveur de noms.
+
+Que se passe t-il si B souhaite r\'epondre \`a A ? Avant tout, le nom de A doit \^etre r\'esolu, de la m\^eme fa\c{c}on que l'a \'et\'e celui de B. Cependant, la modification suivante de l'\'etape 10 permet de l'\'eviter~: au lieu d'envoyer l'identificateur global de A uniquement \`a \(R_{b}\), \(R_{a}\) peut l'envoyer \`a tous les SRG du r\'eseau. Ainsi, A est connue de tous les noeuds. 
+
+Ces~optimisations~induisent~des~communications distantes~suppl\'ementaires.~Toutefois,~dans~la~mesure~o\`u elles remplacent~un~<< unicast >>~par~un << broadcast >>, le~nombre~de~messages~n'augmente~pas.~Par~cons\'equent, nous~pensons~que~leur~impact~sera~faible. L'impl\'e\-mentation de ce protocole est en cours et seules des mesures 
+de performances nous permettront de juger de son efficacit\'e.
+
+\subsection{S\'ecurit\'e des communications}
+
+Notre objectif est de mettre \`a la disposition des environnements des services permettant de d\'ejouer les attaques que nous avons \'evoqu\'ees, ou du moins de compliquer leur mise en oeuvre.
+
+Notre approche repose sur les techniques suivantes~:
+\begin{itemize}
+\item s\'eparation de l'interface de communication inter-serveurs et de l'interface de communication client-serveur~;
+\item chiffrement des donn\'ees transmises entre les serveurs r\'eseaux \`a l'aide d'un algorithme \`a cl\'e publique~\cite{Diffie76}~;
+\item authentification des serveurs par le serveur de noms~:
+	\begin{itemize}
+	\item lors de leur enregistrement aupr\`es du serveur de noms \`a l'aide d'empreintes num\'eriques~;
+	\item lors d'une demande de r\'esolution de nom, gr\^ace \`a un algorithme \`a cl\'e priv\'ee~;
+	\end{itemize}
+\item authentification des serveurs entre eux, gr\^ace \`a un algorithme \`a cl\'e priv\'ee~; 
+\item authentification des serveurs r\'eseaux avant toute communication distante~;
+\end{itemize}
+
+\subsubsection{S\'eparation des interfaces}
+
+Chaque serveur poss\`ede deux interfaces de communications~:
+\begin{itemize}
+\item une gr\^ace \`a laquelle il re\c{c}oit les requ\^etes des clients. Le ou les ports qui la constituent sont disponibles sur simple demande aupr\`es du serveur de noms~;
+\item une lui permettant de communiquer avec d'autres serveurs.  Le ou les ports qui la constituent sont \'egalement disponibles aupr\`es du serveur de noms, mais celui-ci ne les fournit qu'apr\`es avoir authentifi\'e son interlocuteur, c'est \`a dire apr\`es avoir v\'erifi\'e qu'il s'agit bien d'un serveur.
+\end{itemize}
+
+Cette s\'eparation prot\`ege les ports servant \`a la communication inter-serveurs et emp\^eche ainsi un processus utilisateur d'acqu\'erir un droit d'\'emission sur ces ports.
+
+\subsubsection{Chiffrement des transmissions entre les serveurs r\'eseaux}
+
+Nous avons choisi d'utiliser un protocole de chiffrement \`a cl\'e publique. En effet, les protocoles de ce type ne n\'ecessitent pas la connaissance pr\'ealable d'une cl\'e secr\`ete de la part des entit\'es communicantes et sont donc
+ bien adapt\'es \`a une architecture r\'epartie. 
+
+Le principe d'un tel protocole est tr\`es simple. Chaque entit\'e communicante dispose de deux cl\'es, appel\'ees cl\'e publique et cl\'e secr\`ete. Elles sont g\'en\'er\'ees par un algorithme math\'ematique, comme RSA~\cite{Rivest78} ou LUC~\cite{Smith92}, garantissant qu'il est extr\^emement difficile de d\'eduire la cl\'e secr\`ete de la cl\'e publique.
+La cl\'e publique d'une entit\'e sert \`a chiffrer les messages qui lui sont destin\'es. Par cons\'equent, avant de pouvoir envoyer un message \`a un processus, il faut obtenir sa cl\'e publique. Une fois cette cl\'e obtenue, le message peut \^etre chiffr\'e et transmis. Lorsqu'il est re\c{c}u, il est d\'echiffr\'e gr\^ace \`a la cl\'e secr\`ete, qui, commme son nom l'indique, doit rester totalement confidentielle.
+
+Chaque serveur r\'eseau connait la cl\'e publique de tous les autres. En effet, lorsqu'il d\'emarre, le SRG transmet sa cl\'e publique \`a tous les autres et demandent qu'ils lui envoient la leur. Bien s\^ur, cet \'echange doit \^etre authentifi\'e : le fait de le chiffrer avec le mot de passe du super-utilisateur peut tenir lieu d'authentification.
+
+Un \'echange s\'ecuris\'e entre deux t\^aches A et B a lieu comme suit~:
+\begin{enumerate}
+\item A envoie un message vers le port mandataire de B~;
+\item comme \(R_{a}\) poss\`ede le droit en r\'eception sur ce port, il re\c{c}oit le message. Il transmet le message \`a \(R_{b}\) en le chiffrant avec \(pub_{{R}_{b}}\), la cl\'e publique de \(R_{b}\)~;
+\item seul \(R_{b}\) peut le d\'echiffrer gr\^ace \`a sa cl\'e secr\`ete, \(sec_{{R}_{b}}\). Apr\`es l'avoir fait, il transmet le message \`a B~;
+\item lorsque B envoie la r\'eponse \`a A, \(R_{b}\) transmet le message \`a \(R_{a}\) en le chiffrant avec \(pub_{{R}_{a}}\)~;
+\item seul \(R_{a}\) peut le d\'echiffrer gr\^ace \`a \(sec_{{R}_{a}}\). Apr\`es l'avoir fait, il transmet le message \`a A~;
+\item et ainsi de suite~\dots
+\end{enumerate}
+
+\subsubsection{Authentification des serveurs par le serveur de noms}
+
+Les serveurs locaux (serveurs d'environnement et serveurs g\'en\'eriques) s'enregistrent d\`es leur lancement aupr\`es du serveur de noms. Toutefois, il faut \`a tout prix \'eviter qu'un processus utilisateur r\'eussisse \`a s'enregistrer de la sorte. S'il y arrivait, il pourrait obtenir les ports de tous les serveurs, ce qui lui permettrait de consulter, voire de modifier l'\'etat du syst\`eme.
+
+Lorsqu'il souhaite s'enregistrer, un serveur doit envoyer au serveur de noms un port, ainsi que le nom sous lequel il souhaite enregistrer ce port. Le serveur de noms demande alors au serveur de processus de d\'eterminer le propri\'etaire de ce port, puis de calculer l'empreinte num\'erique de son ex\'ecutable, par exemple avec l'algorithme MD5~\cite{Rivest92}. 
+
+Si celle-ci ne figure pas dans la liste des signatures autoris\'ees (qui peut par exemple \^etre stock\'ee sur un disque et chiffr\'ee avec le mot de passe du super-utilisateur), cela signifie que le processus qui essaie de s'enregistrer n'est pas un serveur r\'epertori\'e. Par cons\'equent, la demande d'enregistrement \'echoue. 
+
+Dans le cas contraire, elle r\'eussit et le serveur de noms retourne au serveur une signature, qui fait d\'esormais office de cl\'e secr\`ete. La possession de cette cl\'e prouve que son d\'etenteur est un serveur l\'egitime.
+Gr\^ace \`a cette signature, qui doit lui \^etre fournie \`a chaque demande de r\'esolution de nom, le serveur de noms peut s'assurer que son interlocuteur est un serveur enregistr\'e, et non pas un imposteur.
+
+\subsubsection{Authentification~entre~serveurs~locaux}
+
+Nous utilisons un protocole d'authentification \`a cl\'e secr\`ete, inspir\'e par~\cite{Needham78}. Il est illustr\'e par la figure~\ref{fig:key-local}. La cl\'e utilis\'ee est la signature fournie par le serveur de noms apr\`es l'enregistrement du serveur.
+
+Nous notons \(sec_{a}\) la cl\'e secr\`ete du serveur A, et \(C_{sec_{a}}(\dots)\) un message chiffr\'e avec cette cl\'e.
+
+\figps{key-local}{60mm}{45mm}{Authentification entre deux t\^aches locales}
+
+\begin{enumerate}
+\item  A envoie \`a \(N_{a}\) le message (A, B), c'est \`a dire l'identit\'e de A et l'identit\'e de B~;
+\item \(N_{a}\) cr\'ee \`a partir de \(sec_{a}\) et \(sec_{b}\), une cl\'e \(sec_{ab}\) qui servira pour les communications entre A et B. Puis, il envoie \`a A le message \((B, sec_{ab}, C_{sec_{b}}(sec_{ab}, A))\)~;
+\item A  stocke \(sec_{ab}\). Puis, il envoie \`a B le message \(C_{sec_{b}}(sec_{ab}, A)\)~;
+\item seul B est capable de d\'echiffrer ce message et d'obtenir \(sec_{ab}\). D\'esormais, seuls A et B poss\`edent cette cl\'e. Par cons\'equent, elle garantit l'identit\'e de l'exp\'editeur. 
+\end{enumerate}
+
+Le protocole original comporte un \'echange de messages suppl\'ementaire. En effet, rien ne prouve que le message re\c{c}u par B \`a l'\'etape 4 provienne r\'eellement de A. Il peut s'agir d'un message espionn\'e et retransmis par un processus qui ne poss\`ede pas \(sec_{ab}\). Cependant, \'etant donn\'e qu'il s'agit de communications locales, l'espionnage ne peut pas se produire.
+
+\subsubsection{Authentification entre serveurs distants}
+
+Dans le cas de deux serveurs s'ex\'ecutant sur deux noeuds diff\'erents, l'obtention de la cl\'e secr\`ete \(sec_{ab}\) est plus compliqu\'ee, comme l'illustre la figure~\ref{fig:key-remote}~:
+
+\figps{key-remote}{90mm}{50mm}{Authentification entre serveurs distants}
+
+\begin{enumerate}
+\item A envoie \`a \(N_{a}\) le message (A, B)~;
+\item \(N_{a}\) envoie \`a \(N_{b}\) le message \((A,B, sec_{a})\). Comme \(N_{b}\) est distante, \(R_{a}\) re\c{c}oit le message sur son port mandataire~;
+\item \(R_{a}\) envoie \`a \(R_{b}\) le message \(C_{pub_{R_{b}}}(A, B, sec_{a})\)~;
+\item  \(R_{b}\) le d\'echiffre avec \(sec_{R_{b}}\) et envoie \`a \(N_{b}\) le message \((A, B, sec_{a})\)~;
+\item \(N_{b}\)~compose~\`a~partir~de~\(sec_{a}\)~et~\(sec_{b}\), une cl\'e \(sec_{ab}\) qui~servira~pour~les~communications entre A et B. Puis,~il~envoie~\`a~\(N_{a}\)~le~message \((A, B, sec_{ab}, C_{sec_{b}}(sec_{ab}, A))\).~Comme~\(N_{a}\)~est distante, \(R_{b}\) re\c{c}oit le message sur son port mandataire~;
+\item \(R_{b}\) envoie \`a \(R_{a}\) le message \(C_{pub_{R_{a}}}((A, B, sec_{ab}, C_{sec_{b}}(sec_{ab}, A))\)~;
+\item \(R_{a}\) le d\'echiffre avec \(sec_{R_{a}}\), et envoie \`a \(N_{a}\) le message \((A, B, sec_{ab}, C_{sec_{b}}(sec_{ab}, A))\)~;
+\item \(N_{a}\) envoie \`a A \((A, B, sec_{ab}, C_{sec_{b}}(sec_{ab}, A))\)~;
+\item A  stocke \(sec_{ab}\). Puis, il envoie \`a B le message \(C_{sec_{b}}(sec_{ab}, A)\)~;
+\item seul B est capable de d\'echiffrer ce message et d'obtenir \(sec_{ab}\). 
+D\'esormais, seuls A et B poss\`edent cette cl\'e. Par cons\'equent, elle 
+garantit l'identit\'e de l'exp\'editeur.
+\end{enumerate}
+
+Ce protocole d'authentification est tr\`es proche de celui utilis\'e pour la r\'esolution des noms. Par cons\'equent, ils peuvent sans peine \^etre fusionn\'es, afin d'effectuer simultan\'ement la localisation et l'authentification des entit\'es communicantes. 
+
+\subsection{Performances}
+
+Il est tout \`a fait possible d'obtenir des performances \'equivalentes, voire m\^eme sup\'erieures, \`a celles d'un syst\`eme monolithique, \`a condition :
+\begin{itemize}
+\item de tirer profit des sp\'ecificit\'es du micro-noyau pour optimiser les performances : 
+	\begin{itemize}
+	\item pilote de p\'eriph\'eriques << mapp\'e >> dans l'espace d'adressage des processus utilisateurs~\cite{Forin91}~;
+	\item m\'emoire partag\'ee entre le serveur r\'eseau et le pilote de p\'eriph\'erique~\cite{Reynolds91}~;
+	\end{itemize}
+\item d'am\'eliorer le fonctionnement interne du protocole, tout en pr\'eservant ses s\'emantiques de d\'epart~;
+\item d'\'eviter si possible le passage des appels syst\`eme li\'es \`a la communication dans un \'emulateur Unix en r\'eecrivant les clients pour qu'ils utilisent directement les appels Mach. Ceci est tout \`a fait envisageable pour les applications courantes comme {\bf ftp} ou {\bf telnet}, mais plus difficile pour des applications volumineuses.
+\end{itemize}
+
+\figps{libs-fr}{80mm}{55mm}{D\'ecomposition des protocoles}
+
+L'optimisation la plus notable est celle propos\'ee par~\cite{Maeda93}. En effet, elle permet d'atteindre les performances d'un syst\`eme monolithique en d\'ecomposant les fonctionnalit\'es d'un protocole entre le serveur r\'eseau et une librairie << mapp\'ee >> dans l'espace d'adressage des applications. Cette d\'ecomposition est illustr\'ee par la figure~\ref{fig:libs-fr}.
+
+La librairie contient les services dont les performances sont critiques, comme l'envoi ou la r\'eception d'un message, ce qui permet d'\'eviter de co\^uteux changements de contexte entre l'application et le serveur r\'eseau. Ce dernier ne contient plus quant \`a lui que les services qui n\'ecessitent son intervention, comme l'ouverture et la fermeture d'une connexion. 
+Nous travaillons sur cette d\'ecomposition.
+
+
+\section{Conclusion}
+
+L'architecture multi-serveurs r\'epartie du syst\`eme Masix n\'ecessite 
+des services de communication adapt\'es. Ils doivent notamment \^etre transparents, s\^urs et performants.
+Notre solution s'articule autour du serveur r\'eseau g\'en\'erique, interpos\'e entre les environnements et le micro-noyau. Gr\^ace \`a l'utilisation de ports mandataires et d'un protocole de r\'esolution de nom, nous avons \'etendu les communications locales de Mach \`a l'\'echelle d'un r\'eseau local sans modifier leurs s\'emantiques.
+Nous avons \'egalement propos\'e plusieurs m\'ecanismes qui garantissent la confidentialit\'e et l'authenticit\'e des communications. Ils sont bas\'es sur des algorithmes de chiffrement \`a cl\'es publiques et priv\'ees. Nous avons notamment pr\'esent\'e un protocole d'authentification entre deux t\^aches distantes, qui peut tr\`es facilement \^etre int\'egr\'e dans le protocole de r\'esolution de noms.
+Enfin, nous avons pr\'esent\'e plusieurs techniques permettant d'accro\^{\i}tre les performances r\'eseau de bout en bout. La plus notable est bas\'ee sur la 
+d\'ecomposition des protocoles, afin de placer les primitives dont les 
+performances sont critiques dans l'espace d'adressage des applications.
+
+
+\bibliographystyle{rcnamed}
+\bibliography{security,group,ft,distributed,abbrev,wanted,etat,masix,net,mach}
+
+\end{document}
+

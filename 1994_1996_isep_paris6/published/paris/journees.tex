@@ -1,0 +1,147 @@
+
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{lmodern}
+\usepackage{epsf}
+\usepackage{graphicx}
+\usepackage{rcnamed}
+\usepackage{pdareport}
+
+% \title {Répartition de Charge au dessus du Micro-noyau Mach : \\ 
+% Intégration de la Migration dans le Système Masix}
+% \author { Franck Mével \and Julien Simon}
+% \date {~}
+\parskip=2mm
+\begin{document}
+% \maketitle
+
+\begin{center}
+{\Large
+Répartition de Charge au dessus du Micro-noyau Mach : \\ 
+Intégration de la Migration dans le Système Masix
+}
+
+Franck Mével, Julien Simon \\
+Franck.Mevel@masi.ibp.fr, Julien.Simon@freenix.fr
+\end{center}
+\newcommand {\figps} [4]
+{
+    \begin {figure} [htbp]
+        \begin {center}
+                \includegraphics[width=0.6\textwidth,keepaspectratio]{#1.ps}
+        \end {center}
+        \caption {#4}
+        \label {fig:#1}
+    \end {figure}
+}
+
+\newcommand {\mysection} [1]
+{
+	\vspace {-5mm}
+	\section* {#1}
+	\vspace {-3mm}
+}
+
+\newcommand {\myitem}
+{
+	\vspace {-2mm}
+	\item
+}
+
+\mysection{Introduction}
+La distribution de charge est un problème étudié depuis longtemps~\cite{distributed:ancetreMigration}. Différentes approches de placement et de migration de processus ont été implémentées, soit à l'intérieur du système d'exploitation~\cite{distributed:SpriteMigration}, soit à l'extérieur~\cite{distributed:gatostar}. 
+Depuis quelques années, la conception de systèmes s'oriente vers des approches à base de micro-noyau~\cite{mach:foundation,distributed:AmoebaOverview,distributed:overviewchorus}, ce qui facilite l'intégration de la migration à l'intérieur du système.
+Cependant, la collecte d'informations pour le calcul de la charge est très délicate. 
+En effet,
+les systèmes basés sur un micro-noyau sont souvent composés de plusieurs serveurs qui ne possèdent chacun qu'une partie de ces informations.
+
+Notre étude s'inscrit dans le cadre du système d'exploitation multi-serveurs Masix~\cite{masix:osf}, basé sur le micro-noyau Mach, en cours de développement au laboratoire 
+MASI. 
+Il est conçu pour utiliser les ressources d'un réseau de stations de travail de manière optimale. Il comporte donc des extensions réparties qui permettent aux stations de mettre leurs ressources en commun (processeurs, mémoire, périphériques, fichiers).
+
+De plus, Masix autorise l'exécution simultanée de plusieurs environnements de travail. Il est possible d'exécuter parallèlement sur une même station des applications Unix, DOS, OS/2, Win32, etc. 
+
+Nous présentons tout d'abord la structure générale du système, puis nous
+étudions le mécanisme de migration qui est à la base de la répartition de charge dans Masix. Enfin, nous expliquons les problèmes liés à la collecte d'informations sur la charge dans un système multi-serveurs.
+
+\mysection{Structure de Masix}
+Masix est construit selon un modèle multi-serveurs, ce qui lui confère une grande modularité. En effet, chaque serveur peut \^etre écrit et testé indépendamment des autres. De plus, il est possible d'ajouter ou de retirer dynamiquement un serveur au système.
+
+Masix est composé de deux couches, illustrées dans la figure~\ref{fig:masix2}~:
+\begin{itemize}
+\myitem les environnements, qui implémentent les sémantiques des systèmes d'exploitation traditionnels~;
+\myitem le système d'accueil générique réparti (SAGR), qui offre des services répartis aux différents environnements (communications, mémoire répartie, gestion répartie de processus, tolérance aux fautes, \dots).
+\end{itemize}
+
+Masix repose sur le micro-noyau Mach 3.0~\cite{mach:basis}. Comme tout micro-noyau, Mach ne fournit pas toutes les fonctionnalités traditionnelles d'un système. Il offre uniquement~:
+\begin{itemize}
+\myitem la gestion de t\^aches et de {\it threads}, qui constituent le support de l'implémentation des processus. Une t\^ache est une unité d'allocation de ressources, tandis qu'un {\it thread} est une unité d'exécution~; 
+\myitem les communications entre t\^aches selon un modèle client-serveur, par le biais de ports et de messages. Un port est un canal de communication unidirectionnel, accessible via des droits d'émission et de réception. Un message est un ensemble de données typées transmis vers un port~;
+\myitem la gestion de la mémoire physique et virtuelle~;
+\myitem la gestion des périphériques physiques.
+\end {itemize}
+\figps{masix2}{150mm}{120mm}{Structure du système Masix}
+
+\mysection{Mécanisme de migration de Masix}
+Peu d'études ont été menées sur la migration au dessus de Mach. \cite{mach:milo93sedms} étudie le migration de t\^aches Mach. Selon les auteurs, cette approche a l'avantage d'\^etre indépendante du système qui s'exécute au dessus du micro-noyau, puisque l'entité déplacée l'est. La migration est donc totalement transparente pour le système.
+
+Cependant, cette technique a l'inconvénient de garder des dépendances 
+résiduelles~: chaque requ\^ete concernant la t\^ache (ou 
+le processus qu'elle représente) est redirigée vers le site d'origine de 
+la t\^ache. Elle repose toutefois sur une version étendue du micro-noyau incluant un nommage global et une mémoire partagée distribuée, ce qui facilite la redirection.
+
+Cette approche est pertinente dans le cadre d'une architecture fortement couplée, comme une machine multi-processeurs, où les communications entre noeuds sont rapides et fiables, mais l'est beaucoup moins pour une architecture faiblement couplée, comme un réseau de stations de travail, où les communications sont coûteuses et sujettes à des pannes.
+
+\`A partir de ces remarques, nous proposons d'étendre le mécanisme de migration en définissant dans le cadre de Masix une nouvelle entité permettant de diminuer les dépendances résiduelles~: le processus générique (PG).
+
+Chaque PG possède un nom global unique et correspond à une t\^ache Mach
+contenant un ou plusieurs {\em threads}. Un PG ne peut migrer que vers les sites exécutant l'environnement auquel appartient la t\^ache qu'il représente.
+
+On utilise un second niveau de nommage dans les environnements, en 
+définissant des processus locaux et des processus globaux~:
+\begin{itemize}
+\myitem un  processus local ne peut pas migrer, soit parce qu'il est lié à la machine sur laquelle il a été créé (serveur X, démons réseau), soit parce qu'il requiert de fréquentes interactions avec l'utilisateur (shells). Un processus local est créé directement par le serveur de processus de son environnement et n'est connu que du noeud sur lequel il est créé~;
+\myitem un processus global peut migrer. Il est créé par le SAGR à la demande d'un 
+environnement et est associé à un PG. Cet événement est diffusé aux noeuds du réseau, afin qu'ils aient tous accès au processus global. Les appels le concernant ne sont donc plus redirigés vers son noeud d'origine. Ainsi, sa migration est totalement transparente et n'introduit pas de dépendances résiduelles.  
+\end{itemize}
+
+\mysection{Répartition de charge dans Masix}
+La migration est décidée par le SAGR qui utilise un algorithme multi-critères prenant en compte le temps CPU consommé, l'espace mémoire utilisé, les communications effectuées, \dots
+
+La difficulté dans notre approche consiste à recueillir les informations
+nécessaires pour prendre cette décision. En effet, ces données sont
+disséminées dans plusieurs serveurs et
+le micro-noyau lui-même en possède une partie, par exemple le temps CPU utilisé par
+un {\em thread}.
+
+Chaque serveur du SAGR gère une partie de ces informations:
+\begin{itemize}
+\myitem le gestionnaire de processus accumule le temps CPU consommé par les
+PG (temps CPU des {\em threads} du PG + temps CPU consommé dans des appels
+système liés au PG)~;
+\myitem le serveur réseau comptabilise les requ\^etes externes de chaque PG~;
+\myitem le serveur de fichiers comptabilise les fichiers ouverts par chaque PG
+ainsi que ses requ\^etes d'entrée/sortie.
+\end{itemize}
+Périodiquement, le serveur de processus générique
+interroge les autres serveurs pour collecter les informations relatives aux PG.
+Il connait ainsi les statistiques se rapportant aux processus et peut les utiliser pour décider de migrer certains PG.
+
+\mysection{Conclusion}
+Les architectures multi-serveurs au dessus des micro-noyaux posent de nouveaux
+problèmes dans le domaine de la répartition de charge.
+
+La définition d'une couche générique répartie nous permet d'offrir une 
+répartition de charge indépendante des différents environnements.
+
+Notre méthode minimise les dépendances résiduelles, car un 
+processus qui migre est pris en charge par les serveurs(SAGR et
+environnements) du site sur lequel il a été déplacé. Seuls quelques
+appels système liés aux périphériques du site d'origine sont 
+redirigés vers celui-ci.
+
+\bibliographystyle{rcnamed}
+\bibliography{distributed,mach,masix,abbrev}
+\end{document}

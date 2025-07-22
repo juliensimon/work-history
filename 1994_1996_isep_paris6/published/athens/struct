@@ -1,0 +1,12 @@
+Masix is built according to the multi-server model, which grants it a high
+modularity. Indeed, each server can be written and tested independently from
+the others. Also, it is possible to add or remove dynamically a server to
+the system.
+
+Masix is made up of two layers, shown on Figure~\ref{fig:masix2-us}. The upper
+one is the personalities, which implement the semantics of traditional
+operating systems. The lower one is
+the Distributed Generic Layer (DGL), which offers generic
+services to the multiple personalities (communication, shared memory,
+process management, fault tolerance,~\dots).
+

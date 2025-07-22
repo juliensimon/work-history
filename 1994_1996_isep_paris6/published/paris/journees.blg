@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d (TeX Live 2025)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: journees.aux
+The style file: rcnamed.bst
+Database file #1: distributed.bib
+Database file #2: mach.bib
+Warning--string name "cmucs" is undefined
+--line 7 of file mach.bib
+Database file #3: masix.bib
+Database file #4: abbrev.bib
+Warning--empty institution in mach:basis
+You've used 9 entries,
+            2439 wiz_defined-function locations,
+            623 strings with 6475 characters,
+and the built_in function-call counts, 3728 in all, are:
+= -- 365
+> -- 170
+< -- 3
++ -- 58
+- -- 58
+* -- 308
+:= -- 604
+add.period$ -- 27
+call.type$ -- 9
+change.case$ -- 64
+chr.to.int$ -- 9
+cite$ -- 10
+duplicate$ -- 156
+empty$ -- 279
+format.name$ -- 70
+if$ -- 775
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 8
+newline$ -- 48
+num.names$ -- 27
+pop$ -- 68
+preamble$ -- 1
+purify$ -- 74
+quote$ -- 0
+skip$ -- 119
+stack$ -- 0
+substring$ -- 150
+swap$ -- 38
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 72
+warning$ -- 1
+while$ -- 25
+width$ -- 11
+write$ -- 117
+(There were 2 warnings)

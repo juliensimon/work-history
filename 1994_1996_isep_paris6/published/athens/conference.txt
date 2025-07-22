@@ -1,0 +1,583 @@
+
+
+
+
+                      PDPTA'95 - TECHNICAL PROGRAM
+                          (November 3-4, 1995)
+
+      International Conference on Parallel and Distributed Processing
+                Techniques and Applications (PDPTA'95)
+                            Georgia, USA
+
+
+
+
+
+
+
+
+                         NOVEMBER 3 - FRIDAY
+
+
+
+
+07:15 - 08:30am    Registration
+
+08:15 - 08:35am    Opening remarks
+                  Hamid R. Arabnia, The University of Georgia, USA.
+
+08:35 - 09:35am    The Keynote Lecture:
+                  "High Performance Computing and Molecular Quantum
+                  Mechanics, 1965 - 1995: A Personal Perspective"
+                  Henry F. Schaefer III, Graham Perdue Professor,
+                  The University of Georgia, USA.
+                  Professor Henry Schaefer is one of the founders of
+                  Computational Quantum Chemistry.  For his work in this
+                  area, he has been nominated for The Nobel Prize in
+                  Chemistry.
+
+
+
+
+            Friday, 9:40 - 10:30am, Three Parallel Sessions (1, 2, 3)
+
+
+SESSION 1:  APPLICATIONS, ALGORITHMS, AND RELATED ISSUES
+
+
+09:40 - 10:05    CellFlow: A Parallel Rendering Scheme for Distributed
+                Memory Architectures
+                A. Law and R. Yagel, The Ohio State University, USA.
+
+10:05 - 10:30    Plasma Simulation on Networks of Workstations using the
+                Bulk-Synchronous Parallel Model
+                M. V. Nibhanupudi, C. D. Norton, and B. K. Szymanski,
+                Rensselaer Polytechnic Institute, USA.
+
+
+SESSION 2:  LANGUAGES, TOOLS, SOFTWARE ENVIRONMENTS, AND RELATED SYSTEMS
+
+
+09:40 - 10:05    A Real-Time MPEG Software Decoder Using a Portable
+                Message-Passing Library
+                M. K. Kwong, P. T. P. Tang, and B. Lin, Argonne National
+                Laboratory, USA.
+
+10:05 - 10:30    Distributed Occam Processes on a Sun Network
+                L. Woolley and A. Battersby, Nottingham Trent
+                University, U.K.
+
+
+SESSION 3:  COMMUNICATIONS, ROUTING, I/O, AND NETWORKS
+
+
+09:40 - 10:05    NuMesh: A Communication Architecture for Static Routing
+                D. Shoemaker, C. Metcalf, and S. Ward,
+                Massachusetts Institute of Technology, USA.
+
+10:05 - 10:30    Static Estimation of Communication Delays in Distributed
+                Memory Architectures
+                B. Shirazi and S. Basireddy, The University of Texas at
+                Arlington, USA.
+
+
+10:30 - 10:55    BREAK - Refreshments
+
+
+
+
+            Friday, 10:55 - 12:35pm, Three Parallel Sessions (4, 5, 6)
+
+
+SESSION 4:  APPLICATIONS, ALGORITHMS, AND RELATED ISSUES (Cont.)
+
+
+10:55 - 11:20    Singular Integral Computation with ParInt
+                E. deDoncker, A. Gupta, K. Rathbun, and J. Ball,
+                Western Michigan University, USA.
+
+11:20 - 11:45    SuperStabilizing Mutual Exclusion
+                T. Herman, University of Iowa, USA.
+
+11:45 - 12:10    Computation and Data Partitioning on Scalable Shared
+                Memory Multiprocessors
+                S. Tandri and T. S. Abdelrahman, The University of
+                Toronto, Canada.
+
+12:10 - 12:35    A Logic for Networked Virtual Worlds
+                P. C. Silva, University of Erlangen-Nuernberg, Germany.
+
+
+SESSION 5:  LANGUAGES, TOOLS, SOFTWARE ENVIRONMENTS, AND RELATED SYSTEMS (Cont.)
+
+
+10:55 - 11:20    A Concurrent, Specification Language over CML
+                M. Debbabi, Laval University, Canada.
+
+11:20 - 11:45    An Environment for Developing Parallel Programs
+                T. Hintz, J. Hammond, and U. Szewcow, University of
+                Technology, Australia.
+
+11:45 - 12:10    Performance Analysis for SVM-Fortran with OPAL
+                M. Gerndt, A. Krumme, and S. Ozmen, Research Centre
+                Julich (KFA), Germany.
+
+12:10 - 12:35    Implementing Adaptive Parallelism on a Heterogeneous
+                Cluster of Networked Workstations
+                G. M. Rehmet and P. G. Clayton, Rhodes University,
+                South Africa.
+
+
+SESSION 6:  COMMUNICATIONS, ROUTING, I/O, AND NETWORKS (Cont.)
+
+
+10:55 - 11:20    The Round Table ATM Interconnection Network
+                W. Wei, M. J. Clement, and J. K. Flanagan, Brigham Young
+                University, USA.
+
+11:20 - 11:45    Performance Considerations for I/O-Dominated Applications on
+                Parallel Computers
+                A. F. Dedkov and D. J. Eadline, Paralogic, Inc, USA.
+
+11:45 - 12:10    An Efficient Distributed Ranking Scheme For Finite
+                Projective Planes
+                D. S. L. Wei and Z. Cheng, The University of Aizu, Japan.
+
+12:10 - 12:35    Hypercube Sandwich Approach to Conferencing
+                J. F. Houlahan, L. J. Cowen, and G. M. Masson, The Johns
+                Hopkins University, USA.
+
+
+12:35 - 01:50    LUNCH
+
+
+
+
+            Friday, 1:50 - 3:30pm, Three Parallel Sessions (7, 8, 9)
+
+
+SESSION 7:  APPLICATIONS, ALGORITHMS, AND RELATED ISSUES (Cont.)
+
+
+01:50 - 02:15    A Diagnosis Strategy for Cluster-Based Parallel
+                Architectures
+                O. Benkahla, C. Aktouf, and C. Robach, LGI-IMAG, France.
+
+02:15 - 02:40    Data-Parallel Design of an Interval-Based Constraint
+                Language: Analysis of Speedups
+                J. Cohen and S. Kalathur, Brandeis University, USA.
+
+02:40 - 03:05    Using Algorithm-Architecture Relationships to Design a
+                Massively Parallel System
+                P. Ni, NOMOS Corporation, USA;
+                E. W. Davis, North Carolina State University.
+
+03:05 - 03:30    Parallel Algorithms for the Solution of Linear Systems
+                in PVM
+                R. Abdullah and D. J. Evans,  Loughborough University
+                of Technology, U.K.
+
+
+SESSION 8:  LANGUAGES, TOOLS, SOFTWARE ENVIRONMENTS, AND RELATED SYSTEMS (Cont.)
+
+
+01:50 - 02:15    The Use of Simulation for Software Development in
+                Heterogeneous Computing Environments
+                R. Aversa, A. Mazzeo, and N. Mazzocca, Universita di Napoli,
+                Italy;
+                U. Villano, IRSIP-CNR, Italy.
+
+02:15 - 02:40    Loop Parallelism on Tera MTA Using Sisal
+                S. Mitrovic, Lawrence Livermore National Laboratory, USA.
+
+02:40 - 03:05    Code Generation for Parallel Execution on Distributed Systems
+                M. I. Muralles, Mark R. Gilder, M. Krishnamoorthy,
+                and J. Lipasti, Rensselaer Polytechnic Institute, USA.
+
+03:05 - 03:30    Colony: The Building Block for a Scalable Multiprocessor
+                System
+                W. K. Foong, Ngee Ann Polytechnic, Singapore.
+
+
+SESSION 9:  COMMUNICATIONS, ROUTING, I/O, AND NETWORKS (Cont.)
+
+
+01:50 - 02:15    An Integrated Approach to Communication Axioms Among
+                Concurrent Processes
+                R. Hu and P. M. Lewis, State University of New York at
+                Stony Brook, USA.
+
+02:15 - 02:40    Mappings Minimizing Contention in Wormhole-Routed Networks
+                U. H. Nguyen, H. Hosseini, L. Tao, and T. Bui, Concordia
+                University, Canada.
+
+02:40 - 03:05    Optimal and Deadlock Free Routing for Wrap Around
+                Connections k-ary n-cubes Using o(n) Buffer Space
+                B. Hadim and I. Sakho, Centre SIMADE-Ecole des Mines
+                de St Etienne, France.
+
+03:05 - 03:30    Parametrized Dynamic Reconfigurable Trees
+                G. Racherla and R. Sridhar, University of Oklahoma, USA.
+
+
+03:30 - 03:55    BREAK - Refreshments
+
+
+
+
+            Friday, 3:55 - 5:35pm, Three Parallel Sessions (10, 11, 12)
+
+
+SESSION 10:  APPLICATIONS, ALGORITHMS, AND RELATED ISSUES (Cont.)
+
+
+03:55 - 04:20    Evaluation of Static Scheduling Algorithms Improved
+                with Nonstrict Triggering of Program Graph Nodes
+                M. Ojstersek and V. Zumer, University of Maribor, Slovenia;
+                L. Pipan, University of Ljubljana, Slovenia;
+                A. Kvas and B. Benko , University of Maribor, Slovenia.
+
+04:20 - 04:45    Host-Diagnosis of Parallel Systems
+                O. Benkahla, C. Aktouf, and C. Robach, LGI-IMAG, France.
+
+04:45 - 05:10    A Parallel Implementation of Backpropagation Neural
+                Network on MasPar MP-1
+                F. Valafar, The University of Georgia, USA;
+                O. K. Ersoy, Purdue University, USA.
+
+05:10 - 05:35    Parallel Stereocorrelation with Applications in Medical
+                Imaging
+                H. R. Arabnia, J. Pellenz, J. Zeppen and R. Rouhani,
+                The University of Georgia, GA, USA.
+
+
+SESSION 11: LANGUAGES, TOOLS, SOFTWARE ENVIRONMENTS, AND RELATED SYSTEMS (Cont.)
+
+
+03:55 - 04:20    A VIM Film for Cellular Automation-like Algorithms
+                N. Mirenkov and T. Mirenkova, University of Aizu, Japan.
+
+04:20 - 04:45    PSO: Shared Symbol Space for Multicomputer Architectures
+                S. Lupke, J. W. Quittek, and T. Wiese, Technische
+                Universitat, Germany.
+
+04:45 - 05:10    A Stand-alone Remote Thread Library for Transputer Systems
+                D. A. Brinkerhoff and S. R. Cannon, Utah State University,
+                USA.
+
+05:10 - 05:35    Flexible Kernel: The AURORA Approach for Multiprocessor
+                Operating System
+                L. C. Zancanella and P. O. A. Navaux, UFRGS/RS, Brazil.
+
+
+SESSION 12:  MODELS, THEORIES, AND METHODOLOGIES (+ Multimedia)
+
+
+03:55 - 04:20    Selection on k-Dimensional Meshes with Multiple
+                Broadcasting
+                Y. Pan, University of Dayton, USA;
+                M. Hamdi, Hong Kong University of Science and Technology,
+                Hong Kong.
+
+04:20 - 04:45    On the Time Complexity of the Dining Philosophers Problem
+                I. Rhee, University of Warwick, U.K.;
+                J. L. Welch, Texas A&M University, USA.
+
+04:45 - 05:10    On Formal Verification of Occam Programs
+                O. Ait-Mohamed and A. Mokkedem, CRIN-CNRS & INRIA-Lorraine,
+                France.
+
+05:10 - 05:35    Discussion on Multimedia Information Processing
+                M. Zhenjiang, J. Basille, and Y. Baozong, ENSEEIHT, France.
+
+
+
+06:15pm          RECEPTION
+
+
+
+
+
+
+
+
+
+
+                         NOVEMBER 4 - SATURDAY
+
+
+
+
+
+            Saturday 8:30 - 10:10am, Three Parallel Sessions (13, 14, 15)
+
+
+SESSION 13:  APPLICATIONS, ALGORITHMS, AND RELATED ISSUES (Cont.)
+
+
+08:30 - 08:55    A Dynamic Priority-based Scheduling Method in Distributed
+                Systems
+                Y. Li and R. Campbell, University of Illinois at
+                Urbana-Champaign, USA.
+
+08:55 - 09:20    Improved Heuristic Models for Task Allocation in Distributed
+                Computer Systems
+                A. E. Abdelrazek and B. E. Wells, The University of
+                Alabama in Huntsville, USA.
+
+09:20 - 09:45    A New Parallel Algorithm for Training Feedforward Neural
+                Networks Based on the Augmented Lagrange Multiplier
+                Method
+                X. Feng, H. Chen, and B. Zheng, Marquette University, USA.
+
+09:45 - 10:10    Application of the Genetic Algorithm to Multiprocessor
+                Scheduling
+                F. Ghannadian and C. O. Alford, Georgia Institute of
+                Technology, USA.
+
+
+SESSION 14: LANGUAGES, TOOLS, SOFTWARE ENVIRONMENTS, AND RELATED SYSTEMS (Cont.)
+
+
+08:30 - 08:55    Enhancing the Performance of Parallel Processors:
+                Experiments with Loop Constructs and Tiling
+                D. C. Wong, E. W. Davis, and M. H. Thomas, North Carolina
+                State University, USA.
+
+08:55 - 09:20    Cyclic Performance Analysis for Parallel Systems
+                R. Borgeest, Technische Universitat Munchen, Germany.
+
+09:20 - 09:45    Characterising Parallel Application Performance by
+                Detailed Profiling
+                S. Raina and C. Cap, University of Zurich, Zurich,
+                Switzerland.
+
+09:45 - 10:10    Improving the Efficiency of Object Invocations by
+                Dynamic object Replication
+                H. M. Windisch, Munich University of Technology, Germany.
+
+
+SESSION 15:  ARCHITECTURE, HARDWARE, AND RELATED SYSTEMS
+
+
+08:30 - 08:55    A High Speed Serial Communication Architecture for
+                Machine Vision Systems
+                C. R. Brown, S. Harrison, and P. Furness,
+                Sheffield University, U.K.
+
+08:55 - 09:20    3-D Architecture for Multidimensional Fast Fourier
+                Transform
+                D. Korchev, Image and Signal Processing, Inc., USA.
+
+09:20 - 09:45    A Modularly Configured Attached Processor for Performing
+                Matrix Operations
+                D. A. Doran and G. A. Gibson, The University of Texas
+                at El Paso, USA.
+
+09:45 - 10:10    Latency Hiding on COMA Multiprocessors
+                T. S. Abdelrahman, The University of Toronto, Canada.
+
+
+10:10 - 10:35    BREAK - Refreshments
+
+
+
+
+            Saturday 10:35 - 12:15pm, Three Parallel Sessions (16, 17, 18)
+
+
+SESSION 16:  APPLICATIONS, ALGORITHMS, AND RELATED ISSUES (Cont.)
+
+
+10:35 - 11:00    Concurrent Lock-Free Access to Blink-tree
+                L. H. Cheong and I. W. Chan, National University of
+                Singapore, Singapore.
+
+11:00 - 11:25    A New Distributed Algorithm for Decentralized Consensus
+                Problem Based on k-layered Coterie
+                Z. Cheng and T. Huang, The University of Aizu, Japan;
+                N. Shiratori, Tohoko University, Japan.
+
+11:25 - 11:50    A Massively Parallel Transportation Solution
+                D. J. Haglin and J. A. Kaliski, Mankato State University,
+                USA.
+
+11:50 - 12:15    Parallel Algorithm for Via Minimization in VLSI Routing
+                H. Kimm, University of Tennessee at Martin, USA.
+
+
+SESSION 17: LANGUAGES, TOOLS, SOFTWARE ENVIRONMENTS, AND RELATED SYSTEMS (Cont.)
+
+
+10:35 - 11:00    A Static Analysis to Order Instructions of a Concurrent
+                Program
+                F. Baiardi and L. Ricci, Universita di Pisa, Italy.
+
+11:00 - 11:25    Behavioural Model Debugging in Linda
+                D. A. Sewry, P. G. Clayton, and E. P. Wentworth,
+                Rhodes University, South Africa.
+
+11:25 - 11:50    Contracting Processes in Virtual Architecture Programs
+                H. Hosseini, U. H. Nguyen, L. Tao, and T. Bui, Concordia
+                University, Canada.
+
+11:50 - 12:15    A Supporting Environment for Parallel Algorithm
+                Development of a Parallel Image Processing Engine
+                F. Du, C. Bandera, and A. Izatt, Amherst Systems, Inc.,
+                USA.
+
+
+SESSION 18: SCHEDULING, LOAD BALANCING, AND FAULT TOLERANCE
+
+
+10:35 - 11:00    Distributed Scheduling in SCI Distributed Shared Memory
+                Systems
+                S. Agasaveeran, Department of Computer Science, Wayne State
+                University, USA.
+                Q. Li, Santa Clara University, USA.
+
+11:00 - 11:25    Concurrent Error Detection and Recovery in a Hybrid
+                Dataflow System
+                D. M. Lorts, E-Systems, Inc, USA.
+
+11:25 - 11:50    Searching for an Optimal Reconfiguration Strategy in
+                Fault Tolerant Multiprocessor Systems
+                P. Janik and M. Kotocova, Slovak Technical University,
+                Slovak Republic.
+
+11:50 - 12:15    Design of a Load Balancing Framework for Distributed
+                and Parallel Applications
+                S. N. Haq, M. Bozyigit, S. Ghanta, and S. K. Naseer,
+                King Fahd University of Petroleum and Minerals, Saudi Arabia.
+
+
+12:15 - 01:45    LUNCH
+
+
+
+            Saturday 1:45 - 3:25pm, Three Parallel Sessions (19, 20, 21)
+
+
+SESSION 19:  APPLICATIONS, ALGORITHMS, AND RELATED ISSUES (Cont.)
+
+
+01:45 - 02:10    Using Systolic Algorithms on Massively-Parallel
+                ASIMD Machines
+                G. Zevin, School of Computer Sciences, University of
+                Technology, Sydney, Australia.
+
+02:10 - 02:35    A Distributed Boundary Representation for Parallel
+                Solid Modelling
+                K. C. Hui and Y. M. Kan, The Chinese University of
+                Hong Kong, Hong Kong.
+
+02:35 - 03:00    Parallel Implementation of the p-Version of the
+                Nonconforming Finite Element Method for Elliptic
+                Equations on a Shared-Memory Architecture
+                T. Janik, University of Alabama in Huntsville, USA.
+
+03:00 - 03:25    Comparing Nested Dissection Orderings for Parallel
+                Sparse Matrix Factorization
+                J. Schulze, R. Diekmann, and R. Preis, University of
+                Paderborn, Germany.
+
+
+SESSION 20: LANGUAGES, TOOLS, SOFTWARE ENVIRONMENTS, AND RELATED SYSTEMS (Cont.)
+
+
+01:45 - 02:10    Scalable Performance on a Distributed Shared-Memory
+                Machine
+                D. R. Kaeli, Northeastern University, USA;
+                L. L. Fong and D. H. Renfrew, IBM T. J. Watson Research
+                Center, USA;
+                R. Booth and K. Imming, IBM Application Solutions Division,
+                Rochester, USA.
+
+02:10 - 02:35    A Coordination Language for Systems of Cooperating
+                Processes
+                C. Assmann, University of Kiel, Germany.
+
+02:35 - 03:00    Programming in LIPS
+                A. S. Bavan and E. Illingworth, University of
+                North London, U.K.
+
+03:00 - 03:25    HyperPascal: Implementation of a Pascal-based Interface
+                for Parallel Programming on the Intel iPSC/860 Hypercube
+                S. M. Bhandarkar and C. B. Giberson, The University of
+                Georgia, USA.
+
+
+SESSION 21:      IMAGING APPLICATIONS
+
+
+01:45 - 02:10    Distributed Ray Tracing System
+                A. G. Skarmeta and H. M. Barbera, Universidad de Murcia,
+                Spain.
+
+02:10 - 02:35    A Load-Balanced Parallel Volume Rendering Algorithm
+                M. N. Chong, K. Mu, and H. S. Seah, Nanyang Technological
+                University , Singapore.
+
+02:35 - 03:00    GT-FITES: A Heterogeneous, Parallel Image Processing System
+                R. W. Melton, T. C. Huang, J. I. Chamdani, and C. O. Alford,
+                Georgia Institute of Technology, USA;
+                L. Becker, United States Army Space and Strategic Defense
+                Command Weapons Directorate, USA.
+
+03:00 - 03:25    Fast Implementation of an Algorithm for Automated
+                Recognition of Translated and Rotated Patterns in
+                Satellite Images Using Task and Data Parallelism
+                M. R. Saradjian, L. W. B. Hayes, and A. P. Cracknell,
+                University of Dundee, U.K.
+
+
+03:25 - 03:50    BREAK - Refreshments
+
+
+
+            Saturday 3:50 - 5:05pm, Three Parallel Sessions (22, 23, 24)
+
+
+SESSION 22:  APPLICATIONS, ALGORITHMS, AND RELATED ISSUES (Cont.)
+
+
+03:50 - 04:15    An Algorithm and Array Processor for Solving the
+                Systems of Linear Equations
+                S. G. Sedukhin, The University of Aizu, Japan.
+
+04:15 - 04:40    Distributed Progressive Radiosity on a Workstation Network
+                F. Bricout and E. Lepretre, Universite des Sciences et
+                Technologies de Lille, France.
+
+04:40 - 05:05    A Parallel Multidimensional Program for the Time
+                Dependent Schroedinger Equation of Molecules Interacting
+                with Intense Laser Pulses - Simulation on an IBM SP2
+                A. D. Bandrauk and S. Chelkowski, Universite de Sherbrooke,
+                Canada.
+
+
+SESSION 23:      ARCHITECTURES AND ALGORITHMS
+
+
+03:50 - 04:15    DSP-based SIMD Mesh: An Exquisite Solution to Computational
+                and I/O Intensive Signal Processing Applications
+                S. A. Khan and V. K. Madisetti,
+                Georgia Institute of Technology, USA.
+
+04:15 - 04:40    Improving Cache Performance in a Multiprocessor Environment
+                J. S. Park and L. D. Coraor, The Pennsylvania State
+                University, USA.
+
+
+SESSION 24: LANGUAGES, TOOLS, SOFTWARE ENVIRONMENTS, AND RELATED SYSTEMS (Cont.)
+
+
+03:50 - 04:15    Building a Distributed Generic Layer for Multiple
+                Personality Support on top of the Mach Microkernel
+                F. Mevel and J. Simon, Institut Blaise Pascal, Universite
+                Paris, France.
+
+04:15 - 04:40    A Performance Debugger for Parallel Programs Running on
+                Wormhole-Routed Multicomputers
+                U. H. Nguyen, H. Hosseini, and L. Tao, Concordia University,
+                Canada.

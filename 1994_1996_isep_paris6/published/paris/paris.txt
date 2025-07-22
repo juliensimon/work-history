@@ -1,0 +1,23 @@
+Type de papier (mettez un X devant la bonne ligne !):
+	X Journees d'etudes
+
+Auteurs                : Franck Mevel et Julien Simon
+
+Titre:
+
+Nom de la conference   : Journees de Recherche sur le Placement Dynamique 
+			 et la Repartition de Charge
+
+Sigle de la conference : JRPRC
+
+Date                   : Mai 1995
+
+Lieu                   : Universite Paris VI, Paris, France
+
+Les pages              : 77-80
+
+Nom du (des) fichiers depose (s)
+(noms que vous avez donner aux fichiers que vous me faite parvenir
+lire ci-dessous):
+
+paris95.ps.gz

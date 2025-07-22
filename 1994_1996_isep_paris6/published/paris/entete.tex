@@ -1,0 +1,24 @@
+
+\documentstyle [11pt,a4,epsf,fancyheadings,twoside,rcnamed,pdareport] {article}
+\title {\bf Proposition de serveur r\'eseau pour le syst\`eme Masix}
+\author { Julien Simon
+	\thanks {This work has not been financed by the MASI Laboratory}
+	\\Julien.Simon@freenix.fr}
+\date{ 27 mars 1995}
+\begin{document}
+\maketitle
+
+\newcommand {\figps} [4]
+{
+    \begin {figure} [htbp]
+        \begin {center}
+                \leavevmode
+                \epsfxsize=#2
+                \epsfysize=#3
+                \epsfbox {#1.ps}
+        \end {center}
+        \caption {#4}
+        \label {fig:#1}
+    \end {figure}
+}
+

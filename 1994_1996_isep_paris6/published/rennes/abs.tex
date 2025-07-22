@@ -1,0 +1,189 @@
+\documentstyle [IEEEpaper,rcnamed] {article}
+\IEEEtitle{Services de communication r\'epartis dans le syst\`eme Masix}
+\IEEEauthors{
+\begin{tabular}{cc}
+Julien Simon &  Franck M\'evel\\
+Julien.Simon@masi.ibp.fr & Franck.Mevel@masi.ibp.fr\\
+\end{tabular}
+}
+
+\newcommand{\myitem} {
+	\vspace{-2mm}
+	\item 
+}
+
+\IEEEinstitute{Laboratoire MASI, Institut Blaise Pascal
+\\Universit\'e Pierre et Marie Curie\\Paris VI}
+
+\frenchspacing
+
+\begin{document}
+
+\IEEEheader
+
+\sloppy
+
+\section{Introduction}
+Depuis quelques ann\'ees, la conception de syst\`emes d'exploitation r\'epartis
+s'oriente vers des approches \`a base de micro-noyau. En effet, les
+micro-noyaux offrent de nombreux avantages par rapport aux syst\`emes
+monolithiques, comme la portabilit\'e, la modularit\'e et la dynamicit\'e.
+
+Cependant, les syst\`emes bas\'es sur un micro-noyau posent de nouveaux probl\`emes, 
+li\'es notamment \`a la d\'ecentralisation des informations, qui entraine une 
+augmentation des communications entre les diff\'erentes composantes du syst\`eme.
+Afin de r\'esoudre ces probl\`emes de mani\`ere efficace, le syst\`eme 
+d'exploitation doit disposer de services de 
+communication r\'epartis adapt\'es.
+
+Cet article d\'ecrit cet aspect du syst\`eme r\'eparti Masix~\cite{masix:osf}, 
+bas\'e sur le micro-noyau Mach~\cite{mach:foundation}, en cours de d\'eveloppement
+au laboratoire MASI. 
+Son objectif principal est l'ex\'ecution simultan\'ee de plusieurs 
+environnements, afin d'utiliser 
+parall\`element sur une m\^eme station de travail des applications Unix, DOS, 
+OS/2, Win32,~\dots. 
+
+Masix permet \'egalement de mettre en commun les ressources d'un r\'eseau 
+(processeurs, m\'emoire, p\'eriph\'eriques, fichiers), 
+ind\'ependamment des diff\'erents environnements qui peuvent s'ex\'ecuter
+sur chaque station.
+
+Nous pr\'esentons tout d'abord la structure g\'en\'erale du syst\`eme Masix
+puis nous \'etudions ses services de communication.
+
+\section{Structure de Masix}
+Masix est construit selon le mod\`ele multi-serveurs~\cite{mach-us95}, 
+qui lui conf\`ere une 
+grande modularit\'e. En effet, chaque serveur, qui offre des fonctionnalit\'es 
+orthogonales, peut \^etre \'ecrit et test\'e ind\'ependamment des autres.
+De plus, il est possible d'ajouter ou de retirer dynamiquement un serveur 
+au syst\`eme.
+Masix est compos\'e de deux couches, elles-m\^emes form\'ees de plusieurs 
+serveurs~:
+\begin{itemize}
+\myitem les environnements, qui impl\'ementent les s\'e-mantiques des 
+syst\`emes d'exploitation traditionnels~: Unix, DOS, OS/2, Win32,~\dots~;
+\myitem en dessous, le syst\`eme d'accueil g\'en\'erique r\'eparti, 
+qui factorise les 
+services r\'epartis dont ils ont besoin, et notamment les 
+services de communication sous la forme d'un serveur r\'eseau.
+\end{itemize}
+
+La modularit\'e du syst\`eme Masix pose certains probl\`emes,
+comme la gestion de l'\'etat global du syst\`eme. En effet,
+les informations qui le composent sont r\'eparties entre le micro-noyau
+et les diff\'erents serveurs. De ce fait, de nombreuses communications ont
+lieu, d'une part entre les diff\'erents serveurs s'ex\'ecutant sur un noeud, 
+et d'autre part
+entre les diff\'erents noeuds du r\'eseau. Il est donc important
+de disposer de m\'ecanismes adapt\'es afin de mini-miser leur surco\^ut.
+
+Le serveur r\'eseau offre des services de communication susceptibles
+de satisfaire les besoins de toutes les composantes du syst\`eme Masix, 
+c'est \`a dire des serveurs du syst\`eme d'accueil et 
+des serveurs qui composent les diff\'erents environnements.
+
+\subsection {Transparence des communications}
+
+Afin de concevoir le syst\`eme Masix de mani\`ere coh\'erente et d'en 
+faciliter le d\'eveloppement, il est pr\'ef\'erable que les 
+communications inter-processus distantes s'effectuent selon
+les m\^emes s\'emantiques que les communications locales offertes par
+Mach.
+
+En effet, deux t\^aches qui souhaitent communiquer ne doivent en aucun cas
+pr\'ejuger de leur localisation respective, car certains
+m\'ecanismes de Masix, comme la migration~\cite{jrprc}, 
+provoquent le d\'eplacement 
+d'une t\^ache d'un noeud du r\'eseau vers un autre noeud. 
+Par ailleurs,
+plusieurs occurences d'un m\^eme
+serveur peuvent coexister sur le r\'eseau, afin d'assurer une meilleure
+tol\'erance aux fautes. Dans ce cas, une t\^ache ne peut pas savoir
+a priori laquelle d'entre elles va traiter sa requ\^ete.
+
+\subsection {Support multi-protocoles}
+
+Le syst\`eme Masix est un syst\`eme multi-environnements. Par cons\'equent,
+le serveur r\'eseau g\`ere les protocoles 
+propres \`a chaque environnement (TCP/IP, IPX, \dots). 
+De plus, il connait \`a tout moment l'\'etat des communications
+initi\'ees par les applications qui utilisent cet environnement. 
+
+En effet, la terminaison d'un environnement peut n\'ecessiter la fermeture
+de toutes les connexions g\'er\'ees par ses protocoles r\'eseau. Il est donc
+important que tous les protocoles utilis\'es par les environnements soient
+connus du serveur r\'eseau.
+Pour ce faire, celui-ci poss\`ede une interface
+d'enregistrement et de d\'esenregistrement dynamiques des
+protocoles~\cite{Tschudin91}.
+
+\subsection {Fiabilit\'e des communications}
+
+Un syst\`eme r\'eparti s'ex\'ecutant sur un r\'eseau local est \`a la merci des 
+d\'efaillances des noeuds et des liens de communications. Ce probl\`eme
+se pose avec d'autant plus d'acuit\'e dans Masix que celui-ci est compos\'e 
+de nombreux serveurs, qui peuvent chacun tomber en panne. Par cons\'equent,
+un serveur peut \^etre r\'epliqu\'e afin de garantir la continuit\'e de son 
+service.
+
+Masix dispose donc de primitives 
+de communication de groupe fiables~\cite{Schiper93,Hadzi94} permettant 
+d'une part de d\'etecter les d\'efaillances puis d'y rem\'edier, et d'autre part
+de pr\'eserver la coh\'erence des donn\'ees r\'epliqu\'ees.
+
+\subsection {S\'ecurit\'e des communications}
+
+Dans Masix, les probl\`emes traditionnels de s\'ecurit\'e des communications r\'eseau
+prennent de l'ampleur.
+En effet, les serveurs \'echangent par le r\'eseau des informations
+priv\'ees, qui ont trait \`a l'\'etat global du syst\`eme. 
+Si ces informations sont intercept\'ees ou alt\'er\'ees, 
+la s\'ecurit\'e et l'int\'egrit\'e du syst\`eme peuvent s'en trouver gravement
+compromises. C'est pourquoi le serveur r\'eseau met \`a la disposition des
+environnements des services de chiffrement.
+
+De plus, gr\^ace \`a son interface d'enregistrement, ce serveur
+contr\^ole l'acc\`es aux p\'eriph\'eriques r\'eseau, 
+puisqu'une application 
+ne peut communiquer qu'au travers des protocoles enregistr\'es aupr\`es
+du serveur. Ceci emp\^eche une application mal intentionn\'ee 
+d'utiliser son propre protocole et d'acc\`eder ainsi librement au r\'eseau.
+
+\subsection {Performances}
+
+La plupart des mesures montrent que les syst\`emes
+bas\'es sur un micro-noyau ont des performances r\'eseau inf\'erieures
+\`a celles des syst\`emes monolithiques~\cite{Maeda92}. On
+pourrait donc en d\'eduire que les micro-noyaux sont intrins\`equement
+inadapt\'es aux architectures r\'eparties.
+
+Or,~\cite{Maeda93} montrent qu'il est possible d'atteindre 
+les performances d'un syst\`eme monolithique en d\'ecomposant les
+fonctionnalit\'es d'un protocole entre le serveur r\'eseau et une librairie projet\'ee 
+dans l'espace d'adressage des applications. 
+
+La librairie contient 
+les services dont les performances sont critiques, comme l'envoi ou 
+la r\'eception d'un message, ce qui permet d'\'eviter de co\^uteux changements 
+de contexte entre l'application et le serveur r\'eseau. Ce dernier ne contient
+plus quant \`a lui que les services qui n\'ecessitent son intervention, comme
+l'ouverture et la fermeture d'une connexion. 
+
+\section {Conclusion}
+Les services r\'epartis offerts par le serveur r\'eseau du syst\`eme Masix sont : 
+\begin{itemize}
+\myitem l'extension des s\'emantiques de communication inter-processus de Mach
+\`a l'\'echelle d'un r\'eseau local ;
+\myitem la gestion dynamique des protocoles utilis\'es par les environnements ;
+\myitem des primitives fiables de communication de groupe (
+broadcast, multicast) ;
+\myitem l'authentification des entit\'es communicantes et le chiffrement des donn\'ees 
+transmises ;
+\myitem des performances proches de celles des syst\`emes monolithiques. 
+\end{itemize}
+
+\bibliographystyle{rcnamed}
+\bibliography{group,wanted,etat,masix,net,mach}
+\end{document}

@@ -1,0 +1,46 @@
+\textheight=25cm
+\textwidth=15.6cm
+\topmargin=-1cm
+\evensidemargin=1pt
+\oddsidemargin=1pt
+\headsep=0pt
+\parskip=1ex
+%% \lineskip=5pt
+%% \lineskiplimit=7pt
+
+\pagestyle{empty}
+
+
+\@ifundefined{reset@font}{\def\reset@font{}}{}
+\def\subsection{\@startsection{subsection}{2}{\z@}{-3.25ex plus-1ex
+    minus-.2ex}{1.5ex plus.2ex}{\reset@font\large\it}}
+
+
+\def\TWENTYFOURPT{\@setsize\TWENTYFOURPT{24pt}\xxpt\@xxpt}
+\def\Title#1{\vspace*{2cm} \begin{center}
+				{\TWENTYFOURPT #1}
+			   \end{center}}
+
+
+\newenvironment{oneAuthor}{
+   \vspace*{0.5cm}
+   \begin{center}
+   }{\end{center}}
+\newenvironment{twoAuthor}{
+   \vspace*{0.5cm}
+   \begin{center}
+   \begin{tabular}{c@{\hspace*{0.25in}}c}
+   }{\end{tabular}\end{center}}
+
+
+\newcommand{\Abstract}[1]{
+  \begin{center}
+
+  {\bf Abstract}
+
+  \begin{minipage}[t]{12cm}
+  #1
+  \end{minipage}
+  \end{center}
+}
+

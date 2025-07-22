@@ -1,0 +1,144 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citeauthoryear{Accetta \bgroup \em et al.\egroup
+  }{1986}]{mach:foundation}
+M.~Accetta, R.~Baron, W.~Bolosky, D.~Golub, R.~Rashid, A.~Tevanian, et
+  M.~Young.
+\newblock {M}ach: {A} {N}ew {K}ernel {F}oundation {F}or {UNIX} {D}evelopment.
+\newblock In {\em Proceedings of the USENIX 1986 Summer Conference}, June 1986.
+
+\bibitem[\protect\citeauthoryear{Bryant \bgroup \em et al.\egroup
+  }{1993}]{norma93}
+B.~Bryant, A.~Langerman, S.~Sears, et D.~Black.
+\newblock {\em {N}ORMA {I}PC: {A} {T}ask-to-{T}ask {C}ommunication {S}ystem for
+  {M}ulticomputer {S}ystems}.
+\newblock Technical report, Open Software Foundation, October 1993.
+
+\bibitem[\protect\citeauthoryear{Card \bgroup \em et al.\egroup
+  }{1993}]{masix:osf}
+R.~Card, E.~Commelin, S.~Dayras, et F.~M\'evel.
+\newblock {T}he {MASIX} {M}ulti-{S}erver {O}perating {S}ystem.
+\newblock In {\em OSF Workshop on Microkernel Technology for Distributed
+  Systems}, June 1993.
+
+\bibitem[\protect\citeauthoryear{Diffie et Hellman}{1976}]{Diffie76}
+W.~Diffie et M.~Hellman.
+\newblock New {D}irection in {C}ryptography.
+\newblock {\em IEEE Transactions on Information Theory}, IT-22:644--654, 1976.
+
+\bibitem[\protect\citeauthoryear{Draves}{1990}]{Draves90}
+R.~Draves.
+\newblock A {R}evised {IPC} {I}nterface.
+\newblock In {\em Proceedings of the Usenix Mach Workshop}, pages 101--121,
+  October 1990.
+
+\bibitem[\protect\citeauthoryear{Forin \bgroup \em et al.\egroup
+  }{1991}]{Forin91}
+A.~Forin, D.~Golub, et B.~Bershad.
+\newblock An {I}/{O} {S}ystem for {M}ach 3.0.
+\newblock In {\em Proceedings of the 1st Usenix Mach Symposium}, pages
+  163--176, November 1991.
+
+\bibitem[\protect\citeauthoryear{Golub \bgroup \em et al.\egroup
+  }{1990}]{Golub90}
+D.~Golub, R.~Dean, A.~Forin, et R.~Rashid.
+\newblock Unix as an {A}pplication {P}rogram.
+\newblock In {\em Proceedings of the Summer 1990 USENIX Conference}, pages
+  87--96, June 1990.
+
+\bibitem[\protect\citeauthoryear{Helander}{1994}]{Helander94}
+J.~Helander.
+\newblock Unix under {M}ach - the {L}ites {S}erver.
+\newblock Master's thesis, Helsinki University of Technology, December 1994.
+
+\bibitem[\protect\citeauthoryear{Kupfer}{1993}]{Kupfer93}
+Michael~D. Kupfer.
+\newblock Sprite on {M}ach.
+\newblock In {\em Proceedings of the Third Usenix Mach Symposium}, April 1993.
+
+\bibitem[\protect\citeauthoryear{Maeda et Bershad}{1992}]{Maeda92}
+C.~Maeda et B.~Bershad.
+\newblock Networking {P}erformance for {M}icrokernels.
+\newblock In {\em Proceedings of the 3rd Workshop on Workstation Operating
+  Systems}, April 1992.
+
+\bibitem[\protect\citeauthoryear{Maeda et Bershad}{1993}]{Maeda93}
+C.~Maeda et B.~Bershad.
+\newblock Protocol {S}ervice {D}ecomposition for {H}igh {P}erformance
+  {N}etworking.
+\newblock In {\em Proceedings of the 14th ACM Symposium on Operating Systems
+  Principles}, pages 244--255, December 1993.
+
+\bibitem[\protect\citeauthoryear{Malan \bgroup \em et al.\egroup
+  }{1991}]{dos91}
+G.~Malan, R.~Rashid, D.~Golub, et R.~Baron.
+\newblock {DOS} as a {M}ach 3.0 {A}pplication.
+\newblock In {\em Proceedings of the 1st Usenix Mach Symposium}, pages 27--40.
+  Carnegie Mellon University, November 1991.
+
+\bibitem[\protect\citeauthoryear{M\'evel et Simon}{1995}]{athens95}
+F.~M\'evel et J.~Simon.
+\newblock Building a {D}istributed {G}eneric {L}ayer for {M}ultiple
+  {P}ersonality {S}upport on top of the {M}ach {M}icrokernel.
+\newblock In {\em Proceedings of the International Conference on Parallel and
+  Distributed Processing Techniques and Applications}, November 1995.
+
+\bibitem[\protect\citeauthoryear{NBS}{1977}]{des77}
+NBS.
+\newblock Data {E}ncryption {S}tandard ({DES}).
+\newblock In {\em Federal Information Processing Standards 46}. US National
+  Bureau of Standards, 1977.
+
+\bibitem[\protect\citeauthoryear{Needham et Schroeder}{1978}]{Needham78}
+R.~Needham et M.~Schroeder.
+\newblock Using {E}ncryption for {A}uthentication in {L}arge {N}etworks of
+  {C}omputers.
+\newblock {\em Communications of the ACM}, 21(12):993--999, 1978.
+
+\bibitem[\protect\citeauthoryear{OSF}{1994}]{norma94}
+OSF.
+\newblock {\em NORMA {I}PC {V}ersion {T}wo: {A}rchitecture and {D}esign}.
+\newblock Technical report, Open Software Foundation, October 1994.
+
+\bibitem[\protect\citeauthoryear{Phelan \bgroup \em et al.\egroup
+  }{1993}]{Phelan93}
+J.~Phelan, J.~Arendt, et G.~Ormsby.
+\newblock An {O}{S}/2 {P}ersonality on {M}ach.
+\newblock In {\em Proceedings of the 2nd Usenix Mach Symposium}, pages
+  191--201, April 1993.
+
+\bibitem[\protect\citeauthoryear{Reynolds et Heller}{1991}]{Reynolds91}
+F.~Reynolds et J.~Heller.
+\newblock Kernel {S}upport {F}or {N}etwork {P}rotocol {S}ervers.
+\newblock In {\em Proceedings of the Usenix Mach Symposium}, November 1991.
+
+\bibitem[\protect\citeauthoryear{Rivest \bgroup \em et al.\egroup
+  }{1978}]{Rivest78}
+R.~Rivest, A.~Shamir, et L.~Adelman.
+\newblock A method of obtaining digital signatures and public key
+  cryptosystems.
+\newblock {\em Communications of the ACM}, 21(2):120--126, 1978.
+
+\bibitem[\protect\citeauthoryear{Rivest}{1992}]{Rivest92}
+R.~Rivest.
+\newblock {\em The {M}{D}5 {M}essage-{D}igest {A}lgorithm}.
+\newblock Technical Report RFC 1321, Network Information Center, 1992.
+
+\bibitem[\protect\citeauthoryear{Sansom \bgroup \em et al.\egroup
+  }{1986}]{Sansom86}
+R.~Sansom, D.~Julin, et R.~Rashid.
+\newblock Extending a {C}apability {B}ased {S}ystem into a {N}etwork
+  {E}nvironment.
+\newblock In {\em Proceedings of ACM SIGCOMM'86}, pages 265--274, 1986.
+
+\bibitem[\protect\citeauthoryear{Smith}{1993}]{Smith92}
+P.~Smith.
+\newblock {L}{U}{C} {P}ublic {K}ey {E}ncryption.
+\newblock {\em Dr Dobb's Journal}, 1993.
+
+\bibitem[\protect\citeauthoryear{Stevenson et Julin}{1995}]{mach-us95}
+J.~Stevenson et D.~Julin.
+\newblock Mach-{U}s: {U}nix on {G}eneric {O}{S} {O}bject {S}ervers.
+\newblock In {\em Proceedings of the 1995 Usenix Conference}, January 1995.
+
+\end{thebibliography}

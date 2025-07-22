@@ -1,0 +1,14 @@
+Masix is based on the Mach 3.0 microkernel. As such, Mach does not provide
+all the traditional functionalities usually found in an operating system.
+It only provides~:
+\begin{itemize}
+\item task and thread management, which is the implementation basis for 
+processes. A task is a resource allocation unit, whereas a thread is an
+execution unit~;
+\item local interprocess communication (IPC), according to a client-server model
+ based on ports and messages. A port is an unidirectional communication channel,
+protected by send and receive rights. A message is a set of typed data, sent to a port~;
+\item physical and virtual memory management~;
+\item physical peripherals management.
+\end{itemize}
+

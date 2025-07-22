@@ -1,0 +1,266 @@
+
+\documentstyle [a4,epsf,rcnamed] {article}
+
+\parskip=2mm
+
+\begin {document}
+
+\begin{center}
+{\Large Overview of the Masix Distributed Operating System}
+
+Franck M\'evel and Julien Simon\\
+Laboratoire MASI, Institut Blaise Pascal\\ 
+Universit\'e Paris VI\\
+4 place Jussieu\\
+75252 PARIS CEDEX 05, FRANCE\\
+T\'el: (1) 44 27 71 04\\
+Fax: (1) 44 27 62 86\\
+\{Franck.Mevel,Julien.Simon\}@masi.ibp.fr\\
+http://www-masi.ibp.fr/masix
+
+\end{center}
+
+\newcommand {\figps} [4]
+{
+    \begin{figure} [ht] 
+       \begin{center} 
+                \leavevmode
+                \epsfxsize=#2
+                \epsfysize=#3
+                \epsffile {#1.ps}
+                \caption {#4}
+                \label {fig:#1}
+        \end{center}
+    \end{figure} 
+}       
+
+\newcommand {\mysection} [1]
+{
+        \vspace {-5mm}
+        \section {#1}
+        \vspace {-3mm}
+}
+
+\newcommand {\mysubsection} [1]
+{
+        \vspace {-1mm}
+        \subsection {#1}
+        \vspace {-3mm}
+}
+
+\newcommand {\myitem}
+{
+        \vspace {-2mm}
+        \item
+}
+
+
+\mysection {Introduction}
+
+A current trend in operating systems research is to use microkernels as a basis
+for new systems. 
+Indeed, microkernels offer many advantages compared with monolithic systems, 
+such as portability, modularity and dynamicity.
+
+Mach has been widely used to build many Unix-like systems, like
+Lites~\cite{Helander94} and Mach-US~\cite{mach-us95}. Other personalities
+have been implemented on top of Mach, like DOS~\cite{dos91} or 
+OS/2~\cite{Phelan93}.
+Nevertheless, to the best of our knowledge, none of the operating systems 
+built on top of a microkernel has really investigated the issues related 
+to multiple personality support.
+
+Masix~\cite{caracas94} is a distributed operating system based on the 
+Mach microkernel~\cite{mach:foundation}, currently under development at the 
+MASI Laboratory.
+The goal of this project is to investigate extensively the problems related 
+to multiple personality support. 
+We are particularly interested in providing transparent
+distributed mechanisms to the user processes, such as load distribution~\cite{paris95}, 
+fault tolerance or distributed files. 
+For this purpose, we have designed a Distributed Generic Layer~\cite{athens95}
+, made of several servers, interposed between the microkernel and 
+the personalities.
+
+In this paper, after a brief overview of Mach, we present the design 
+principles of Masix and its overall structure. Then, we focus on
+two major services provided by the DGL, i.e. naming and communications.
+
+\mysection {The Mach microkernel} 
+
+The Mach microkernel provides basic resource management mechanisms, such as~:
+\begin{itemize}
+\myitem task and thread management. They are the implementation basis for
+processes. A task is a resource allocation unit, whereas a thread is an
+execution unit~;
+\myitem local interprocess communication (IPC), according to a client-server model
+ based on ports and messages. A port is an unidirectional communication channel,
+protected by send and receive rights. A message is a set of typed data, sent to
+a port~;
+\myitem physical and virtual memory management~;
+\myitem physical peripherals management.
+\end{itemize}
+
+\mysection {Design Principles}
+
+\mysubsection {System Structure}
+
+We believe that it is worth designing an evolutive system in which
+components can be added in a dynamic way. Therefore, we have chosen 
+to build Masix following the multi-servers approach. 
+Implementing the operating system as a set of communicating user mode 
+tasks offers many advantages:
+\begin {itemize}
+\myitem each server has its own interface, that insures protection and minimal
+interactions between the other ones~;
+\myitem each server can be written and tested without interactions with the
+other ones,
+\myitem each server is smaller than a traditional kernel and, thus, easier
+to maintain,
+\myitem adding a server in the running system is easy if a dynamic service
+management has been implemented.
+\end {itemize}
+
+Nevertheless, the multi-servers approach has also its drawbacks:
+\begin {itemize}
+\myitem shared data are difficult to implement because each server has its
+own address space,
+\myitem the execution of system services often involves several servers and
+implies message exchanges and context switches. This leads to lower
+performances due to the context switch overhead.
+\end {itemize}
+
+Lots of optimizations have been included in the design of the system
+to minimize the number of servers involved in the realization of a system call.
+Moreover, we plan to use new mechanisms to reduce context switching between
+tasks : after intensive testing of systems servers it should be possible to
+take advantage of co-location~\cite{Condict93}. This way, the servers
+will run in kernel mode and any context switching and memory copying
+between the kernel and servers will not occur anymore.
+
+System calls are implemented as remote procedure calls: a process
+sends a request message to a server and waits for the reply. 
+
+\mysubsection {Naming and Protection}
+
+In Masix, each server is responsible for providing a set of well-defined
+abstractions and semantics. The combination of the whole set of servers
+forms the complete operating system.
+
+Each server implements the operations that act on typed objects. The
+server implements a fixed dialog protocol related to the
+type of the objects. When a client process needs to act on an object, it sends
+a request message to the server that manages the object. This message is sent
+on a Mach port, which is used as the object identifier. The server holds the
+reception right on this port.
+
+Accessing an object only requires to know its
+port and its associated dialog protocol. The request sent to the object
+port is forwarded by the Mach microkernel to the server which manages the
+object. This communication scheme allows several servers, which manage the
+same objects types in different ways, to coexist in the system as long as
+they implement the same dialog protocol.
+
+Using Mach ports as objects references allows a high level of protection.
+To act on an object, a process needs to hold a send right on its port.
+When a process accesses an object for the first time, i.e. when it creates or
+opens the object, the server returns the send right if the calling
+process is allowed to act on the object. Otherwise, it does not return
+any send right. Thus, if the server has denied access to the object, the
+process cannot send any request since it does not hold any send right to the
+port.
+
+\mysubsection {Server Structure}
+
+In Masix, each server is a Mach task. This task contains several
+threads which wait for requests and execute them.
+Each object is named by a port and every object
+port is contained in a single port set. Every thread waits for requests on
+this port set. Requests are thus dynamically distributed between the
+threads contained in the server.
+
+\mysubsection {Interactions between servers}
+
+Each server needs to maintain some information relative to its
+objects. Two servers often need to use the same information. In a monolithic
+kernel, these informations are stored in common tables which are accessed by
+every component which needs to. In a multi-server system, we cannot use global
+tables since each server has its own address space. In Masix, each server
+maintains a subset of the system informations. This subset contains only the
+informations that the server needs to know in order to manage its objects.
+
+\mysection {Overall Structure}
+
+As shown on Figure~\ref{fig:masix2-us}, Masix is made up of two layers, 
+themselves built of several servers~:
+\begin{itemize}
+\myitem the personalities, which implement the semantics of traditional
+operating systems : Unix, DOS, OS/2, Win32,~\dots~;
+\myitem underneath, the DGL, which offers generic services to the multiple 
+personalities (communication, shared memory, process management, fault 
+tolerance,~\dots.
+\end{itemize}
+
+\figps{masix2-us}{125mm}{85mm}{Overall structure of the Masix System}  
+
+\section {The Distributed Generic Layer}
+
+This layer consists of a set of communicating servers
+which offer distributed services to the personalities. 
+We now present two of these servers : the Administration and Configuration 
+Server and the Generic Network Server.
+
+\mysubsection {The Administration and Configuration Server}
+
+The Administration and Configuration Server (ACS) is the first server
+to run when Masix is started up. It is in charge of maintaining the list of
+the servers which run on a node. 
+When a server starts its execution, it registers itself with
+the ACS by sending a message on its port. This message contains a character
+string used as the name of the server, and a send right on its request port.
+
+When a client wishes to communicate with a server, it sends the string to 
+the ACS and requests a send right on the corresponding port. Nevertheless, 
+not any client should be allowed to request any port in the system.
+So, we have designed the following security mechanismss~:
+\begin{itemize}
+\myitem separation of the inter-server and the client-server communication 
+interfaces~;
+\myitem authentication of the servers by the ACS~;
+        \begin{itemize}
+        \myitem when they register, thanks to digital signatures~;
+        \myitem when they request a name resolution, thanks to a secret key 
+algorithm~;
+        \end{itemize}
+\myitem mutual authentication of local and remote servers, thanks to a secret key algoritm~;
+\end{itemize}
+
+\mysubsection {The Generic Network Server}
+
+Many issues arise because of the modularity of Masix,
+linked to the distribution of the global state of the system among 
+the microkernel and the various servers. As a consequence, many
+communications are initiated between servers running on a same node on
+the one hand, and between servers running on different nodes on the other hand.
+Thus, Masix needs adequate communication mechanisms to minimize their extra 
+cost. 
+
+Our solution is based on a Generic Network Server~\cite{rennes95}, 
+interposed between the personalities and the microkernel. 
+By using proxy ports and a global name resolution protocol, we scale the 
+local Mach IPC up to a workstation network, without altering their 
+original semantics
+The GNS also provides encryption services, to make up for the insecurity 
+of the communication links. This way, eavesdropping can be defeated.
+
+\mysection {Conclusion}
+
+We have presented the structure of the Masix distributed operating
+system, as well as some features of its Distributed Generic Layer. 
+We briefly explained the naming and communication services it transparently 
+provides to the personalities.
+
+\bibliographystyle{rcnamed}
+\bibliography {etat,masix,mach,wanted}
+
+\end {document}

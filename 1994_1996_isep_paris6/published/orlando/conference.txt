@@ -1,0 +1,278 @@
+                              PROGRAM
+                    IASTED International Conference
+                             NETWORKS
+                        January 8-10, 1996
+
+LOCATION:
+Orlando Marriott - Orlando, Florida, USA
+
+INTERNATIONAL PROGRAM COMMITTEE
+M. Alam                                        University of Toledo, USA
+U.M. Borghoff                         Rank Xerox Research Center, France
+A. Bottcher                              TB&D Telekommunikation, Germany
+V. Chaudhary                                 Wayne State University, USA
+B. Cong                               South Dakota State University, USA
+M. Hamdi                      Hong Kong Univ. of Sci. & Tech., Hong Kong
+L. Lin                            Yunlin Institute of Technology, Taiwan
+J.W. Mark                                 University of Waterloo, Canada
+H. Mei                                Fu-Jen Catholic University, Taiwan
+X. Meng                           University of Texas, Pan American, USA
+P.A. Morreale                       Stevens Institute of Technology, USA
+B. Petrasko                                Univ. of Central Florida, USA
+S. Singh                               University of South Carolina, USA
+K.R. Subramanian                  Nanyang Technol. University, Singapore
+
+
+January 8
+08:00 Registration
+09:10 Welcome & Keynote Speaker
+10:10 Coffee Break (also at 15:15)
+
+10:30 Session: 01 -  Network Security (room: Hibiscus A/B)
+Chairperson: Y. Oki (Japan)
+
+An Access Determination Algorithm for Preventing Non-secure Information Flows
+Y. Oki, T. Shimomura, T. Ohta (Japan)
+
+Secure Communication Services in the Masix Distributed Operating System
+J. Simon, F. Mevel (France)
+
+Message Delivery Certification Scheme based on the Fiat-Shamir Identification
+Scheme
+M. Kanda, Y. Takashima, K. Yamanaka (Japan)
+
+Network Security Scheme Based on Error Correcting Codes
+Y.I. Kang, S.H. Yoon, T.Y. Kim (Korea)
+
+A High-Speed DES Implementation using Temporal Parallelism
+T.-K. Park, D.-J. Hwang (Korea)
+
+
+13:45  Session: 02 -  Commercial and Wireless (room: Hibiscus A/B)
+Chairperson: A. Schill (Germany)
+
+Network Management System for Intelligent Telecommunication Equipment
+C.H.N. Vun, B. Lee, C.T. Lau (Singapore)
+
+An Integrated Platform for Corporate Network Services
+Y.I. Kang, S.H. Yoon, T.Y. Kim (Korea)
+
+Adaptive Bandwidth Allocation in the CPE (Customer Premises Equipment)
+G. Kbar, W. Dewar, K. Salway, S. Sharma (Australia)
+
+Telecommunications Network Development: Organizational and Societal Challenges
+for Developing Nations
+L. Hossain (Australia)
+
+Multimedia Network Application for Industrial Process Analysis
+I. Myllyl, I. Trast (Finland)
+
+Experiences with Wireless Access to Internet
+C.-H. M. Lin, J. Sang, B.R. Dantsduri (USA)
+
+Enhancing Distributed Platforms for Exploiting Advanced Network Technologies
+A. Schill (Germany)
+
+Performance Evaluation of an Integrated Service Protocol for CDMA Wireless LANs
+S.J. Jiang, L. Lin, Y.-F. Huang, W.-D. Weng (Taiwan)
+
+
+January 9, 1996
+Coffee breaks will be at 10:00 and 15:15
+
+08:00  Session: 03 -  Networks & Algorithms (room: Hibiscus A)
+Chairperson: W. Dewar (Australia)
+
+Multicast Routing through Depth First Search Algorithm
+A. Borella, G. Cancellieri (Italy)
+
+Two Phase Algorithm for the Topological Design of Local Access Tree Networks
+Y.-J. Lee, D.-W. Lee (Korea)
+
+The Critical Conditions for Finding the Optimal Reconfiguration using Traffic
+Patterns Given on Token Ring-Based Distributed Systems
+S.-C. Joo, M.-H. Kim, J.W. Lee (Korea)
+
+Integrating Agent-Functionality into Distributed Applications
+G. Schfer, J. Seitz (Germany)
+
+Optimization of Circuit Switched Networks
+A. Svensson, L. Reneby (Sweden)
+
+A Tool for Resource and Load Sharing in Heterogeneous Networks
+P.D. Le, B. Srinivasan (Australia)
+
+Mutual Trust between Customer and Providers of Distributed Services
+H.-H. Pagnia, C. Liebig (Germany), O. Theel (France)
+
+Relationship Between Throughput and the Mean Waiting Time for Random Access LANs
+K. Mihavics, A.B. Wolpert (USA)
+
+EHABKIT LAN/MAN/WAN Architecture and Protocol
+E.A. Khalil (Egypt)
+
+Pipelining Consideration in EHABKIT LAN/WAN
+E.A. Khalil (Egypt)
+
+A Comparative Study of Various Fairness Mechanisms for DQDB Man Protocol
+P.M. Geethakumari, W.J. Dewar (Australia)
+
+08:00  Session: 04 -  ATM (room: Hibiscus B)
+Chairperson: C. Kim (Korea)
+
+A High Performance Shared Output Buffer Switch for ATM
+J.-F. Lin, S.-D. Wang, T.-S. Kuo (Taiwan)
+
+Performance Analysis of ATM Switches under Bursty and Non-Uniform Traffic
+J. Ibarra (Costa Rica), C.V. Chakravarthy (USA)
+
+A Simple Virtual Path and Virtual Channel Bandwidth Allocation Scheme for ATM
+Networks
+W.M. Moh, T.S. Moh, U. Rajgopal, M. Hegde (USA)
+
+A Soft Bandwidth Reservation Protocol for Non-Real-Time Traffic in ATM Local
+Area Networks
+H. Jerome, L. Murphy (USA)
+
+A Reactive Congestion Control Scheme for ATM Networks
+K. Kang, Y. Yoon, C. Kim (Korea)
+
+Dynamic Traffic Shaping Scheme Applicable to ATM Ring
+C.-W. Choi, T.-Y. Kim (Korea)
+
+The Efficacy of Moving Ceiling Scheme in Integrated Environment
+J. Park, Y. Yoon, C. Kim (Korea)
+
+Calculation of Throughput Loss due to ATM Connection Set-Up Time
+M. Hassan, J. Breen (Australia)
+
+DTCL: A New Mode for Transporting Connectionless Traffic in ATM-based Networks
+Z. Yu (USA), N. Yu (P.R. China)
+
+More Powerful ATM Connectionless Support using AAL5+
+F. Hoymany, D. Mosse (USA)
+
+
+LUNCH 12:15 (Pool Pavilion)
+
+
+13:45  Session: 05 - Protocols (room: Hibiscus A)
+Chairperson: K.H. Chong (Singapore)
+
+Executable Network Protocols using VHDL
+J.W. Gowens, B. Nguyen, W. Butler (USA)
+
+Transport Protocol for Reliable Multicast: TRM
+B. Sabata, M. Brown, B. Denny (USA), C.H. Heo (Korea)
+
+Design and Analysis of Cell Delivery Protocol in ATM Virtual Paths
+Z. Zlotnikov, M. Koreblit, S. Meltsin (Israel)
+
+An Efficient OSI-based Remote Procedure Call Model for Open Systems
+D.B. Hoang, Y. Liu (Australia)
+
+A Dynamic Routing Protocol Based on Acyclic Digraph Concept
+K.H. Chong (Singapore)
+
+A Transfer Protocol Based on E-Mail Messages: Description and
+Performance
+F. Abal, J. Aramberri (Spain)
+
+Guaranteeing Synchronous Message Deadlines with the Deterministic Collision
+Resolution Protocol
+J.A. Gil, A. Pont, A. Crespo (Spain)
+
+
+13:45  Session: 06 - Architecture (room: Hibiscus B)
+Chairperson: Y. Zhang (USA)
+
+An Internetwork Arhitecture for Mobile Computing
+Y. Zhang, S.K. Dao (USA)
+
+Architecture Refinement for a Distributed Functional Model
+T. Sera, A. Takura, T. Ohta (Japan)
+
+The Effect of Traffic Locality on Network Architecture Performance
+S.L. Ng, B. Dewar (Australia)
+
+ATM Parallel Shared Memory Switch (APSMS)
+G. Kbar, W. Dewar (Australia)
+
+ATM Switch Modeling and Simulation
+S. Roy, E. Yaprak, J. Liu, E. Chow, R. Markley (USA)
+
+
+15:45  Session: 07 - Software (room: Hibiscus B)
+Chairperson: X. Meng (USA)
+
+Debugging Aid for Distributed Programs in TCP/IP Based Network
+X. Meng (USA)
+
+Graph-based Multi-Technique Distributed System Modelling
+J.M. Crichlow, Y. Francis (Trinidad & Tobago)
+
+A State-Space Design of Two-Dimensional Digital Filters
+A. Kawakami (Japan)
+
+A New Technique for Derivation of Test Sequences from LOTOS Specifications
+H. El-Gendy (Canada)
+
+
+January 10, 1996
+Coffee break will be at 10:15
+
+08:00  Session: 08 -  Multimedia (room: Oleander B)
+Chairperson: R.S. Chang (Taiwan)
+
+Multimedia Networking Techniques
+I. Trast (Finland)
+
+Simulation of a Multimedia Metropolitan Area Network
+F. Pirri, M. Lunghi, T. Pecorella (Italy)
+
+Realtime Multimedia Placement Algorithm and its File System
+K. Park, B. Song, S. An (Korea)
+
+Performance of a Congestion Control Scheme on an ATM Switch
+W. Feng, J.W.-S. Liu (USA)
+
+Service User Emulator for Generating A Repreatable Network Load
+N. Bjrkman (Sweden), I. Cselnyi, F. Baumann, P. Haraszti, T. Henk (Hungary),
+A. Latour-Henner, A. Miah (Sweden)
+
+Bottom-Line of Interoperability for PC-based Platforms
+K.E. Lim, J.Y. Kim, D.J. Hwang (Korea)
+
+A Dual Bus Network for VOD
+C.L. Chen, R.-S. Chang (Taiwan)
+
+A Reflector Based System to Support the RSW Multimedia Conferencing Control
+Criteria
+R. Sureswaran, A. Goh (Malaysia)
+
+Network CAI System (FUJAO System)
+F. Ye (P.R. China)
+
+Optimal Buffering for the Delivery of Compressed Prerecorded Video
+W.-C. Feng, F. Jahanian, S. Sechrest (USA)
+
+
+AUTHORS PLEASE NOTE
+The registration fee for IASTED/ISMM members is $400.00 and for non-members
+$460.00. Extra page and extra paper charges are $80.00 per page. The
+registration fee includes one copy of the proceedings, refreshments during the
+conference and lunch on January 9, 1996. Cheques are to be made payable to
+IASTED. Visa and Mastercard are accepted.
+
+ACCOMMODATION
+Special rates are available at the Marriott, $99.00 single or double occupancy.
+
+EXTRA COPIES OF THE PROCEEDINGS
+Extra copies of the proceedings may be ordered separately from the Secretariat.
+
+SECRETARIAT
+IASTED Secretariat
+1811 West Katella Avenue, Suite 101
+Anaheim, California 92804
+Tel: 1-800-995-2161 or (714) 778-3230; Fax: (714) 778-5463
+email: iasted@orion.oac.uci.edu

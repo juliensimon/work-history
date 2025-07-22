@@ -1,0 +1,23 @@
+Type de papier (mettez un X devant la bonne ligne !):
+	X Journees d'etudes
+
+Auteurs                : Franck Mevel et Julien Simon
+
+Titre: Services de Communications Repartis dans le Systeme Masix
+
+Nom de la conference   : Deuxiemes Journees Jeunes Chercheurs en
+			 Systemes Repartis
+
+Sigle de la conference : JJCSR
+
+Date                   : 9-10 octobre 1995
+
+Lieu                   : IRISA, Rennes, France
+
+Les pages              : pas de numeros de page
+
+Nom du (des) fichiers depose (s)
+(noms que vous avez donner aux fichiers que vous me faite parvenir
+des fichiers differents.
+
+rennes95.ps.gz

@@ -1,0 +1,270 @@
+
+\documentstyle [11pt,a4,epsf,fancyheadings,twoside,rcnamed,pdareport] {article}
+\title{ {\bf Etat de l'art des serveurs Unix au dessus de Mach}}
+\author { Rémy Card\\card@tsx-11.mit.edu
+	\and Franck Mével\\mevel@masi.ibp.fr 
+	\and Julien Simon\thanks {This work has not been financed by the MASI Laboratory}\\simon@freenix.fr
+}
+\date{ 16 mars 1995}
+\begin{document}
+\maketitle
+
+
+\newcommand {\figps} [4]
+{
+    \begin {figure} [htbp]
+        \begin {center}
+                \leavevmode
+                \epsfxsize=#2
+                \epsfysize=#3
+                \epsfbox {#1.ps}
+        \end {center}
+        \caption {#4}
+        \label {fig:#1}
+    \end {figure}
+}
+
+
+Nous présentons ici brièvement le fonctionnement des systèmes qui offrent
+une émulation d'Unix au dessus du micronoyau Mach.
+
+Ils sont de trois types :
+\begin{itemize}
+\item les systèmes à architecture monolithique, utilisant Mach comme couches basses (OSF/1 IK) ;
+\item les systèmes composés d'un seul serveur, qui s'éxécute en mode utilisateur au dessus de Mach (BSD Single Server, CMU Unix Server, OSF/1 MK, Lites et Sprite) ;
+\item les systèmes composés de plusieurs serveurs coopérants, appelés systèmes multiserveurs. (CMU Mach-US et GNU Hurd).
+\end{itemize}
+
+\section {Systèmes monolithiques}
+
+\subsection {OSF/1 IK}
+
+OSF/1 IK ~\cite{Foundation90}, développé par l'Open Software Foundation,
+repose sur Mach 2.5. Ce système reprend la structure monolithique présente
+dans Unix et se contente d'utiliser les fonctionnalités de Mach pour assurer
+les sémantiques Unix sans en tirer pleinement profit. Pour ces raisons,
+nous nous contentons de le décrire brièvement.
+
+Sa structure est représentée sur la figure~\ref {fig:structosf1ik}.
+
+\figps {structosf1ik} {100mm} {100mm} {Structure de OSF/1 IK}
+
+Les  innovations offertes par OSF/1 IK par rapport à Unix, au niveau
+structurel, sont~:
+\begin {itemize}
+
+\item l'utilisation des fonctionnalités de gestion de t\^aches et {\it threads}
+pour fournir des processus selon la sémantique Unix~;
+\item la possibilité d'utiliser plusieurs {\it threads} au sein d'un m\^eme
+processus~;
+\item la parallélisation des fonctions du système, gr\^ace aux
+fonctionnalités fournies par Mach, afin de permettre une exécution
+optimale sur des ordinateurs multiprocesseurs~;
+\item l'utilisation des gestionnaires de périphériques contenus dans
+Mach pour effectuer les entrées-sorties~;
+\item l'optimisation de la gestion de la mémoire virtuelle gr\^ace à
+l'utilisation des mécanismes de Mach (notamment par rapport à la version
+BSD de Unix qui implémente une gestion peu performante de la
+mémoire\footnote {pour les versions antérieures à 4.4BSD, cette
+dernière ayant repris la gestion de la mémoire virtuelle de Mach} ~\cite {Leffler89}.
+
+L'utilisation de fonctionnalités de Mach permet d'alléger le code
+du système lui-m\^eme puisque de nombreuses fonctions internes
+(ordonnancement de processus, gestion des périphériques, gestion de la
+mémoire physique...) peuvent \^etre remplacées par des appels à Mach.
+Néanmoins, de par son caractère monolithique, OSF/1 IK n'est pas
+différent d'une implémentation classique de fonctionnalités Unix dans la
+mesure où il est fondé sur la m\^eme structure et en possède donc les
+m\^emes inconvénients.
+
+
+\end {itemize}
+
+\section{Systèmes monoserveurs}
+
+\subsection{OSF/1 MK}
+
+\subsubsection{Structure de OSF/1 MK}
+
+OSF/1 MK ~\cite{Foundation92}, développé par l'Open Software Foundation, repose sur la version 3.0 de Mach.
+L'architecture de ce système est directement inspirée de celle du BSD Single Server de
+Carnegie Mellon University. C'est également le cas du Unix Server de CMU ~\cite{Golub90}, et de Lites ~\cite{Helander94}.
+ 
+Il est donc composé d'un serveur unique, qui s'exécute en mode utilisateur au 
+dessus de Mach. Les composantes de ce serveur sont :
+\begin{itemize}
+\item la quasi-intégralité du code de OSF/1 IK ;
+\item une couche d'interface avec les processus utilisateurs, chargée de convertir leurs
+appels système en RPC a destination de Mach ;
+\item une couche d'interface avec le micronoyau, qui permet au serveur d'obtenir des 
+services indisponibles en mode utilisateur.
+\end{itemize}
+
+Sa structure est représentée sur la figure~\ref {fig:structosf1mk}.
+
+\subsubsection{Traitement des appels système}
+
+OSF/1 MK offre une compatibilité binaire avec Unix, gr\^ace à une librairie d'émulation
+placée dans l'espace d'adressage des processus utilisateurs.
+
+\figps {structosf1mk} {130mm} {120mm} {Structure de OSF/1 MK}
+
+Lorsqu'un processus effectue un appel système, il exécute une trappe qui
+transfère le contr\^ole à Mach. Celui-ci redirige l'appel vers la librairie, qui
+exécute l'appel système. Si l'appel est simple, la librairie peut l'exécuter seule.
+
+\figps {apsyssimp} {110mm} {110mm} {Appel système simple dans OSF/1 MK}
+
+Par contre, dans le cas où l'appel est plus complexe, elle effectue un RPC vers
+le micro-noyau et retourne les résultats au processus utilisateur.
+
+\figps {apsyscomp} {110mm} {110mm} {Appel système complexe dans OSF/1 MK}
+
+Cependant, l'utilisation d'une librairie d'émulation pose de sérieux problèmes
+de sécurité et de maintenance. Pour tenter de les résoudre, OSF a mis au point
+une version d'OSF/1 MK sans librairie d'émulation ~\cite{Patience93}.
+Ceci a été rendu possible au prix de plusieurs modifications de Mach 3.0, notamment
+dans la gestion de la mémoire virtuelle et des exceptions. 
+
+\subsubsection{Gestion des processus}
+
+Les processus sont gérés par le biais des t\^aches et threads Mach. Le serveur maintient
+des structures de données contenant les informations liées aux sémantiques Unix des
+processus qui ne sont pas directement gérées par Mach. 
+Les informations maintenues par le serveur sont également accessibles par la librairie
+d'émulation sans son espace d'adressage, afin de lui permettre de traiter directement
+certains appels système, sans faire appel au serveur.
+
+La mémoire virtuelle des processus est gérée par un paginateur, appelé "vnode pager",
+qui fait partie du serveur.
+
+\subsubsection{Gestion des entrées-sorties}
+
+Le serveur contient une version non modifiée des fonctions d'entrées-sorties d'Unix BSD
+(systèmes de fichiers, gestion des sockets, \dots). Dans Unix, ces sous-systèmes utilisent
+des tables de pointeurs sur fonctions pour accéder au gestionnaires de périphériques 
+~\cite{Leffler89}.
+
+Dans OSF/1 MK, ces tables contiennent les adresses de fonctions, contenues dans la
+couche d'interface avec le micronoyau, qui redirigent les requ\^etes vers les
+gestionnaires de périphériques contenus dans Mach.
+
+\subsection{Sprite}
+
+Sprite ~\cite{Ousterhout88}, développé \'a l'Université de Berkeley, est un système réparti, basé sur 
+les sémantiques Unix. Les fonctionnalitées réparties de Sprite permettent à un ensemble de stations reliées par
+un réseau de partager leurs ressources (processeurs, fichiers) de manière transparente.
+ 
+Sprite a été porté au dessus de Mach 3.0 ~\cite{Kupfer93}, afin de bénéficier du grand nombre de plates-formes 
+supportées par ce micronoyau. Sa structure est représentée sur la figure~\ref {fig:sprite}.
+
+Sous cette forme, Sprite s'exécute en tant que serveur unique en mode utilisateur.
+Si l'objectif de portabilité ait été atteint, les performances sont en revanche très inférieures à celles
+du système de départ.
+
+\figps {sprite} {120mm} {100mm} {Structure de Sprite au dessus de Mach}
+
+\section{Systemes multiserveurs} 
+\subsection{Mach-US}
+\subsubsection {Structure de Mach-US}
+
+Développé par Carnegie Mellon University, Mach-US est un système multi-serveurs orienté objet basé sur Mach 3.0 ~\cite{mach-us91}, ~\cite{mach-us95}.
+Les composantes de Mach-US sont :
+\begin{itemize}
+\item un ensemble de serveurs, offrant chacun un type de service bien déterminé ;
+\item une librairie d'émulation, chargée dans l'espace d'adressage de chaque processus utilisateur, et qui permet d'offrir une compatibilité binaire avec 4.3BSD.
+\end{itemize}
+Sa structure est représentée sur la figure~\ref {fig:machus}.
+
+\figps {machus} {120mm} {150mm} {Structure de Mach-US}
+
+Les serveurs sont de deux types :
+\begin{itemize}
+\item les serveurs indépendants des fonctionnalités système \'a offrir aux processus utilisateurs :
+\begin{itemize}
+\item serveur de configuration, chargé de lancer les autres et de leur fournir des informations globales ;
+\item serveur d'authentification ;
+\item serveur de diagnostic.
+\end{itemize}
+\item les serveurs offrant des fonctionnalités système aux processus utilisateurs :
+\begin{itemize}
+\item serveur de chemin ;
+\item serveur de fichiers, qui gère les systèmes de fichiers de type UFS ;
+\item serveur de communications inter-processus locales (tubes, sockets, \dots);
+\item serveur de communications réseau par sockets  ;
+\item serveur de terminaux, qui gère les lignes séries ;
+\item serveur de processus. 
+\end{itemize}
+\end {itemize}
+
+\subsubsection{Traitement des appels système}
+
+Les appels système sont implémentés de la m\^eme façon que
+dans OSF/1 MK~: les processus utilisateur provoquent une trappe gérée par
+Mach qui la redirige vers la librairie d'émulation selon un effet de
+trampoline.  Cette librairie exécute ensuite l'appel
+système en transmettant une ou plusieurs requ\^etes aux serveurs.
+
+\subsection{GNU Hurd}
+
+\subsubsection {Structure interne de Hurd}
+
+Hurd est en cours de développement par la Free Software Foundation ~\cite{Hurd94}
+Il est conçu comme un ensemble de serveurs coopérants, auquels s'ajoute une librairie d'émulation. 
+Certains de ces serveurs sont essentiels au fonctionnement du système alors que
+d'autres peuvent \^etre remplacés dynamiquement.
+
+Les serveurs indispensables sont :
+\begin{itemize}
+\item le serveur d'authentification ;
+\item le serveur de processus ;
+\item les serveurs de fichiers (UFS, NFS, \dots);
+\item le serveur de terminaux.
+\end{itemize}
+
+\subsubsection {Mécanisme de translation}
+
+La plupart des serveurs sont accessibles via des fichiers. Normalement,
+l'ouverture d'un fichier provoque l'envoi d'un droit d'émission sur un port
+caractérisant le fichier. Tout système de fichiers est géré par un
+serveur~; quand un fichier est ouvert, le serveur crée un port, l'associe au
+fichier et transmet un droit d'émission sur ce port au client.
+
+Un fichier peut avoir un ``translateur'' qui lui est associé. Dans ce
+cas, au lieu de retourner un port caractérisant le fichier, le serveur
+exécute un programme, appelé ``translateur''. Le serveur fournit à ce
+programme le port correspondant au fichier ouvert et le translateur doit
+renvoyer un port au client.
+
+Ce mécanisme de translation est utilisé pour le montage de
+systèmes de fichiers~: quand un utilisateur ouvre le fichier correspondant à
+un point de montage, le translateur correspondant, qui comprend la structure
+physique du système de fichiers monté, est exécuté et renvoie un
+port au client. Les accès ultérieurs aux fichiers sont donc ensuite
+dirigés, via ce port, sur ce translateur.
+
+Un translateur peut \^etre associé à un fichier par son
+propriétaire. De la sorte, tout programme peut \^etre utilisé comme
+translateur à condition qu'il respecte un protocole bien défini. Il est
+donc ainsi possible, pour tout utilisateur, d'ajouter dynamiquement des
+fonctionnalités au système par le biais de translateurs.
+
+Aucun des translateurs présents installé dans le système de
+fichiers ne voit ses privilèges accrus. Les translateurs s'exécutent avec
+l'identité et les droits des propriétaires des fichiers auxquels ils sont
+associés, et peuvent \^etre associés à des fichiers ou modifiés
+seulement par leurs propriétaires. Les protocoles d'entrées-sorties et
+d'accès aux fichiers sont conçus de façon à ne pas faire
+confiance aux différents clients et serveurs.
+
+\subsubsection{Traitement des appels système}
+
+Les appels système sont implémentés de la m\^eme façon que
+dans OSF/1 MK~: les processus utilisateur provoquent une trappe gérée par
+Mach qui la redirige vers la librairie d'émulation selon un effet de
+trampoline.  Cette librairie exécute ensuite l'appel
+système en transmettant une ou plusieurs requ\^etes aux serveurs.
+
+\bibliographystyle{rcnamed}
+\bibliography{etat}
+\end{document}
