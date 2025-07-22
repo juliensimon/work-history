@@ -80,7 +80,7 @@ These projects were completed during Julien's engineering studies, representing:
 
 ## 🔗 Related Links
 
-- **[Main Repository](../README.md)** - Overview of Julien's complete work history
+- **[Main Repository](../../README.md)** - Overview of Julien's complete work history
 - **[julien.org](https://julien.org)** - Julien's current work and expertise
 
 ---

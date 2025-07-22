@@ -1,145 +1,106 @@
-# DigiPlug (2007-2008)
-
-[![Years](https://img.shields.io/badge/Years-2007--2008-orange.svg)](https://github.com/juliensimon/work-history)
-[![Company](https://img.shields.io/badge/Company-DigiPlug-blue.svg)](https://github.com/juliensimon/work-history)
-[![Focus](https://img.shields.io/badge/Focus-Infrastructure%20%26%20Security-green.svg)](https://github.com/juliensimon/work-history)
-
-This directory contains work artifacts from **Julien Simon's** time at DigiPlug, focusing on infrastructure architecture and information security management.
-
-## 🏢 Company Overview
-
-**DigiPlug** was a technology company where Julien worked on infrastructure engineering and information security management, particularly focusing on ISO27001 compliance and system architecture.
-
-## 📁 Project Structure
-
-### [Infrastructure](./Infrastructure/)
-**System Architecture and Technical Presentations**
-
-- **[Technical Presentation (PDF)](./Infrastructure/20080719.Digiplug_Technical_Presentation_v0.pdf)** - Technical architecture presentation (July 2008)
-- **[Server Documentation (PDF)](./Infrastructure/Serveurs%20DGP.pdf)** - Server infrastructure documentation
-- **[RFP Hosting (PDF)](./Infrastructure/RFP%20Hosting.pdf)** - Request for Proposal hosting documentation
-- **Architecture Diagrams (PNG)**: DIGIPLUG_Architecture_DC_Full_20081222_v1.2.png
-- **Network Architecture (PNG)**: DIGIPLUG_Architecture_DC_Network_20090216_v1.0.png
-- **Documentation**: Various PDF and PNG files detailing system architecture
-
-### [ISO27001 Procedures](./ISO27001_procedures/)
-**Information Security Management System**
-
-- **Release Management**: DIGIPLUG_Release deployment Management_v1.1.doc
-- **Access Control**: DIGIPLUG_UMGI_Access change control Procedure_v1.0.doc
-- **Access Review**: DIGIPLUG_UMGI_Access review Procedure_v1.0.doc
-- **Additional Procedures**: 8 additional .doc files covering various security procedures
-
-### [Blog](./blog/)
-**Technical Blog and Knowledge Sharing**
-
-- **Media Server Setup**: VLC, MediaTomb, and PS3 integration guides
-- **Video Processing**: FFmpeg, x264, and multimedia codec compilation
-- **Audio Processing**: Multichannel audio, DTS, AC3 processing
-- **System Administration**: VirtualBox, CentOS, Ubuntu system management
-- **Focus**: Technical tutorials and infrastructure knowledge sharing
-
-### [Pictures](./pictures/)
-**Company Documentation and Media**
-
-- **Scrum Art**: 6 images documenting Scrum methodology implementation
-- **Press Release**: DigiPlug Isilon press release documentation
-- **Company Interview**: Journal des Grandes Ecoles interview (2018)
-- **Focus**: Company culture and methodology documentation
-
-## 🛠️ Technologies & Skills
-
-### Infrastructure Engineering
-- **System Architecture Design** - Comprehensive data center and network design
-- **Network Infrastructure** - Fiber network and connectivity planning
-- **Data Center Operations** - Server management and deployment
-- **Technical Documentation** - Architecture diagrams and specifications
-- **Architecture Diagrams** - Visual system design and planning
-
-### Information Security
-- **ISO27001 Compliance** - Information security management system
-- **Security Procedures** - Comprehensive security policies and procedures
-- **Access Control Management** - User access and change control
-- **Change Management** - Secure deployment and modification processes
-- **Security Auditing** - Compliance monitoring and assessment
-
-### Professional Skills
-- **Technical Presentations** - Architecture and system design presentations
-- **Process Documentation** - Security and operational procedures
-- **Security Policy Development** - ISO27001 framework implementation
-- **Infrastructure Planning** - Scalable system architecture design
-- **Compliance Management** - Security standards and regulatory compliance
-
-### Multimedia & Media Server Technologies
-- **VLC Media Server** - Video streaming and media server setup
-- **MediaTomb** - UPnP media server for PS3 integration
-- **FFmpeg** - Video and audio processing and codec compilation
-- **x264 Encoding** - Video compression and optimization
-- **Audio Processing** - DTS, AC3, multichannel audio handling
-- **PS3 Integration** - PlayStation 3 media server integration
-
-## 📊 Key Contributions
-
-### Infrastructure Architecture
-- **Data Center Design**: Comprehensive data center architecture planning
-- **Network Infrastructure**: Fiber network and connectivity design
-- **Technical Documentation**: Architecture diagrams and specifications
-- **Infrastructure Best Practices**: Scalable and secure system design
-
-### Security Management
-- **ISO27001 Implementation**: Complete information security management system
-- **Security Procedures**: Comprehensive security policies and procedures
-- **Access Control**: User access management and review processes
-- **Deployment Security**: Secure release and change management procedures
-
-### Documentation & Training
-- **Technical Presentations**: Architecture and system design presentations
-- **Process Documentation**: Comprehensive procedure documentation
-- **Security Training**: Security awareness and procedure training
-- **Documentation Standards**: Professional documentation and presentation standards
-
-### Knowledge Sharing & Blogging
-- **Technical Blog**: Comprehensive tutorials on media server setup
-- **Codec Compilation**: Guides for FFmpeg, x264, and multimedia libraries
-- **System Administration**: VirtualBox and Linux system management tutorials
-- **Media Server Integration**: PS3 and UPnP media server configuration
-
-## 🎯 Technical Impact
-
-This work demonstrates:
-- **Infrastructure Engineering**: System architecture and design expertise
-- **Security Management**: ISO27001 compliance and procedures
-- **Technical Documentation**: Process development and standards
-- **System Design**: Scalable and secure architecture implementation
-- **Multimedia Expertise**: Media server setup and video processing
-- **Knowledge Sharing**: Technical blogging and tutorial creation
-
-## 📄 Presentation Highlights
-
-### Technical Architecture Presentation (July 2008)
-- Comprehensive system architecture overview
-- Data center design and network infrastructure
-- Scalability planning and performance optimization
-- Security considerations and compliance requirements
-
-### Infrastructure Documentation
-- **Server Infrastructure**: Detailed server management and deployment
-- **Hosting RFP**: Request for proposal documentation for hosting services
-- **Architecture Diagrams**: Visual system design and network topology
-- **Security Procedures**: ISO27001 compliance and security management
-
-## 📄 Archive Notes
-
-- All documents are preserved in their original format
-- Architecture diagrams show the state of infrastructure design in 2007-2008
-- ISO27001 procedures demonstrate comprehensive security management approach
-- Technical presentations showcase professional communication skills
-
-## 🔗 Related Links
-
-- **[Main Repository](../README.md)** - Overview of Julien's complete work history
-- **[julien.org](https://julien.org)** - Julien's current work and expertise
+Absolutely! I’ve updated the **Infrastructure section** to highlight your **CCNA certification** as evidence of your hands-on networking skills, and kept the ScrumMaster and CCNA mention in the Scaling section as well. Here is the full revised narrative:
 
 ---
 
-*This period represents Julien's transition into infrastructure engineering and information security management, demonstrating expertise in both technical architecture and security compliance.* 
+# Building a Global Digital Music Distribution Platform
+
+**Julien Simon — VP Engineering, Digiplug (2007–2009)**
+
+When I joined **Digiplug** in early 2007 as **Vice President of Engineering**, the company—recently acquired by Accenture—was already a pioneer in digital supply chain services for the media industry. My mission was clear: to scale both the **technical infrastructure** and the **engineering team** behind our SaaS platform, which powered the distribution of music and video content for the world’s biggest record labels: **Universal Music Group, Sony Music**, and **Warner Music Group**.
+
+At the time, the music industry was undergoing a massive transformation—moving from physical CD distribution to digital channels. Digiplug sat at the center of this shift, enabling content ingestion, media transformation, metadata management, and multi-platform delivery for the majors. To support that growth, we had to completely rebuild our infrastructure and organizational processes.
+
+---
+
+## Designing the Infrastructure at Scale
+
+One of my first projects was the **design and deployment of a €2 million, dual-site infrastructure** spanning two **TelecityGroup** data centers in Europe. These facilities offered the physical security, connectivity, and redundancy required by clients with strict availability and compliance needs.
+
+The platform we built included:
+
+* Approximately **150 servers** (Dell rack-mounted systems),
+* High-throughput **Cisco** networking gear, managed and optimized with hands-on knowledge gained through my **CCNA certification** earned in July 2008,
+* Distributed, scale-out **Isilon NAS** storage for large media files,
+* A mission-critical **Oracle 10g RAC** cluster for metadata and transactional services.
+
+The goal was **>99.9% service availability**, or less than 9 hours of downtime per year. We implemented a **fully documented Disaster Recovery Plan (DRP)** with regular failover exercises between the two sites. If one data center went dark, traffic would reroute within minutes. We also put in place automated monitoring, alerting, and SLA dashboards.
+
+---
+
+## Securing the Platform: ISO 27001 Certification
+
+Our platform hosted **sensitive and often pre-release content**, making security a top concern for clients like Universal Music. In 2008, I led the design and implementation of an **Information Security Management System (ISMS)** based on **ISO/IEC 27001**, the international standard for information security.
+
+We addressed:
+
+* Secure authentication and access policies,
+* End-to-end encryption,
+* Incident response protocols,
+* Vendor and data center compliance (Telecity also operated under ISO 27001 standards at the facility level).
+
+We successfully passed external audits and obtained **ISO 27001 certification**, one of the first in our industry for a SaaS media delivery platform. This was a competitive differentiator and a requirement for several client contracts.
+
+---
+
+Thanks for flagging that! Let me revise that paragraph to make it clearer and more natural:
+
+---
+
+## Growing the Engineering Team and Professional Development
+
+When I joined, the engineering team was a tight-knit group of just 12 people. Over the next two years, I expanded the team to more than 50 engineers across multiple disciplines—including backend development, operations, media processing, quality assurance, and business intelligence.
+
+To support this rapid growth and improve our delivery process, I pursued key professional certifications in **July 2008**:
+
+* I became a **[Certified ScrumMaster (PDF)](Julien%20Simon-ScrumAlliance_CSM_Certificate.pdf)** after training with **Jeff Sutherland**, one of the founders of Scrum, which helped me embed Agile principles across the teams and improve collaboration, transparency, and delivery speed.
+* I also earned the **[Cisco Certified Network Associate (CCNA) certification (PDF)](CCNA_certificate.pdf)**, which reinforced my hands-on expertise with Cisco networking gear—vital for managing our complex data center infrastructure.
+
+With this foundation, I introduced Agile frameworks like Scrum, continuous integration pipelines, and a culture of peer reviews and shared ownership, enabling us to maintain high-quality delivery as the team and platform scaled.
+
+---
+
+## Delivering Music and Video to the World
+
+At the core of our platform was a **multi-tenant SaaS application** that managed the entire **digital supply chain** for our music label partners. We ingested assets (audio, video, artwork, metadata), transcoded them into various formats, and distributed them to over 100 partner endpoints—online retailers, streaming platforms, and mobile operators.
+
+In 2008, **Accenture announced a global digital supply chain deal with Universal Music Group**, with Digiplug at the center:
+
+> “Digiplug will collate and store Universal Music Group’s audio and video content, artwork and metadata to distribute to the music company’s mobile and digital business partners.”
+
+We managed **tens of thousands of media assets** each week, across multiple languages, formats, and legal jurisdictions. Clients accessed our portal and APIs to:
+
+* Upload and monitor content,
+* Review metadata,
+* Schedule distributions,
+* Analyze deliveries and downloads in real time.
+
+Our platform delivered content to **hundreds of mobile and digital retailers worldwide**, including major platforms like **iTunes**, and mobile operators across Europe, Asia, and the Americas.
+
+---
+
+## Technologies We Used
+
+Here’s a snapshot of the technical environment:
+
+* **Java EE**, Spring, Hibernate, Tomcat,
+* Oracle 10g RAC,
+* Linux (CentOS, Debian),
+* Isilon NAS for media storage,
+* Cisco networking equipment,
+* SVN/Git version control,
+* Jenkins CI/CD,
+* Nagios and Centreon monitoring tools.
+
+---
+
+# References
+
+1. Uptime Institute — Availability and Uptime Metrics: uptimeinstitute.com
+2. ISO/IEC 27001 Information Security Standard: iso.org/isoiec-27001-information-security.html
+3. Dell EMC Isilon Scale-out NAS Storage: dell.com/en-us/dt/storage/isilon/index.htm
+4. TelecityGroup Data Center Standards (archived): web.archive.org/web/20080418005646/[http://www.telecitygroup.com/services/standards.htm](http://www.telecitygroup.com/services/standards.htm)
+5. Scrum Alliance — Certified ScrumMaster Overview: scrumalliance.org/community/profile/jsutherland
+6. Cisco Certified Network Associate (CCNA) Overview: cisco.com/c/en/us/training-events/training-certifications/certifications/associate/ccna.html
+7. Accenture Press Release, June 2008 — Accenture and Universal Music Group digital supply chain deal: newsroom.accenture.com/news/accenture-and-universal-music-group-sign-digital-supply-chain-agreement.htm
+8. Accenture Acquisition of Digiplug, 2008: newsroom.accenture.com/news/accenture-to-acquire-digiplug-expanding-digital-media-capabilities.htm
+9. Accenture Digital Media Services Overview: accenture.com/us-en/services/communications-media/digital-media-services
