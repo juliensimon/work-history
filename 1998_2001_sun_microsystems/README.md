@@ -1,4 +1,14 @@
-In 1998, just as Sun Microsystems acquired **Chorus Systèmes SA**, I joined the **ChorusOS Engineering Group** within Sun’s Consumer & Embedded Division. We were tasked with something ambitious: transforming a microkernel-based real-time operating system into a strategic platform for embedded Java, telecommunications, and digital media.
+# Sun Microsystems (1998-2001)
+
+[![Years](https://img.shields.io/badge/Years-1998--2001-orange.svg)](https://github.com/juliensimon/work-history)
+[![Role](https://img.shields.io/badge/Role-Systems%20Engineer-blue.svg)](https://github.com/juliensimon/work-history)
+[![Technologies](https://img.shields.io/badge/Technologies-ChorusOS%2C%20Java%2C%20Embedded%20Systems%2C%20Real-time-green.svg)](https://github.com/juliensimon/work-history)
+
+This directory contains artifacts from **Julien Simon's** time at **Sun Microsystems**, where he worked in the **ChorusOS Engineering Group** within Sun's Consumer & Embedded Division, transforming a microkernel-based real-time operating system into a strategic platform for embedded Java, telecommunications, and digital media.
+
+## 🏢 Company Overview
+
+In 1998, just as Sun Microsystems acquired **Chorus Systèmes SA**, I joined the **ChorusOS Engineering Group** within Sun's Consumer & Embedded Division. We were tasked with something ambitious: transforming a microkernel-based real-time operating system into a strategic platform for embedded Java, telecommunications, and digital media.
 
 The embedded world was on the brink of change. Single-purpose boxes were being replaced by **programmable, multi-service platforms**, and Java was poised to bring portability and interactivity to embedded systems. ChorusOS was the real-time foundation that could make that possible.
 
@@ -118,4 +128,60 @@ Here are **historically accurate, time-appropriate references** that support the
 6. **Java in Embedded Systems (Sun White Paper, c.1999)**
    Describes the use of **PersonalJava** in constrained embedded environments like set-top boxes and emphasizes the role of the JVM’s memory handling features (e.g., class loading, memory mapping).
    Archived: [https://web.archive.org/web/20000711012606/http://java.sun.com/products/personaljava/](https://web.archive.org/web/20000711012606/http://java.sun.com/products/personaljava/)
+
+## 🛠️ Technologies & Expertise
+
+### Embedded Systems & Real-time
+- **ChorusOS**: Microkernel-based real-time operating system
+- **Java VM**: PersonalJava implementation for embedded systems
+- **Memory Management**: `mmap()` implementation for JVM support
+- **Cross-compilation**: Multi-platform development toolchains
+
+### System Architecture
+- **Microkernel Design**: Real-time microkernel architecture
+- **Device Drivers**: Kernel modules and interrupt handling
+- **C++ Exception Handling**: Real-time compatible exception management
+- **Memory Mapping**: Efficient memory management for embedded Java
+
+### Development & Training
+- **Technical Training**: Global education programs for ChorusOS
+- **Customer Support**: Escalation engineering and troubleshooting
+- **Documentation**: Technical specifications and user guides
+- **Cross-platform Development**: Support for multiple architectures
+
+## 📊 Technical Achievements
+
+### Mass-market Deployment
+- **d-box Set-top Boxes**: 1+ million units deployed across Europe
+- **Real-time Performance**: MPEG and DVB transport stream handling
+- **Java Integration**: PersonalJava applications on embedded systems
+- **Commercial Success**: Production deployment in consumer electronics
+
+### Kernel Development
+- **`mmap()` Implementation**: Critical JVM memory management feature
+- **Multi-architecture Support**: x86, PowerPC, SPARC compatibility
+- **Real-time Determinism**: Preserved performance under RTOS constraints
+- **C++ Toolchain**: GNU C/C++ cross-development suite integration
+
+### Global Impact
+- **International Training**: Courses delivered across multiple continents
+- **Customer Success**: Support for major telecom and electronics companies
+- **Industry Standards**: Established best practices for embedded Java
+- **Technology Convergence**: Bridged telecom, computing, and consumer electronics
+
+## 📄 Archive Notes
+
+- Technical documentation demonstrates deep embedded systems expertise
+- Project showcases early Java integration in embedded systems
+- Global training experience shows excellent communication skills
+- Commercial deployment experience with mass-market products
+
+## 🔗 Related Links
+
+- **[Main Repository](../../README.md)** - Complete work history overview
+- **[julien.org](https://julien.org)** - Julien's current work and expertise
+
+---
+
+*This period demonstrates Julien's expertise in embedded systems, real-time programming, and Java integration, with significant commercial impact through mass-market product deployment.*
 

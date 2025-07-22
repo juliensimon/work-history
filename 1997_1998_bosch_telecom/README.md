@@ -1,4 +1,14 @@
-**At Bosch Telecom in Louveciennes, France (1996–1997), I worked as a Systems Software Engineer on the Integral7 PBX—an embedded enterprise telecom platform deployed across Europe. I was responsible for the full design, development, and validation of a real-time C++ communication library that bridged legacy PBX internals with a modern SNMP-based management interface.**
+# Bosch Telecom (1997-1998)
+
+[![Years](https://img.shields.io/badge/Years-1997--1998-orange.svg)](https://github.com/juliensimon/work-history)
+[![Role](https://img.shields.io/badge/Role-Systems%20Software%20Engineer-blue.svg)](https://github.com/juliensimon/work-history)
+[![Technologies](https://img.shields.io/badge/Technologies-C%2B%2B%2C%20ChorusOS%2C%20SNMP%2C%20Embedded%20Systems-green.svg)](https://github.com/juliensimon/work-history)
+
+This directory contains artifacts from **Julien Simon's** time at **Bosch Telecom** in Louveciennes, France, where he worked as a **Systems Software Engineer** on the Integral7 PBX—an embedded enterprise telecom platform deployed across Europe.
+
+## 🏢 Project Overview
+
+At Bosch Telecom (1997–1998), I was responsible for the full design, development, and validation of a real-time C++ communication library that bridged legacy PBX internals with a modern SNMP-based management interface.
 
 The Integral7 system combined Motorola 68k-based legacy boards—running Pascal applications for core switching—with a PowerPC board running **ChorusOS 3.2**, a real-time microkernel operating system. The communication library I built allowed SNMP agents running on the ChorusOS board to interact seamlessly with the Pascal-based switching logic, without exposing the complexity of the underlying proprietary backplane or legacy codebase.
 
@@ -14,6 +24,56 @@ Development was done on a Solaris workstation, with cross-compilation and deploy
 I also collaborated remotely with a team of around 20 application developers in Bangalore and Frankfurt, providing architectural guidance, integration support, and troubleshooting assistance throughout the development cycle.
 
 This project placed me squarely at the intersection of telecom infrastructure, embedded systems, and network management. It was a deeply technical and rewarding role that strengthened my skills in low-level systems programming, real-time design, and cross-domain software integration.
+
+## 🛠️ Technologies & Expertise
+
+### Embedded Systems
+- **ChorusOS 3.2**: Real-time microkernel operating system
+- **PowerPC Architecture**: Embedded processor development
+- **Motorola 68k**: Legacy processor integration
+- **Real-time Programming**: Deterministic system design
+
+### Communication Protocols
+- **SNMP**: Network management protocol implementation
+- **Proprietary Backplane**: Inter-board communication protocol
+- **C++ Libraries**: Communication library development
+- **Multithreading**: Concurrent system design
+
+### Development Environment
+- **Solaris Workstation**: Development and cross-compilation
+- **Cross-compilation**: PowerPC target development
+- **Test Automation**: Automated testing and validation
+- **Documentation**: Technical specifications and user guides
+
+## 📊 Technical Achievements
+
+### System Integration
+- **Legacy Integration**: Bridged Pascal-based switching with modern SNMP
+- **Real-time Performance**: Low-latency access to live PBX data
+- **Reliability**: Deterministic operation under RTOS constraints
+- **Scalability**: Support for multiple SNMP agents and polling modes
+
+### International Collaboration
+- **Remote Teams**: Worked with developers in Bangalore and Frankfurt
+- **Architectural Guidance**: Provided technical leadership across teams
+- **Integration Support**: Assisted with cross-domain software integration
+- **Troubleshooting**: Resolved complex technical issues
+
+## 📄 Archive Notes
+
+- Architecture diagram preserved showing system integration
+- Technical documentation demonstrates embedded systems expertise
+- Project showcases early experience with real-time systems
+- International collaboration experience with distributed teams
+
+## 🔗 Related Links
+
+- **[Main Repository](../../README.md)** - Complete work history overview
+- **[julien.org](https://julien.org)** - Julien's current work and expertise
+
+---
+
+*This project demonstrates Julien's early expertise in embedded systems, real-time programming, and complex system integration, laying the foundation for future technical leadership roles.*
 
 ---
 
