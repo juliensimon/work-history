@@ -1,11 +1,3 @@
-Absolutely! I’ve updated the **Infrastructure section** to highlight your **CCNA certification** as evidence of your hands-on networking skills, and kept the ScrumMaster and CCNA mention in the Scaling section as well. Here is the full revised narrative:
-
----
-
-# Building a Global Digital Music Distribution Platform
-
-**Julien Simon — VP Engineering, Digiplug (2007–2009)**
-
 When I joined **Digiplug** in early 2007 as **Vice President of Engineering**, the company—recently acquired by Accenture—was already a pioneer in digital supply chain services for the media industry. My mission was clear: to scale both the **technical infrastructure** and the **engineering team** behind our SaaS platform, which powered the distribution of music and video content for the world’s biggest record labels: **Universal Music Group, Sony Music**, and **Warner Music Group**.
 
 At the time, the music industry was undergoing a massive transformation—moving from physical CD distribution to digital channels. Digiplug sat at the center of this shift, enabling content ingestion, media transformation, metadata management, and multi-platform delivery for the majors. To support that growth, we had to completely rebuild our infrastructure and organizational processes.
