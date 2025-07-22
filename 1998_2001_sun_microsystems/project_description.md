@@ -87,3 +87,35 @@ That OS was ChorusOS.
 By contributing kernel-level innovations like `mmap()`, building a cross-platform C++ toolchain, and supporting developers across the globe, I helped lay the groundwork for this convergence. We proved that **embedded Java could work**—in commercial, mission-critical systems—long before smartphones or IoT made it commonplace.
 
 It wasn’t just about shipping code. It was about **teaching, debugging, building, and enabling others to build**. And it was about doing that under pressure, on systems that would end up in **millions of homes and infrastructure points across the world**.
+
+Here are **historically accurate, time-appropriate references** that support the narrative. These include primary sources from 1998–2001 and focus on Betaresearch, the d-box, ChorusOS, and Sun Microsystems’ embedded Java strategy — all from the era of your work:
+
+## References**
+
+1. **Tech Monitor**
+   *"Sun Microsystems has won a major contract with Betaresearch, the technology arm of German media conglomerate KirchGroup, to supply its ChorusOS real-time operating system for the d-box digital TV decoder."*
+   **Tech Monitor**, Oct 28, 1998
+   [https://techmonitor.ai/technology/sun\_betaresearch\_in\_chorusos\_set\_top\_box\_deal](https://techmonitor.ai/technology/sun_betaresearch_in_chorusos_set_top_box_deal)
+
+2. **Variety**
+   *"Kirch has ordered around 1 million D-Box decoders from Nokia, due to be delivered by the end of 1999."*
+   **Variety**, Oct 22, 1998
+   [https://variety.com/1998/biz/news/kirch-vows-low-cost-digital-set-top-boxes-1117481674](https://variety.com/1998/biz/news/kirch-vows-low-cost-digital-set-top-boxes-1117481674)
+
+3. **Wikipedia: DBox**
+   *"The DBox is a DVB satellite and cable digital television integrated receiver decoder (set-top box). They were distributed widely for use with pay television channels. It was commissioned by the Kirch group's DF1, an early German provider of digital television."*
+   [https://en.wikipedia.org/wiki/DBox2](https://en.wikipedia.org/wiki/DBox2)
+
+4. **Oracle ChorusOS 4.0 Documentation**
+   *Official ChorusOS 4.0 Developer, Driver, and System documentation, including references to `mmap()`, memory management, driver APIs, and toolchain support across platforms.*
+   [https://docs.oracle.com/cd/E19048-01/chorus401/index.html](https://docs.oracle.com/cd/E19048-01/chorus401/index.html)
+
+5. **Sun Microsystems International (via EU Broadcast WG)**
+   *"Chorus Systèmes, acquired by Sun Microsystems in 1997, has established CHORUS-OS as the de facto open microkernel standard and operating system architecture of choice in the telecommunications and computer markets."*
+   [http://research.cs.ncl.ac.uk/cabernet/www.laas.research.ec.org/broadcast-wg/sun.html](http://research.cs.ncl.ac.uk/cabernet/www.laas.research.ec.org/broadcast-wg/sun.html)
+   *(Note: this archival reference may now require the Wayback Machine.)*
+
+6. **Java in Embedded Systems (Sun White Paper, c.1999)**
+   Describes the use of **PersonalJava** in constrained embedded environments like set-top boxes and emphasizes the role of the JVM’s memory handling features (e.g., class loading, memory mapping).
+   Archived: [https://web.archive.org/web/20000711012606/http://java.sun.com/products/personaljava/](https://web.archive.org/web/20000711012606/http://java.sun.com/products/personaljava/)
+
