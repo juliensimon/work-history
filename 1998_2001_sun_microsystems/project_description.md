@@ -1,5 +1,3 @@
-# My Experience at Sun Microsystems ChorusOS Engineering (1998-2000)
-
 In 1998, I joined the ChorusOS Engineering Group within Sun Microsystems' Consumer & Embedded Division, right after Sun's acquisition of the French company Chorus Systèmes SA. This was an exciting time - we were integrating a proven real-time operating system into Sun's broader strategy for embedded markets, and I found myself at the center of some groundbreaking work in digital set-top boxes and telecommunications infrastructure.
 
 ## The Betaresearch Partnership: Millions of Units at Stake
