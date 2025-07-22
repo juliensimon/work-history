@@ -1,0 +1,151 @@
+<i><span style="font-family: inherit; font-size: large;"><b>21/08/2013 - By popular demand (according to page view stats), I've decided to refresh this post for Ubuntu 12.04 : <a href="http://juliensimon.blogspot.fr/2013/08/howto-compiling-ffmpeg-x264-mp3-aac.html">here is the updated HOWTO</a>. Enjoy :)</b></span></i><br />
+<i><span style="font-family: inherit; font-size: large;"><b><br /></b></span></i>
+<span style="font-style: italic;"><br /></span>
+<span style="font-style: italic;">ffmpeg </span>is THE audio/video conversion tool. Unfortunately, the default build included in Ubuntu is usually quite outdated, as well as lacking support for many codecs.<br />
+<br />
+The purpose of this article is to show you how you can build a fresh, up to date version of <span style="font-style: italic;">ffmpeg</span> supporting (almost) all codecs. This procedure was successfully performed on Ubuntu 8.04 and 8.10.<br />
+<br />
+<span style="font-weight: bold;">0) Prerequisites</span><br />
+<br />
+Before we start, let's check if <span style="font-style: italic;">subversion</span> and <span style="font-style: italic;">git</span> are installed. We'll need both to install some of the libraries required by <span style="font-style: italic;">ffmpeg</span>:<br />
+<br />
+<code>ubuntu% <span style="font-weight: bold;">svn</span><br />Type 'svn help' for usage.</code><code>ubuntu% <span style="font-weight: bold;">git</span><br />usage: git [--version] [--exec-path[=GIT_EXEC_PATH]] [-p|--paginate|--no-pager] [--bare] [--git-dir=GIT_DIR] [--work-tree=GIT_WORK_TREE] [--help] COMMAND [ARGS]<br /></code>OK, they're both present. If not, you need to install them with the following commands:<br />
+<br />
+<code>ubuntu% <span style="font-weight: bold;">sudo apt-get install subversion</span></code><code>ubuntu% <span style="font-weight: bold;">sudo apt-get install <span style="font-family: Georgia,serif;">git git-core<br /></span></span></code>Now would be a good time to decide where you're going to build all those sources. Just create a temporary directory anywhere you like (you'll need less than 150MB).<br />
+<br />
+<span style="font-style: italic;">[Updated on 2008/01/02] If you have an existing installation of ffmpeg, you may run into linking issues caused by conflicting library versions. My advice is to remove all existing copies of libav* (libavcodec and so on) which may be present </span><span style="font-style: italic;">in /usr/lib, either by uninstalling them with APT or by deleting the .a and .so files. Please read the comments below for additional information.<br /></span><span style="font-weight: bold;">1) Fetching the <span style="font-style: italic;">ffmpeg</span> sources</span><br />
+<br />
+First of all, let's get the latest <span style="font-style: italic;">ffmpeg</span> source snapshot from the Subversion server:<br />
+<code><br />ubuntu% <span style="font-weight: bold;">svn checkout svn://svn.ffmpeg.org/ffmpeg/trunk ffmpeg</span><br /><span style="font-style: italic;">lots of output removed</span><br />Checked out external at revision 28172.<br />Checked out revision 16245.</code><br />
+Of course, you could just go ahead with <span style="font-style: italic;">configure</span>, <span style="font-style: italic;">make</span>, <span style="font-style: italic;">make install</span> and be done with it. Unfortunately (?), it's not that simple. Go ahead, run <span style="font-style: italic;">configure</span>:<br />
+<code><br />ubuntu% <span style="font-weight: bold;">cd ffmpeg</span><br />ubuntu% <span style="font-weight: bold;">./configure </span></code><code><span style="font-weight: bold;"><span style="font-family: Georgia,serif;">--prefix=/usr/local</span></span></code><code><br /><span style="font-style: italic;">lots of output removed</span><br />Creating config.mak and config.h...</code><br />
+Take a closer look at the output, especially at the '<span style="font-style: italic;">Enabled encoders</span>' section. A number of major formats, like AAC, MP3, x.264 or XViD are missing. Can you live without these? Probably not...<br />
+<br />
+Why, oh why are they missing? Take another look at the output of the <span style="font-style: italic;">configure</span> command:<br />
+<br />
+<code>libfaac enabled           no<br />libmp3lame enabled        no<br />libx264 enabled           no<br />libxvid enabled           no</code><br />
+These encoders are missing because they're handled by external libraries which are not part of the <span style="font-style: italic;">ffmpeg</span> source package. Chasing them all is a bit of a pain in the #$$ and hopefully this article will help!<br />
+<br />
+<code></code><span style="font-weight: bold;">2) Configuring <span style="font-style: italic;">ffmpeg</span>... and failing<br /></span>Let's go wild and enable almost everything, including shared libraries (nice if you're running multiple copies of <span style="font-style: italic;">ffmpeg</span>) and POSIX threads (additional parallelism can't hurt):<br />
+<br />
+<code>ubuntu% <span style="font-weight: bold;">./configure </span></code><code></code><code><span style="font-weight: bold;">--prefix=/usr/local</span></code><code> -</code><code><span style="font-weight: bold;">-enable-gpl --enable-nonfree --enable-shared --enable-postproc --enable-avfilter --enable-avfilter-lavf --enable-pthreads --enable-x11grab --enable-bzlib --enable-libamr-nb --enable-libamr-wb --enable-libdc1394  --enable-libfaac --enable-libfaad --enable-libfaadbin --enable-libgsm --enable-libmp3lame --enable-libnut   --enable-libschroedinger --enable-libtheora --enable-libvorbis --enable-libx264  --enable-libxvid --enable-zlib</span></code><code><br /></code><br />
+It will inevitably lead to something like this:<br />
+<br />
+<code>FAAD test failed.<br />If you think configure made a mistake, make sure you are using the latest<br />version from SVN.  If the latest version fails, report the problem to the<br />ffmpeg-user@mplayerhq.hu mailing list or IRC #ffmpeg on irc.freenode.net.<br />Include the log file "config.err" produced by configure as this will help<br />solving the problem.</code><br />
+It's normal, we haven't installed the external libraries required for our <span style="font-style: italic;">ffmpeg</span> build. Let's get to it!<br />
+<br />
+<span style="font-weight: bold;">3) Installing </span><a href="http://www.penguin.cz/~utx/amr" style="font-weight: bold;">libamr</a><span style="font-weight: bold;"><br /></span>This library is needed for 3GPP speech codecs. For legal reasons, it is not part of the standard Ubuntu repository. You can find it in the <a href="http://medibuntu.org/">Medibuntu</a> repository. Of course, you need to let APT know about this new repository. These are the commands for Ubuntu 8.04 (more information on other versions <a href="https://help.ubuntu.com/community/Medibuntu">here</a>):<br />
+<code><br />ubuntu% <span style="font-weight: bold;">sudo wget http://www.medibuntu.org/sources.list.d/hardy.list --output-document=/etc/apt/sources.list.d/medibuntu.list</span><br />ubuntu% <span style="font-weight: bold;">sudo apt-get update &amp;&amp; sudo apt-get install medibuntu-keyring &amp;&amp; sudo apt-get update<br /></span></code>Now you can install libamr:<br />
+<br />
+<code>ubuntu%<span style="font-weight: bold;"> sudo apt-get install libamrnb-dev libamrwb-dev<br /></span></code><span style="font-weight: bold;">4) Installing </span><a href="http://wiki.multimedia.cx/index.php?title=NUT" style="font-weight: bold;">libnut</a><span style="font-weight: bold;"></span><br />
+<code><br /></code>NUT is a container format under construction by <a href="http://wiki.multimedia.cx/index.php?title=MPlayer" title="MPlayer">MPlayer</a> and <a href="http://wiki.multimedia.cx/index.php?title=FFmpeg" title="FFmpeg">FFmpeg</a> developers. Libnut needs to be built from source:<br />
+<br />
+<code>ubuntu% <span style="font-weight: bold;">svn co svn://svn.mplayerhq.hu/nut/src/trunk/ nut</span><br />ubuntu% <span style="font-weight: bold;">cd nut</span><br />ubuntu% <span style="font-weight: bold;">make</span><br /><span style="font-style: italic;"></span>ubuntu% <span style="font-weight: bold;">sudo make install</span></code><br />
+<span style="font-weight: bold;">5) Installing </span><a href="http://www.videolan.org/developers/x264.html" style="font-weight: bold;">libx264</a><span style="font-weight: bold;"></span><br />
+<br />
+x264 is a free library for encoding H264/AVC video streams.<br />
+<br />
+It can be fetched with APT using '<span style="font-style: italic;">apt-get install libx264-dev</span>' but let's make sure we have both the latest <span style="font-style: italic;">ffmpeg</span> and the latest <span style="font-style: italic;">x264</span>.<br />
+<br />
+Before we build the <span style="font-style: italic;">x264</span> source, we need to install<br />
+<ul>
+<li><span style="font-style: italic;">libgpac</span>, required to support the <span style="font-style: italic;">mp4</span> container with the <span style="font-style: italic;">x264</span> codec,</li>
+<li>the <span style="font-style: italic;">yasm</span> assembler, required to compile several assembly language routines present in the <span style="font-style: italic;">x264</span> code.</li>
+</ul>
+Installing <span style="font-style: italic;">libgpac</span> is straightforward:<br />
+<br />
+<code>ubuntu% <span style="font-weight: bold;">sudo apt-get install libgpac-dev</span></code><br />
+<br />
+Now, let's take a look at <span style="font-style: italic;">yasm</span>:<br />
+<br />
+<code>ubuntu% </code><code><span style="font-weight: bold;">yasm --version</span>zsh: command not found: yasm<span style="font-weight: bold;"><br /></span></code>It's not there. Let's get it using APT:<br />
+<br />
+<code>ubuntu% <span style="font-weight: bold;">sudo apt-get install <span style="font-family: Georgia,serif;">yasm</span></span></code><code>ubuntu% <span style="font-weight: bold;">yasm --version</span><br />yasm 0.5.0.1591</code><code><br /></code>OK, now let fetch the <span style="font-style: italic;">x264</span> source and configure the build:<br />
+<code><br />ubuntu% <span style="font-weight: bold;">git clone git://git.videolan.org/x264.git</span><br />ubuntu% <span style="font-weight: bold;">cd x264</span><br />ubuntu% <span style="font-weight: bold;">./configure --prefix=/usr/local --enable-shared</span><br />Found yasm 0.5.0.1591<br />Minimum version is yasm-0.6.1<br />If you really want to compile without asm, configure with --disable-asm.</code><br />
+Hmmm.. Do we want to use generic C routines instead of optimized assembly? No. Let's build the latest <a href="http://www.tortall.net/projects/yasm/"><span style="font-style: italic;">yasm</span></a> (0.7.2 at the time of this writing):<br />
+<br />
+<code>ubuntu% <span style="font-weight: bold;">sudo apt-get remove yasm</span></code><br />
+<span style="font-style: italic;"></span><code>ubuntu% <span style="font-family: Georgia,serif; font-weight: bold;">wget http://www.tortall.net/projects/yasm/releases/yasm-0.7.2.tar.gz</span></code><br />
+<code>ubun</code><code><span style="font-family: Georgia,serif;"></span></code><code>tu% <span style="font-weight: bold;"><span style="font-family: Georgia,serif;">tar xvfz </span></span></code><code><span style="font-family: Georgia,serif;"><span style="font-weight: bold;">yasm-0.7.2.tar.gz</span></span></code><code>ubun</code><code><span style="font-family: Georgia,serif;"></span></code><code>tu% <span style="font-family: Georgia,serif; font-weight: bold;">cd </span></code><code style="font-weight: bold;"><span style="font-family: Georgia,serif;">yasm-0.7.2</span></code><code><span style="font-family: Georgia,serif;"><br /></span></code><code>ubun</code><code><span style="font-family: Georgia,serif;"></span></code><code>tu% <span style="font-family: Georgia,serif; font-weight: bold;">./configure --prefix=/usr/local</span></code><br />
+<code>ubuntu% <span style="font-weight: bold;">make</span></code><br />
+<code>ubuntu% <span style="font-weight: bold;">sudo </span><span style="font-weight: bold;">make install</span></code><br />
+<code>ubuntu% <span style="font-weight: bold;">yasm --version</span><br />yasm 0.7.2.2153</code><br />
+<br />
+OK, now we can build <span style="font-style: italic;">x264</span>:<br />
+<code><br /></code><code>ubuntu% <span style="font-weight: bold;"><span style="font-family: Georgia,serif;">cd x264</span></span></code><code>ubuntu% <span style="font-weight: bold;">./configure --prefix=/usr/local --enable-shared</span><br /><span style="font-style: italic;">output removed</span><br />Platform: X86<br />System: LINUX<br />asm: yes<br />avis input: no<br />mp4 output: yes<br />pthread: yes<br />debug: no<br />gprof: no<br />PIC: no<br />shared: yes<br />visualize: no<br />ubuntu% <span style="font-weight: bold;">make</span><br />ubuntu% <span style="font-weight: bold;">sudo make install</span></code><br />
+<span style="font-weight: bold;">6) Installing </span><a href="http://www.xvid.org/" style="font-style: italic; font-weight: bold;">libxvid</a><br />
+<br />
+Before we install <span style="font-style: italic;">libxvid</span>, we need to check that the <span style="font-style: italic;">nasm</span> assembler is OK. It's required to build assembly code in <span style="font-style: italic;">libxvid</span> and you do NOT want this code to be replaced with generic C code in case <span style="font-style: italic;">nasm</span> is missing : I ran some <span style="font-style: italic;">Xvid</span> encoding tests with and without assembly code and there's a 2.5x factor... So read on :)<br />
+<br />
+You need at least <span style="font-style: italic;">nasm</span> 2.0, so let's check the default version on Ubuntu 8.04 and Ubuntu 8.10:<br />
+<code></code><br />
+<code>ubuntu8.04% <span style="font-family: Georgia,serif;"><span style="font-weight: bold;">sudo apt-get install nasm</span></span></code><br />
+<code>ubuntu8.04% <span style="font-family: Georgia,serif;"><span style="font-weight: bold;">nasm -v</span>NASM version 0.99.06-20071101 compiled on Sep 16 2008<span style="font-weight: bold;"><br /></span></span></code><code>ubuntu8.10% <span style="font-family: Georgia,serif;"><span style="font-weight: bold;">sudo apt-get install nasm</span></span></code><code></code><code>ubuntu8.10% <span style="font-family: Georgia,serif;"><span style="font-weight: bold;">nasm -v</span></span></code><code><span style="font-family: Georgia,serif;"><span style="font-weight: bold;"><br /></span>NASM version 2.03.01 compiled on Jun 19 2008<span style="font-weight: bold;"><br /></span></span></code><br />
+So, if you have 8.10, you're good to go and you can skip the rest of this section. If you have 8.04, follow me:<br />
+<br />
+<code>ubuntu% <span style="font-family: Georgia,serif;"><span style="font-weight: bold;">sudo apt-get remove nasm</span></span></code><code>ubuntu% </code><code><span style="font-family: Georgia,serif;"><span style="font-weight: bold;">wget http://www.nasm.us/pub/nasm/releasebuilds/2.05.01/nasm-2.05.01.tar.gz</span></span></code><code><span style="font-family: Georgia,serif;"><span style="font-weight: bold;"><br /></span></span></code><code>ubuntu% <span style="font-family: Georgia,serif;"><span style="font-weight: bold;">tar xvfz nasm-2.05.01.tar.gz</span></span></code><code>ubuntu% <span style="font-family: Georgia,serif;"><span style="font-weight: bold;">cd nasm-2.05.01</span></span></code><code>ubuntu% <span style="font-family: Georgia,serif;"><span style="font-weight: bold;">./configure --prefix=/usr/local</span></span></code><code>ubuntu% <span style="font-family: Georgia,serif;"><span style="font-weight: bold;">make</span></span></code><br />
+<code>ubuntu% <span style="font-family: Georgia,serif;"><span style="font-weight: bold;">sudo make install</span></span></code><code>ubuntu% <span style="font-family: Georgia,serif;"><span style="font-weight: bold;">nasm -v</span>NASM version 2.05.01 compiled on Dec 23 2008<span style="font-weight: bold;"><br /></span></span></code><code></code><code></code><br />
+Now, let's fetch the <span style="font-style: italic;">xvid</span> sources and build them:<br />
+<code><span style="font-family: Georgia,serif;"><span style="font-weight: bold;"></span></span><span style="font-weight: bold;"><span style="font-family: Georgia,serif;"><br /></span></span></code><code>ubuntu% <span style="font-weight: bold;"><span style="font-family: Georgia,serif;">wget http://downloads.xvid.org/downloads/xvidcore-1.2.1.tar.gz</span></span></code><br />
+<code>ubuntu% <span style="font-weight: bold;"><span style="font-family: Georgia,serif;">tar xvfz xvidcore-1.2.1.tar.gz</span></span></code><br />
+<code>ubuntu% <span style="font-weight: bold;"><span style="font-family: Georgia,serif;">cd xvidcore/build/generic</span></span></code><br />
+<code>ubuntu% <span style="font-weight: bold;"><span style="font-family: Georgia,serif;">./configure --prefix=/usr/local</span></span></code><br />
+<code>ubuntu% <span style="font-weight: bold;">make</span></code><code><br /><span style="font-style: italic;">lots of output removed</span><br />---------------------------------------------------------------<br />Xvid has been successfully built.<br /><br />* Binaries are currently located in the '=build' directory<br />* To install them on your system, you can run '# make install'<br />as root.<br />---------------------------------------------------------------</code><br />
+<code>ubuntu% <span style="font-weight: bold;">sudo </span><span style="font-weight: bold;">make install<br /></span></code><span style="font-weight: bold;">7) Installing everything else</span><br />
+All the other libraries we need are part of the standard Ubuntu repository. Let's install them all with a single command:<br />
+<code><br />ubuntu% <span style="font-weight: bold;">sudo apt-get install </span></code><code><span style="font-weight: bold;">libfaac-dev </span></code><code><span style="font-weight: bold;">libfaad-dev libschroedinger-dev </span><span style="font-weight: bold;">libtheora-dev  libvorbis-dev libxv-dev libxvmc-dev</span></code><br />
+We also need to install the LAME MP3 encoder.  The name of the library differs on Ubuntu 8.04 and Ubunto 8.10, so choose wisely :)<br />
+<code><br />ubuntu8.04% <span style="font-weight: bold;">sudo apt-get </span></code><code><span style="font-weight: bold;">install liblame-dev</span></code><br />
+<br />
+<code>ubuntu8.10% <span style="font-weight: bold;">sudo apt-get </span></code><code><span style="font-weight: bold;">install libmp3lame-dev</span><span style="font-weight: bold;"></span></code><br />
+<br />
+<span style="font-weight: bold;">8) Configuring <span style="font-style: italic;">ffmpeg</span>... and succeeding!</span><br />
+<code><br /></code>We should have everything we need now. Let's try that <span style="font-style: italic;">configure</span> command again:<br />
+<br />
+<span style="font-style: italic;">[Updated on 2009/02/18 : the '--enable-xvmc' flag has been removed. XVMC support now seems to be integrated by default. If you're using an old build, please add the flag to the command line below]</span><br />
+<br />
+<span style="font-style: italic;">[Updated on 2009/03/09 : the '--enable-swscale' flag has been removed. This library is now built by default. If you're using an old build, please </span><span style="font-style: italic;">add the flag to the command line below</span><span style="font-style: italic;">]</span><br />
+<br />
+<code>ubuntu% <span style="font-weight: bold;"><span style="font-family: Georgia,serif;">cd ffmpeg</span></span></code><br />
+<code>ubuntu% <span style="font-weight: bold;">./configure </span></code><code style="font-weight: bold;"><span style="font-family: Georgia,serif;">--prefix=/usr/local </span></code><code><span style="font-weight: bold;">--enable-gpl --enable-nonfree --enable-shared --enable-postproc --enable-avfilter --enable-avfilter-lavf --enable-pthreads --enable-x11grab --enable-bzlib --enable-libamr-nb --enable-libamr-wb --enable-libdc1394 --enable-libfaac --enable-libfaad --enable-libfaadbin --enable-libgsm --enable-libmp3lame --enable-libnut --enable-libschroedinger --enable-libtheora --enable-libvorbis --enable-libx264 --enable-libxvid --enable-zlib</span><span style="font-style: italic;">lots of output removed</span><span style="font-weight: bold;"><br /></span>License: unredistributable<br />Creating config.mak and config.h...<br /></code>All right. Let's build it.<br />
+<code><br /></code><span style="font-weight: bold;">9) Building ffmpeg<br /></span>That's the easiest bit!<br /><code>ubuntu% <span style="font-weight: bold;">make</span></code><code><br /><span style="font-style: italic;">LOTS of output removed</span><br />ranlib libavutil/libavutil.a<br />rm doc/ffserver.pod doc/ffmpeg.pod doc/ffplay.pod</code><code>ubuntu% <span style="font-weight: bold;">sudo make install<br /></span></code>That's it. Cool, huh? Before you can start playing with your <span style="font-style: italic;">ffmpeg</span> binary, you need to register those new dynamic libraries in <span style="font-style: italic;">/usr/local/lib</span> (I'm using <span style="font-style: italic;">zsh</span>. the syntax may be different if you're using another shell):<br />
+<br />
+<code>ubuntu% <span style="font-weight: bold;">LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH</span></code><br />
+<code>ubuntu% <span style="font-weight: bold;">export</span><span style="font-weight: bold;"> </span></code><code><span style="font-weight: bold;">LD_LIBRARY_PATH</span></code><br />
+<code>ubuntu% <span style="font-weight: bold;">sudo ldconfig<br /></span></code>Now, let's check this new <span style="font-style: italic;">ffmpeg</span>:<br />
+<br />
+<code>ubuntu% <span style="font-weight: bold;">which ffmpeg</span><br />/usr/local/bin/ffmpeg<br />ubuntu% <span style="font-weight: bold;">ffmpeg -formats </span><br /><span style="font-style: italic;">lots of output removed</span><br /></code><code></code>Pretty good list of codecs, isn't it?<br />
+<br />
+<span style="font-weight: bold;">10) Cleaning up</span><code><br /></code>If like me you keep building the latest version, you will eventually end up with a lot of unecessary libraries in <span style="font-style: italic;">/usr/local/lib</span>, e.g.:<br />
+<pre>ubuntu% <span style="font-weight: bold;">cd /usr/local/lib</span>
+ubuntu% <span style="font-weight: bold;">ls -l libav*</span>
+-rw-r--r-- 1 root root 24108334 2009-02-20 11:15 libavcodec.a
+lrwxrwxrwx 1 root root       21 2009-02-20 11:15 libavcodec.so -&gt; libavcodec.so.52.15.0
+lrwxrwxrwx 1 root root       21 2009-02-20 11:15 libavcodec.so.52 -&gt; libavcodec.so.52.15.0
+-rwxr-xr-x 1 root root  5791060 2009-02-04 11:34 libavcodec.so.52.11.0
+-rwxr-xr-x 1 root root  5791192 2009-02-05 15:29 libavcodec.so.52.12.0
+-rwxr-xr-x 1 root root  5791228 2009-02-10 17:46 libavcodec.so.52.14.0
+-rwxr-xr-x 1 root root  5774920 2009-02-20 11:15 libavcodec.so.52.15.0
+-rw-r--r-- 1 root root   467478 2009-02-20 11:15 libavdevice.a
+lrwxrwxrwx 1 root root       21 2009-02-20 11:15 libavdevice.so -&gt; libavdevice.so.52.1.0
+lrwxrwxrwx 1 root root       21 2009-02-20 11:15 libavdevice.so.52 -&gt; libavdevice.so.52.1.0
+-rwxr-xr-x 1 root root    39492 2009-02-20 11:15 libavdevice.so.52.1.0
+-rw-r--r-- 1 root root    63220 2009-02-20 11:15 libavfilter.a
+lrwxrwxrwx 1 root root       20 2009-02-20 11:15 libavfilter.so -&gt; libavfilter.so.0.3.0
+lrwxrwxrwx 1 root root       20 2009-02-20 11:15 libavfilter.so.0 -&gt; libavfilter.so.0.3.0
+-rwxr-xr-x 1 root root    17876 2009-02-20 11:15 libavfilter.so.0.3.0
+-rw-r--r-- 1 root root  6259158 2009-02-20 11:15 libavformat.a
+lrwxrwxrwx 1 root root       22 2009-02-20 11:15 libavformat.so -&gt; libavformat.so.52.29.0
+lrwxrwxrwx 1 root root       22 2009-02-20 11:15 libavformat.so.52 -&gt; libavformat.so.52.29.0
+-rwxr-xr-x 1 root root   766736 2009-02-05 15:29 libavformat.so.52.25.0
+-rwxr-xr-x 1 root root   770972 2009-02-10 17:46 libavformat.so.52.26.0
+-rwxr-xr-x 1 root root   771072 2009-02-12 16:57 libavformat.so.52.27.0
+-rwxr-xr-x 1 root root   775232 2009-02-13 11:22 libavformat.so.52.28.0
+-rwxr-xr-x 1 root root   767108 2009-02-20 11:15 libavformat.so.52.29.0
+-rw-r--r-- 1 root root   225672 2009-02-20 11:15 libavutil.a
+lrwxrwxrwx 1 root root       20 2009-02-20 11:15 libavutil.so -&gt; libavutil.so.49.14.0
+lrwxrwxrwx 1 root root       20 2009-02-20 11:15 libavutil.so.49 -&gt; libavutil.so.49.14.0
+-rwxr-xr-x 1 root root    55508 2009-02-20 11:15 libavutil.so.49.14.0</pre>
+There's nothing really wrong here, but for the sake of clarity, you may want to remove the old libraries, i.e. the ones NOT linked as lib*.so.<br />
+<br />
+That's it for today :)

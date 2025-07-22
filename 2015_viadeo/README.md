@@ -25,7 +25,17 @@ This directory contains work artifacts from **Julien Simon's** time at Viadeo, f
 
 - **[Board Presentation (PDF)](./presentations/board_19_12_2014.pdf)** - Board presentation from December 2014
 - **[CTO Strategy (PDF)](./presentations/CTO%20Crunch%2020150224.pdf)** - CTO-level technical strategy presentation (February 2015)
-- **Focus**: Executive communication and technical strategy
+- **[AWS Startup Summit (PDF)](./presentations/aws-startup-summit-moving-viadeo-to-aws.pdf)** - Moving Viadeo to AWS presentation
+- **[Velocity Conference (PDF)](./presentations/velocity-conference-moving-viadeo-to-aws.pdf)** - AWS migration at Velocity conference
+- **Focus**: Executive communication, technical strategy, and cloud migration
+
+### [Blog](./blog/)
+**AWS Machine Learning and Data Science**
+
+- **[Amazon Machine Learning with Redshift](./blog/2015-04-14-test-drive-amazon-machine-learning-redshift.html)** - Real-time prediction with Amazon ML and Redshift
+- **[Real-time Prediction with Amazon ML](./blog/2015-04-16-test-drive-real-time-prediction-with-amazon-machine-learning.html)** - Machine learning prediction systems
+- **[Java Integration with Amazon ML](./blog/2015-04-17-test-drive-real-time-prediction-in-java-with-amaon-machine-learning.html)** - Java implementation of Amazon ML predictions
+- **Focus**: AWS machine learning, data science, and technical tutorials
 
 ## 🛠️ Technologies & Skills
 
@@ -34,6 +44,18 @@ This directory contains work artifacts from **Julien Simon's** time at Viadeo, f
 - **Data Visualization** - Charts and graphs for business intelligence
 - **Statistical Modeling** - User behavior analysis and predictions
 - **CSV Processing** - Data extraction and transformation
+
+### Machine Learning & Cloud
+- **AWS Machine Learning** - Amazon ML platform and real-time predictions
+- **Amazon Redshift** - Data warehouse integration with ML
+- **Java Integration** - Java applications with AWS ML services
+- **Real-time Prediction** - Machine learning prediction systems
+
+### Cloud Migration & Infrastructure
+- **AWS Migration** - Large-scale cloud migration strategies
+- **Infrastructure as Code** - Automated infrastructure deployment
+- **Cloud Architecture** - Scalable cloud-native architecture design
+- **Performance Optimization** - Cloud performance tuning and optimization
 
 ### Business Intelligence
 - **User Analytics** - Member behavior analysis and insights
@@ -46,6 +68,18 @@ This directory contains work artifacts from **Julien Simon's** time at Viadeo, f
 - **Strategic Planning** - Technical roadmap development
 - **Team Leadership** - Data science team management
 - **Business Alignment** - Technical solutions for business problems
+
+### Technical Communication
+- **AWS Tutorials** - Machine learning and cloud computing guides
+- **Technical Blogging** - Data science and ML implementation tutorials
+- **Knowledge Sharing** - AWS ML and Redshift integration guides
+- **Industry Insights** - Machine learning and data science best practices
+
+### Conference Speaking
+- **AWS Startup Summit** - Cloud migration strategies and best practices
+- **Velocity Conference** - Performance and scalability at Velocity conference
+- **Technical Presentations** - High-profile conference speaking and knowledge sharing
+- **Industry Leadership** - Thought leadership in cloud migration and ML
 
 ## 📊 Key Contributions
 
@@ -61,6 +95,18 @@ This directory contains work artifacts from **Julien Simon's** time at Viadeo, f
 - **Data Strategy**: Analytics and business intelligence planning
 - **Team Development**: Data science and analytics team leadership
 
+### AWS Machine Learning Expertise
+- **Amazon ML Integration**: Real-time prediction systems with AWS ML
+- **Redshift Integration**: Data warehouse and ML platform integration
+- **Java Implementation**: Java applications with AWS ML services
+- **Technical Tutorials**: Comprehensive guides for AWS ML implementation
+
+### Cloud Migration Leadership
+- **AWS Migration Strategy**: Large-scale cloud migration planning and execution
+- **Conference Speaking**: AWS Startup Summit and Velocity conference presentations
+- **Infrastructure Transformation**: Legacy to cloud-native architecture migration
+- **Performance Optimization**: Cloud performance tuning and scalability
+
 ### Business Impact
 - **User Insights**: Deep understanding of member behavior
 - **Performance Optimization**: Data-driven improvements
@@ -74,6 +120,10 @@ This work demonstrates:
 - **Business Intelligence**: Analytics and reporting
 - **Statistical Modeling**: User behavior analysis and prediction
 - **Data Processing**: ETL and automated workflows
+- **Machine Learning**: AWS ML and real-time prediction systems
+- **Cloud Integration**: AWS Redshift and ML platform expertise
+- **Cloud Migration**: Large-scale AWS migration and infrastructure transformation
+- **Conference Leadership**: High-profile speaking at major technology conferences
 
 
 

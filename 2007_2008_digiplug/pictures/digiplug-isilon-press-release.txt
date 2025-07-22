@@ -1,0 +1,26 @@
+DIGIPLUG CHOISIT ISILON SYSTEMS POUR SA PLATE-FORME DE DISTRIBUTION DE CONTENU DIGITAL
+
+ISILON SYSTEMS vient d’installer chez DIGIPLUG - fournisseur de solutions informatiques et de services dédiés à la production et à la distribution de contenus multimédia - deux clusters de 14 noeuds IQ12000X et EX12000 avec un miroir de réplication. Ils sont dédiés à la production et stockent un total d'environ 300 téraoctets. Ces serveurs sont hébergés dans deux data centers différents et synchronisés via des liens en fibre optique pour garantir aux clients de DIGIPLUG une disponibilité maximale de leurs services.
+
+Depuis plus de 5 ans DIGIPLUG gère et approvisionne les réseaux de distribution digitaux des plus grandes maisons de disque dans 50 pays et auprès de près de 200 partenaires.
+
+DIGIPLUG dispose également d’un large portefeuille de solutions pour les services de téléchargement de contenus digitaux (audio et vidéo) pour les opérateurs télécoms, les fabricants de terminaux, les distributeurs de contenus digitaux allant de l’agrégation de contenus digitaux à l’animation de magasins virtuels (web, wap) en passant par l’analyse de la performance.
+
+Julien Simon, VP Engineering de DIGIPLUG déclare « Les systèmes de stockage sont au coeur de l'activité de Digiplug. En effet, nous produisons des fichiers audio et vidéo dans une multitude de formats pour permettre leur téléchargement sur PC ou sur mobile. Ceci implique des capacités de stockage considérables. Nous stockons des fichiers dont l'offre s'adresse à une industrie musicale en pleine mutation qui doit gérer beaucoup d’imprévus. Au delà de la stabilité et de la performance qu'ils doivent évidemment offrir, ces systèmes doivent être capables de croître massivement, rapidement et sans interruption de service. ISILON SYSTEMS nous a convaincu sur sa capacité à satisfaire ces différents critères. »
+
+Il ajoute « La mise en production de chaque cluster a pris moins de deux heures et ils nécessitent peu d’administration courante. »
+
+Pour Xavier Guérin, Directeur Général Europe du Sud d’ISILON SYSTEMS « Nous constatons que la croissance du marché des contenus multimédia requiert des solutions professionnelles nécessitant une capacité d’extension très importante et surtout très souple, car si l’augmentation des besoins reste très forte, elle demeure imprédictible. La force de nos solutions de stockage en cluster, offrant un système de fichiers totalement distribué, est de proposer une solution « pay as you grow » qui simplifie l’administration et permet une gestion très fine des budgets.
+
+A propos de DIGIPLUG
+Digiplug est un fournisseur de solutions logicielles en mode SaaS dédiées à la production, à la gestion et à la distribution de contenus multimédia (audio, vidéo). Digiplug est aujourd’hui un partenaire privilégié des Maisons de disque. Il gère au travers de solutions qu’ils développent les services de fabrication et de distribution de contenus digitaux à un niveau international de 3 des 4 majors de la Musique : Universal Music depuis 2001, Warner Music et Sony Music Entertainment depuis 2003. Chaque jour, Digiplug distribue des milliers de produits pour le compte des majors dans plus de 50 pays et vers près de 200 plate-formes (approvisionnement en contenu et services de transcoding…). Digiplug dispose également d’un large portefeuille de solutions pour les distributeurs de contenus digitaux : agrégation de contenus, plate-forme de téléchargement, animation de magasins virtuels (web, wap) en passant par l’analyse de la performance.
+
+Contact Presse : Virginie Sitter, Solution Marketing Manager : Tel : 01 53 43 37 55 – virginie.sitter@digiplug.com
+
+
+À propos d’ISILON SYSTEMS
+ISILON SYSTEMS (Nasdaq : ISLN) est le leader mondial dans le domaine des systèmes de stockage en cluster et de logiciels pour les contenus numériques et les données non structurées, permettant aux entreprises de transformer leurs données en information et leur information en innovations. La gamme primée de systèmes de stockage en cluster IQ d’ISILON SYSTEMS associe le système d’exploitation OneFS® avec les meilleurs types de matériels informatiques afin d’offrir des systèmes modulaires de stockage d’entreprise pour lesquels les clients paient en fonction de leurs besoins. Les solutions de stockage en cluster d'ISILON SYSTEMS permettent d'accéder rapidement aux informations cruciales, tout en assurant une réduction importante des coûts et de la complexité du stockage. Pour obtenir des informations à propos d’ISILON SYSTEMS, consulter le site http://www.isilon.com
+
+Contacts Presse ISILON SYSTEMS
+VENISE RP : Maud de Valicourt – Anaïs Loyzance - Tel : 01 70 08 71 03 - aloyzance@venise.com
+

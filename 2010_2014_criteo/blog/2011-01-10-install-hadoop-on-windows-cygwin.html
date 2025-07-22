@@ -1,0 +1,42 @@
+Highly unnecessary... unless you're stuck with a Windows machine :-/<br />
+<br />
+<u>1) Install <a href="http://cygwin.com/">Cygwin</a></u><br />
+<br />
+This is as straightforward as it gets, but don't forget to add your favorite editor : <i>vim </i>is not included in the default install (!).<br />
+<br />
+The default directory is <i>c:\cygwin</i>, no reason to change it.<br />
+<br />
+<u>2) Install the <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java Development Kit</a></u><br />
+<br />
+You should avoid unnecessary spaces in the installation directory : <i>c:\jdk1.6</i> will do nicely.<br />
+<br />
+<u>3) Install <a href="http://hadoop.apache.org/common/releases.html">Hadoop</a></u><br />
+<br />
+Download the latest release (0.21.0 at the time of writing) and extract it to <i>d:\work</i> (or something similar).<br />
+<br />
+<u>4) Fix your environment variables</u><br />
+<br />
+Start <i>cygwin </i>and append the following lines at the end of your <i>.bashrc</i> file:<br />
+<code><br />
+$ <b>export JAVA_HOME=/cygdrive/c/jdk1.6</b><br />
+$ <b>export HADOOP_INSTALL=/cygdrive/d/work/hadoop-0.21.0</b><br />
+$ <b>export PATH=$PATH:$HADOOP_INSTALL/bin</b></code><br />
+<br />
+<u>5) Fix the <i>hadoop-config</i> script</u><br />
+<br />
+<code>$ <b>vi $HADOOP_INSTALL/bin/hadoop-config.sh</b></code><br />
+<br />
+Locate this section starting with "<i># cygwin path translation</i>" and add the following line :<br />
+<br />
+<code>CLASSPATH=`cygpath -wp "$CLASSPATH"`</code><br />
+<br />
+Save and exit.<br />
+<br />
+<u>6) Test your installation</u><br />
+<code><br />
+$ <b>hadoop version</b><br />
+Hadoop 0.21.0<br />
+<i>etc etc.</i><br />
+</code><br />
+<br />
+That's it. Happy hadoop'ing :)

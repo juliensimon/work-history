@@ -30,6 +30,23 @@ This directory contains work artifacts from **Julien Simon's** time at DigiPlug,
 - **Access Review**: DIGIPLUG_UMGI_Access review Procedure_v1.0.doc
 - **Additional Procedures**: 8 additional .doc files covering various security procedures
 
+### [Blog](./blog/)
+**Technical Blog and Knowledge Sharing**
+
+- **Media Server Setup**: VLC, MediaTomb, and PS3 integration guides
+- **Video Processing**: FFmpeg, x264, and multimedia codec compilation
+- **Audio Processing**: Multichannel audio, DTS, AC3 processing
+- **System Administration**: VirtualBox, CentOS, Ubuntu system management
+- **Focus**: Technical tutorials and infrastructure knowledge sharing
+
+### [Pictures](./pictures/)
+**Company Documentation and Media**
+
+- **Scrum Art**: 6 images documenting Scrum methodology implementation
+- **Press Release**: DigiPlug Isilon press release documentation
+- **Company Interview**: Journal des Grandes Ecoles interview (2018)
+- **Focus**: Company culture and methodology documentation
+
 ## 🛠️ Technologies & Skills
 
 ### Infrastructure Engineering
@@ -53,6 +70,14 @@ This directory contains work artifacts from **Julien Simon's** time at DigiPlug,
 - **Infrastructure Planning** - Scalable system architecture design
 - **Compliance Management** - Security standards and regulatory compliance
 
+### Multimedia & Media Server Technologies
+- **VLC Media Server** - Video streaming and media server setup
+- **MediaTomb** - UPnP media server for PS3 integration
+- **FFmpeg** - Video and audio processing and codec compilation
+- **x264 Encoding** - Video compression and optimization
+- **Audio Processing** - DTS, AC3, multichannel audio handling
+- **PS3 Integration** - PlayStation 3 media server integration
+
 ## 📊 Key Contributions
 
 ### Infrastructure Architecture
@@ -73,6 +98,12 @@ This directory contains work artifacts from **Julien Simon's** time at DigiPlug,
 - **Security Training**: Security awareness and procedure training
 - **Documentation Standards**: Professional documentation and presentation standards
 
+### Knowledge Sharing & Blogging
+- **Technical Blog**: Comprehensive tutorials on media server setup
+- **Codec Compilation**: Guides for FFmpeg, x264, and multimedia libraries
+- **System Administration**: VirtualBox and Linux system management tutorials
+- **Media Server Integration**: PS3 and UPnP media server configuration
+
 ## 🎯 Technical Impact
 
 This work demonstrates:
@@ -80,6 +111,8 @@ This work demonstrates:
 - **Security Management**: ISO27001 compliance and procedures
 - **Technical Documentation**: Process development and standards
 - **System Design**: Scalable and secure architecture implementation
+- **Multimedia Expertise**: Media server setup and video processing
+- **Knowledge Sharing**: Technical blogging and tutorial creation
 
 ## 📄 Presentation Highlights
 

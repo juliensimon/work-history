@@ -1,0 +1,132 @@
+<div class="separator" style="clear: both; text-align: center;">
+<span id="goog_1759208167"></span><span id="goog_1759208168"></span></div>
+<a href="http://static.guim.co.uk/sys-images/Media/Pix/pictures/2009/1/20/1232459591607/Top-Gear---the-Stig-001.jpg" imageanchor="1" style="clear: right; float: right; margin-bottom: 1em; margin-left: 1em;"><img border="0" src="http://static.guim.co.uk/sys-images/Media/Pix/pictures/2009/1/20/1232459591607/Top-Gear---the-Stig-001.jpg" height="192" width="320" /></a>Last week, AWS launched their flavor of "Machine Learning as a service", aka <a href="https://aws.amazon.com/fr/machine-learning/" target="_blank">Amazon Machine Learning</a>. It was not a moment too soon, given the number of existing cloud-based ML propositions. To name just a few: BigML, Qubole and yes, Azure Machine Learning (pretty impressive, I'm sorry to admit).<br />
+<br />
+So, here it is finally. Let's take it for a ride.<br />
+<br />
+First things first: some data is needed. Time to use a little Java program that I wrote to pump out test data simulating an e-commerce web log (see <i>Generator.java </i>in <a href="https://github.com/juliensimon/DataStuff">https://github.com/juliensimon/DataStuff</a>).<br />
+<br />
+Here's the format, columns are pretty self-explanatory:<br />
+<br />
+<script src="https://gist.github.com/juliensimon/79687ad0b4dc28b994aa.js"></script> Nothing fancy, but it should do the trick.<br />
+<br />
+Next step: connect to my super fancy 1-node Redshift cluster and create an appropriate table for this data:<br />
+<br />
+<script src="https://gist.github.com/juliensimon/12e9736bd8b2be62b316.js"></script>
+
+<br />
+Next, let's generate 10,000,000 lines, write them in a CSV file and upload it to my favorite S3 bucket located in <i>eu-west-1</i>. And now the AWS fun begins! Right now, Amazon ML is only available in <i>us-east-1</i>, which means that your Redshift cluster must be in the same region, as well as the S3 bucket used to output files (as I later found out). Bottom line: if everything is in <i>us-east-1</i> for now, your life will be easier ;)<br />
+<br />
+Lucky me, the only cross-region operation allowed in this scenario is copying data from S3 to Redshift, here's how:<br />
+<br />
+<script src="https://gist.github.com/juliensimon/d4fd99c26f5b2ecc79d6.js"></script> For the record, this took just under a minute for 450MB. That's about 100MB per second sustained. Not bad :) <br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhasbCXkhutzqBvfHzCpjo8kPEpRLHWKrOyKzEpLTmjXjY0EdUyhbLaouOmfZcdvllZNUp1Ovf0TWALMKoqaZ1egVlMhzk3nhz4oJzH09JgB9VxI9hNdYzMz0hVWcsUDKjiXh9AqW6v2ns/s1600/Capture+d%E2%80%99e%CC%81cran+2015-04-13+a%CC%80+16.46.43.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhasbCXkhutzqBvfHzCpjo8kPEpRLHWKrOyKzEpLTmjXjY0EdUyhbLaouOmfZcdvllZNUp1Ovf0TWALMKoqaZ1egVlMhzk3nhz4oJzH09JgB9VxI9hNdYzMz0hVWcsUDKjiXh9AqW6v2ns/s1600/Capture+d%E2%80%99e%CC%81cran+2015-04-13+a%CC%80+16.46.43.png" height="144" width="640" /></a></div>
+<br />
+Let's take a quick look: <b>SELECT * FROM mydata LIMIT 10;</b><br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgNcAPGy1xnQR6i0f4rFtq57BrApc9LG-Ed9fhSm9501a0v4rQclc3-ejzgnzQf9d9XWUrS3EEbkqgxyhY9QljbzidWKEg9IwrEq0Z20eWL5ga2mVvGgcUOl3yMlHaDtdw7PNfaYQcEhmQ/s1600/Capture+d%E2%80%99e%CC%81cran+2015-04-13+a%CC%80+16.47.20.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgNcAPGy1xnQR6i0f4rFtq57BrApc9LG-Ed9fhSm9501a0v4rQclc3-ejzgnzQf9d9XWUrS3EEbkqgxyhY9QljbzidWKEg9IwrEq0Z20eWL5ga2mVvGgcUOl3yMlHaDtdw7PNfaYQcEhmQ/s1600/Capture+d%E2%80%99e%CC%81cran+2015-04-13+a%CC%80+16.47.20.png" height="192" width="640" /></a></div>
+<br />
+Looks good. Time to fire up Amazon ML. The process is quite simple:<br />
+<ol>
+<li>Create a datasource, either from an S3 file of from Redshift</li>
+<li>Pick the column you want to predict the value for (in our case, we'll use '<i>basket</i>')</li>
+<li>Send some data to build and evaluate the model (we'll use the 10M-line file)</li>
+<li>If the model is good enough, use it to predict values for new data</li>
+</ol>
+&nbsp;Creating the datasource from Redshift is straightforward: cluster id, credentials, table name, SQL statement to build the test data. <br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjfugFSFKp8HSBRKDwvZN4uQpUUrRhB2ZycHVIvMf9ROEo5jeoe_uSJQgFf2salydAi0bWHQxYGWfc31K99kibH8_DL5EJjKrDYp5FRt5_q66GOdBubFjo6_A2we8bLEttsbY8BUocDwCk/s1600/Capture+d%E2%80%99e%CC%81cran+2015-04-13+a%CC%80+16.58.14.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjfugFSFKp8HSBRKDwvZN4uQpUUrRhB2ZycHVIvMf9ROEo5jeoe_uSJQgFf2salydAi0bWHQxYGWfc31K99kibH8_DL5EJjKrDYp5FRt5_q66GOdBubFjo6_A2we8bLEttsbY8BUocDwCk/s1600/Capture+d%E2%80%99e%CC%81cran+2015-04-13+a%CC%80+16.58.14.png" height="442" width="640" /></a></div>
+<br />
+Once connected to Redshift, Amazon ML figures out the schema and data types: <br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2ZDoi7m0y0z8MmYqWiqU1ybH0pm3xwCMbmwMbWvLre-ZmVjPiOvwKUjBlTfGLBxnSmutUlEAc8MH1dSnODSDEv-pEo5jm0LEitZzJ0AD_4gmmWzXXOpq9tyYw55KBdokJCP2MlhbzJYw/s1600/Capture+d%E2%80%99e%CC%81cran+2015-04-13+a%CC%80+16.47.49.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2ZDoi7m0y0z8MmYqWiqU1ybH0pm3xwCMbmwMbWvLre-ZmVjPiOvwKUjBlTfGLBxnSmutUlEAc8MH1dSnODSDEv-pEo5jm0LEitZzJ0AD_4gmmWzXXOpq9tyYw55KBdokJCP2MlhbzJYw/s1600/Capture+d%E2%80%99e%CC%81cran+2015-04-13+a%CC%80+16.47.49.png" height="228" width="640" /></a></div>
+<br />
+Now, let's select our target column (the one we want to predict):<br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgc1Wh2J2uo90iV46LHbjpuF6jyT-aSA6NC_FhBxp4kv8Wg2GhFHvRg1hpvkIzGuCu8bbOFUfoAW47kUbo-L0NknK3fYQPC22ya4mqGqRpEXmcpmXYxfRdzhpNZxjNcnrpfGLMq-0jvWtA/s1600/Capture+d%E2%80%99e%CC%81cran+2015-04-13+a%CC%80+16.49.29.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgc1Wh2J2uo90iV46LHbjpuF6jyT-aSA6NC_FhBxp4kv8Wg2GhFHvRg1hpvkIzGuCu8bbOFUfoAW47kUbo-L0NknK3fYQPC22ya4mqGqRpEXmcpmXYxfRdzhpNZxjNcnrpfGLMq-0jvWtA/s1600/Capture+d%E2%80%99e%CC%81cran+2015-04-13+a%CC%80+16.49.29.png" height="259" width="640" /></a></div>
+<br />
+&nbsp;Next, we can customize the model. Since this is a numerical value, Amazon ML will use a
+ numerical regression algorithm. If we had picked a boolean value, a 
+different algorithm would have been used. Keep on eye on this in future 
+releases, I'm sure AWS will add more algos and allow users to tweak them
+ much more than today.<br />
+<br />
+As you can see, 70% of data is used to build the model, 
+30% to evaluate it.  <br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjVSitnhszi7YRDxRLKBfslLrYC4ppyYjVXyOeS0W0E7fX0TiHEEHIB3J3RsCHLd1vUhLLXpmXSzX0LQQ7TzhTzPs9C8UiO9siQG-CejbcbA30CFvVkOk4aggXJR5PFYe8CopTVWllzjlQ/s1600/Capture+d%E2%80%99e%CC%81cran+2015-04-13+a%CC%80+17.12.19.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjVSitnhszi7YRDxRLKBfslLrYC4ppyYjVXyOeS0W0E7fX0TiHEEHIB3J3RsCHLd1vUhLLXpmXSzX0LQQ7TzhTzPs9C8UiO9siQG-CejbcbA30CFvVkOk4aggXJR5PFYe8CopTVWllzjlQ/s1600/Capture+d%E2%80%99e%CC%81cran+2015-04-13+a%CC%80+17.12.19.png" height="480" width="640" /></a></div>
+Next, Amazon ML ingests the data: In our case, this means 10 million lines, which 
+takes a little while. You can see the different tasks: splitting the data, building the model, evaluating it.<br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhV69hJvWpDvwQW96YmuNg-RH5T2865_PdMoZJkeTeiXD9rDvoshGVhEYHfmJ00WRFJb2AIeScN3UtT22R20KvHGrynznE73b3e5pp2GoqxK_6a0_J7OzPtiKs1WfUraHRNElkhN1T9_do/s1600/Capture+d%E2%80%99e%CC%81cran+2015-04-13+a%CC%80+17.24.41.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhV69hJvWpDvwQW96YmuNg-RH5T2865_PdMoZJkeTeiXD9rDvoshGVhEYHfmJ00WRFJb2AIeScN3UtT22R20KvHGrynznE73b3e5pp2GoqxK_6a0_J7OzPtiKs1WfUraHRNElkhN1T9_do/s1600/Capture+d%E2%80%99e%CC%81cran+2015-04-13+a%CC%80+17.24.41.png" height="91" width="640" /></a></div>
+A few coffees later, all tasks are completed. The longest one was by far building the ML model. The whole process lasted just under a hour (reminder: 10 columns, 10 millions lines).<br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhx-KG-bCJuc0sdIMMVPiN7s2Zpa26rg0mm15xatwbhf-hUu93Zl3FAzW5pkHeusH7Ib4N_VkZP7J5wuM9es_U3a7cHj0B0MYasapoJFrJj8MF8xEiGyvuSHcY5M3CxcwmE-RBiA4Ey_W4/s1600/Capture+d%E2%80%99e%CC%81cran+2015-04-13+a%CC%80+17.53.35.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhx-KG-bCJuc0sdIMMVPiN7s2Zpa26rg0mm15xatwbhf-hUu93Zl3FAzW5pkHeusH7Ib4N_VkZP7J5wuM9es_U3a7cHj0B0MYasapoJFrJj8MF8xEiGyvuSHcY5M3CxcwmE-RBiA4Ey_W4/s1600/Capture+d%E2%80%99e%CC%81cran+2015-04-13+a%CC%80+17.53.35.png" height="116" width="640" /></a></div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+So, is this model any good? Amazon ML gives limited information for now, but here it is:<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgwgpbg925SjOqCMqEhvrUg2AZior1s4643z6U5gg1Utdqgg6qudn7DpfSf0k5Wjxv5XxqqSgbAFYy3CpqRWIcK-GPQfMCm4GY0kpxftpBcmC4YaARhr0coF6P6ezfS11eIU_n_meoOsco/s1600/Capture+d%E2%80%99e%CC%81cran+2015-04-13+a%CC%80+18.00.30.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgwgpbg925SjOqCMqEhvrUg2AZior1s4643z6U5gg1Utdqgg6qudn7DpfSf0k5Wjxv5XxqqSgbAFYy3CpqRWIcK-GPQfMCm4GY0kpxftpBcmC4YaARhr0coF6P6ezfS11eIU_n_meoOsco/s1600/Capture+d%E2%80%99e%CC%81cran+2015-04-13+a%CC%80+18.00.30.png" height="164" width="640" /></a></div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+That promising "<i>Explore the model performance</i>" button displays a distribution curve of residuals for the part of the data set used to evaluate the model. Nothing extraordinary.<br />
+<br />
+As a sidenote, I think it's pretty interesting to see that a model can be build from totally random data. What does this say about the Java random generator? I'm not sure.<br />
+<br />
+Now, we're ready to predict! Amazon ML supports batch prediction and real-time prediction through an API. I'll use batch for now. Using a second data set of 10,000 lines missing the '<i>basket</i>' column, let's build a second data source (from S3 this time):<br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEizg8hkyYEDIcdIZHfaKwGFEXQKgtB65wMGWYg78MX0QI3fLXygOSmYhgrUQT1ffp-cw_5JETDmyoldPLY72eFiEvpDBasjB58B8fHujdngGygBtQuI_TMuqZth6w_5uZP9Uq8Gx4Y-dNs/s1600/Capture+d%E2%80%99e%CC%81cran+2015-04-13+a%CC%80+18.11.15.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEizg8hkyYEDIcdIZHfaKwGFEXQKgtB65wMGWYg78MX0QI3fLXygOSmYhgrUQT1ffp-cw_5JETDmyoldPLY72eFiEvpDBasjB58B8fHujdngGygBtQuI_TMuqZth6w_5uZP9Uq8Gx4Y-dNs/s1600/Capture+d%E2%80%99e%CC%81cran+2015-04-13+a%CC%80+18.11.15.png" height="360" width="400" /></a></div>
+<br />
+Two news tasks are created: ingest the data from S3 and predict. After a 3-4 minutes, prediction is complete:<br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi0w2yES_QnwnNJ7vy2mGRIkIPqqIbrFWK_g6qbgpxDKeU5tKU34W1ALKYM2PLta3fd9mcJpYtViEZhd9yW0i8Zonbyu7riVHDa_3iXkKjV5I8P6zR3-foCtP0NdB8dFq5KjBrrPsR1JX4/s1600/Capture+d%E2%80%99e%CC%81cran+2015-04-13+a%CC%80+18.14.02.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi0w2yES_QnwnNJ7vy2mGRIkIPqqIbrFWK_g6qbgpxDKeU5tKU34W1ALKYM2PLta3fd9mcJpYtViEZhd9yW0i8Zonbyu7riVHDa_3iXkKjV5I8P6zR3-foCtP0NdB8dFq5KjBrrPsR1JX4/s1600/Capture+d%E2%80%99e%CC%81cran+2015-04-13+a%CC%80+18.14.02.png" height="158" width="640" /></a></div>
+<br />
+<br />
+<br />
+<br />
+A nice distribution curve of predicted values is also available.<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgtc9IHhufd-GZNh3lkRe0jBEYjUf1shrmQ2edJ3zb9JPqRgAnsvoeSiQ9tUfj_7jepJ-iyCnUwA7DbTdnJE68io33rTL4qmP_sVm_DpedM1RNdJfeYAI9Th-QzNwRRUJ8veo7RdIuVGj4/s1600/Capture+d%E2%80%99e%CC%81cran+2015-04-13+a%CC%80+18.20.38.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgtc9IHhufd-GZNh3lkRe0jBEYjUf1shrmQ2edJ3zb9JPqRgAnsvoeSiQ9tUfj_7jepJ-iyCnUwA7DbTdnJE68io33rTL4qmP_sVm_DpedM1RNdJfeYAI9Th-QzNwRRUJ8veo7RdIuVGj4/s1600/Capture+d%E2%80%99e%CC%81cran+2015-04-13+a%CC%80+18.20.38.png" height="554" width="640" /></a></div>
+<br />
+Actual predicted values are available in a gzip'ed text file in S3:<br />
+<br />
+<script src="https://gist.github.com/juliensimon/3d7bfdb9ef7d886513a0.js"></script> Pretty cool... but one last question needs to be answered. How much does it cost? Well, I did push the envelope all afternoon and so...<br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhB4_i5xExippkxXXC3EFQ2Uz726sDIf4IAueZ2AZqG8X7W95OjCVGp8tg9pDuHQs4YdF3FXikm9rV_rM5Vwj2KitUY3dmT0oiejfh64gJef7hhtsEMmX76MxNzGbrBMEprZRKajr1ohc4/s1600/Capture+d%E2%80%99e%CC%81cran+2015-04-14+a%CC%80+09.48.43.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhB4_i5xExippkxXXC3EFQ2Uz726sDIf4IAueZ2AZqG8X7W95OjCVGp8tg9pDuHQs4YdF3FXikm9rV_rM5Vwj2KitUY3dmT0oiejfh64gJef7hhtsEMmX76MxNzGbrBMEprZRKajr1ohc4/s1600/Capture+d%E2%80%99e%CC%81cran+2015-04-14+a%CC%80+09.48.43.png" height="288" width="640" /></a></div>
+<br />
+Over a thousand bucks. Ouch! Expensive fun indeed. I guess I'll expense that one :D<br />
+<br />
+One thousand predictions cost $0.1. So, the scenario I described (model building plus 10K predictions) only costs <u>a few dollars </u>(thanks Jamie <a class="pretty-link js-nav" data-send-impression-cookie="true" dir="ltr" href="https://twitter.com/ideasasylum"><span class="screen-name"><s>@</s>ideasasylum</span></a> for pointing it out). <br />
+<br />
+However, if you decide to use live prediction on a high-traffic website or if you want to go crazy on data-mining, costs will rise VERY quickly. Caveat emptor.&nbsp; AWS has an history of adapting prices pretty quickly, let's see what happens.<br />
+<br />
+Final words? Amazon ML delivers prediction at scale. Ease of use and documentation are what you'd expect from AWS. Features are pretty limited and the UI is still pretty rough but good things come to those who wait, I guess. Cost rises quickly, so make sure you set and track ROI targets on your ML scenarios. Easier said than done... and that's another story :)<br />
+<br />
+Till next time, keep crunchin'!<br />
+<br />
+<i>(Update: want to learn about real-time prediction with Amazon ML? <a href="http://juliensimon.blogspot.fr/2015/04/test-drive-real-time-prediction-with.html">Read on!</a>)</i>

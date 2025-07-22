@@ -23,8 +23,26 @@ This directory contains work artifacts from **Julien Simon's** time at Criteo, f
 - **[10gen Collaboration (PDF)](./10gen%20Criteo.pdf)** - Collaboration with 10gen (now MongoDB Inc.)
 - **[USI Conference (PDF)](./Criteo%20USI.pdf)** - Presentation at USI conference
 
-### Process Documentation
-- *Process documentation has been removed from this repository*
+### [Blog](./blog/)
+**Technical Blog and Industry Insights**
+
+- **The Billion Dollar App Series**: 5-part series on app development and scaling
+- **Viking Laws for Tech Teams**: 6-part series on team management and culture
+- **MongoDB and Python**: Technical tutorials and best practices
+- **Real-time Bidding**: Under the hood of advertising technology
+- **Data Centers**: Learning about infrastructure and operations
+- **Hiring Insights**: Recruitment and team building strategies
+- **Cloud Migration**: AWS S3 and cloud infrastructure guides
+- **Focus**: Technical leadership, team culture, and industry insights
+
+### [Images](./images/)
+**Company Culture and Documentation**
+
+- **Office Documentation**: 6 images of new office space and facilities
+- **Team Culture**: Code review, Scrum, and team process documentation
+- **Leadership**: Life 24/7/365 and team management insights
+- **Industry Events**: MongoDB conference and industry networking
+- **Focus**: Company culture, team processes, and industry presence
 
 ## 🛠️ Technologies & Skills
 
@@ -46,6 +64,12 @@ This directory contains work artifacts from **Julien Simon's** time at Criteo, f
 - **Team Leadership** - Infrastructure team management
 - **Stakeholder Communication** - Executive and board presentations
 
+### Content Creation & Thought Leadership
+- **Technical Blogging** - Industry insights and technical tutorials
+- **Team Culture** - Leadership philosophy and team management
+- **Industry Commentary** - Advertising technology and infrastructure insights
+- **Knowledge Sharing** - Technical tutorials and best practices
+
 ## 📊 Key Contributions
 
 ### MongoDB Expertise
@@ -66,6 +90,12 @@ This directory contains work artifacts from **Julien Simon's** time at Criteo, f
 - **Team Training**: Internal knowledge sharing and training programs
 - **Documentation**: Process and system documentation standards
 
+### Content Creation & Industry Leadership
+- **Blog Series**: The Billion Dollar App and Viking Laws for Tech Teams
+- **Technical Tutorials**: MongoDB, Python, and infrastructure guides
+- **Industry Insights**: Real-time bidding and advertising technology
+- **Team Culture**: Leadership philosophy and team management insights
+
 ## 🎯 Technical Impact
 
 This work demonstrates:
@@ -73,6 +103,8 @@ This work demonstrates:
 - **NoSQL Databases**: MongoDB specialization and optimization
 - **System Architecture**: Scalable infrastructure design
 - **Performance Optimization**: Database and system tuning
+- **Content Creation**: Technical blogging and industry thought leadership
+- **Team Leadership**: Culture building and team management philosophy
 
 
 
