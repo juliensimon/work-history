@@ -29,6 +29,7 @@ This repository contains legacy work artifacts from **Julien Simon's** engineeri
 - **Data Center Operations** - System architecture and deployment
 - **Network Infrastructure** - Fiber networks and connectivity design
 - **Performance Optimization** - Database and system tuning
+- **AWS Cloud Migration** - Large-scale cloud migration strategies and implementation
 
 ### Data Science & Analytics
 - **Statistical Analysis** - User behavior modeling and business intelligence
@@ -68,8 +69,8 @@ This repository contains legacy work artifacts from **Julien Simon's** engineeri
 - **Technologies**: MongoDB, distributed systems, performance optimization, conference speaking
 
 #### **Viadeo (2015)**
-- **[Data Analysis & Leadership](./2015_viadeo/)** - Statistical analysis with Octave and executive presentations
-- **Technologies**: Octave/Matlab, statistical modeling, data visualization, business intelligence
+- **[Data Analysis & Leadership](./2015_viadeo/)** - Statistical analysis with Octave and AWS machine learning
+- **Technologies**: Octave/Matlab, AWS ML, AWS Redshift, cloud migration, conference speaking
 
 ## 🎯 Technical Evolution
 
@@ -94,14 +95,18 @@ This repository contains legacy work artifacts from **Julien Simon's** engineeri
 - **Statistical Analysis**: Octave/Matlab for data modeling
 - **Business Intelligence**: User behavior analysis and reporting
 - **Technical Leadership**: Executive communication and strategy
+- **AWS Machine Learning**: Amazon ML platform and real-time predictions
+- **Cloud Migration**: Large-scale AWS migration and infrastructure transformation
+- **Conference Leadership**: High-profile speaking at major technology conferences
 
 ## 🎯 Archive Purpose
 
 This repository serves as a historical record of:
-- **Technology Evolution**: From Ada to modern data science tools
+- **Technology Evolution**: From Ada to modern data science and cloud computing
 - **Security Development**: Early smart card technology and cryptographic implementations
 - **Infrastructure Growth**: Evolution of distributed systems and database technologies
 - **Data Science Emergence**: Statistical analysis and business intelligence applications
+- **Cloud Computing**: AWS migration and machine learning platform adoption
 - **Professional Growth**: Technical leadership and communication skills development
 
 All code and materials are preserved for archival and educational purposes.
