@@ -1,11 +1,11 @@
 # Work History - Legacy Artifacts
 
 [![License](https://img.shields.io/badge/License-Archive-blue.svg)](https://github.com/juliensimon/work-history)
-[![Years](https://img.shields.io/badge/Years-1991--2015-orange.svg)](https://github.com/juliensimon/work-history)
+[![Years](https://img.shields.io/badge/Years-1991--2021-orange.svg)](https://github.com/juliensimon/work-history)
 [![Technologies](https://img.shields.io/badge/Technologies-Multi%20Language%20%26%20Platform-green.svg)](https://github.com/juliensimon/work-history)
 [![Status](https://img.shields.io/badge/Status-Archival%20Repository-lightgrey.svg)](https://github.com/juliensimon/work-history)
 
-This repository contains legacy work artifacts from **Julien Simon's** engineering studies and professional experience spanning from 1991 to 2015.
+This repository contains legacy work artifacts from **Julien Simon's** engineering studies and professional experience spanning from 1991 to 2021.
 
 ## 🛠️ Technology Stack Overview
 
@@ -54,11 +54,8 @@ This repository contains legacy work artifacts from **Julien Simon's** engineeri
 
 #### **Oberthur Card Systems (2001-2006)**
 - **[Java Card Development](./2001_2006_oberthur_card_systems/)** - Smart card applets, cryptographic implementations, and training materials
-- **Technologies**: Java Card, RSA/DES/DSA cryptography, smart card security protocols
-
-#### **SchlumbergerSema (2003)**
-- **[Java Card Disassembler](./2003_schlumberger_sema/)** - Reverse engineering tools for Java Card bytecode analysis
-- **Technologies**: Java, CAP file format parsing, bytecode disassembly
+- **[Java Card Disassembler](./2001_2006_oberthur_card_systems/JavaCard_disassembler/)** - Reverse engineering tools for Java Card bytecode analysis
+- **Technologies**: Java Card, RSA/DES/DSA cryptography, smart card security protocols, bytecode disassembly
 
 #### **DigiPlug (2007-2008)**
 - **[Infrastructure & Security](./2007_2008_digiplug/)** - System architecture and ISO27001 compliance procedures
@@ -71,6 +68,10 @@ This repository contains legacy work artifacts from **Julien Simon's** engineeri
 #### **Viadeo (2015)**
 - **[Data Analysis & Leadership](./2015_viadeo/)** - Statistical analysis with Octave and AWS machine learning
 - **Technologies**: Octave/Matlab, AWS ML, AWS Redshift, cloud migration, conference speaking
+
+#### **Amazon Web Services (2015-2021)**
+- **[AWS Evangelism & Certifications](./2015_2021_amazon_web_services/)** - Principal Evangelist for ML/AI and comprehensive AWS expertise
+- **Technologies**: AWS services, machine learning, cloud computing, technical evangelism, global speaking
 
 ## 🎯 Technical Evolution
 
@@ -99,6 +100,13 @@ This repository contains legacy work artifacts from **Julien Simon's** engineeri
 - **Cloud Migration**: Large-scale AWS migration and infrastructure transformation
 - **Conference Leadership**: High-profile speaking at major technology conferences
 
+### AWS Evangelism Era (2015-2021): Global Technical Leadership
+- **Technical Evangelism**: Principal Evangelist for AWS ML/AI services
+- **Global Speaking**: Hundreds of conferences and events worldwide
+- **Community Building**: Developer community leadership and advocacy
+- **Professional Certifications**: Comprehensive AWS expertise across all service areas
+- **Thought Leadership**: Recognized expert in cloud computing and machine learning
+
 ## 🎯 Archive Purpose
 
 This repository serves as a historical record of:
@@ -107,6 +115,7 @@ This repository serves as a historical record of:
 - **Infrastructure Growth**: Evolution of distributed systems and database technologies
 - **Data Science Emergence**: Statistical analysis and business intelligence applications
 - **Cloud Computing**: AWS migration and machine learning platform adoption
+- **Technical Evangelism**: Global speaking and community building
 - **Professional Growth**: Technical leadership and communication skills development
 
 All code and materials are preserved for archival and educational purposes.
@@ -123,4 +132,4 @@ This repository contains legacy work artifacts and is provided for archival purp
 
 ---
 
-*This repository showcases the evolution of technology across programming languages, security systems, infrastructure engineering, and data science, demonstrating a diverse and comprehensive technical career spanning over two decades.* 
+*This repository showcases the evolution of technology across programming languages, security systems, infrastructure engineering, data science, and cloud computing, demonstrating a diverse and comprehensive technical career spanning three decades.* 
